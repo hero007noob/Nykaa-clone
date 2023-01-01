@@ -5,6 +5,9 @@ body {
 #footer {
   font-family: sans-serif;
   height: 714px;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
 }
 
 .footer-layer-1 {
