@@ -18,6 +18,11 @@ body {
   padding: 2.81rem 6rem 1.81rem 6rem;
 }
 
+.footer-list-div > header > img {
+  width: 61px;
+  height: 30px;
+}
+
 .footer-list-div > ul {
   padding-left: 0;
 }
