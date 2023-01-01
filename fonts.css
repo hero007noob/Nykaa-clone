@@ -1,0 +1,100 @@
+/* navbar fonts */
+.font-nav1-items{ 
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+    text-transform: capitalize;
+    color: #03021a; 
+}
+.font-nav1-dropdown-heading{
+    font-size: 14px;
+    font-weight: 600;
+}
+.font-nav-dropdown-items{
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 20px;
+}
+.font-nav1-dropdown-heading:hover{
+    border-bottom: 3px solid #fc2779;
+    color: #fc2779;
+}
+.font-nav1-dropdown-subheading{
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    line-height: 20px;
+    text-transform: capitalize;
+}
+.font-nav2-items{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+    color: rgba(3, 2, 26, 0.6);
+}
+.font-nav2-dropdown-heading{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    letter-spacing: -0.1px;
+}
+
+.font-path{
+    color: rgb(136, 136, 136);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+}
+.section-heading{
+    color: #001325; 
+    font-size: 24px;
+    font-family: Inter; 
+    letter-spacing: 0rem;
+    font-weight: 600;
+    text-align: left;
+    line-height: initial !important; 
+    text-transform: capitalize;
+}
+.font-section-subheading{
+    color: #5C6873; 
+    font-size: 16px;
+    font-family: Inter; 
+    letter-spacing: 0rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: initial !important; 
+    padding: 0.125rem 0rem 0rem 0rem;
+}
+.font-home-item-title{
+    color: #001325; 
+    font-size: 16px;
+    font-family: Inter; 
+    letter-spacing: 0rem;
+    font-weight: 600;
+    text-align: left;
+    line-height: initial !important;
+    line-height: 1.2;
+}
+.font-home-item-description{
+    color: #5C6874; 
+    font-size: 16px;
+    font-family: Inter; 
+    letter-spacing: 0rem;
+    font-weight: 500;
+    text-align: left;
+    line-height: initial !important;
+    padding: 0.125rem 0rem 0rem 0rem;
+}
+.font-readmore-pink{
+    color: rgb(232, 0, 113);
+    font-size: 16px;
+    font-family: Inter;
+    letter-spacing: 0rem;
+    font-weight: 500;
+    text-align: left;
+    padding: 0.125rem 0rem 0rem; 
+    line-height: initial !important;
+}
