@@ -1,4 +1,8 @@
 @import "./theme.css";
+/* font-family */
+* {
+    font-family: Inter, Roboto, Arial, sans-serif;
+}
 /* navbar fonts */
 .font-nav1-items{ 
     font-size: 14px;
