@@ -1,0 +1,186 @@
+@import "../theme_fonts/theme.css";
+:root{
+    --sidebar-width:390px;
+}
+.cart-sidebar-view{
+    display: flex;
+    position: fixed;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    pointer-events: none;
+}
+.cart-sidebar{ 
+    position: relative;
+    top: 50px;
+    width: 0px;
+    pointer-events: auto;
+    margin: 0;
+    height: 90%;
+    transition: all 250ms;
+    background-color: white;
+    overflow-y: scroll;
+}
+.sidebar-dim-overlay{
+    background-color: transparent;
+    flex-grow: 1;
+    margin: 0;
+    pointer-events: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.show-sidebar{
+    width: var(--sidebar-width);
+}
+.sidebar-dim-overlay-enable{
+    background-color: rgba(180, 183, 201, 0.4);
+    pointer-events: all;
+}
+/* ? cart-sidebar specific classes */
+
+.cart-sidebar__header{
+    position: fixed;
+    top: 0;
+    width: var(--sidebar-width);
+    height: 50px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 10px;
+    border-bottom: 1px solid rgba(202, 197, 197, 0.685);
+}
+.cart-sidebar__header>div{
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+.cart-sidebar-all-items{
+    display: relative;
+    width: var(--sidebar-width);
+}
+
+.cart-sidebar__footer{
+    position: fixed;
+    bottom: 0;
+    width: var(--sidebar-width); 
+    height: 60px;
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-sizing: border-box;
+    align-items: center;
+    border-top: 1px solid rgba(202, 197, 197, 0.685);
+}
+.cart-sidebar__grand-total__div{ 
+    height: 60px;
+    width: 40%; 
+    box-sizing: border-box;
+}
+
+.cart-sidebar__grand-total{
+
+    margin: 10px 0px -5px 0px;
+}
+.cart-sidebar__grand-total_disp{
+    display: flex;
+    align-items: center;
+}
+.cart-proceed-btn{
+    padding: 5px 12px 8px 18px; 
+    color: white;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(232,0,113);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+}
+
+/* ? Item css */
+.sidebar-item {
+    position: relative;
+    width: 90%;
+    padding: 10px;
+    background-color: var(--primary-background);
+    margin: 15px auto;
+    border-radius: 10px;
+    height: 130px;
+    border: 1px solid var(--bottom-border);
+  }
+  .sidebar-item-top {
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid var(--bottom-border);
+    padding-bottom: 5px;
+  }
+  .sidebar-item-img-sec {
+    margin-right: 10px;
+  }
+  .sidebar-item-img-sec > img {
+    border-radius: 10px;
+    width: 90px;
+  }
+  .sidebar-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -5px;
+  }
+  .sidebar-item-quantity-sec * {
+    display: flex;
+    align-items: center;
+  }
+  .sidebar-item-text-sec{
+    margin-right: auto; 
+  }
+  .sidebar-item__delete-icon > img {
+    width: 20px;
+    margin-left: auto;
+  }
+  .sidebar-item-price-sec {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+
+/* todo Extra classes for demo purposes Delete */
+
+.fa-bag-shopping{
+    font-size: 500px;
+}
+.cart-btn{
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    
+} 
+.demo-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+@media screen and (max-width:912px)  {
+    :root{
+        --sidebar-width:100%;
+    } 
+}
+    @media screen and (max-width:500px)  {
+        :root{
+            --sidebar-width:100%;
+        }
+        .cart-sidebar-view{
+            width: 100%;
+        }
+    }
