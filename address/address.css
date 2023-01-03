@@ -81,7 +81,27 @@ display: grid;
   }
   .collapse
   {
-    width: 30%;
+    position: absolute;
   }
 
-  
+  #details-section{
+    width: 50%;
+    
+  }
+  #address-text-section{
+    width: 50%; 
+  }
+  #address-text{
+    width: 50%;
+    margin: auto;
+  }
+  #details{
+    width: 50%;
+    margin: auto;
+    position: relative;
+  }
+  #details>img{
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+  } 
