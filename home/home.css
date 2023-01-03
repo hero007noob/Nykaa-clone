@@ -1,0 +1,223 @@
+@import "/theme_fonts/theme.css";
+:root{
+    --home-carouse-item-border:rgb(236, 233, 233);
+    --btn-pink:rgb(232,0,112);
+    --btn-text-white:#fff;
+}
+.home-main-div{
+    width: 80%;
+    margin: auto;
+}
+.home-section-best-in-beauty{
+    
+}
+.home-top-offer-carousel{
+    height: 350px;
+    background-color: coral;
+}
+.home-main-div{
+
+}
+.home-payday-image >img{
+    width: 100%;
+    border-radius: 10px;
+}
+.home-flat-off >img{
+    width: 100%;
+    border-radius: 10px;
+} 
+/* ? Items css */
+.home-section-top-brands-items,.home-section-only-at-nykaa-items,.home-section-featured-brands-items,.home-section-below-featured-brands-items{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;  
+}
+.home-section-featured-brands-items{
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 5px;
+}
+.home-section-editor-choice-items{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 5px;
+    gap: 20px; 
+}
+.home-carousel-item{ 
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+    /* border: 1px solid var(--home-carouse-item-border); */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.home-carousel-item>div:first-child>img{
+    width: 100%;
+}
+.home-carousel-item>div:nth-child(2){
+    padding: 0px 30px; 
+}
+.home-carousel-item>div:nth-child(2)>p{
+    text-overflow: ellipsis; 
+    white-space: nowrap; 
+    overflow: hidden;
+}
+.home-carousel-item>div:nth-child(2)>p:first-child{ 
+    margin-bottom: -15px; 
+    margin-top: 10px;
+}
+
+.home-section-try-buy-carousel{
+    height: 140px;
+    margin: 40px 0;
+    background-color: coral;
+}
+.home-section-discover-fav-trending>img{
+width: 100%;
+border-radius: 10px;
+}
+.home-section-discover-fav-carousel{
+    height: 300px;
+    margin: 40px 0;
+    background-color: coral;
+}
+.home-section-below-featured-brands{
+    margin: 40px 0;
+} 
+.home-section-everyday-essentials-crazy>img{
+    width: 100%;
+    border-radius: 10px;
+}
+.home-section-everyday-essentials-carousel{
+    height: 300px;
+    background-color: coral;
+    margin: 40px 0;
+}
+.home-section-in-focus-items,.home-section-gifting-nykaa-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;   
+}
+.home-section-in-focus-items>img,.home-section-gifting-nykaa-items>img{
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+}
+.home-section-brand-miss-carousel{
+    height: 300px;
+    background-color: coral;
+    margin-bottom: 20px;
+}
+.home-section-influencers-carousel{
+    height: 300px;
+    background-color: coral; 
+}
+.home-section-buying-guides-carousel{
+    height: 300px;
+    background-color: coral; 
+}
+.home-section-buying-btn{
+    display: flex;
+    padding: 5px;
+    width: 100%;
+    background-color: var(--btn-pink);
+    border: none;
+    border-radius: 10px;
+    margin: 20px auto;
+    align-items: center;
+    color: var(--btn-text-white);
+}
+.home-section-buying-btn>span:first-child{
+    text-align: center;
+    margin: 0 0 0 auto;
+    font-size: large;   
+}
+.home-section-buying-btn>span:nth-child(2){
+    font-size: 34px; 
+    margin: 0 auto 4px 6px;
+}
+.home-section-game-zone-items>img{
+    width: 100%;
+    border-radius: 10px;
+}  
+.home-section-discover-more-carousel{
+    height: 300px;
+    background-color: coral; 
+}
+.home-section-beauty-advice-items,.home-section-pop-up-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+.home-section-pop-up-carousel{
+    height: 300px;
+    background-color: coral;
+    margin: 40px 0;
+}
+.home-section-only-at-nykaa-items>div:nth-child(4){
+    grid-column: 2;
+}
+.home-section-featured-brands-items>div:nth-child(6){
+    grid-column: 2;
+}
+
+@media screen and (max-width:912px){
+    .home-section-top-brands-items,.home-section-only-at-nykaa-items,.home-section-featured-brands-items,.home-section-below-featured-brands-items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;  
+    }
+    .home-section-featured-brands-items{
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 5px;
+    }
+    .home-section-editor-choice-items{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin-top: 5px;
+        gap: 20px; 
+    }
+    .home-section-editor-choice-items>div:nth-child(4){
+        grid-column: 2;
+    }
+    .home-section-only-at-nykaa-items>div:nth-child(4){
+        grid-column: initial;
+    }
+    .home-section-featured-brands-items>div:nth-child(6){
+        grid-column: initial;
+    }
+}
+@media screen and (max-width:540px){
+    .home-section-top-brands-items,.home-section-only-at-nykaa-items,.home-section-featured-brands-items,.home-section-below-featured-brands-items{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;  
+    }
+    .home-section-featured-brands-items{
+        grid-template-columns: repeat(2 ,1fr);
+        margin-top: 5px;
+    }
+    .home-section-editor-choice-items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        margin-top: 5px;
+        gap: 20px; 
+    }
+    .home-section-editor-choice-items>div:nth-child(4){
+        grid-column: 2;
+    }
+    .home-section-only-at-nykaa-items>div:nth-child(4){
+        grid-column: initial;
+    }
+    .home-section-featured-brands-items>div:nth-child(6){
+        grid-column: initial;
+    }
+    .home-section-beauty-advice-items,.home-section-pop-up-items{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:20px;
+    }
+    .home-section-in-focus-items,.home-section-gifting-nykaa-items{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:20px;   
+    }
+}
