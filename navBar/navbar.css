@@ -1,6 +1,7 @@
-body{
+@import "../theme_fonts/fonts.css";
+/* body{
     font-family: sans-serif;
-}
+} */
 .nav-header {
 width: 105%;
 height: 55px;
@@ -27,8 +28,8 @@ margin-left: -10px;
 }
 #nav1 li, #nav2 li{
     display:block;
-    font-size: 10px;
-    font-weight: 600;
+    /* font-size: 10px;
+    font-weight: 600; */
 }
 .search{
     /* border: 1px solid black; */
@@ -56,10 +57,10 @@ margin-left: -10px;
     border:none;
     margin-left: 15px;
     color: white;
-    font-weight: 600;
+    /* font-weight: 600; */
     height: 60%;
     border-radius: 5px;
-    font-size: 11px;
+    /* font-size: 11px; */
     padding: 8px 14px;
 }
 .search span{

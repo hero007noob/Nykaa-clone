@@ -1,0 +1,273 @@
+
+/* you can change this  */
+body {
+  margin: 0;
+  font-family: Inter, Roboto, Arial, sans-serif;
+}
+.footer-playstore {
+  width: 100%;
+  padding: 40px 0;
+  background-color: #3f414d;
+  align-items: center;
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-playstore > div {
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.footer-playstore > div > img {
+  margin: 10px 10px 10px 0;
+}
+
+#footer {
+  height: 714px;
+  position: fixed;
+  position: relative;
+  bottom: 0;
+  width: 100vw;
+}
+
+.footer-layer-1 {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #3f414d;
+  color: white;
+  padding: 2.81rem 6rem 1.81rem 6rem;
+}
+
+.footer-list-div > header > img {
+  width: 61px;
+  height: 30px;
+}
+
+.footer-list-div > ul {
+  padding-left: 0;
+}
+
+.footer-list-div > ul > li {
+  list-style: none;
+  margin-bottom: 11px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+.footer-list-div > ul > li:hover {
+  color: red;
+}
+
+/*************/
+
+.footer-layer-2 {
+  height: 217px;
+  width: 100%;
+  padding: 2.81rem 5.625rem 1.875rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1.2fr;
+  box-sizing: border-box;
+}
+
+.footer-activity {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+
+.footer-layer-2 > div h4 {
+  margin: 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.footer-layer-2 > div p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.footer-social-media {
+  text-align: center;
+}
+
+.phone-social-media {
+  display: none;
+}
+
+.footer-social-media > ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  list-style: none;
+  padding: 0 50px;
+}
+
+.footer-social-media > span {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.footer-social-media li {
+  color: black;
+}
+
+.footer-social-media a {
+  font-size: 18px;
+  text-decoration: none;
+  color: black;
+}
+
+/*************/
+
+.footer-layer-3 {
+  height: 81px;
+  background-color: #fc2779;
+  color: white;
+}
+
+.footer-layer-3 > div a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-layer-3 > div:first-child {
+  display: flex;
+  justify-content: center;
+  gap: 29px;
+  padding-top: 2px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 49px;
+}
+
+.footer-credit {
+  text-align: center;
+  font-size: 11px;
+}
+
+
+/* responsive  */
+@media screen and (max-width: 1199px) {
+  .footer-layer-2 {
+    padding: 45px 40px 30px 40px;
+    grid-template-columns: repeat(4, 1fr);
+    height: 163px;
+  }
+
+  .footer-activity:first-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  #footer {
+    height: 425px;
+  }
+  .footer-layer-1 {
+    display: none;
+  }
+
+  .footer-layer-2 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .footer-layer-3 {
+    position: relative;
+    top: 50px;
+  }
+
+  .footer-social-media {
+    display: none;
+  }
+
+  .phone-social-media {
+    display: grid;
+    width: 250px;
+    margin: auto;
+    margin-top: 25px;
+  }
+
+  .footer-layer-2 > div:last-child {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .footer-playstore {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  #footer {
+    height: 280px;
+  }
+
+  .footer-layer-2 {
+    row-gap: 50px;
+  }
+
+  .footer-activity {
+    width: 100%;
+    height: 122px;
+    grid-template-columns: 1fr;
+    text-align: center;
+    place-items: center;
+  }
+
+  .footer-layer-3 {
+    position: relative;
+    top: 100px;
+  }
+
+  .footer-activity > div {
+    width: 100%;
+  }
+
+  .footer-social-media a {
+    margin-right: 10px;
+  }
+
+  .footer-layer-3 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  body {
+    height: 100px;
+  }
+  .footer-layer-2 {
+    padding: 0;
+    margin-top: 50px;
+  }
+
+  .footer-layer-2 h4 {
+    font-size: 9px;
+    margin: 0;
+  }
+
+  .footer-activity {
+    height: 100px;
+  }
+
+  .footer-activity > div span {
+    display: none;
+  }
+
+  .footer-layer-2 p {
+    margin: 0;
+    font-size: 8px;
+  }
+
+  .footer-activity img {
+    width: 20%;
+  }
+
+}
