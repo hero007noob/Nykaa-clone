@@ -1,0 +1,58 @@
+.sign-up-body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  padding-top: 50px;
+}
+
+#sign-up-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 25%;
+  padding: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: auto;
+  height: 450px;
+}
+
+#sign-up-form input {
+  margin-bottom: 20px;
+  height: 26px;
+  border-radius: 3px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#sign-up-form input[type="submit"] {
+  background-color: #fc2779;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sign-up-or {
+  text-align: center;
+}
+
+.sign-up-google-btn {
+  background-color: white;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.sign-up-google-btn img {
+  margin-right: 10px;
+  margin-top: 0px;
+  position: relative;
+  top: 5px;
+}
+.sign-up-google-btn p {
+  display: inline-block;
+}
