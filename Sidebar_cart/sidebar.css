@@ -23,6 +23,7 @@
     transition: all 250ms;
     background-color: white;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 .sidebar-dim-overlay{
     background-color: transparent;
@@ -109,7 +110,7 @@ body{
 /* ? Item css */
 .sidebar-item {
     position: relative;
-    width: 90%;
+    width: 85%;
     padding: 10px;
     background-color: var(--primary-background);
     margin: 15px auto;

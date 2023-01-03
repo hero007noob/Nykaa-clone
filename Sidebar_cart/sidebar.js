@@ -1924,7 +1924,7 @@ function addSideBarCartDataItem(item, index) {
       </p>
       <p class="font-sidebar-item-small_pink">${item.bonus || " "}</p>
     </div>
-    <div class="sidebar-item__delete-icon">
+    <div class="sidebar-item__delete-icon" onclick="deleteAct(event)">
       <img src="./assets/sidebar-item-delete.svg" alt="" />
     </div>
   </div>
@@ -1947,4 +1947,7 @@ function addSideBarCartDataItem(item, index) {
   </div>
 </div>`;
   parentDiv.innerHTML += itemDiv;
+}
+function deleteAct(event) {
+  console.log(event.target.parentNode);
 }
