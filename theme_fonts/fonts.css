@@ -53,7 +53,7 @@
     line-height: 20px;
     letter-spacing: -0.1px;
 }
-.section-heading{
+.font-home-section-heading{
     color: var(--primary-text-black); 
     font-size: 24px;
     font-family: Inter; 
@@ -62,8 +62,9 @@
     text-align: left;
     line-height: initial !important; 
     text-transform: capitalize;
+    margin-bottom: -15px;
 }
-.font-section-subheading{
+.font-home-section-subheading{
     color: var(--home-gray-text);
     font-size: 16px;
     font-family: Inter; 
@@ -72,6 +73,7 @@
     text-align: left;
     line-height: initial !important; 
     padding: 0.125rem 0rem 0rem 0rem;
+    margin-bottom: 8px;
 }
 .font-home-item-title{
     color: var(--primary-text-black); 
@@ -81,7 +83,21 @@
     font-weight: 600;
     text-align: left;
     line-height: initial !important;
-    line-height: 1.2;
+    line-height: 1.2; 
+}
+.font-home-carousel-title{
+    color: var(--primary-text-black);
+    font-size: 16px;
+    font-family: Inter;
+    letter-spacing: 0rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 0.5rem 0rem 0rem;
+    text-transform: capitalize;
+    margin: 0rem;
+    margin-bottom: 5px; 
+    overflow: hidden;
+    line-height: initial !important;
 }
 .font-home-item-description{
     color: var(--home-gray-text);
@@ -310,3 +326,14 @@
     font-weight: 400;
 }
 
+@media screen and (max-width:912px) {
+    .font-home-item-title ,.font-home-item-description{
+        font-size: 12px;
+    }
+    .font-home-section-heading{
+        font-size: 20px;
+    }
+    .font-home-section-subheading{
+        font-size: 12px;
+    }
+}
