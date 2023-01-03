@@ -324,18 +324,9 @@
     font-size: 38px;
     font-weight: 400;
 }
+
 /* sidebar-cart-fonts */
-@media screen and (max-width:912px) {
-    .font-home-item-title ,.font-home-item-description{
-        font-size: 12px;
-    }
-    .font-home-section-heading{
-        font-size: 20px;
-    }
-    .font-home-section-subheading{
-        font-size: 12px;
-    }
-}.font-cart-sidebar-heading{
+.font-cart-sidebar-heading{
     color: var(--primary-text-black);
     font-size: 20px;
     font-weight: 600;
@@ -408,4 +399,15 @@
     line-height: 16px;
     letter-spacing: 0.1px; 
     cursor: pointer;
+}
+@media screen and (max-width:912px) {
+    .font-home-item-title ,.font-home-item-description{
+        font-size: 12px;
+    }
+    .font-home-section-heading{
+        font-size: 20px;
+    }
+    .font-home-section-subheading{
+        font-size: 12px;
+    }
 }
