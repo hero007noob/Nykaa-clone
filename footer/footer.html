@@ -9,28 +9,44 @@
     <!-- css  -->
     <link rel="stylesheet" href="footer.css" />
 
-    <!-- font-awesome  -->
+    <!-- font-awesome - social media icons -->
     <script
       src="https://kit.fontawesome.com/b78a585d56.js"
       crossorigin="anonymous"
     ></script>
 
     <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
 
-    <style>
-   
-      
-    </style>
   </head>
+
+  <!-- note =>
+    when you copy the footer make sure to take the footer-images folder also.
+    Google fonts link and font awesome(icons) link are not required if it's already in your page
+  -->
+  
   <body>
+    <div class="footer-playstore">
+      <div>
+        <i class="fa fa-mobile"></i>
+        EXPERIENCE THE NYKAA MOBILE APP
+      </div>
+
+      <div>
+        <img src="./Asset/google-playstore.svg" alt="google play store" />
+        <img src="./Asset/applestore.svg" alt="Apple play store" />
+      </div>
+    </div>
+
     <footer id="footer">
       <div class="footer-layer-1">
         <div class="footer-list-div">
-          <header><img src="../Asset/nyka-log.svg" alt=""></header>
+          <header><img src="./Asset/nyka-log.svg" alt="" /></header>
           <ul>
             <li>Who are we</li>
             <li>Careers</li>
@@ -92,7 +108,6 @@
           </ul>
         </div>
       </div>
-
       <div class="footer-layer-2">
         <div class="footer-activity">
           <img
@@ -102,7 +117,7 @@
           <div>
             <h4>FREE SHIPPING</h4>
             <p>
-              On Orders Above <br />
+              On Orders Above 
               ₹299
             </p>
           </div>
@@ -126,12 +141,11 @@
           />
           <div>
             <h4>
-              100% <br />
+              100% 
               AUTHENTIC
             </h4>
             <p>
-              Products Sourced <br />
-              Directly
+              Products Sourced <span> Directly </span>
             </p>
           </div>
         </div>
@@ -183,6 +197,43 @@
         </div>
       </div>
 
+
+      <div class="footer-social-media phone-social-media">
+        <span> Show us some love ❤ on social media </span>
+
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/mynykaa/?ref=badge">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/MyNykaa">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCoaH2UtB1PsV7av17woV1BA"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com/mynykaa/">
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/MyNykaa">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
       <div class="footer-layer-3">
         <div>
           <div>
@@ -218,5 +269,4 @@
       </div>
     </footer>
   </body>
-  <script src="footer.js"></script>
 </html>
