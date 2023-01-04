@@ -35,14 +35,16 @@
       <form id="sign-up-form" action="">
         <img src="./Images/nyka-log.svg" alt="nykaa-logo" />
         <h1>Log in</h1>
-        <input type="text" placeholder="Email  or Phone Number" required />
 
+        <div class="signup-warning email-warning"></div>
         <input
-          type="password"
-          placeholder="Password"
-          required
-          id="login-password"
+          type="text"
+          id="email-input"
+          placeholder="Email or Phone Number"
         />
+
+        <div class="signup-warning password-warning"></div>
+        <input type="password" placeholder="Password" id="login-password" />
 
         <!-- eye icons  -->
         <div class="eye-icon">
@@ -50,7 +52,7 @@
           <i id="eye-slash-id" class="eye-slash-icon fa-solid fa-eye-slash"></i>
         </div>
 
-        <input type="submit" value="Login" required />
+        <input type="submit" value="Login" />
 
         <p class="sign-up-already-ac">
           <a href="#"

@@ -109,7 +109,7 @@ input[type="number"]::-webkit-inner-spin-button {
 .eye-icon {
   
   position: relative;
-  bottom: 37px;
+  bottom: 26px;
   left: 92%;
   cursor: pointer;
   width: 19px;
@@ -126,7 +126,7 @@ input[type="number"]::-webkit-inner-spin-button {
   height: 0px;
   width: 40.5%;
   position: relative;
-  top: 41px;
+  top: 31px;
   right: 97px;
   border: 1px solid #ebdddd;
 }
@@ -136,7 +136,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 40.5%;
   position: relative;
   left: 94px;
-  bottom: 25px;
+  bottom: 11px;
   border: 1px solid #ebdddd;
 }
 
@@ -190,6 +190,19 @@ input[type="number"]::-webkit-inner-spin-button {
   text-decoration: none;
 }
 
+
+/* form validation  */
+.signup-warning{
+  color: var(--btn-pink);
+  height: 16px;
+  width: 100%;
+  font-size: .7rem;
+  font-weight: 600;
+  position: relative;
+  top: 6px;
+}
+
+
 /* responsive  */
 @media screen and (max-width: 1024px) {
   #sign-up-form {
@@ -217,3 +230,5 @@ input[type="number"]::-webkit-inner-spin-button {
     width: 70%;
   }
 }
+
+

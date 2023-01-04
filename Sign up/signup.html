@@ -7,7 +7,10 @@
     <title>Nykaa - Sign UP</title>
 
     <!-- title favicon icon  -->
-    <link rel="icon" href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png" />
+    <link
+      rel="icon"
+      href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
+    />
 
     <!-- fontawesome  -->
     <script
@@ -28,34 +31,39 @@
   </head>
 
   <body>
-
     <div class="sign-up-body">
-      
-
       <form id="sign-up-form" action="">
-        
         <img src="./Images/nyka-log.svg" alt="nykaa-logo" />
         <h1>Sign up</h1>
-        <input type="email" placeholder="Email ID" required />
 
-        
+        <div class="signup-warning username-warning"></div>
+        <input type="text" placeholder="Full Name" class="username" />
+
+        <div class="signup-warning email-warning"></div>
+        <input type="email" class="email-input" placeholder="Email ID" />
+
+        <div class="signup-warning phonenumber-warning"></div>
         <div class="input-container">
-          <input type="number" class="phonenumber-input" placeholder="Phone Number" />
+          <input
+            type="number"
+            class="phonenumber-input"
+            placeholder="Phone Number"
+          />
         </div>
-        
-        <input type="password" placeholder="Password" id="signin-password"/>
+
+        <div class="signup-warning password-warning"></div>
+        <input type="password" placeholder="Password" id="signin-password" />
 
         <div class="eye-icon">
-          <i  class="far fa-eye" id="togglePassword"></i>
+          <i class="far fa-eye" id="togglePassword"></i>
           <i id="eye-slash-id" class="eye-slash-icon fa-solid fa-eye-slash"></i>
         </div>
 
-
         <input type="submit" value="Create Account" />
 
-        <hr class="hr-left">
-        <p class="sign-up-or">  OR</p>
-        <hr class="hr-right">
+        <hr class="hr-left" />
+        <p class="sign-up-or">OR</p>
+        <hr class="hr-right" />
 
         <button class="sign-up-google-btn">
           <img
@@ -65,11 +73,12 @@
           <p>Sign up with google</p>
         </button>
 
-        <p class="sign-up-already-ac">Already have an account? <a href="login.html">  <span class="already-ac">Log in</span> </a> </p>
-
+        <p class="sign-up-already-ac">
+          Already have an account?
+          <a href="login.html"> <span class="already-ac">Log in</span> </a>
+        </p>
       </form>
-
     </div>
   </body>
   <script src="signup.js"></script>
-</html>
+</html>`
