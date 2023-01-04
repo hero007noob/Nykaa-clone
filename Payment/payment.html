@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,87 +14,442 @@
     <link rel="stylesheet" href="../theme_fonts/theme.css" />
     <link rel="stylesheet" href="./payment.css" />
     <link rel="stylesheet" href="../theme_fonts/fonts.css" />
-</head>
-<body>
+  </head>
+  <body>
     <div id="header">
-        <div id="logo">
+      <div id="logo">
+        <img
+          class="header-logo"
+          src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg"
+          alt=""
+        />
+      </div>
+      <div id="location">
+        <div class="modules">
           <img
-            class="header-logo"
-            src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/nykaa-logo.svg"
+            class="module-img"
+            src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg"
             alt=""
           />
+          <p>Sign-Up</p>
+          <hr class="header-hr"">
         </div>
-        <div id="location">
-          <div class="modules">
-            <img
-              class="module-img"
-              src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg"
-              alt=""
-            />
-            <p>Sign-Up</p>
-            <hr class="header-hr"">
-          </div>
-          <div class="modules">
-            <img
-              class="module-img"
-              src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg"
-              alt=""
-            />
-            <p>Address</p>
-            <hr class="header-hr" />
-          </div>
-          <div class="modules">
-            <img
-              class="module-img"
-              src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg"
-              alt=""
-            />
-            <p>Payment</p>
+        <div class="modules">
+          <img
+            class="module-img"
+            src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg"
+            alt=""
+          />
+          <p>Address</p>
+          <hr class="header-hr" />
+        </div>
+        <div class="modules">
+          <img
+            class="module-img"
+            src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/edit-icon.svg"
+            alt=""
+          />
+          <p>Payment</p>
+        </div>
+      </div>
+    </div>
+    <div id="content">
+      <div id="address-text-section">
+        <div id="address-text">
+          <h1 class="font-address-title">Choose Payment Method</h1>
+          <p class="font-address-description">
+            Choose the payment method you prefer.
+          </p>
+          <div id="addpaymentmethod">
+            <h2>Payment Method Options</h2>
+            <div class="tab">
+              <button
+                id="firsttab"
+                class="tablinks"
+                onclick="openCity(event, 'credit')"
+              >
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Credit_Debit_Card.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">
+                      Credit/Debit card
+                    </h3>
+                    <p class="font-payment-tab-button-p">
+                      Visa, Mastercard, Rupay & more
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'upi')">
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPI.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">UPI</h3>
+                    <p class="font-payment-tab-button-p">
+                      Google Pay, PhonePe, Paytm & more
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'netbanking')">
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Netbanking.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">NetBanking</h3>
+                    <p class="font-payment-tab-button-p">
+                      Pay through your favourite bank
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'shopnow')">
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Snpl.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">
+                      Shop now & Pay later
+                    </h3>
+                    <p class="font-payment-tab-button-p">
+                      Zest money, Simpl & more
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'cod')">
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/COD.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">Cash on delivery</h3>
+                    <p class="font-payment-tab-button-p">
+                      Pay at your doorstep
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'paytm')">
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/PaytmPaymentOption.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">Paytm Wallet</h3>
+                    <p class="font-payment-tab-button-p">
+                      Link your Paytm wallet and pay
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              <button class="tablinks" onclick="openCity(event, 'giftcard')">
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/GiftCard.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">Gift card</h3>
+                    <p class="font-payment-tab-button-p">
+                      One card for all Nykaa apps
+                    </p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                id="lasttab"
+                class="tablinks"
+                onclick="openCity(event, 'emi')"
+              >
+                <div class="tab-button">
+                  <div class="tab-button-img">
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/EMI.svg"
+                      alt=""
+                    />
+                  </div>
+                  <div class="tab-button-text">
+                    <h3 class="font-payment-tab-button-h3">EMI</h3>
+                    <p class="font-payment-tab-button-p">Easy installments</p>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <div id="credit" class="tabcontent">
+              <h3 class="font-payment-content-h3">Credit/Debit Card</h3>
+              <div >
+                <p class="font-payment-content-p">WE ACCEPT</p>
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/VISA.svg"
+                  alt=""
+                />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/mastercard.svg"
+                  alt=""
+                />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/Rupay.svg"
+                  alt=""
+                />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/AMEX.svg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div>
+                  <input id="cardnumber" class="input-details" type="number" min="0" max="16" placeholder="Card Number" />
+                </div>
+                <div class="month-cvv">
+                  <input
+                    type="text"
+                    id="expdate"
+                    class="input-details"
+                    placeholder=" Expiry(MM / YY)"
+                    maxlength="5"
+                  />
+                  <input type="password" class="input-details" value="" autocomplete="off" placeholder="CVV">
+                </div>
+              </div>
+              <div>
+                <input type="checkbox" >
+                <p class="font-payment-content-p">Save this card securely for future</p>
+              </div>
+              <button class="payment-verify-btn">Submit</button>
+            </div>
+
+            <div id="upi" class="tabcontent">
+              <h3 class="font-payment-content-h3">UPI</h3>
+              <hr class="Section-hr" />
+              <p class="font-payment-content-p">1.Select UPI App</p>
+              <div id="upi-logos">
+                <div >
+                  <div>
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/GPay_01.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="font-payment-content-p">Google Pay</p>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/PhonePe.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="font-payment-content-p">PhonePe</p>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/Paytm.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="font-payment-content-p">Paytm</p>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/UPI-Logo-vector 1.svg"
+                      alt=""
+                    />
+                  </div>
+                  <p class="font-payment-content-p">Other UPI</p>
+                </div>
+              </div>
+              <div>
+                <p class="font-payment-content-p">2.Enter UPI/VPA Id</p>
+                <input type="text" class="input-details"/>
+                <button class="payment-verify-btn">Verify & Pay<span class="amt-verify-btn">0</span></button>
+              </div>
+            </div>
+
+            <div id="netbanking" class="tabcontent">
+              <h3 class="font-payment-content-h3">Net Banking</h3>
+              <hr class="section-hr" />
+              <div class="netbanking-checkbox"  >
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7AXIS.svg" alt="" />
+                <p class="net-banking-p">AXIS</p>
+                 <input type="checkbox" class="netbankin-checkbox-box" >
+              </div>
+              <div class="netbanking-checkbox">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7HDFC.svg" alt="" />
+                <p class="net-banking-p">HDFC</p>
+                <input type="checkbox"/>
+              </div>
+              <div class="netbanking-checkbox">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7ICICI.svg" alt="" />
+                <p class="net-banking-p">ICICI</p>
+                <input type="checkbox"/>
+              </div>
+              <div class="netbanking-checkbox">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7KOTAK.svg" alt="" />
+                <p class="net-banking-p">KOTAK</p>
+                <input type="checkbox"/>
+              </div>
+              <div class="netbanking-checkbox">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7SBI.svg" alt="" />
+                <p class="net-banking-p">SBI</p>
+                <input type="checkbox"/>
+              </div>
+              <div class="netbanking-checkbox">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7YES.svg" alt="" />
+                <p class="net-banking-p">YES</p>
+                <input type="checkbox"/>
+              </div>
+              <div class="netbanking-checkbox">
+                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7Otherbank.svg" alt="" />
+                <p class="net-banking-p">OTHER BANK</p>
+                <input type="checkbox"/>
+              </div>
+              <div>
+                <button class="payment-verify-btn">Pay <span class="amt-verify-btn"></span></button>
+              </div>
+              <div>
+                
+              </div>
+            </div>
+
+            <div id="shopnow" class="tabcontent">
+              <h3 class="font-payment-content-h3">Shop now & pay later</h3>
+              <hr class="Section-hr" >
+              <div>
+                <input type="number" class="input-details" placeholder="Phone Number">
+              </div>
+              <div>
+                <div class="snpl-content">
+                  <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Zest_Simpl/Simpl.svg" alt="">
+                  <div>
+                    <h4 class="net-banking-p" >Simpl</h4>
+                    <p class="font-payment-content-p">You are not eligible for this payment option</p>
+                  </div>
+                </div>
+                <div class="snpl-content">
+                  <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Zest_Simpl/Zest.svg" alt="">
+                  <div>
+                    <h4 class="net-banking-p">Zest Money</h4>
+                    <p class="font-payment-content-p">Oopa! You are not eligible to use ZestMoney fornow</p>
+
+                  </div>
+                </div>
+                <div>
+                  <p class="font-payment-content-p">You can pay <span class="amt-verify-btn">0</span></p>
+                  <p class="font-payment-content-p">Proceed with other payments</p>
+                </div>
+              </div>
+            </div>
+
+            <div id="cod" class="tabcontent">
+              <h3 class="font-payment-content-h3">Cash On Delivery</h3>
+              <hr class="Section-hr">
+              <button class="payment-verify-btn">Place Order</button>
+            </div>
+
+            <div id="paytm" class="tabcontent">
+              <h3 class="font-payment-content-h3">Paytm Wallet</h3>
+              <hr class="Section-hr">
+              <input type="number" class="input-details" placeholder="Mobile Number">
+              <button class="payment-verify-btn">Link</button>
+            </div>
+
+            <div id="giftcard" class="tabcontent">
+              <h3 class="font-payment-content-h3">Gift Card</h3>
+              <hr class="Section-hr">
+              <div>
+                <input type="number" class="input-details" placeholder="Gift Card Number">
+              </div>
+              <div id="giftcard-pin">
+                <input type="password" class="input-details" placeholder="PIN">
+                <button class="payment-verify-btn">Submit</button>
+              </div>
+            </div>
+
+            <div id="emi" class="tabcontent">
+              <h3 class="font-payment-content-h3">EMI</h3>
+              <hr class="Section-hr">
+              <div>
+                <button class="payment-verify-btn">Pay <span class="amt-verify-btn"></span></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div id="content">
-        <div id="address-text-section">
-          <div id="address-text">
-            <h1 class="font-address-title">Choose Payment Method</h1>
-            <p class="font-address-description">
-              Choose the payment method you prefer.
-            </p>
-            <div id="addpaymentmethod">
-              
+      <div id="details-section">
+        <div id="details">
+          <img
+            src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/payment-icon.svg"
+            alt=""
+          />
+          <div class="collapse">
+            <button class="collapsible col1 font-address-regular">
+              Bag <span id="numberofitems" class="spanelemright">0</span>
+            </button>
+            <div class="collapse-content">
+              <div class="cartitem"></div>
             </div>
           </div>
-        </div>
-        <div id="details-section">
-          <div id="details">
-            <img
-              src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/payment-icon.svg"
-              alt=""
-            />
-            <div class="collapse">
-              <button class="collapsible col1 font-address-regular">Bag <span id="numberofitems" class="spanelemright">0</span></button>
-              <div class="collapse-content">
-                  <div class="cartitem"></div>
-              </div>
+          <div class="collapse">
+            <button class="collapsible col2 font-address-regular">
+              Price Detail <span id="cartvalue" class="spanelemright">0</span>
+            </button>
+            <div class="collapse-content col1 col2">
+              <div class="cartitem"></div>
             </div>
-            <div class="collapse">
-              <button class="collapsible col2  font-address-regular">Price Detail <span id="cartvalue" class="spanelemright">0</span></button>
-              <div class="collapse-content col1 col2" >
-                  <div class="cartitem"></div>
-              </div>
+          </div>
+          <div id="secure">
+            <div>
+              <p class="font-address-regular">
+                Buy authentic products. Pay securely. Easy returns and exchange
+              </p>
             </div>
-            <div id="secure">
-              <div>
-                  <p class="font-address-regular">Buy authentic products. Pay securely. Easy returns and exchange</p>
-              </div>
-              <div>
-                  <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/pay-secure-lock.png" alt="">
-              </div>
-              
+            <div>
+              <img
+                src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/pay-secure-lock.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
       </div>
-</body>
-<script src="payment.js"></script>
+    </div>
+  </body>
+  <script src="payment.js"></script>
 </html>
