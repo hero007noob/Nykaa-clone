@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nykaa - Login</title>
+
+    <!-- title favicon icon  -->
+    <link
+      rel="icon"
+      href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
+    />
+
+    <!-- fontawesome  -->
+    <script
+      src="https://kit.fontawesome.com/b78a585d56.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- css  -->
+    <link rel="stylesheet" href="login.css" />
+
+    <!-- google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="sign-up-body">
+      <form id="sign-up-form" action="">
+        <img src="./Images/nyka-log.svg" alt="nykaa-logo" />
+        <h1>Log in</h1>
+
+        <div class="signup-warning email-warning"></div>
+        <input
+          type="text"
+          id="email-input"
+          placeholder="Email or Phone Number"
+        />
+
+        <div class="signup-warning password-warning"></div>
+        <input type="password" placeholder="Password" id="login-password" />
+
+        <!-- eye icons  -->
+        <div class="eye-icon">
+          <i class="far fa-eye" id="togglePassword"></i>
+          <i id="eye-slash-id" class="eye-slash-icon fa-solid fa-eye-slash"></i>
+        </div>
+
+        <input type="submit" value="Login" />
+
+        <p class="sign-up-already-ac">
+          <a href="#"
+            ><u> Forgot Password </u> <span class="already-ac"></span>
+          </a>
+        </p>
+
+        <hr class="hr-left" />
+        <p class="sign-up-or">OR</p>
+        <hr class="hr-right" />
+
+        <button class="sign-up-google-btn">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
+            alt="google-logo"
+          />
+          <p>Login with google</p>
+        </button>
+
+        <p class="sign-up-already-ac">
+          Don't have an account?
+          <a href="signup.html">
+            <span class="already-ac">Sign up for free</span>
+          </a>
+        </p>
+      </form>
+    </div>
+  </body>
+  <script src="login.js"></script>
+</html>
