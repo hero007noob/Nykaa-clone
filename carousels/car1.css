@@ -1,16 +1,35 @@
-.swiper {
-    width: 100%;
-    display: flex;
-}
-
-.swiper img{
-    display: block;
-    width: 40%;
-    margin: auto;
-}
-
-swiper-pagination img {
-    width: 100%;
-    margin: 15px;
-    border-radius: 15px;
-}
+.carousel-container {
+     width: 100%; 
+     margin: auto; 
+     
+     overflow: hidden; 
+     position: relative; 
+    } 
+    .carousel-slide{ 
+        
+        width     : 100%;
+        display   : inline-flex;
+        
+    } 
+    .carousel-slide img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    #prevBtn{ 
+        position: absolute; 
+        top: 50%; 
+        z-index: 10; 
+        left: 5%; 
+        font-size: 30px; 
+        color: white; 
+        cursor: pointer; 
+    } 
+    #nextBtn{ 
+        position: absolute; 
+        top: 50%; 
+        z-index: 10; 
+        right: 5%; 
+        font-size: 30px; 
+        color: white; 
+        cursor: pointer; 
+    }
