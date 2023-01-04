@@ -10,6 +10,7 @@
 }
 .Bathchild{
     display: flex;
+    position: relative;
 }
 
 .Bathchild2{
@@ -62,10 +63,13 @@
 .font-product-bestseller{
     height: 20px;
 }
+.Bathmenu{
+    width: 30%;
+}
 .Bathchild1{
     gap: 50px;
     width: 30%;
-    position: relative;
+    position: fixed;
     max-width: 320px;
     background-color: #fff;
    margin-right: 15px;
@@ -125,6 +129,7 @@
     margin-right: 12px;
     border: 1.5px solid #c0c0c0;
     transition: all 0.3s ease-in-out;
+    pointer-events: none;
 }
 .check-icon{
     font-size: 11px;
@@ -133,6 +138,7 @@
 }
 .Bc1-item-text{
     color: #333;
+    pointer-events: none;
 }
 .Bc1-select-btn.open ~ .Bc1-list-items,.Bc1-select-btn2.open ~ .Bc1-list-items-ul2,.Bc1-select-btn3.open ~ .Bc1-list-items-ul3,.Bc1-select-btn4.open ~ .Bc1-list-items-ul4,.Bc1-select-btn5.open ~ .Bc1-list-items-ul5,.Bc1-select-btn6.open ~ .Bc1-list-items-ul6,.Bc1-select-btn7.open ~ .Bc1-list-items-ul7,.Bc1-select-btn8.open ~ .Bc1-list-items-ul8,.Bc1-select-btn9.open ~ .Bc1-list-items-ul9,.Bc1-select-btn10.open ~ .Bc1-list-items-ul10{
     display: block;
