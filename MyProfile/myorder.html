@@ -6,99 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
     <script src="https://kit.fontawesome.com/09ea9ed7f5.js" crossorigin="anonymous"></script>
-    <style>
-        body{
-            font-family: sans-serif;
-            background: rgb(231, 229, 229);
-        }
-        .profile .profileList{
-            display:inline-block;
-            box-sizing: border-box;
-            align-items: center;
-            width: 20rem;
-        }
-        .profileList li{
-            display:block;
-            border: 1px solid rgb(231, 229, 229);
-            width: 100%;
-            height: 100%;
-            background:white;
-        }
-        .profileList li a{
-            display:block;
-            text-decoration: none;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            color: rgb(51, 50, 50);
-            font-weight: 600;
-            
-            align-items: center;
-            justify-content: center;
-        }
-        .profileList li a:hover{
-            color:#fc2779;
-        }
-        .profileList li a:active{
-            color:#fc2779;
-            border-right: 4px solid #fc2779;
-        }
-        .profile{
-            margin-left: 9rem;
-        }
-        .profile a{
-            text-decoration: none;
-            color: rgb(43, 42, 42);
-            font-weight: 600;
-        }
-        .profile i{
-            font-size: .7rem;
-        }
-        /* a{
-            padding:1rem;
-        } */
-        .popup{
-            background-color: white;
-            width: 17rem;
-            text-align: center;
-            padding: 1rem;
-            position: absolute;
-            left: 50%;
-            top:0%;
-            transform: translate(-50%,-50%) scale(0.1);
-            visibility: hidden;
-            transition: transform 0.5s ,top 0.5s;
-        }
-        .popback{
-            top:50%;
-            transform: translate(-50%,-50%) scale(1);
-            visibility: visible;
-            transition: transform 0.7s ,bottom 0.5s;
-        }
-        .popup li{
-            display: block;
-            border: 1px solid rgb(231, 229, 229);
-            height: 2.5rem;
-            padding-top: 1rem;
-        }
-        .popup ul{
-            width:100%;
-            align-items: center;
-            justify-content: center;
-            margin-left: -2.4rem;
-            border:#fc2779;
-            color: #fc2779;
-           
-        }
-    </style>
+    <link rel="stylesheet" href="myorder.css">
 </head>
 <body>
+    <div class="DisPageName">
+        <a href="">Home</a>
+        <span><i class="fa-solid fa-greater-than"></i></span> 
+        <span class="PageName">My Order</span>
+    </div>
     <div class="profile">
-        <div>
-            <a href="">Home</a>
-            <span><i class="fa-solid fa-greater-than"></i></span> 
-            <span class="PageName">My Order</span>
-        </div>
         <ul class="profileList">
             <li><a href="Myprofile.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><title>user profile icon</title><path fill="currentcolor" fill-rule="nonzero" d="M7 0C3.138 0 0 3.138 0 7c0 3.684 2.855 6.706 6.47 6.978l.022.002c.168.012.337.02.508.02.171 0 .34-.008.508-.02l.022-.002C11.145 13.706 14 10.684 14 7c0-3.862-3.138-7-7-7zm0 .609A6.387 6.387 0 0 1 13.391 7c0 1.75-.702 3.331-1.838 4.484-.521-.323-1.256-.4-1.801-.581-.616-.204-1.349-.517-1.535-.86.736-.093 2.435-.407 2.435-1.1a.304.304 0 0 0-.1-.225c-.21-.19-.197-1.18-.188-1.975.019-1.512.04-3.225-.845-4.09-.348-.34-.805-.513-1.358-.515-.282-.195-.687-.305-1.15-.305h-.005c-3.173.228-3.25 3.19-3.3 5.149-.02.737-.04 1.572-.255 1.762a.305.305 0 0 0-.103.228c0 .66 1.222.916 2.435 1.071-.172.356-1.206.71-1.826.914-.538.177-1.05.216-1.514.524A6.368 6.368 0 0 1 .61 7 6.387 6.387 0 0 1 7 .609z"></path></svg></i> My Profile</a></li>
             <li><a href="Mywallet.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 36 36"><title>wallet icon</title><path fill="currentColor" d="M26.25 0c-.67.01-1.41.154-2.33.393-2.642.681-17.84 4.791-17.84 4.791-2.487.914-4.004 1.748-4.928 2.959C.234 9.347.03 10.793.027 12.515v.55c-.01.105-.027.21-.027.314v17.908C0 33.876 2.173 36 4.821 36H31.18c2.647 0 4.82-2.124 4.82-4.713V13.248c0-2.67-2.444-4.896-5.143-4.896H5.143c-.961 0-.96.008-1.68.447.213-.447 1.678-1.107 4.492-1.956.15-.053 14.056-3.782 16.61-4.44.851-.22 1.316-.051 1.685.215.37.266.396.59.396 1.257v2.802h2.497V3.875c0-.726-.047-1.341-.188-1.91-.14-.57-.415-1.13-.91-1.493C27.549.109 26.92-.01 26.25 0zM5.747 10.573h24.672c1.603 0 3.29 1.557 3.29 3.09V30.97c0 1.614-1.33 2.914-2.981 2.914H5.438c-1.654 0-2.98-1.297-2.98-2.914V14.968l.025-1.331c.048-.547.334-1.325.874-1.935.588-.665 1.39-1.13 2.39-1.13zm9.187 9.82s-.468 7.619-.57 8.762c-.103 1.143.037 1.966 1.062 1.966 1.025 0 1.449-1.19 1.449-1.19s.85-2.571 2.474-6.157c1.623-3.587 2.428-5.067 2.428-5.067s2.196-4.286 2.669-5.225c.472-.94.417-1.144.02-1.342-.397-.199-1.315-.314-1.925.334-.61.648-2.108 3.88-2.108 3.88l-2.835 5.719s-.105-1.2.127-3.57c.231-2.368.667-5.428-.138-5.833-.805-.405-1.482-.116-2.104.825-.621.94-3.238 6.503-3.238 6.503s-4.422 9.453-4.527 9.937c-.105.484-.08 1.23 1.099 1.23s1.7-.354 2.563-2.512c.864-2.16 3.554-8.26 3.554-8.26zm14.637-.31c-1.185 0-2.142.936-2.142 2.094 0 1.159.957 2.095 2.142 2.095 1.182 0 2.143-.936 2.143-2.095 0-1.158-.96-2.094-2.143-2.094z"></path></svg></i> My Wallet</a></li>
@@ -114,6 +30,14 @@
                 <li>Logout from all devices</li>
                 <li class="cancle" id="popback">Cancle</li>
             </ul>
+        </div>
+        <div class="orderbox">
+            <div class="orderheading"><i class="fa-solid fa-arrow-left"></i> <h4> My Order</h4></div>
+            <div class="orderdiv">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <h5>No Order</h5>
+                <h6>start Shoping</h6>
+            </div>
         </div>
     </div>
     

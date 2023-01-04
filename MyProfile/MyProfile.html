@@ -6,125 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Profile</title>
     <script src="https://kit.fontawesome.com/09ea9ed7f5.js" crossorigin="anonymous"></script>
-    <style>
-        body{
-            font-family: sans-serif;
-            background: rgb(231, 229, 229);
-        }
-        .profile .profileList{
-            display:inline-block;
-            box-sizing: border-box;
-            align-items: center;
-            width: 20rem;
-            margin-top: 5rem;
-            margin-left: -7rem;
-        }
-        .profileList li{
-            display:block;
-            border: 1px solid rgb(231, 229, 229);
-            /* width: 100%;
-            height: 100%; */
-            background:white;
-        }
-        .profileList li a{
-            display:block;
-            text-decoration: none;
-            align-items: center;
-            justify-content: center;
-            padding: 1rem;
-            color: rgb(51, 50, 50);
-            font-weight: 600;
-            
-            align-items: center;
-            justify-content: center;
-        }
-        .profileList li a:hover{
-            color:#fc2779;
-        }
-        .profileList li a:active{
-            color:#fc2779;
-            border-right: 4px solid #fc2779;
-        }
-        .profile{
-            display:flex;
-            margin-left: 9rem;
-        }
-        .profile a{
-            text-decoration: none;
-            color: rgb(43, 42, 42);
-            font-weight: 600;
-        }
-        .profile i{
-            font-size: .7rem;
-        }
-        /* a{
-            padding:1rem;
-        } */
-        .popup{
-            background-color: white;
-            width: 17rem;
-            text-align: center;
-            padding: 1rem;
-            position: absolute;
-            left: 50%;
-            top:0%;
-            transform: translate(-50%,-50%) scale(0.1);
-            visibility: hidden;
-            transition: transform 0.5s ,top 0.5s;
-        }
-        .popback{
-            top:50%;
-            transform: translate(-50%,-50%) scale(1);
-            visibility: visible;
-            transition: transform 0.7s ,bottom 0.5s;
-        }
-        .popup li{
-            display: block;
-            border: 1px solid rgb(231, 229, 229);
-            height: 2.5rem;
-            padding-top: 1rem;
-        }
-        .popup ul{
-            width:100%;
-            align-items: center;
-            justify-content: center;
-            margin-left: -2.4rem;
-            border:#fc2779;
-            color: #fc2779;
-            
-           
-        }
-        .profilebox{
-            display: flex;
-            margin: auto;
-            background-color: white;
-            width: 60%;
-            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-            margin-top: 2rem;
-        }
-        .profileback{
-            width: 70%;
-            background-image: url("data:image/jpeg;base64,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");
-            margin: 5rem;
-            margin-left: 2rem;
-        }
-        .profileimg{
-            width: 30%;
-            display: flex;
-            margin:auto;
-        }
-        .profiledetail{
-            width: 55%;
-        }
-    </style>
+    <link rel="stylesheet" href="myprofile.css">
+    <link rel="stylesheet" href="profilecommon.css">
 </head>
 <body>
+    <div class="DisPageName">
+        <a href="">Home</a>
+        <span><i class="fa-solid fa-greater-than"></i></span> 
+        <span class="PageName">My Profile</span>
+    </div>
     <div class="profile">
-        <div>
-            <a href="">Home</a>
-            <span><i class="fa-solid fa-greater-than"></i></span> 
-            <span class="PageName">My Profile</span>
-        </div>
         <ul class="profileList">
             <li><a href="Myprofile.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><title>user profile icon</title><path fill="currentcolor" fill-rule="nonzero" d="M7 0C3.138 0 0 3.138 0 7c0 3.684 2.855 6.706 6.47 6.978l.022.002c.168.012.337.02.508.02.171 0 .34-.008.508-.02l.022-.002C11.145 13.706 14 10.684 14 7c0-3.862-3.138-7-7-7zm0 .609A6.387 6.387 0 0 1 13.391 7c0 1.75-.702 3.331-1.838 4.484-.521-.323-1.256-.4-1.801-.581-.616-.204-1.349-.517-1.535-.86.736-.093 2.435-.407 2.435-1.1a.304.304 0 0 0-.1-.225c-.21-.19-.197-1.18-.188-1.975.019-1.512.04-3.225-.845-4.09-.348-.34-.805-.513-1.358-.515-.282-.195-.687-.305-1.15-.305h-.005c-3.173.228-3.25 3.19-3.3 5.149-.02.737-.04 1.572-.255 1.762a.305.305 0 0 0-.103.228c0 .66 1.222.916 2.435 1.071-.172.356-1.206.71-1.826.914-.538.177-1.05.216-1.514.524A6.368 6.368 0 0 1 .61 7 6.387 6.387 0 0 1 7 .609z"></path></svg></i> My Profile</a></li>
             <li><a href="Mywallet.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 36 36"><title>wallet icon</title><path fill="currentColor" d="M26.25 0c-.67.01-1.41.154-2.33.393-2.642.681-17.84 4.791-17.84 4.791-2.487.914-4.004 1.748-4.928 2.959C.234 9.347.03 10.793.027 12.515v.55c-.01.105-.027.21-.027.314v17.908C0 33.876 2.173 36 4.821 36H31.18c2.647 0 4.82-2.124 4.82-4.713V13.248c0-2.67-2.444-4.896-5.143-4.896H5.143c-.961 0-.96.008-1.68.447.213-.447 1.678-1.107 4.492-1.956.15-.053 14.056-3.782 16.61-4.44.851-.22 1.316-.051 1.685.215.37.266.396.59.396 1.257v2.802h2.497V3.875c0-.726-.047-1.341-.188-1.91-.14-.57-.415-1.13-.91-1.493C27.549.109 26.92-.01 26.25 0zM5.747 10.573h24.672c1.603 0 3.29 1.557 3.29 3.09V30.97c0 1.614-1.33 2.914-2.981 2.914H5.438c-1.654 0-2.98-1.297-2.98-2.914V14.968l.025-1.331c.048-.547.334-1.325.874-1.935.588-.665 1.39-1.13 2.39-1.13zm9.187 9.82s-.468 7.619-.57 8.762c-.103 1.143.037 1.966 1.062 1.966 1.025 0 1.449-1.19 1.449-1.19s.85-2.571 2.474-6.157c1.623-3.587 2.428-5.067 2.428-5.067s2.196-4.286 2.669-5.225c.472-.94.417-1.144.02-1.342-.397-.199-1.315-.314-1.925.334-.61.648-2.108 3.88-2.108 3.88l-2.835 5.719s-.105-1.2.127-3.57c.231-2.368.667-5.428-.138-5.833-.805-.405-1.482-.116-2.104.825-.621.94-3.238 6.503-3.238 6.503s-4.422 9.453-4.527 9.937c-.105.484-.08 1.23 1.099 1.23s1.7-.354 2.563-2.512c.864-2.16 3.554-8.26 3.554-8.26zm14.637-.31c-1.185 0-2.142.936-2.142 2.094 0 1.159.957 2.095 2.142 2.095 1.182 0 2.143-.936 2.143-2.095 0-1.158-.96-2.094-2.143-2.094z"></path></svg></i> My Wallet</a></li>
@@ -150,6 +41,13 @@
                     <h5>Add Mobile number  ></h5>
                     <h3>Date of birth: dd/mm/yyyy</h3>
                 </div>
+            </div>
+            <div class="address">
+                <div class="addresshead">
+                    <span>Your Address</span>
+                    <span><button></button> Change Address</span>
+                </div>
+                <div class="addressbox"></div>
             </div>
         </div>
     </div>

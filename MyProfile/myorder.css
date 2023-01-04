@@ -1,0 +1,111 @@
+body{
+    font-family: sans-serif;
+    background: rgb(231, 229, 229);
+}
+.profile .profileList{
+    display:flex;
+    flex-direction: column;
+    width: 14rem;
+    margin-top: 2rem;
+}
+
+.profileList li{
+    display:flex;
+    width:100%;
+    border: 1px solid rgb(231, 229, 229);
+    background:white;
+    margin-left: 1.5rem;
+}
+.DisPageName{
+    display: inline-block;
+    margin: auto;
+    margin-left: 4rem;
+}
+.DisPageName a{
+    text-decoration: none;
+    color: black;
+}
+.profileList li a{
+    display:flex;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    padding: .5rem;
+    color: rgb(51, 50, 50);
+}
+.profileList li :hover{
+    color:#fc2779;
+}
+.profile{
+    display:flex;
+    flex-direction: row;
+}
+.profile a{
+    text-decoration: none;
+    color: rgb(43, 42, 42);
+}
+.profile i{
+    font-size: .7rem;
+}
+.popup{
+    background-color: white;
+    width: 17rem;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    left: 50%;
+    top:0%;
+    transform: translate(-50%,-50%) scale(0.1);
+    visibility: hidden;
+    transition: transform 0.5s ,top 0.5s;
+}
+.popback{
+    top:50%;
+    transform: translate(-50%,-50%) scale(1);
+    visibility: visible;
+    transition: transform 0.7s ,bottom 0.5s;
+}
+.popup li{
+    display: block;
+    border: 1px solid rgb(231, 229, 229);
+    height: 2.5rem;
+    padding-top: 1rem;
+}
+.popup ul{
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    margin-left: -2.4rem;
+    border:#fc2779;
+    color: #fc2779;
+}
+.orderbox{
+    width: 65%;
+    margin-left: 2.4rem;
+    margin-top:2rem;
+}
+.orderheading{
+    padding-left: 1rem;
+    display:flex;
+    align-items: center;
+    background-color: white;
+}
+.orderheading i{
+    margin: 0 1rem;
+    font-size: 1rem;
+}
+.orderdiv{
+    text-align: center;
+    background-color: white;
+    margin-top: 0.2rem;
+}
+.orderdiv i{
+font-size: 3rem;
+color:rgb(230, 225, 225);
+margin-top:2rem;
+}
+.orderdiv h6{
+    color:#fc2779;
+    margin-top: -1rem;
+    padding-bottom: 6rem;
+}

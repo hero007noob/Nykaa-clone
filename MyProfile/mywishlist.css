@@ -1,0 +1,21 @@
+
+.whishlistbox{
+    width: 65%;
+    margin-left: 2.4rem;
+    margin-top:2rem;
+    background-color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+.whishlistbox button{
+    padding: .7rem;
+    color: #fc2779;
+    background-color: white;
+    border:none;
+}
+.whishlistbox button:hover{
+    background-color: rgb(239, 235, 235);
+}
+.whishlistbox img{
+    width: 11rem;
+}
