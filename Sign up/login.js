@@ -95,3 +95,15 @@ function verifyCredentials(emailOrPhone, password) {
 
   return credentialMatch;
 }
+var form = document.querySelector("#sign-up-form");
+form.addEventListener("submit", popUp);
+function popUp() {
+  // put all code in if() if you need to run some validation
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector("p");
+  message.textContent = "Put text here";
+  pop.classList.add("pop");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 2000);
+}
