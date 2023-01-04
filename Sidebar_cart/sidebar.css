@@ -1,6 +1,7 @@
 @import "../theme_fonts/theme.css";
 :root{
     --sidebar-width:390px;
+    --btn-text-white:#fff;
 }
 .cart-sidebar-view{
     display: flex;
@@ -24,6 +25,23 @@
     background-color: white;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+.coupon-sidebar{ 
+    position: absolute; 
+    width: 0px;
+    pointer-events: auto;
+    margin: 0;
+    height: 100%;
+    right: 0;
+    transition: all 250ms;
+    background-color: var(--primary-background);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 1;
+}
+.coupon-sidebar-back-arrow{
+    margin-bottom: -4px;
+    margin-right: 5px;
 }
 .sidebar-dim-overlay{
     background-color: transparent;
@@ -56,6 +74,7 @@ body{
     box-sizing: border-box;
     padding: 0 10px;
     border-bottom: 1px solid rgba(202, 197, 197, 0.685);
+    
 }
 .cart-sidebar__header>div{
     display: flex;
@@ -106,18 +125,111 @@ body{
     justify-content: space-between;
     width: 50%;
 }
-
+/* ? scrollbar */ 
+::-webkit-scrollbar {
+  width: 7px;
+}
+ 
+::-webkit-scrollbar-track {
+  /* background: rgba(136, 136, 136, 0.103); */
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #666;
+    border-radius: 15px;
+}
+ 
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(232,0,113);
+}
 /* ? Item css */
-.sidebar-item {
+.sidebar-item-parent{ 
     position: relative;
-    width: 85%;
+    height: 160px;
+    /* width: 85%; */
+    margin: 15px auto;
+    padding: 0px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.sidebar-item-flip{
+    transform: rotateY(-180deg);
+}
+.sidebar-item {
+    position: absolute;
     padding: 10px;
-    background-color: var(--primary-background);
+    top: 0;
+    left: 20px;
+    right: 20px;
+    width: 85%; 
     margin: 15px auto;
     border-radius: 10px;
-    height: 130px;
+    /* height: 130px; */
+    backface-visibility: hidden; 
     border: 1px solid var(--bottom-border);
   }
+.sidebar-item-delete {
+    position: absolute;
+    padding: 10px;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    width: 85%;
+    transform: rotateY(180deg); 
+    margin: 15px auto;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    height: 140px; 
+    border: 1px solid var(--bottom-border);
+    text-align: center;
+  }
+.sidebar-item-delete>p:first-of-type{
+    margin-top: 0px;
+    pointer-events: none;
+}
+.sidebar-item-delete>div:first-of-type{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 5px 0px 0px 5px;
+    z-index: 100;
+    pointer-events: all; 
+}
+.sidebar-item-delete>div:first-of-type>img{
+    pointer-events: none;
+}
+.sidebar-item-delete>p:nth-child(3){
+    margin-top: 20px;
+}
+.sidebar-item-delete>div:nth-child(4){
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+}
+.sidebar-item-delete>div:nth-child(4)>*{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid var(--bottom-border);
+    padding: 10px 10px;
+    margin: 5px auto;
+    width: 40%; 
+    border-radius: 8px;
+}
+.sidebar-item-delete>div:nth-child(4)>*>*{
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.sidebar-item-removeAction>span{
+     color: rgb(232,0,113);
+}
+.sidebar-item-wishlistAction{
+     background-color: rgb(232,0,113);;
+     color: var(--btn-text-white);
+}
+.sidebar-item-wishlistAction>span{
+     color: var(--primary-background);
+}
   .sidebar-item-top {
     display: flex;
     align-items: flex-start;
@@ -147,14 +259,85 @@ body{
   .sidebar-item__delete-icon > img {
     width: 20px;
     margin-left: auto;
+    pointer-events: none;
   }
   .sidebar-item-price-sec {
     display: flex;
     align-items: center;
     gap: 5px;
   }
-
-
+.sidebar-coupon{
+    display: flex;  
+    padding: 0 10px;  
+    width: 85%; 
+    margin: 35px auto 15px auto;
+    border-radius: 10px; 
+    border: 1px solid var(--bottom-border);
+    justify-content: space-between;
+}
+.sidebar-coupon-logo,.sidebar-coupon-arrow{
+    display: flex;
+    align-items: center;
+}
+.sidebar-coupon-logo>img,.sidebar-coupon-arrow>img{
+    width: 100%;
+}
+.sidebar-price-details{
+    border-radius: 10px; 
+    width: 85%; 
+    padding: 0 10px;  
+    margin:  5px auto  35px auto;
+    border: 1px solid var(--bottom-border);
+}
+.sidebar-price-details>div{
+    display: flex;  
+    padding: 0 20px;
+    border-radius: 10px;  
+    justify-content: space-between;
+}
+/* ? coupon body */
+.coupon-input {
+    width: 85%;
+    margin: 60px auto;
+    background-color: #eceff0;
+    border-radius: 10px;
+    box-shadow: 0 2px 0 0 #999;
+    padding: 8px 10px;
+    display: flex;
+  }
+  .coupon-input:focus-within {
+    box-shadow: 0 2px 0 0 #fc2779;
+  }
+  .coupon-apply {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    color: #999;
+  }
+  #coupon-input-field {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 10px;
+    font-size: medium;
+  }
+  ::placeholder {
+    color: #999;
+  }
+  #coupon-input-field,
+  #coupon-input-field:focus {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+  }
+  .coupon-body-img{
+    width: 85%;
+    margin: auto;
+  }
+  .coupon-body-img>img{
+    width: 100%;
+    min-width: 350px;
+  }
 /* todo Extra classes for demo purposes Delete */
 
 .fa-bag-shopping{

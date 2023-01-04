@@ -1888,6 +1888,9 @@ document.querySelector(".cart-btn").addEventListener("click", openNav);
 document
   .querySelector(".sidebar-dim-overlay")
   .addEventListener("click", closeNav);
+document
+  .querySelector(".cart-sidebar-back-arrow")
+  .addEventListener("click", closeNav);
 
 function openNav(event) {
   console.log("open");
@@ -1902,15 +1905,19 @@ function closeNav(event) {
   let dimOverlay = document.querySelector(".sidebar-dim-overlay");
   sidebar.classList.remove("show-sidebar");
   dimOverlay.classList.remove("sidebar-dim-overlay-enable");
+  closeCoupon();
 }
 function addSideBarCartData(data) {
   data.forEach((item, index) => {
     addSideBarCartDataItem(item, index);
   });
+  addCoupon();
 }
 function addSideBarCartDataItem(item, index) {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
-  const itemDiv = `<div class="sidebar-item">
+  const itemDiv = `
+  <div class="sidebar-item-parent" >
+  <div class="sidebar-item">
   <div class="sidebar-item-top">
     <div class="sidebar-item-img-sec">
       <img
@@ -1945,9 +1952,165 @@ function addSideBarCartDataItem(item, index) {
       <p class="font-sidebar-item-price">${item.price}</p>
     </div>
   </div>
+</div>
+<div class="sidebar-item-delete">
+<div onclick="cancelAct(event)">
+<img src="./assets/sidebar-item-cancel.svg" alt="" >
+</div>
+<p class="font-sidebar-item-price" >Remove Item from Bag?</p>
+<p class="font-cart-sidebar-subheading">Add it to your wishlist to purchase it later!</p>
+<div>
+<div class="sidebar-item-removeAction"><span class="font-sidebar-item-price">Remove</span></div>
+<div class="sidebar-item-wishlistAction"><span class="font-sidebar-item-price">Add To Wishlist</span></div>
+</div>
+<div>
 </div>`;
   parentDiv.innerHTML += itemDiv;
 }
+function addCoupon() {
+  let parentDiv = document.querySelector(".cart-sidebar-all-items");
+  let couponDiv = document.createElement("div");
+  couponDiv.setAttribute("class", "sidebar-coupon");
+  let logoDiv = document.createElement("div");
+  let logo = document.createElement("img");
+  logo.setAttribute("src", "./assets/coupon-logo.svg");
+  logoDiv.appendChild(logo);
+  logoDiv.setAttribute("class", "sidebar-coupon-logo");
+  let textDiv = document.createElement("div");
+  let title = document.createElement("p");
+  title.textContent = "Coupons";
+  title.setAttribute("class", "font-sidebar-item-price");
+
+  let disc = document.createElement("p");
+  disc.textContent = "Apply now and save extra!";
+  disc.setAttribute("class", "font-sidebar-item-regular_pink");
+  textDiv.append(title, disc);
+  textDiv.setAttribute("class", "sidebar-coupon-text");
+  let arrowDiv = document.createElement("div");
+  let arrow = document.createElement("img");
+  arrow.setAttribute(
+    "src",
+    "https://adn-static1.nykaa.com/media/wysiwyg/Payments/Right.svg"
+  );
+  arrowDiv.classList.add("class", "sidebar-coupon-arrow");
+  arrowDiv.appendChild(arrow);
+  couponDiv.append(logoDiv, textDiv, arrowDiv);
+  couponDiv.addEventListener("click", openCoupon);
+  parentDiv.appendChild(couponDiv);
+  addPriceDetails();
+}
+function addPriceDetails() {
+  let parentDiv = document.querySelector(".cart-sidebar-all-items");
+  let priceDetailsDiv = document.createElement("div");
+  priceDetailsDiv.setAttribute("class", "sidebar-price-details");
+  let title = document.createElement("p");
+  title.textContent = "Price Details";
+  title.setAttribute("class", "font-sidebar-price-details");
+  let bagMrpDiv = document.createElement("div");
+  let bagMrp = document.createElement("p");
+  bagMrp.textContent = "Bag MRP ";
+  bagMrpDiv.setAttribute("class", "font-sidebar-item-small");
+  let bagItemCount = document.createElement("span");
+  bagItemCount.textContent = "(15 items)";
+  bagItemCount.setAttribute("class", "sidebar-bag-item-count");
+  bagMrp.appendChild(bagItemCount);
+  let bagMrpPrice = document.createElement("p");
+  bagMrpPrice.textContent = "₹7147";
+  bagMrpDiv.append(bagMrp, bagMrpPrice);
+  let bagDiscountDiv = document.createElement("div");
+  let bagDiscount = document.createElement("p");
+  bagDiscount.textContent = "Bag Discount";
+  let bagDiscountPrice = document.createElement("p");
+  bagDiscountPrice.textContent = "₹1768";
+  bagDiscountDiv.append(bagDiscount, bagDiscountPrice);
+  bagDiscountDiv.setAttribute("class", "font-sidebar-item-small");
+  let shippingDiv = document.createElement("div");
+  let shipping = document.createElement("p");
+  shipping.textContent = "Shipping";
+  let shippingTooltip = document.createElement("span");
+  shippingTooltip.innerHTML =
+    "<img src = 'https://adn-static1.nykaa.com/media/wysiwyg/Payments/5TootltipInfo.svg' ></img>";
+  shipping.appendChild(shippingTooltip);
+  let shippingPrice = document.createElement("p");
+  let shippingPriceText = document.createElement("span");
+  shippingPriceText.textContent = "₹70";
+  shippingPriceText.style.textDecoration = "line-through";
+  let shippingFree = document.createElement("span");
+  shippingFree.style.color = "green";
+  shippingFree.textContent = "Free";
+  shippingPrice.append(shippingPriceText, shippingFree);
+  shippingDiv.append(shipping, shippingPrice);
+  shippingDiv.setAttribute("class", "font-sidebar-item-small");
+  let youPayDiv = document.createElement("div");
+  let youPay = document.createElement("p");
+  youPay.textContent = "You Pay";
+  let youPayPrice = document.createElement("p");
+  youPayPrice.textContent = "₹5379";
+  youPayDiv.append(youPay, youPayPrice);
+  youPayDiv.setAttribute("class", "font-sidebar-price-details");
+  priceDetailsDiv.append(
+    title,
+    bagMrpDiv,
+    bagDiscountDiv,
+    shippingDiv,
+    youPayDiv
+  );
+  parentDiv.appendChild(priceDetailsDiv);
+}
+function openCoupon() {
+  console.log("open coupon");
+  let sidebar = document.querySelector(".coupon-sidebar");
+  addCouponBody(sidebar);
+  let dimOverlay = document.querySelector(".sidebar-dim-overlay");
+  sidebar.classList.add("show-sidebar");
+  dimOverlay.classList.add("sidebar-dim-overlay-enable");
+  document
+    .querySelector(".coupon-sidebar-back-arrow")
+    .addEventListener("click", closeCoupon);
+}
+function closeCoupon(event) {
+  console.log("close");
+  let sidebar = document.querySelector(".coupon-sidebar");
+  sidebar.classList.remove("show-sidebar");
+}
+function addCouponBody(sidebar) {
+  sidebar.innerHTML = "";
+  let header = `
+  <div class="cart-sidebar__header">
+  <div>
+    <div class="coupon-sidebar-back-arrow">
+      <img src="./assets/sidebar-back-arrow-pink.svg" alt="" /> 
+    </div> 
+    <p class="font-cart-sidebar-heading">Coupons</p>
+  </div> 
+</div>`;
+  let body = `
+  <div class="coupon-input">
+  <input
+    type="text"
+    id="coupon-input-field"
+    placeholder="Enter Coupon Code"
+  />
+  <div class="coupon-apply">Apply</div> 
+  </div>
+   <div class="coupon-body-img">
+   <img src='https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Black-Friday-PNG/Black_Friday_Save_Coupon_PNG_Clipart_Image.png?m=1438397702'></img>
+   </div>
+   <div class="coupon-body-img">
+   <img src='https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Black-Friday-PNG/Black_Friday_Half_Price_Coupon_PNG_Clipart_Image.png?m=1438397702'></img>
+   </div>
+    `;
+
+  sidebar.innerHTML += header;
+  sidebar.innerHTML += body;
+}
 function deleteAct(event) {
-  console.log(event.target.parentNode);
+  let item = document.querySelector(".sidebar-item-parent");
+  event.target.parentNode.parentNode.parentNode.classList.toggle(
+    "sidebar-item-flip"
+  );
+}
+function cancelAct(event) {
+  let item = document.querySelector(".sidebar-item-parent");
+  event.target.parentNode.parentNode.classList.toggle("sidebar-item-flip");
 }

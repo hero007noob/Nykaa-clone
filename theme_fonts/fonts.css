@@ -358,6 +358,22 @@
     margin: 0;
     cursor: pointer;
 }
+.font-sidebar-item-regular_pink{
+    color: #fc2779; 
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    margin-top: -6px;
+    cursor: pointer;
+}
+.font-sidebar-price-details{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: rgb(0, 19, 37); 
+    
+}
 .font-sidebar-item-discount{
     color: var(--discount-text);
     font-family: inherit;
