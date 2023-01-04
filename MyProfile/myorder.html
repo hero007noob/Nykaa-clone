@@ -7,6 +7,7 @@
     <title>My Profile</title>
     <script src="https://kit.fontawesome.com/09ea9ed7f5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="myorder.css">
+    <script src="./commonmyprofile.js" defer></script>
 </head>
 <body>
     <div class="DisPageName">
@@ -43,15 +44,3 @@
     
 </body>
 </html>
-<script>
-    document.querySelector("#popback").addEventListener("click",popback);
-
-    document.querySelector(".logout").addEventListener("click",popup);
-    var a=document.querySelector(".popup");
-    function popup(){
-        a.classList.add("popback");
-    }
-    function popback(){
-        a.classList.remove("popback");
-    }
-</script>
