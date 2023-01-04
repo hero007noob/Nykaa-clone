@@ -1,3 +1,16 @@
-#carouselExampleInterval{
+.swiper {
+    width: 100%;
     display: flex;
+}
+
+.swiper img{
+    display: block;
+    width: 40%;
+    margin: auto;
+}
+
+swiper-pagination img {
+    width: 100%;
+    margin: 15px;
+    border-radius: 15px;
 }

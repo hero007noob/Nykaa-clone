@@ -11,9 +11,43 @@
 .home-section-best-in-beauty{
     
 }
-.home-top-offer-carousel{
-    height: 350px;
-    background-color: coral;
+.home-top-offer-carousel {
+    width     : 100%;
+    max-height: 90vh;
+    position  : relative;
+    overflow  :hidden;
+    margin    : 30px auto;
+}
+
+#slider {
+    width     : 100%;
+    display   : inline-flex;
+    transition: 0.7s;
+}
+
+#slider img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.indicators {
+    position : absolute;
+    left     : 50%;
+    bottom   : 20px;
+    transform: translateX(-50%);
+}
+
+.indicators span {
+    display:inline-table;
+    width        : 15px;
+    height       : 15px;
+    border-radius: 50%;
+    background   : rgb(168, 19, 19);
+    cursor:alias;
+}
+
+.active {
+    background: #ffff !important;
 }
 .home-main-div{
 
