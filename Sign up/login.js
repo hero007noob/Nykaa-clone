@@ -1,16 +1,10 @@
 //password show and hide
+
 var eyeIcon = document.querySelector("#togglePassword");
 var eyeSlash = document.querySelector("#eye-slash-id");
-var password = document.querySelector("#signin-password");
-
-console.log(eyeIcon, eyeSlash, password);
+var password = document.querySelector("#login-password");
 
 eyeSlash.classList.add("hide-icon");
-eyeIcon.classList.add("hide-icon");
-
-password.addEventListener("click", function () {
-  eyeIcon.classList.remove("hide-icon");
-});
 
 eyeIcon.addEventListener("click", function () {
   let type = password.getAttribute("type") === "password" ? "text" : "password";
@@ -26,7 +20,3 @@ eyeSlash.addEventListener("click", function () {
   eyeSlash.classList.toggle("hide-icon");
   eyeIcon.classList.toggle("hide-icon");
 });
-
-
-
-// sign up form validation 

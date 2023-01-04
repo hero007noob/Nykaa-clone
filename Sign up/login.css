@@ -36,6 +36,21 @@
   margin: 0;
 }
 
+.eye-icon {
+  position: relative;
+  bottom: 35px;
+  left: 92%;
+  cursor: pointer;
+  width: 19px;
+  height: 18px;
+  color: rgb(156 156 156);
+  font-size: 0.9rem;
+}
+
+.hide-icon {
+  display: none;
+}
+
 #sign-up-form input {
   height: 29px;
   border-radius: 3px;
@@ -46,43 +61,6 @@ input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-/* phonenumber */
-
-.input-container {
-  position: relative;
-}
-
-.phonenumber-input {
-  width: 100%;
-}
-
-.input-container::before {
-  content: "+91 ";
-  position: absolute;
-  left: 5px;
-  top: 4px;
-  bottom: 0;
-  font-size: 1rem;
-  width: 10%;
-  text-align: center;
-  height: 23px;
-}
-
-.input-container::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 5%;
-}
-
-.input-container input {
-  /* width: calc(90% - 2em); */
-  padding-left: 14%;
-  box-sizing: border-box;
 }
 
 #sign-up-form input[type="submit"] {
@@ -105,23 +83,6 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 14px;
 }
 
-/* eye icons  */
-.eye-icon {
-  
-  position: relative;
-  bottom: 37px;
-  left: 92%;
-  cursor: pointer;
-  width: 19px;
-  height: 18px;
-  color: rgb(156 156 156);
-  font-size: .9rem;
-}
-
-.hide-icon {
-  display: none;
-}
-
 .hr-left {
   height: 0px;
   width: 40.5%;
@@ -136,7 +97,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 40.5%;
   position: relative;
   left: 94px;
-  bottom: 25px;
+  bottom: 18px;
   border: 1px solid #ebdddd;
 }
 
@@ -190,30 +151,43 @@ input[type="number"]::-webkit-inner-spin-button {
   text-decoration: none;
 }
 
+
 /* responsive  */
 @media screen and (max-width: 1024px) {
   #sign-up-form {
-
     width: 39%;
   }
+
 }
 
 @media screen and (max-width: 768px){
   #sign-up-form {
-
     width: 50%;
   }
+
+  
+
 }
 
 @media screen and (max-width: 768px){
   #sign-up-form {
-
     width: 50%;
   }
+
+  .sign-up-already-ac{
+    font-size: 12px;
+  }
+
+  
+
 }
 
 @media screen and (max-width: 560px){
   #sign-up-form {
-    width: 70%;
+    width: 85%;
   }
+  /* .eye-icon{
+    left: 91%;
+  } */
+ 
 }
