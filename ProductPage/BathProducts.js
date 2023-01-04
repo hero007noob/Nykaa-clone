@@ -2262,13 +2262,17 @@ var faceData = [
     shades: "8 Shades",
   },
 ];
+var classchanging=document.querySelectorAll(".pagination>div:nth-child(2)>*");
+var symbolstrt=classchanging[0].textContent;
+var symbolclose=classchanging[(classchanging.length)-1].textContent;
 var pageNo=document.querySelector(".active").textContent;
 var req= faceData.length/7;
 var reqnofrom= req*(pageNo-1);
 var reqnoto= req*pageNo;
 var pagefaceData=faceData.slice(reqnofrom,reqnoto);
-  display(pagefaceData);
+display(pagefaceData);
   function display(list){
+    document.querySelector(".Bathchild2").innerHTML = "";
     list.map(function(elem,index){
         var div =document.createElement("div");
         var keyword=document.createElement("h4");
@@ -2434,6 +2438,128 @@ var pagefaceData=faceData.slice(reqnofrom,reqnoto);
       item.classList.toggle("checked");
     })
   });
+}
+{//page changes
+function changeclass() {
+  // var classname=document.getElementById('myButton')
+  //   .className;
+  var classchanging=document.querySelectorAll(".pagination>div:nth-child(2)>*");
+  var activated=event.target.textContent;
+  console.log(activated);
+  for (var x=0;x<classchanging.length;x++)
+  {
+    if(classchanging[x].textContent!==activated){
+    console.log(classchanging[x]);
+    classchanging[x].setAttribute("class","");
+    }
+    else{
+      classchanging[x].setAttribute("class","active");
+    }
+  }
+  var pageNo = document.querySelector(".active").textContent;
+  console.log(pageNo);
+  if (pageNo == 4) {
+    var classchanging = document.querySelectorAll(".pagination>div:nth-child(2)>*");
+    classchanging[0].textContent = symbolstrt;
+    // classchanging[0].setAttribute("onclick","changeclass()");
+    classchanging[1].textContent = 2;
+    // classchanging[0].setAttribute("onclick","changeprev(1)");
+    var c = 3;
+    for (var x = 2; x < classchanging.length - 1; x++) {
+      console.log(classchanging[x]);
+      classchanging[x].textContent = c;
+      c++;
+    }
+    classchanging[classchanging.length] = symbolclose;
+    for (var x = 0; x < classchanging.length; x++) {
+      if (classchanging[x].textContent !== pageNo) {
+        console.log(classchanging[x]);
+        classchanging[x].setAttribute("class", "");
+      }
+      else {
+        classchanging[x].setAttribute("class", "active");
+      }
+    }
+
+  }
+  
+  if (pageNo == 5) {
+    var classchanging = document.querySelectorAll(".pagination>div:nth-child(2)>*");
+    classchanging[0].textContent=symbolstrt;
+    classchanging[1].textContent= 2;
+    var c=3;
+    for (var x = 2; x < classchanging.length-1; x++) {
+      console.log(classchanging[x]);
+      classchanging[x].textContent=c;
+      c++;
+    }
+    classchanging[classchanging.length]=symbolclose;
+    for (var x = 0; x < classchanging.length; x++) {
+      if (classchanging[x].textContent !== pageNo) {
+        console.log(classchanging[x]);
+        classchanging[x].setAttribute("class", "");
+      }
+      else {
+        classchanging[x].setAttribute("class", "active");
+      }
+    }
+  }
+  var req = faceData.length / 7;
+  var reqnofrom = req * (pageNo - 1);
+  var reqnoto = req * pageNo;
+  var pagefaceData = faceData.slice(reqnofrom, reqnoto);
+  display(pagefaceData);
+  document.querySelector(".pagechangetext").textContent=pageNo;
+}
+
+  function changeprev(num) {
+    var pageid = document.querySelector(".active").textContent;
+    pageid = pageid - '0';
+    if (pageid==2) {
+      var classchanging = document.querySelectorAll(".pagination>div:nth-child(2)>*");
+      // classchanging[0].textContent = symbolstrt;
+      classchanging[1].textContent = 1;
+      var c = 2;
+      for (var x = 2; x < classchanging.length - 1; x++) {
+        console.log(classchanging[x]);
+        classchanging[x].textContent = c;
+        c++;
+      }
+    }
+    else{
+      var classchanging = document.querySelectorAll(".pagination>div:nth-child(2)>*");
+      // console.log('test');
+      for (var x = 0; x < classchanging.length; x++) {
+        if (num == 1) {
+          if (parseInt(classchanging[x].textContent) !== +pageid - 1) {
+            console.log(classchanging[x]);
+            classchanging[x].setAttribute("class", "");
+          }
+          else {
+            classchanging[x].setAttribute("class", "active");
+          }
+        }
+        else {
+          if (parseInt(classchanging[x].textContent) !== +pageid + 1) {
+            console.log(classchanging[x]);
+            classchanging[x].setAttribute("class", "");
+          }
+          else {
+            classchanging[x].setAttribute("class", "active");
+          }
+        }
+      }
+      }
+  // event.target.setAttribute("class","active");
+  var pageNo = document.querySelector(".active").textContent;
+  var req = faceData.length / 7;
+  var reqnofrom = req * (pageNo - 1);
+  var reqnoto = req * pageNo;
+  var pagefaceData = faceData.slice(reqnofrom, reqnoto);
+  display(pagefaceData);
+  document.querySelector(".pagechangetext").textContent=pageNo;
+  // console.log(pageNo);
+}
 }
 
 
