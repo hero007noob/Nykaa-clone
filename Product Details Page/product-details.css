@@ -1,0 +1,131 @@
+@import "/theme_fonts/theme.css";
+:root {
+  --home-carouse-item-border: rgb(236, 233, 233);
+  --btn-pink: rgb(232, 0, 112);
+  --btn-text-white: #fff;
+  --primary-text-black: #001325;
+  --primary-background: white;
+}
+body {
+  margin: 0;
+  font-family: inter Roboto, Arial, sans-serif;
+}
+
+.product-page-body {
+  width: 100%;
+  background-color: #f3f3f3;
+  height: 2000px;
+}
+.product-container {
+  width: 85%;
+  height: 580px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  background-color: white;
+  position: relative;
+  top: 150px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+/* left  */
+.product-image-section {
+  border-right: 1px solid red;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+.product-image-section > img {
+  width: 90%;
+  height: 51%;
+  background-color: red;
+}
+
+/* right  */
+
+.product-details-section {
+  padding: 1rem;
+}
+
+.product-details-section > h1 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  color: #001325;
+  padding-bottom: 0.25rem;
+  cursor: pointer;
+}
+
+.product-details-section > h1 > span {
+  font-size: 16px;
+}
+
+.product-rating-line {
+  display: flex;
+  margin-top: 20px;
+}
+
+.rating-review {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  border-left: 2px solid #e8e7e7;
+  padding-left: 10px;
+}
+
+.product-price-line {
+  margin-top: 20px;
+  color: rgba(0, 19, 37, 0.64);
+}
+
+.product-price-line > span:first-child {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.product-price-line > span:nth-child(2) {
+  color: #001325;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.product-price-line > span:last-child {
+  color: #008945;
+  padding-left: 6px;
+  box-sizing: border-box;
+  border-left: 1px solid #eeeeee;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.inclulsive-tax {
+  color: rgba(0, 19, 37, 0.64);
+}
+
+.delivery-options {
+  display: grid;
+  position: relative;
+  top: 100px;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.delivery-options>div:first-child{
+  background-color: #008945;
+  height: 138px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.delivery-options>div:last-child{
+  background-color: red;
+  height: 138px;
+}
