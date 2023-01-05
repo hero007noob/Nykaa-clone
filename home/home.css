@@ -18,33 +18,41 @@
     overflow  :hidden;
     margin    : 30px auto;
 }
-
-#slider {
-    width     : 100%;
-    display   : inline-flex;
-    transition: 0.7s;
-}
-
-#slider img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.indicators {
-    position : absolute;
-    left     : 50%;
-    bottom   : 20px;
-    transform: translateX(-50%);
-}
-
-.indicators span {
-    display:inline-table;
-    width        : 15px;
-    height       : 15px;
-    border-radius: 50%;
-    background   : rgb(168, 19, 19);
-    cursor:alias;
-}
+.carousel-container {
+    width: 100%; 
+    margin: auto; 
+    
+    overflow: hidden; 
+    position: relative; 
+   } 
+   .carousel-slide{ 
+       
+       width     : 100%;
+       display   : inline-flex;
+       
+   } 
+   .carousel-slide img {
+       width: 100%;
+       border-radius: 10px;
+   }
+   #prevBtn{ 
+       position: absolute; 
+       top: 50%; 
+       z-index: 10; 
+       left: 5%; 
+       font-size: 30px; 
+       color: white; 
+       cursor: pointer; 
+   } 
+   #nextBtn{ 
+       position: absolute; 
+       top: 50%; 
+       z-index: 10; 
+       right: 5%; 
+       font-size: 30px; 
+       color: white; 
+       cursor: pointer; 
+   }
 
 .home-main-div{
 
@@ -105,11 +113,113 @@
 width: 100%;
 border-radius: 10px;
 }
+/*3rd carosal*/
 .home-section-discover-fav-carousel{
     height: 300px;
     margin: 40px 0;
-    background-color: coral;
+   
 }
+
+section{
+			
+    width: 100%; 
+    margin: auto; 
+    display: flex;
+    overflow: hidden; 
+    position: relative; 
+    
+}
+
+section .product{
+    min-width: 20%;
+    height: 100%;
+    margin:  0 20px  0 0;
+    
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+
+}
+h2{
+   
+    width: 96%;
+    background: rgb(255, 255, 255);
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    color:black;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+    
+    
+}
+picture{
+    
+
+    display: flex;
+    overflow: hidden;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+   
+    
+    
+}
+picture img{
+    width: 100%;
+}
+#prevBtn{ 
+    position: absolute; 
+    top: 30%; 
+    z-index: 10; 
+    left: 5%; 
+    font-size: 30px; 
+    color: white; 
+    cursor: pointer; 
+} 
+#nextBtn{ 
+    position: absolute; 
+    top: 30%; 
+    z-index: 10; 
+    right: 5%; 
+    font-size: 30px; 
+    color: white; 
+    cursor: pointer; 
+}
+
+
+
+
+@media (max-width: 768px) {
+    .text h1{
+        font-size: 35px;
+    }
+    .text p{
+        width: 90%;
+    }
+    header h1{
+        font-size: 25px;
+    }
+    header p span{
+        font-size: 30px;
+    }
+    section .product {
+        min-width: 49%;
+        margin:  0 10px  0 0;
+    }
+    .detail, .button{
+        font-size: 16px;
+    }
+    a{
+        padding: 6px 10px;
+    }
+}
+
+/*3rd carosal end*/
 .home-section-below-featured-brands{
     margin: 40px 0;
 } 

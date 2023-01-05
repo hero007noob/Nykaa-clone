@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="../navBar/navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 
     <title>Home</title>
   </head>
@@ -73,18 +74,22 @@
         <p class="font-home-section-heading">Best In Beauty</p>
         <p class="font-home-section-subheading">Today’s Top Offers</p>
         <div class="home-top-offer-carousel">
-            <div id="slider">
-             <img src="https://images-static.nykaa.com/uploads/d3ab843c-238a-409f-86f2-6717ee845c7e.jpg?tr=w-2400,cm-pad_resize" alt="1">
-             <img src="https://images-static.nykaa.com/uploads/5b1a50c9-4892-46b5-ba52-199e41a5acd1.jpg?tr=w-2400,cm-pad_resize" alt="2">
-             <img src="https://images-static.nykaa.com/uploads/39b25aa2-a962-4e99-a3cf-f65133e73464.jpg?tr=w-2400,cm-pad_resize" alt="3">
-             <img src="https://images-static.nykaa.com/uploads/c6707bec-86ec-4ad6-b388-75ecdcefa730.jpg?tr=w-2400,cm-pad_resize" alt="4">
-            </div>
-             <div class="indicators">
-             <span id="btn1" class="active"></span>
-             <span id="btn2"></span>
-             <span id="btn3"></span>
-             <span id="btn4"></span>
-             </div>
+          <div class="carousel-container"> 
+     
+            <i class="fa-sharp fa-solid fa-angle-left" id="prevBtn"></i>
+            <i class="fa-sharp fa-solid fa-angle-right" id="nextBtn"></i>
+            
+            <div class="carousel-slide"> 
+              <img src="https://images-static.nykaa.com/uploads/39b25aa2-a962-4e99-a3cf-f65133e73464.jpg?tr=w-2400,cm-pad_resize" id="lastClone" alt="1"> 
+              <img src="https://images-static.nykaa.com/uploads/5b1a50c9-4892-46b5-ba52-199e41a5acd1.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/39b25aa2-a962-4e99-a3cf-f65133e73464.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/c6707bec-86ec-4ad6-b388-75ecdcefa730.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/91a7243e-2182-4e18-a4da-cae2829ce40e.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/d3ab843c-238a-409f-86f2-6717ee845c7e.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/bb70000a-8e8b-4588-bc33-a2c36f27ca9a.jpg?tr=w-2400,cm-pad_resize" alt="">
+              <img src="https://images-static.nykaa.com/uploads/bb70000a-8e8b-4588-bc33-a2c36f27ca9a.jpg?tr=w-2400,cm-pad_resize" id="firstClone" alt=""> 
+            </div> 
+          </div> 
 
         </div>
         <div class="home-payday-image">
@@ -99,7 +104,11 @@
         <p class="font-home-section-subheading">In The Spotlight</p>
         <div class="home-section-top-brands-items"></div>
       </div>
-      <div class="home-section-try-buy-carousel"></div>
+      <div class="home-section-try-buy-carousel">
+        
+
+
+      </div>
       <div class="home-section-only-at-nykaa">
         <p class="font-home-section-heading">Only At Nykaa</p>
         <p class="font-home-section-subheading">
@@ -115,7 +124,107 @@
         <div class="home-section-discover-fav-trending">
           <img src="./assets/trending4x.jpg" alt="" />
         </div>
-        <div class="home-section-discover-fav-carousel"></div>
+        <div class="home-section-discover-fav-carousel" >
+          
+				<i class="fa-sharp fa-solid fa-angle-left" id="prevBtn"></i>
+        <i class="fa-sharp fa-solid fa-angle-right" id="nextBtn"></i>
+
+
+<section style="display: inline-flex;">
+         <div class="product" >
+              <picture>
+                     <img src="https://images-static.nykaa.com/uploads/bf0ec2a2-952d-45f5-9e30-7b872906c42d.jpg?tr=w-480,cm-pad_resize" alt="1">
+              </picture>
+                  <h2>Hair Nominees</h2>
+          </div>
+          
+          <div class="product">
+              <picture>
+                   <img src="https://images-static.nykaa.com/uploads/144c95cd-e1d3-4b0d-8d5a-a9ecda42e737.jpg?tr=w-480,cm-pad_resize" alt="2">
+              </picture>
+                    <h2>Body Lotions</h2>
+           </div>
+           
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/b306a794-feaa-4a0c-a1b3-5e0b47b24be5.jpg?tr=w-480,cm-pad_resize" alt="3">
+</picture>
+        <h2>Skin Nominees</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/4162f650-31a3-4d41-a420-ac02caccce89.jpg?tr=w-480,cm-pad_resize" alt="4">
+</picture>
+        <h2>Highlighters</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/b2df2716-c39d-40a7-b2a5-76c728a2590b.jpg?tr=w-480,cm-pad_resize" alt="5">
+</picture>
+        <h2>Feminine Hygiene</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/b21dc0cc-ff53-44e6-988c-624c0cc95c18.jpg?tr=w-480,cm-pad_resize" alt="6">
+</picture>
+        <h2>Moisturisers</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/92447a8b-4cbc-4cfa-9c65-818137cbddf7.jpg?tr=w-480,cm-pad_resize" alt="7">
+</picture>
+        <h2>Bridal Makeup</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/a75736c9-793c-4e69-9dce-558bcd011968.jpg?tr=w-480,cm-pad_resize" alt="8">
+</picture>
+        <h2>Pantone Color '23</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/abfde2f7-4d53-4e07-b9f7-4f088b801595.jpg?tr=w-480,cm-pad_resize" alt="9">
+</picture>
+        <h2>Fragrance</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/fdc3b122-62f6-436e-ab58-e4a2c5a253e3.jpg?tr=w-480,cm-pad_resize" alt="10">
+</picture>
+        <h2>Beauty...</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/4ea35342-cbb3-44ef-a556-9f1c0f749d93.jpg?tr=w-480,cm-pad_resize" alt="11">
+</picture>
+        <h2>Foundations</h2>
+
+</div>
+<div class="product">
+<picture>
+  <img src="https://images-static.nykaa.com/uploads/0d1737ff-11ae-42e4-95df-937ef71a752b.jpg?tr=w-480,cm-pad_resize" alt="12">
+</picture>
+        <h2>Face Serums</h2>
+
+</div>
+</section>
+
+
+
+
+        </div>
+
+        
+
+
       </div>
       <div class="home-section-featured-brands">
         <p class="font-home-section-heading">Featured Brands</p>
