@@ -13,16 +13,46 @@ submitBtn.addEventListener("click", function () {
   otpString = parseInt(otpString);
 
   if (otpMatch(otpString)) {
-    alert("registration success");
+    // alert("registration success");
+    otpSuccessful();
+
     
     for (let digit of otpDigits){
       digit.value = "";
     }
 
   } else {
-    alert("otp not valid");
+    // alert("otp not valid");
+    otpUnsuccessful();
   }
 });
+
+// popup msg 
+function otpSuccessful() {
+  // put all code in if() if you need to run some validation
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector("p");
+  message.textContent = "Login Successful";
+  pop.classList.add("pop");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 2000);
+}
+
+
+function otpUnsuccessful (){
+
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector("p");
+  message.textContent = "Login Failed please check your password";
+  pop.classList.add("pop");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 2000);
+
+
+}
+
 
 function otpMatch(otpString) {
   let matchElement = otpArr.find((elem) => otpString == elem.otp);
