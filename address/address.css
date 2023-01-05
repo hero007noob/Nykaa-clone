@@ -42,13 +42,20 @@
   margin-top: 40px;
 }
 .collapse-content {
-  padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: white;
 }
-
+.cart-item-parent {
+  position: relative;
+  height: 160px;
+  /* width: 85%; */
+  margin: 15px 0;
+  padding: 0px;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
+}
 .collapsible {
   background-color: white;
   color: black;
@@ -101,7 +108,8 @@
   float: right;
 }
 .cartitem {
-  height: 150px;
+  height: 300px;
+  overflow-y: scroll;
 }
 #secure {
   display: flex;
