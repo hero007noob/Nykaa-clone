@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adress Dailog Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../theme_fonts/theme.css" />
+    <link rel="stylesheet" href="./address.css" />
+    <link rel="stylesheet" href="../theme_fonts/fonts.css" />
+    <script
+      src="https://kit.fontawesome.com/b78a585d56.js"
+      crossorigin="anonymous"
+    ></script>
+
+</head>
+<body>
+    
+    <form class="Address-Form" action="">
+        <h2 class="font-address-title">New Address</h2>
+        <div class="address-Data">
+            <h3 class="font-address-regular">Address</h3>
+            <input type="number" placeholder="Pincode" class="add-pincode" />
+            <div class="address-pinwarning"></div>
+            <input type="text" placeholder="House/ Flat/ Office No." class="add-flat" />
+            <div class="address-flatwarning"></div>
+            <input type="text" placeholder="Road Name/ Area/ Colony" class="add-area" />
+            <div class="address-areawarning"></div>
+        </div>
+        <div class="toggleInsert">
+            <p class="font-address-description">
+                Use as default address
+            </p>
+            <i class="fa-solid fa-toggle-off" onclick="changesymbol()" ondblclick="changesymbol(2)"></i>
+        </div>
+        <div>
+            <h3 class="font-address-regular">Contact</h3>
+            <p class="font-address-regular">Information provided here will be used to contact you for delivery updates</p>
+            <input type="number" placeholder="Name" class="add-name" />
+            <div class="address-namewarning"></div>
+            <input type="text" placeholder="Phone" class="add-phone" />
+            <div class="address-phonewarning"></div>
+            <input type="text" placeholder="Email ID (Optional)" class="add-mail" />
+            <div class="address-emailwarning"></div>
+            <button class="Shipping-Button">
+                <p class="font-address-regular">Ship to this address</p>
+            </button>
+            <!-- <input type="submit" class="font-address-regular Shipping-Button"value="Ship to this address" /> -->
+        </div>
+    </form>
+</body>
+<script src="address.js"></script>
+</html>
