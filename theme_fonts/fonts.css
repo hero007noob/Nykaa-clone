@@ -325,6 +325,97 @@
     font-weight: 400;
 }
 
+/* sidebar-cart-fonts */
+.font-cart-sidebar-heading{
+    color: var(--primary-text-black);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: -0.1px; 
+}
+.font-cart-sidebar-headingWhite{
+    color: var(--primary-text-white);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0.1px;
+    margin: unset;
+}
+.font-cart-sidebar-subheading{
+    color: var(--primary-text-black64);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    margin: unset;
+}
+.font-sidebar-item-regular{
+    color: var(--primary-text-black);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0px;
+    margin: 0;
+    cursor: pointer;
+}
+.font-sidebar-item-regular_pink{
+    color: #fc2779; 
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    margin-top: -6px;
+    cursor: pointer;
+}
+.font-sidebar-price-details{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0px;
+    color: rgb(0, 19, 37); 
+    
+}
+.font-sidebar-item-discount{
+    color: var(--discount-text);
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    text-decoration: line-through;
+}
+.font-sidebar-item-price{
+    color: var(--primary-text-black);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0px;
+}
+.font-sidebar-item-small{
+    color: var(--primary-text-black); 
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.font-sidebar-item-small_pink{
+    color: #fc2779; 
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+.font-sidebar-item-small_pinkBold{
+    color: rgb(232, 0, 113); 
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.1px; 
+    cursor: pointer;
+}
 @media screen and (max-width:912px) {
     .font-home-item-title ,.font-home-item-description{
         font-size: 12px;
