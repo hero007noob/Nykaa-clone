@@ -877,6 +877,7 @@ function display(list, clear) {
       mrp.setAttribute("class", "font-product-item-price");
       var dis = document.createElement("h4");
       dis.textContent = elem.discount_percentage;
+      dis.setAttribute("class", "font-product-item-price");
       prcbox.append(prc, mrp, dis);
     }
 
@@ -884,10 +885,19 @@ function display(list, clear) {
     var bonus = document.createElement("h4");
     bonus.textContent = elem.bonus;
     bonus.setAttribute("class", "font-product-item-bonus Bath-bonus");
-    var button = document.createElement("h4");
-    button.textContent = "Add to cart";
+    var buttonsDiv = document.createElement("div");
+    buttonsDiv.setAttribute("class", "Bathchild2btnbox");
+    var wishlist = document.createElement("div");
+    wishlist.setAttribute("class", "BathwishlistBtn");
+    var wishlistIcon = document.createElement("img");
+    wishlistIcon.setAttribute("src", "./assets/heart.svg");
+    wishlistIcon.addEventListener("click", wishList);
+    wishlist.appendChild(wishlistIcon);
+    var button = document.createElement("div");
+    button.textContent = "Add to Bag";
     button.setAttribute("class", "Bathcartbtn");
-    div.append(keyword, imgdiv, title, prcbox, bonus, button);
+    buttonsDiv.append(wishlist, button);
+    div.append(keyword, imgdiv, title, prcbox, bonus, buttonsDiv);
     div.setAttribute("class", "Bathchild2Box");
     document.querySelector(".Bathchild2").append(div);
   });
@@ -1011,6 +1021,11 @@ function display(list, clear) {
 {
   //page changes
   function changeclass() {
+    setTimeout(function () {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }, 100);
+    console.log(event);
     // var classname=document.getElementById('myButton')
     //   .className;
     var classchanging = document.querySelectorAll(
@@ -1198,13 +1213,30 @@ function sortData(event) {
   }
   console.log(query);
 }
-
+function wishList(event) {
+  if (event.target.getAttribute("src") == "./assets/heartselected.svg") {
+    event.target.setAttribute("src", "./assets/heart.svg");
+  } else event.target.setAttribute("src", "./assets/heartselected.svg");
+}
 window.addEventListener("scroll", function () {
-  console.log(this.window.scroll);
+  // console.log(this.window.scroll);
   var top = window.pageYOffset || document.documentElement.scrollTop,
     left = window.pageXOffset || document.documentElement.scrollLeft;
-  console.log("top", top);
-  console.log("left", left);
-  // var nav2 = document.querySelector("#nav2");
-  // nav2.classList.toggle("sticky", window.scrollY > 0);
+  // console.log("top", top);
+  // console.log("left", left);
+  let div = document.getElementsByClassName("Bathchild1")[0];
+  let ele = div.getBoundingClientRect();
+  let cTop = ele.top;
+  let oTop = ele.top + this.window.pageYOffset;
+  console.log("ctop", cTop);
+  console.log("otop", oTop);
+  if (cTop < 0) {
+    div.style.top = "0";
+    div.style.paddingTop = "40px";
+  }
+  if (top < 428) {
+    div.style.top = "initial";
+    div.style.marginTop = "initial";
+    div.style.paddingTop = "initial";
+  }
 });

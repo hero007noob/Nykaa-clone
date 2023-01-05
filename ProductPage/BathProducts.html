@@ -23,11 +23,12 @@
   <body class="Bath-Pro">
     <div class="BathMaindiv">
       <h3 class="BathMainhead">Bath & Body</h3>
-      <img
-        class="BathMainImg"
-        src="https://images-static.nykaa.com/uploads/a0617c8d-9a93-4da0-ab70-b10d41f91e2e.jpg?tr=w-1200,cm-pad_resize"
-        alt="Bath & Body Main image"
-      />
+      <div class="BathMainImg">
+        <img
+          src="https://images-static.nykaa.com/uploads/a0617c8d-9a93-4da0-ab70-b10d41f91e2e.jpg?tr=w-1200,cm-pad_resize"
+          alt="Bath & Body Main image"
+        />
+      </div>
     </div>
     <h3 class="BathMainhead">All Products</h3>
     <div class="Bathchild">
@@ -451,7 +452,7 @@
           </ul>
           <div class="Bc1-select-btn6">
             <span class="Bc1-btn-text"
-              >Avg Customer Rating<span class="Bc1-brn-text2"></span
+              >Avg Rating<span class="Bc1-brn-text2"></span
             ></span>
             <span class="Bc1-arrow-dwn">
               <!-- <i class="fa-chevron-down"></i> -->
@@ -816,13 +817,13 @@
         </p>
       </div>
       <div>
-        <a class="" onclick="changeprev(1)" href="#">&laquo;</a>
-        <a class="active" onclick="changeclass()" href="#">1</a>
-        <a class="" href="#" onclick="changeclass()">2</a>
-        <a class="" href="#" onclick="changeclass()">3</a>
-        <a class="" href="#" onclick="changeclass()">4</a>
-        <a class="" href="#" onclick="changeclass()">5</a>
-        <a class="" href="#" onclick="changeprev(2)">&raquo;</a>
+        <a class="" onclick="changeprev(1); return false" href="#">&laquo;</a>
+        <a class="active" onclick="changeclass(); return false" href="#">1</a>
+        <a class="" href="#" onclick="changeclass(); return false">2</a>
+        <a class="" href="#" onclick="changeclass(); return false">3</a>
+        <a class="" href="#" onclick="changeclass(); return false">4</a>
+        <a class="" href="#" onclick="changeclass(); return false">5</a>
+        <a class="" href="#" onclick="changeprev(2); return false">&raquo;</a>
       </div>
     </div>
   </body>
