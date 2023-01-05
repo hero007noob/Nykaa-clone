@@ -14,6 +14,11 @@
     <link rel="stylesheet" href="../theme_fonts/theme.css" />
     <link rel="stylesheet" href="./address.css" />
     <link rel="stylesheet" href="../theme_fonts/fonts.css" />
+    <link rel="stylesheet" href="../Sidebar_cart/sidebar.css" />
+    <script
+      src="https://kit.fontawesome.com/b78a585d56.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div id="header">
@@ -53,10 +58,107 @@
         </div>
       </div>
     </div>
+    <div class="cart-sidebar-view">
+      <div class="sidebar-dim-overlay"></div>
+      <div class="coupon-sidebar"></div>
+      <div class="cart-sidebar">
+        <div class="address-header">
+          <div class="cart-sidebar-back-arrow">
+            <img
+              src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Clear.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="address-sidebar-all-items">
+          <form class="Address-Form" action="">
+            <p class="font-address-title">New Address</p>
+            <div class="address-Data">
+              <p class="font-address-title">Address</p>
+              <div class="address-pinwarning warnings"></div>
+              <div class="coupon-input">
+                <input
+                  type="number"
+                  id="coupon-input-field"
+                  placeholder="Pincode"
+                  class="add-pincode"
+                />
+              </div>
+              <div class="address-flatwarning warnings"></div>
+              <div class="coupon-input">
+                <input
+                  type="text"
+                  id="coupon-input-field"
+                  placeholder="House/ Flat/ Office No."
+                  class="add-flat"
+                />
+              </div>
+              <div class="address-areawarning warnings"></div>
+              <div class="coupon-input">
+                <input
+                  type="text"
+                  id="coupon-input-field"
+                  placeholder="Road Name/ Area/ Colony"
+                  class="add-area"
+                />
+              </div>
+            </div>
+            <div class="default-address-check">
+              <p class="font-address-description">Use as default address</p>
+              <label class="switch">
+                <input type="checkbox" checked />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="contact-data">
+              <p class="font-address-title">Contact</p>
+              <p class="font-address-regular">
+                Information provided here will be used to contact you for
+                delivery updates
+              </p>
+              <div class="address-namewarning warnings"></div>
+              <div class="coupon-input">
+                <input
+                  type="text"
+                  id="coupon-input-field"
+                  placeholder="Name"
+                  class="add-name"
+                />
+              </div>
+              <div class="address-phonewarning warnings"></div>
+              <div class="coupon-input">
+                <input
+                  type="number"
+                  id="coupon-input-field"
+                  placeholder="Phone"
+                  class="add-phone"
+                />
+              </div>
+              <div class="address-emailwarning warnings"></div>
+              <div class="coupon-input">
+                <input
+                  type="email"
+                  id="coupon-input-field"
+                  placeholder="Email ID (Optional)"
+                  class="add-mail"
+                />
+              </div>
+
+              <!-- <input type="submit" class="font-address-regular Shipping-Button"value="Ship to this address" /> -->
+            </div>
+          </form>
+        </div>
+        <div class="cart-sidebar__footer address__footer">
+          <button class="font-cart-sidebar-headingWhite Shipping-Button">
+            <p>Ship to this address</p>
+          </button>
+        </div>
+      </div>
+    </div>
     <div id="content">
       <div id="address-text-section">
         <div id="address-text">
-          <h1 class="font-address-title">Choose Address</h1>
+          <p class="font-address-title">Choose Address</p>
           <p class="font-address-description">
             Detailed address will help our delivery partner reach your doorstep
             quickly
@@ -79,29 +181,38 @@
             alt=""
           />
           <div class="collapse">
-            <button class="collapsible col1 font-address-regular">Bag <span id="numberofitems" class="spanelemright">0</span></button>
+            <button class="collapsible col1 font-address-regular">
+              Bag <span id="numberofitems" class="spanelemright">0</span>
+            </button>
             <div class="collapse-content">
-                <div class="cartitem"></div>
+              <div class="cartitem"></div>
             </div>
           </div>
           <div class="collapse">
-            <button class="collapsible col2  font-address-regular">Price Detail <span id="cartvalue" class="spanelemright">0</span></button>
-            <div class="collapse-content col1 col2" >
-                <div class="cartitem"></div>
+            <button class="collapsible col2 font-address-regular">
+              Price Detail <span id="cartvalue" class="spanelemright">0</span>
+            </button>
+            <div class="collapse-content col1 col2">
+              <div class="cartitem"></div>
             </div>
           </div>
           <div id="secure">
             <div>
-                <p class="font-address-regular">Buy authentic products. Pay securely. Easy returns and exchange</p>
+              <p class="font-address-regular">
+                Buy authentic products. Pay securely. Easy returns and exchange
+              </p>
             </div>
             <div>
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/pay-secure-lock.png" alt="">
+              <img
+                src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/pay-secure-lock.png"
+                alt=""
+              />
             </div>
-            
           </div>
         </div>
       </div>
     </div>
   </body>
   <script src="address.js"></script>
+  <script src="../Sidebar_cart/sidebar.js"></script>
 </html>
