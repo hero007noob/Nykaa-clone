@@ -1,0 +1,49 @@
+.cart-sidebar{ 
+    width: 0px;
+    margin: 0;
+    transition: all 300ms;
+    background-color: rebeccapurple;
+}
+.sidebar-dim-overlay{
+    background-color: transparent;
+    flex-grow: 1;
+    margin: 0;
+    pointer-events: none;
+}
+.cart-sidebar-view{
+    display: flex;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    pointer-events: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.show-sidebar{
+    width: 350px;
+}
+.sidebar-dim-overlay-enable{
+    background-color: rgba(180, 183, 201, 0.4);
+    pointer-events: all;
+}
+/* todo Extra classes for demo purposes Delete */
+
+.fa-bag-shopping{
+    font-size: 500px;
+}
+.cart-btn{
+    text-align: center;
+    border: none;
+    background-color: transparent;
+}
+.demo-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
