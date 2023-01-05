@@ -1,23 +1,24 @@
-:root{
-    --primary-background: white;
-    --primary-text-white:white;
-    --primary-text-black:#001325;  
-    --beauty-text-gray:#3f414d;  
-    --primary-text-black92:rgba(0, 19, 37, 0.92);
-    --primary-text-black64:rgba(0, 19, 37, 0.64);
-    --nav-items2-text:rgba(3, 2, 26, 0.6);
-    --font-path-text:rgb(136, 136, 136);
-    --home-gray-text:#5C6873;
-    --footer-des-text:#3f3f51;
+:root {
+  --primary-background: white;
+  --secondary-background: rgb(243, 243, 243);
+  --primary-text-white: white;
+  --primary-text-black: #001325;
+  --beauty-text-gray: #3f414d;
+  --primary-text-black92: rgba(0, 19, 37, 0.92);
+  --primary-text-black64: rgba(0, 19, 37, 0.64);
+  --nav-items2-text: rgba(3, 2, 26, 0.6);
+  --font-path-text: rgb(136, 136, 136);
+  --home-gray-text: #5c6873;
+  --footer-des-text: #3f3f51;
 }
-.dark-mode{
-    --primary-background: black;
-    --primary-text-white:black;
-    --primary-text-black:white; 
-    --primary-text-black92:white;
-    --primary-text-black64:white;
-    --beauty-text-gray:#bec1d4;  
-    --nav-items2-text:rgba(193, 192, 212, 0.6);
-    --home-gray-text:#c1cdd8;
-    --footer-des-text:#d5d5e7;
+.dark-mode {
+  --primary-background: black;
+  --primary-text-white: black;
+  --primary-text-black: white;
+  --primary-text-black92: white;
+  --primary-text-black64: white;
+  --beauty-text-gray: #bec1d4;
+  --nav-items2-text: rgba(193, 192, 212, 0.6);
+  --home-gray-text: #c1cdd8;
+  --footer-des-text: #d5d5e7;
 }
