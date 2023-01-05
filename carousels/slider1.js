@@ -1,9 +1,9 @@
 let span = document.getElementsByTagName('i');
 	let product = document.getElementsByClassName('product')
-	let product_page = Math.ceil(product.length/5);
+	let product_page = Math.ceil(product.length/2);
 	let l = 0;
-	let movePer = 25.34;
-	let maxMove = 200;
+	let movePer = 50.34;
+	let maxMove = 100;
 	// mobile_view	
 	let mob_view = window.matchMedia("(max-width: 768px)");
 	if (mob_view.matches)

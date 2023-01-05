@@ -1,0 +1,77 @@
+
+
+		.home-section-try-buy-carousel{
+			
+            width: 100%; 
+            margin: auto; 
+            display: flex;
+            overflow: hidden; 
+            position: relative; 
+			
+		}
+		
+		 .product{
+			min-width: 50%;
+			height: 100%;
+			margin:  0 20px  0 0;
+			
+			position: relative;
+			left: 0;
+			transition: 0.5s;
+
+		}
+    
+		 img{
+			width: 100%;
+            display: flex;
+			overflow: hidden;
+            border-top-right-radius: 20px;
+            border-top-left-radius: 20px;
+           
+		}
+        #prevBtn{ 
+            position: absolute; 
+            top: 8%; 
+            z-index: 10; 
+            left: 5%; 
+            font-size: 30px; 
+            color: white; 
+            cursor: pointer; 
+        } 
+        #nextBtn{ 
+            position: absolute; 
+            top: 8%; 
+            z-index: 10; 
+            right: 5%; 
+            font-size: 30px; 
+            color: white; 
+            cursor: pointer; 
+        }
+		
+		
+		
+		
+		@media (max-width: 768px) {
+			.text h1{
+				font-size: 35px;
+			}
+			.text p{
+				width: 90%;
+			}
+			header h1{
+				font-size: 25px;
+			}
+			header p span{
+				font-size: 30px;
+			}
+			section .product {
+				min-width: 49%;
+				margin:  0 10px  0 0;
+			}
+			.detail, .button{
+				font-size: 16px;
+			}
+			a{
+				padding: 6px 10px;
+			}
+		}
