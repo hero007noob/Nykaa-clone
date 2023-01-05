@@ -33,3 +33,5 @@ let span = document.getElementsByTagName('i');
 	}
 	span[1].onclick = ()=>{right_mover();}
 	span[0].onclick = ()=>{left_mover();}
+
+    // querySelectorAll('home-section-discover-fav-trending>product-sectio>product')
