@@ -71,7 +71,7 @@
     grid-template-columns: repeat(3,1fr);
     gap: 20px;  
 }
-.home-section-featured-brands-items{
+.home-section-featured-brands-items,.home-section-brand-miss-carousel{
     grid-template-columns: repeat(5,1fr);
     margin-top: 5px;
 }
@@ -172,7 +172,7 @@ picture{
 picture img{
     width: 100%;
 }
-#prevBtn{ 
+#prevBtn1{ 
     position: absolute; 
     top: 30%; 
     z-index: 10; 
@@ -181,7 +181,7 @@ picture img{
     color: white; 
     cursor: pointer; 
 } 
-#nextBtn{ 
+#nextBtn1{ 
     position: absolute; 
     top: 30%; 
     z-index: 10; 
@@ -242,9 +242,19 @@ picture img{
     width: 100%;
     border-radius: 10px;
 }
-.home-section-brand-miss-carousel{
+.home-section-brand-miss-carousel, .home-section-brand-miss-carousel4,.home-section-brand-miss-carousel5,.home-section-brand-miss-carousel6,.home-section-brand-miss-carousel7{
+    display: flex;
+    gap: 20px;
     height: 300px;
-    background-color: coral;
+    min-width: 50%;
+    height: 100%;
+    margin:  0 20px  0 0;
+    position: relative;
+    left: 0;
+    transition: 0.5s;
+    margin: auto; 
+    display: flex;
+    overflow: hidden; 
     margin-bottom: 20px;
 }
 .home-section-influencers-carousel{
