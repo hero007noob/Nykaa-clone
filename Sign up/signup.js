@@ -147,10 +147,10 @@ function sendOtpToMail (credentialObj){
   otpArr.push(otpObj);
   localStorage.setItem("otp", JSON.stringify(otpArr));
 
-
-  const serviceId = "service_ds184ez";
-  const templateId = "template_vv5zioi";
-  const apiKey = "MUVmPRDGZt2TiNI7U";
+  // nykaa
+  const serviceId = "service_sd99ved"; 
+  const templateId = "template_pjdhzua"; 
+  const apiKey = "hhZwXWGy44N1Xx-mB";
 
   // Send the email
   emailjs
