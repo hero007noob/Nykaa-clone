@@ -854,6 +854,8 @@ display(pagefaceData);
 function display(list, clear) {
   if (!clear) document.querySelector(".Bathchild2").innerHTML = "";
   list.map(function (elem, index) {
+    var passingobj=event.target.textContent;
+    console.log(passingobj);
     var div = document.createElement("div");
     var keyword = document.createElement("h4");
     keyword.textContent = elem.Keywords;
@@ -861,6 +863,8 @@ function display(list, clear) {
     var imgdiv = document.createElement("div");
     var img = document.createElement("img");
     img.setAttribute("src", elem.image);
+    img.setAttribute("class","Pro-img-StoreData");
+    img.setAttribute("onclick","Prodatastoring(passingobj)")
     imgdiv.append(img);
     var title = document.createElement("h4");
     title.textContent = elem.name;
@@ -1240,3 +1244,13 @@ window.addEventListener("scroll", function () {
     div.style.paddingTop = "initial";
   }
 });
+
+var addingarr = JSON.parse(localStorage.getItem("product-list")) || [];
+function Prodatastoring(passingobj){
+  addingarr.push(passingobj);
+  console.log(passingobj);
+  localStorage.setItem("product-list", JSON.stringify(addingarr));
+}
+// document.querySelector(.Pro-img-StoreData)
+
+
