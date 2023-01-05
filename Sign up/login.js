@@ -58,11 +58,10 @@ form.addEventListener("submit", function (e) {
   if (passwordValid && emailValid) {
     // if both email and password is valid we check inside the local storage;
 
-    if (verifyCredentials(emailOrPhone, password)) {
-      // alert("login successfully");
-    } else {
-      alert("Wrong user id or password");
-    }
+    if (!verifyCredentials(emailOrPhone, password)) {
+      loginFailedPopup();
+    } 
+
   }
 });
 
@@ -87,11 +86,33 @@ function verifyCredentials(emailOrPhone, password) {
       (elem.email == emailOrPhone || elem.phonenumber == emailOrPhone) &&
       elem.password == password
     ) {
-      alert("Welcom back " + elem.userName);
+      LoginSuccessfulPopup(elem.userName);
+
       credentialMatch = true;
       return credentialMatch;
     }
   });
 
   return credentialMatch;
+}
+
+function LoginSuccessfulPopup(username) {
+  // put all code in if() if you need to run some validation
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Welcome back "+username;
+  pop.classList.add("pop");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 4000);
+}
+
+function loginFailedPopup() {
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Login Failed please check your password";
+  pop.classList.add("pop");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 4000);
 }

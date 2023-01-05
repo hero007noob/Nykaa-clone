@@ -96,12 +96,20 @@ form.addEventListener("submit", function (e) {
       password: password,
     };
 
+    sendOtpToMail(credentialObj);
+
     userCredentialArr.push(credentialObj);
     localStorage.setItem("userCredentials", JSON.stringify(userCredentialArr));
 
-    alert("Create account successfully");
+    openOTPpage();
   }
 });
+
+
+// redirect to otp verification page
+function openOTPpage (){
+  window.open('Otp-generator/signup-otp.html', '_blank');
+}
 
 function validateEmail(email) {
   var re =
@@ -120,3 +128,45 @@ function validatePassword(password) {
   }
   return true;
 }
+
+let otpArr = JSON.parse(localStorage.getItem("otp")) || [];
+
+// otp feature
+function sendOtpToMail (credentialObj){
+
+  let name = credentialObj.userName;
+  let mail = credentialObj.email;
+  let otp = generateOTP();
+
+  let otpObj = {
+    name: name,
+    mail: mail,
+    otp : otp,
+  }
+  
+  otpArr.push(otpObj);
+  localStorage.setItem("otp", JSON.stringify(otpArr));
+
+  // nykaa
+  const serviceId = "service_sd99ved"; 
+  const templateId = "template_pjdhzua"; 
+  const apiKey = "hhZwXWGy44N1Xx-mB";
+
+  // Send the email
+  emailjs
+    .send(serviceId, templateId, { name, mail, otp }, apiKey)
+    .then(() => {
+      // alert("OTP sent to your mail ");
+    })
+    .catch((error) => {
+      console.error(error);
+      alert("There was an error sending the email. Please try again later.");
+    });
+}
+
+//generate 6 digits otp
+function generateOTP() {
+  var otp = Math.floor(Math.random() * 900000) + 100000;
+  return otp;
+}
+

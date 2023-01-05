@@ -12,6 +12,18 @@
       href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
     />
 
+    <!-- emailjs for OTP  -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("hhZwXWGy44N1Xx-mB");
+      })();
+    </script>
+
+
     <!-- fontawesome  -->
     <script
       src="https://kit.fontawesome.com/b78a585d56.js"
@@ -32,7 +44,7 @@
 
   <body>
     <div class="sign-up-body">
-      <form id="sign-up-form" action="">
+      <form id="sign-up-form" method="post" action="">
         <img src="./Images/nyka-log.svg" alt="nykaa-logo" />
         <h1>Sign up</h1>
 
@@ -59,7 +71,12 @@
           <i id="eye-slash-id" class="eye-slash-icon fa-solid fa-eye-slash"></i>
         </div>
 
-        <input type="submit" value="Create Account" />
+        <input
+          class="sign-up-submit"
+          target="_blank"
+          type="submit"
+          value="Create Account"
+        />
 
         <hr class="hr-left" />
         <p class="sign-up-or">OR</p>
@@ -81,4 +98,5 @@
     </div>
   </body>
   <script src="signup.js"></script>
-</html>`
+</html>
+`
