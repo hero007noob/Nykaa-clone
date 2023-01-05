@@ -1,0 +1,30 @@
+.orderbox {
+  width: 65%;
+  margin-left: 2.4rem;
+  margin-top: 2rem;
+}
+.orderheading {
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+  background-color: white;
+}
+.orderheading i {
+  margin: 0 1rem;
+  font-size: 1rem;
+}
+.orderdiv {
+  text-align: center;
+  background-color: white;
+  margin-top: 0.2rem;
+}
+.orderdiv i {
+  font-size: 3rem;
+  color: rgb(230, 225, 225);
+  margin-top: 2rem;
+}
+.orderdiv h6 {
+  color: #fc2779;
+  margin-top: -1rem;
+  padding-bottom: 6rem;
+}

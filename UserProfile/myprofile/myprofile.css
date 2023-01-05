@@ -1,0 +1,92 @@
+.profileback {
+  width: 70%;
+  background-image: url("https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
+  margin: 2rem;
+  /* margin-left: 1rem; */
+}
+.profiletop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}
+.profilebox {
+  display: flex;
+  margin: 0 auto;
+  background-color: white;
+  width: 420px;
+  height: 180px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  /* margin-top: 2rem; */
+  padding: 10px;
+}
+.profileimg {
+  display: flex;
+  /* margin: 0 auto; */
+  padding: 0 10px;
+  width: 40%;
+}
+.profileimg > img {
+  width: 100%;
+}
+.profiledetail {
+  margin: 10px;
+}
+.address {
+  width: 100%;
+  background-color: white;
+  margin-top: 4%;
+  height: 25rem;
+}
+.addresshead {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 5%;
+  padding-top: 8%;
+}
+.addressbox {
+  margin: 5%;
+  height: 50%;
+  width: 40%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 90%;
+  }
+  .profileback {
+    width: 90%;
+    margin: auto;
+    /* padding-left: 32px; */
+    margin-top: 1rem;
+    background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
+  }
+}
+/* @media only screen and (max-width: 700px) {
+  .profile {
+    align-items: left;
+  }
+  .profilebox {
+    display: grid;
+    grid-template-columns: repeat(1, 90%);
+    align-items: center;
+    justify-content: center;
+  }
+  .profileimg {
+    width: 100%;
+    margin-left: 1rem;
+  }
+  .profiledetail {
+    margin-top: rem;
+    width: 100%;
+    text-align: center;
+  }
+  .profileback {
+    background-image: url("https://img.freepik.com/free-photo/top-view-background-beautiful-white-grey-brown-cream-blue-background_140725-72219.jpg?w=2000");
+  }
+} */

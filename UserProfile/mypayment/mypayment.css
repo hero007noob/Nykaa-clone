@@ -1,0 +1,23 @@
+.paymentbox {
+  width: 65%;
+  margin-left: 2.4rem;
+  margin-top: 2rem;
+}
+.payheading {
+  padding-left: 1rem;
+  display: flex;
+  background-color: white;
+}
+.paydiv {
+  text-align: center;
+  background-color: white;
+  margin-top: 0.2rem;
+}
+.paydiv i {
+  font-size: 11rem;
+  color: rgb(230, 225, 225);
+  margin-top: 2rem;
+}
+.paydiv p:last-child {
+  padding-bottom: 6rem;
+}
