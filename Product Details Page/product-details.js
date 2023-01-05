@@ -39,7 +39,28 @@ function display(productData){
       var productMrp = document.querySelector(".product-mrp");
       productMrp.innerHTML =` <s> ${elem.discount_price} </s> `
 
-      var discountPercent = document.querySelector(".product-price-line>span>:last-child");
-      discountPercent.textContent = elem.dis
+      var discountPercent = document.querySelector(".offer");
+      discountPercent.textContent = elem.discount_percentage;
+      
+      var review = document.querySelector(".reviews");
+      review.textContent = elem.reviews;
+      
+      
+
     });
 }
+
+
+var addWishList = document.querySelector(".add-wishlist");
+var removeWishList = document.querySelector(".remove-wishlist");
+
+addWishList.addEventListener("click", function () {
+  addWishList.classList.add("disable-class");
+  removeWishList.classList.remove("disable-class");  
+})
+
+removeWishList.addEventListener("click", function (){
+  addWishList.classList.remove("disable-class");
+  removeWishList.classList.add("disable-class");
+})
+
