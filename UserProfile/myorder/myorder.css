@@ -28,3 +28,17 @@
   margin-top: -1rem;
   padding-bottom: 6rem;
 }
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 90%;
+  }
+  .orderbox {
+    width: 90%;
+    margin: auto;
+  }
+}

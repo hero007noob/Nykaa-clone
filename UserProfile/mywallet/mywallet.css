@@ -70,22 +70,17 @@
   background-color: white;
   margin-top: 2rem;
 }
-@media only screen and (max-width: 950px) {
-  /* .profile{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .profile .profileList{
-        width:98%;
-        box-sizing: border-box;
-    }
-    .profileback{
-        width:96%;
-        margin-top: 1rem;
-    }
-    .DisPageName{
-        margin-left: 4%;
-        margin-top: 2%;
-    } */
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 90%;
+  }
+  .walletbox {
+    width: 90%;
+    margin: auto;
+  }
 }

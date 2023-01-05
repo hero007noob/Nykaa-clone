@@ -21,3 +21,17 @@
 .paydiv p:last-child {
   padding-bottom: 6rem;
 }
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 90%;
+  }
+  .paymentbox {
+    width: 90%;
+    margin: auto;
+  }
+}
