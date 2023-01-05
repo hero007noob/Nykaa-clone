@@ -35,9 +35,9 @@
       <h1>Verify your email!</h1>
 
       <p>
-        Enter verification code that was  sent<br> to your mail id
+        Enter verification code that was sent<br />
+        to your mail id
       </p>
-
 
       <p>Verification code</p>
 
@@ -50,12 +50,20 @@
         <input maxlength="1" type="text" />
       </div>
 
-      <p class="resend-otp"> 
+      <p class="resend-otp">
         Didn't receive OTP code
-        <a href="" > Request again?</a>  
+        <a href=""> Request again?</a>
       </p>
-      
+
       <button>Verify & Proceed</button>
+    </div>
+
+    <!-- pop up alert  -->
+    <div class="pop-up-alert-view pop-up-alert-otp-sent">
+      <div class="pop-up-alert">
+        <i class="fa-solid fa-circle-check"></i>
+        <p class="pop-up-msg">OTP sent to your mail.</p>
+      </div>
     </div>
   </body>
   <script src="signup-otp.js"></script>

@@ -1,75 +1,78 @@
-alert("OTP sent to your mail ");
+window.onload = function () {
 
-var otpArr = JSON.parse(localStorage.getItem("otp")) || [];
+  // popup msg otp sent to mail
+  otpSendToMail();
 
-var submitBtn = document.querySelector(".otp-box>button");
-submitBtn.addEventListener("click", function () {
-  var otpDigits = document.querySelectorAll(".otp-input-field>input");
-  let otpString = "";
-
-  for (let digits of otpDigits) {
-    otpString += digits.value;
+  function otpSendToMail() {
+    let pop = document.getElementsByClassName("pop-up-alert")[0];
+    pop.classList.add("pop");
+    let message = pop.querySelector(".pop-up-msg");
+    message.textContent = "OTP sent to your mail ";
+    setTimeout(() => {
+      pop.classList.remove("pop");
+    }, 4000);
   }
-  otpString = parseInt(otpString);
 
-  if (otpMatch(otpString)) {
-    // alert("registration success");
-    otpSuccessful();
+  var otpArr = JSON.parse(localStorage.getItem("otp")) || [];
 
-    
-    for (let digit of otpDigits){
-      digit.value = "";
+  var submitBtn = document.querySelector(".otp-box>button");
+
+  submitBtn.addEventListener("click", function () {
+    var otpDigits = document.querySelectorAll(".otp-input-field>input");
+    let otpString = "";
+
+    for (let digits of otpDigits) {
+      otpString += digits.value;
     }
+    otpString = parseInt(otpString);
 
-  } else {
-    // alert("otp not valid");
-    otpUnsuccessful();
+    if (otpMatch(otpString)) {
+      otpSuccessful();
+      for (let digit of otpDigits) {
+        digit.value = "";
+      }
+    } else {
+      otpFailed();
+    }
+  });
+
+  function otpMatch(otpString) {
+    let matchElement = otpArr.find((elem) => otpString == elem.otp);
+
+    return matchElement ? matchElement : false;
   }
-});
 
-// popup msg 
+  let inputFields = document.querySelectorAll(".otp-input-field>input");
+
+  for (let inputField of inputFields) {
+    inputField.addEventListener("focus", function (event) {
+      event.target.style.borderColor = "red";
+    });
+  }
+
+  inputFields.forEach((inputField) => {
+    inputField.addEventListener("blur", function (event) {
+      event.target.style.borderColor = "e80070";
+    });
+  });
+};
+
 function otpSuccessful() {
-  // put all code in if() if you need to run some validation
   let pop = document.getElementsByClassName("pop-up-alert")[0];
-  let message = pop.querySelector("p");
-  message.textContent = "Login Successful";
   pop.classList.add("pop");
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Registration completed ";
   setTimeout(() => {
     pop.classList.remove("pop");
-  }, 2000);
+  }, 4000);
 }
 
-
-function otpUnsuccessful (){
-
+function otpFailed() {
   let pop = document.getElementsByClassName("pop-up-alert")[0];
-  let message = pop.querySelector("p");
-  message.textContent = "Login Failed please check your password";
   pop.classList.add("pop");
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Registration Failed";
   setTimeout(() => {
     pop.classList.remove("pop");
-  }, 2000);
-
-
+  }, 4000);
 }
-
-
-function otpMatch(otpString) {
-  let matchElement = otpArr.find((elem) => otpString == elem.otp);
-
-  return matchElement ? matchElement : false;
-}
-
-let inputFields = document.querySelectorAll(".otp-input-field>input");
-
-for (let inputField of inputFields) {
-  inputField.addEventListener("focus", function (event) {
-    event.target.style.borderColor = "red";
-  });
-}
-
-inputFields.forEach((inputField) => {
-  inputField.addEventListener("blur", function (event) {
-    event.target.style.borderColor = "e80070";
-  });
-});

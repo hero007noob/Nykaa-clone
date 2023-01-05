@@ -8,7 +8,7 @@
 
 .sign-up-body {
   margin: 0;
-  font-family:inter, Roboto, Arial, sans-serif;
+  font-family: inter, Roboto, Arial, sans-serif;
   padding-top: 50px;
 }
 
@@ -164,13 +164,11 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* popup  */
 
-
-
 .pop-up-alert-view {
   display: flex;
   height: 100vh;
   justify-content: center;
-  font-family:inter, Roboto, Arial, sans-serif;
+  font-family: inter, Roboto, Arial, sans-serif;
 }
 .pop-up-alert {
   position: fixed;
@@ -186,14 +184,13 @@ input[type="number"]::-webkit-inner-spin-button {
   align-items: center;
   transition: all 1s ease;
   padding: 10px;
-
 }
 .pop-up-alert > p {
   padding: 10px;
 }
 .pop {
   animation-name: example;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
 }
 
@@ -211,8 +208,6 @@ input[type="number"]::-webkit-inner-spin-button {
     margin-bottom: -100px;
   }
 }
-
-
 
 /* responsive  */
 @media screen and (max-width: 1024px) {
