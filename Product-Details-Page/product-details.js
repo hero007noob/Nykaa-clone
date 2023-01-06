@@ -33,10 +33,13 @@ function display(productData) {
     productPrice.textContent = elem.price;
 
     var productMrp = document.querySelector(".product-mrp");
-    productMrp.innerHTML = ` <s> ${elem.discount_price} </s> `;
+    var discountValue = elem.discount_price || "";
+    productMrp.innerHTML = ` <s> ${discountValue} </s> `;
+
 
     var discountPercent = document.querySelector(".offer");
-    discountPercent.textContent = elem.discount_percentage;
+    var percentageCheck = elem.discount_percentage || "";
+    discountPercent.textContent = percentageCheck;
 
     var review = document.querySelector(".reviews");
     review.textContent = elem.reviews;
