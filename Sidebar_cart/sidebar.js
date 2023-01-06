@@ -1883,7 +1883,6 @@ const faceData = [
   },
 ];
 const sampleCartItems = faceData.slice(0, 15);
-addSideBarCartData(sampleCartItems);
 document.querySelector(".cart-btn").addEventListener("click", openNav);
 document
   .querySelector(".sidebar-dim-overlay")
@@ -1891,7 +1890,9 @@ document
 document
   .querySelector(".cart-sidebar-back-arrow")
   .addEventListener("click", closeNav);
-
+// localStorage.setItem("product-Bag", JSON.stringify(sampleCartItems));
+let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+addSideBarCartData(data);
 function openNav(event) {
   console.log("open");
   let sidebar = document.querySelector(".cart-sidebar");
@@ -1966,6 +1967,16 @@ function addSideBarCartDataItem(item, index) {
 <div>
 </div>`;
   parentDiv.innerHTML += itemDiv;
+  parentDiv
+    .querySelector(".sidebar-item-removeAction")
+    .addEventListener("click", function (event) {
+      removeItem(event, index);
+    });
+  parentDiv
+    .querySelector(".sidebar-item-wishlistAction")
+    .addEventListener("click", function (event) {
+      wishListItem(event, index);
+    });
 }
 function addCoupon() {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
@@ -2104,13 +2115,28 @@ function addCouponBody(sidebar) {
   sidebar.innerHTML += header;
   sidebar.innerHTML += body;
 }
+
 function deleteAct(event) {
   let item = document.querySelector(".sidebar-item-parent");
-  event.target.parentNode.parentNode.parentNode.classList.toggle(
-    "sidebar-item-flip"
-  );
+  let parent = event.target.parentNode.parentNode.parentNode;
+  parent.classList.toggle("sidebar-item-flip");
 }
 function cancelAct(event) {
   let item = document.querySelector(".sidebar-item-parent");
   event.target.parentNode.parentNode.classList.toggle("sidebar-item-flip");
 }
+function removeItem(event, index) {
+  data.splice(index, 1);
+  localStorage.setItem("product-Bag", JSON.stringify(data));
+  addSideBarCartData(data);
+}
+function wishListItem(event, index) {
+  let wishlist = JSON.parse(localStorage.getItem("product-wishlist")) || [];
+  wishlist.push(data.splice(index, 1));
+  localStorage.setItem("product-wishlist", JSON.stringify(wishlist));
+  addSideBarCartData(data);
+  event.target.parentNode.parentNode.parentNode.classList.toggle(
+    "sidebar-item-flip"
+  );
+}
+// function wishListItem() {}
