@@ -4,13 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Nykaa Payment</title>
+
+    <link
+    rel="icon"
+    href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
+  />
+
+    <!-- google fonts  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap"
       rel="stylesheet"
     />
+
+    <!-- css  -->
     <link rel="stylesheet" href="../theme_fonts/theme.css" />
     <link rel="stylesheet" href="./payment.css" />
     <link rel="stylesheet" href="../theme_fonts/fonts.css" />
@@ -21,6 +30,7 @@
     />
   </head>
   <body>
+
     <div id="header">
       <div id="logo">
         <img
@@ -58,6 +68,11 @@
         </div>
       </div>
     </div>
+
+
+
+
+
     <div id="content">
       <div id="address-text-section">
         <div id="address-text">
@@ -217,7 +232,7 @@
 
             <div id="credit" class="tabcontent">
               <h3 class="font-payment-content-h3">Credit/Debit Card</h3>
-              <div >
+              <div>
                 <p class="font-payment-content-p">WE ACCEPT</p>
                 <img
                   src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/WeAccept/VISA.svg"
@@ -238,7 +253,14 @@
               </div>
               <div>
                 <div>
-                  <input id="cardnumber" class="input-details" type="number" min="0" max="16" placeholder="Card Number" />
+                  <input
+                    id="cardnumber"
+                    class="input-details"
+                    type="number"
+                    min="0"
+                    max="16"
+                    placeholder="Card Number"
+                  />
                 </div>
                 <div class="month-cvv">
                   <input
@@ -248,12 +270,20 @@
                     placeholder=" Expiry(MM / YY)"
                     maxlength="5"
                   />
-                  <input type="password" class="input-details" value="" autocomplete="off" placeholder="CVV">
+                  <input
+                    type="password"
+                    class="input-details"
+                    value=""
+                    autocomplete="off"
+                    placeholder="CVV"
+                  />
                 </div>
               </div>
               <div>
-                <input type="checkbox" >
-                <p class="font-payment-content-p">Save this card securely for future</p>
+                <input type="checkbox" />
+                <p class="font-payment-content-p">
+                  Save this card securely for future
+                </p>
               </div>
               <button class="payment-verify-btn">Submit</button>
             </div>
@@ -263,7 +293,7 @@
               <hr class="Section-hr" />
               <p class="font-payment-content-p">1.Select UPI App</p>
               <div id="upi-logos">
-                <div >
+                <div>
                   <div>
                     <img
                       src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/UPImWeb/GPay_01.svg"
@@ -302,116 +332,170 @@
               </div>
               <div>
                 <p class="font-payment-content-p">2.Enter UPI/VPA Id</p>
-                <input type="text" class="input-details"/>
-                <button class="payment-verify-btn">Verify & Pay<span class="amt-verify-btn">0</span></button>
+                <input type="text" class="input-details" />
+                <button class="payment-verify-btn">
+                  Verify & Pay<span class="amt-verify-btn">0</span>
+                </button>
               </div>
             </div>
 
             <div id="netbanking" class="tabcontent">
               <h3 class="font-payment-content-h3">Net Banking</h3>
               <hr class="section-hr" />
-              <div class="netbanking-checkbox"  >
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7AXIS.svg" alt="" />
+              <div class="netbanking-checkbox">
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7AXIS.svg"
+                  alt=""
+                />
                 <p class="net-banking-p">AXIS</p>
-                 <input type="checkbox" class="netbankin-checkbox-box" >
+                <input type="checkbox" class="netbankin-checkbox-box" />
               </div>
               <div class="netbanking-checkbox">
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7HDFC.svg" alt="" />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7HDFC.svg"
+                  alt=""
+                />
                 <p class="net-banking-p">HDFC</p>
-                <input type="checkbox"/>
+                <input type="checkbox" />
               </div>
               <div class="netbanking-checkbox">
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7ICICI.svg" alt="" />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7ICICI.svg"
+                  alt=""
+                />
                 <p class="net-banking-p">ICICI</p>
-                <input type="checkbox"/>
+                <input type="checkbox" />
               </div>
               <div class="netbanking-checkbox">
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7KOTAK.svg" alt="" />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7KOTAK.svg"
+                  alt=""
+                />
                 <p class="net-banking-p">KOTAK</p>
-                <input type="checkbox"/>
+                <input type="checkbox" />
               </div>
               <div class="netbanking-checkbox">
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7SBI.svg" alt="" />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7SBI.svg"
+                  alt=""
+                />
                 <p class="net-banking-p">SBI</p>
-                <input type="checkbox"/>
+                <input type="checkbox" />
               </div>
               <div class="netbanking-checkbox">
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7YES.svg" alt="" />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7YES.svg"
+                  alt=""
+                />
                 <p class="net-banking-p">YES</p>
-                <input type="checkbox"/>
+                <input type="checkbox" />
               </div>
               <div class="netbanking-checkbox">
-                <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7Otherbank.svg" alt="" />
+                <img
+                  src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/7Otherbank.svg"
+                  alt=""
+                />
                 <p class="net-banking-p">OTHER BANK</p>
-                <input type="checkbox"/>
+                <input type="checkbox" />
               </div>
               <div>
-                <button class="payment-verify-btn">Pay <span class="amt-verify-btn"></span></button>
+                <button class="payment-verify-btn">
+                  Pay <span class="amt-verify-btn"></span>
+                </button>
               </div>
-              <div>
-                
-              </div>
+              <div></div>
             </div>
 
             <div id="shopnow" class="tabcontent">
               <h3 class="font-payment-content-h3">Shop now & pay later</h3>
-              <hr class="Section-hr" >
+              <hr class="Section-hr" />
               <div>
-                <input type="number" class="input-details" placeholder="Phone Number">
+                <input
+                  type="number"
+                  class="input-details"
+                  placeholder="Phone Number"
+                />
               </div>
               <div>
                 <div class="snpl-content">
-                  <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Zest_Simpl/Simpl.svg" alt="">
+                  <img
+                    src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Zest_Simpl/Simpl.svg"
+                    alt=""
+                  />
                   <div>
-                    <h4 class="net-banking-p" >Simpl</h4>
-                    <p class="font-payment-content-p">You are not eligible for this payment option</p>
+                    <h4 class="net-banking-p">Simpl</h4>
+                    <p class="font-payment-content-p">
+                      You are not eligible for this payment option
+                    </p>
                   </div>
                 </div>
                 <div class="snpl-content">
-                  <img src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Zest_Simpl/Zest.svg" alt="">
+                  <img
+                    src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/Zest_Simpl/Zest.svg"
+                    alt=""
+                  />
                   <div>
                     <h4 class="net-banking-p">Zest Money</h4>
-                    <p class="font-payment-content-p">Oopa! You are not eligible to use ZestMoney fornow</p>
-
+                    <p class="font-payment-content-p">
+                      Oopa! You are not eligible to use ZestMoney fornow
+                    </p>
                   </div>
                 </div>
                 <div>
-                  <p class="font-payment-content-p">You can pay <span class="amt-verify-btn">0</span></p>
-                  <p class="font-payment-content-p">Proceed with other payments</p>
+                  <p class="font-payment-content-p">
+                    You can pay <span class="amt-verify-btn">0</span>
+                  </p>
+                  <p class="font-payment-content-p">
+                    Proceed with other payments
+                  </p>
                 </div>
               </div>
             </div>
 
             <div id="cod" class="tabcontent">
               <h3 class="font-payment-content-h3">Cash On Delivery</h3>
-              <hr class="Section-hr">
+              <hr class="Section-hr" />
               <button class="payment-verify-btn">Place Order</button>
             </div>
 
             <div id="paytm" class="tabcontent">
               <h3 class="font-payment-content-h3">Paytm Wallet</h3>
-              <hr class="Section-hr">
-              <input type="number" class="input-details" placeholder="Mobile Number">
+              <hr class="Section-hr" />
+              <input
+                type="number"
+                class="input-details"
+                placeholder="Mobile Number"
+              />
               <button class="payment-verify-btn">Link</button>
             </div>
 
             <div id="giftcard" class="tabcontent">
               <h3 class="font-payment-content-h3">Gift Card</h3>
-              <hr class="Section-hr">
+              <hr class="Section-hr" />
               <div>
-                <input type="number" class="input-details" placeholder="Gift Card Number">
+                <input
+                  type="number"
+                  class="input-details"
+                  placeholder="Gift Card Number"
+                />
               </div>
               <div id="giftcard-pin">
-                <input type="password" class="input-details" placeholder="PIN">
+                <input
+                  type="password"
+                  class="input-details"
+                  placeholder="PIN"
+                />
                 <button class="payment-verify-btn">Submit</button>
               </div>
             </div>
 
             <div id="emi" class="tabcontent">
               <h3 class="font-payment-content-h3">EMI</h3>
-              <hr class="Section-hr">
+              <hr class="Section-hr" />
               <div>
-                <button class="payment-verify-btn">Pay <span class="amt-verify-btn"></span></button>
+                <button class="payment-verify-btn">
+                  Pay <span class="amt-verify-btn"></span>
+                </button>
               </div>
             </div>
           </div>
