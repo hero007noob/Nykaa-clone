@@ -4,10 +4,14 @@ window.onload = function () {
   otpSendToMail();
 
   function otpSendToMail() {
-    let pop = document.getElementsByClassName("pop-up-alert")[0];
-    pop.classList.add("pop");
-    let message = pop.querySelector(".pop-up-msg");
-    message.textContent = "OTP sent to your mail ";
+   
+    setTimeout(() => {
+      let pop = document.getElementsByClassName("pop-up-alert")[0];
+      pop.classList.add("pop");
+      let message = pop.querySelector(".pop-up-msg");
+      message.textContent = "OTP sent to your mail ";
+    }, 500);
+
     setTimeout(() => {
       pop.classList.remove("pop");
     }, 4000);

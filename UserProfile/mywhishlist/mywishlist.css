@@ -1,0 +1,212 @@
+.profileList
+{
+  width: 20%;
+}
+.whishlistbox {
+  width: 80%;
+  margin-left: 2.4rem;
+  margin-top: 2rem;
+  background-color: white;
+  text-align: center;
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+}
+/* .whishlistbox button {
+  padding: 0.7rem;
+  background-color: white;
+  border: none;
+} */
+/* .whishlistbox button:hover {
+  background-color: rgb(239, 235, 235);
+} */
+.whishlistbox img {
+  width: 11rem;
+}
+.maindiv
+{
+  width: 100%;
+  /* box-sizing: border-box; */
+}
+.parentdiv
+{
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  /* height:  400px; */
+}
+.imgdiv
+{
+  width: 80%;
+  margin: auto;
+}
+.imgdiv>img
+{
+  width: 100%;
+  padding-top: 20px;
+}
+.textdiv
+{
+  width: 80%;
+  margin: auto;
+}
+.mrpdiv
+{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+
+}
+.movetobag
+{
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  border-color: rgb(232, 0, 113);
+  background-color: rgb(232, 0, 113);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 50%;
+}
+.buy
+{
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  border-color: black;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 50%;
+}
+.starsdiv
+{
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  width: 70%;
+  align-items: center;
+  padding-left: 5px;
+  /* gap: 10px; */
+}
+.starsdiv>img{
+  width: 100%;
+}
+.font-product-item-MRP
+{
+  width: 30%;
+  font-size: 16px;
+  margin-right: 5px;
+}
+.reviewdiv
+{
+ display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+.bagdiv
+{
+  display: flex;
+  gap: 10px;
+}
+@media only screen and (max-width: 1000px) {
+  .profile {
+    display: block !important;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profileList {
+    width: 80%;
+  }
+  .whishlistbox {
+    width: 80%;
+    /* margin: auto; */
+  }
+}
+.rmvbtn
+{
+  border-radius: 55%;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  border: 1px solid  black;
+  color: white;
+  font-size: large;
+  float: right;
+  margin-right: 30px;
+}
+.rmvbtn:hover
+{
+  cursor: pointer;
+  background-color: #fc2779;
+  border-color: #fc2779;
+  color: white;
+}
+
+
+.pop-up-alert-view {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  font-family:inter, Roboto, Arial, sans-serif;
+}
+.pop-up-alert {
+  position: fixed;
+  height: 50px;
+  width: 200px;
+  bottom: 0;
+  margin-bottom: -100px;
+  border-radius: 10px;
+  background-color: #fc2779;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+  padding: 10px;
+
+}
+.pop-up-alert > p {
+  padding: 10px;
+}
+.pop {
+  animation-name: example;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes example {
+  0% {
+    margin-bottom: -100px;
+  }
+  40% {
+    margin-bottom: 100px;
+  }
+  60% {
+    margin-bottom: 100px;
+  }
+  100% {
+    margin-bottom: -100px;
+  }
+}

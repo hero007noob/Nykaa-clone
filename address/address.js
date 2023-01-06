@@ -248,7 +248,7 @@ function called(){
 
 function addingaddress() {
   // document.querySelector(".Adding-new-add").textContent="";
-  var x=JSON.parse(localStorage.getItem("address-list"));
+  var x=JSON.parse(localStorage.getItem("address-list")) ||[];
   for (var i=0;i<x.length;i++)
   {
     var div= document.createElement("div");
