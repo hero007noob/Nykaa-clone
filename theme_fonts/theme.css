@@ -10,6 +10,8 @@
   --font-path-text: rgb(136, 136, 136);
   --home-gray-text: #5c6873;
   --footer-des-text: #3f3f51;
+  --discount-text: rgb(118, 146, 173);
+  --bottom-border: rgba(0, 19, 37, 0.08);
 }
 .dark-mode {
   --primary-background: black;

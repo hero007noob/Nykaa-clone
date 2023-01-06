@@ -668,3 +668,7 @@ input::-webkit-inner-spin-button {
     width: 54%;
   }
 }
+
+.inclulsive-tax {
+  color: rgba(0, 19, 37, 0.64);
+}
