@@ -11,9 +11,58 @@
 .home-section-best-in-beauty {
 }
 .home-top-offer-carousel {
-  height: 350px;
-  background-color: coral;
-}
+ 
+  padding-top: 20px;
+ }
+ .carousel-container {
+   width: 100%; 
+   margin: auto; 
+   border-radius: 10px;
+   
+   overflow: hidden; 
+   position: relative; 
+  } 
+  .carousel-slide{ 
+      
+      width     : 120%;
+      display   : inline-flex;
+      
+  } 
+  .carousel-slide img {
+      width: 100%;
+      border-radius: 10px;
+  }
+  #prevBtn{ 
+   transform: initial;
+   height: 56px;
+   width: 56px;
+   top: 45%;
+   content: "";
+   display: inline-block;
+   position: absolute;
+   border: 0px;
+   cursor: pointer;
+   z-index: 2;
+   background: url(https://images-static.nykaa.com/uploads/45d5a7b6-86eb-4850-9568-4d6ed91731fe.svg)
+     no-repeat;
+   right: 8px;
+  } 
+  #nextBtn{ 
+   transform: initial;
+   height: 56px;
+   width: 56px;
+   top: 45%;
+   content: "";
+   display: inline-block;
+   position: absolute;
+   border: 0px;
+   cursor: pointer;
+   z-index: 2;
+   background: url(https://images-static.nykaa.com/uploads/3df01759-af0c-4d81-b2f7-f61577ac3807.svg)
+     no-repeat;
+   left: 8px;
+  }
+ 
 .home-main-div {
   overflow: hidden;
 }
