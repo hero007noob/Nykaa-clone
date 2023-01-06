@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="../navBar/navbar.css">
 
+
     <title>Home</title>
   </head>
   <body>
@@ -51,20 +52,33 @@
           <li class="font-nav1-items"><a href=""><img src="./assets/women.png" alt=""></a></li>
           <li class="font-nav1-items"><a href=""><img src="./assets/bag.png" alt=""></a></li>
         </ul>
-        <div class="dropdown">
-          <div class="dropbtn"><img src="./assets/user.png" alt=""></div>
-          <div class="dropdown-content">
-            <a href="#">Link 1</a>
-            <a href="#">Link 2</a>
-            <a href="#">Link 3</a>
-          </div>
-        </div>
-        <div class="search">
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        
+        <div class="search right">
+          <button class="serach-icon"><i class="fa fa-magnifying-glass"></i></button>
           <input type="text" placeholder="Search on Nykaa" />
           <button class="sign">Sign in</button>
-          <span class="cartIcon-click"><img src="./assets/cart-icon.svg" alt="" /></span>
+
+          <div class="dropdown">
+            <div class="dropbtn">
+              <img src="./assets/nav-user-icon.svg"  alt="usericon">
+             <span>  User</span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+              <a href="#"> <i class="fa-solid fa-basket-shopping"></i> Orders</a>
+              <a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a>
+              <a href="#"><i class="fa-solid fa-wallet"></i> Wallet</a>
+              <a href="#"><i class="fa-solid fa-power-off"></i> Log out</a>
+            </div>
+          </div>
+
+          
+          <img class="cartIcon-click" src="./assets/cart-icon.svg" alt="" />
+        
+          
         </div>
+        
+
       </div>
       <div id="nav2">
         <ul>
@@ -81,8 +95,8 @@
           <li class="font-nav2-items"><a href="">Pop Ups</a></li>
           <li class="font-nav2-items">
             <img
-              src="https://w7.pngwing.com/pngs/624/330/png-transparent-porsche-offer-text-logo-porsche.png"
-              alt=""
+              src="assets/offers-nav.jpg"
+              alt="offers"
             />
           </li>
         </ul>
