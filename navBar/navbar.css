@@ -51,10 +51,10 @@
 #nav2 li {
   display: block;
   margin: auto;
-  
 }
-#nav1 li>a:hover, #nav2 li>a:hover {
-  color: #fc2779
+#nav1 li > a:hover,
+#nav2 li > a:hover {
+  color: #fc2779;
 }
 
 .search {
@@ -69,14 +69,11 @@
   width: 44px;
 }
 
-
 .search > input[type="text"] {
   height: 39px;
   background-color: #eeebeb;
-  border: none; 
+  border: none;
 }
-
-
 
 .search > .sign {
   background-color: #fc2779;
@@ -98,16 +95,16 @@
 
 .nav-header > #nav2 {
   display: flex;
-    border-bottom: 0.1px solid rgb(211, 207, 207);
-    background-color: white;
-    margin-top: -0.13rem;
-    position: relative;
-    padding-top: 6px;
-    height: 43px;
-    box-sizing: border-box;
-    border-top: 1px solid #d9d3d3;
-    transition: transform 6s;
-    box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px;
+  border-bottom: 0.1px solid rgb(211, 207, 207);
+  background-color: white;
+  margin-top: -0.13rem;
+  position: relative;
+  padding-top: 6px;
+  height: 43px;
+  box-sizing: border-box;
+  border-top: 1px solid #d9d3d3;
+  transition: transform 6s;
+  box-shadow: rgb(0 0 0 / 24%) 0px 2px 2px;
 }
 #nav2.sticky {
   margin-top: -150px;
@@ -146,17 +143,15 @@
 #nav2 ul > li > a {
   text-decoration: none;
   color: rgb(139, 133, 133);
-
 }
 #nav1 ul li a img {
   width: 30px;
 }
 
-.search-icon{
+.search-icon {
   font-size: 1.3rem;
   font-weight: 400;
 }
-
 
 .dropdown {
 }
@@ -206,6 +201,16 @@
   display: block;
 }
 
+@media screen and (max-width: 1200px) {
+  #nav1 li,
+  #nav2 li {
+    display: block;
+    margin: auto;
+    margin-left: 16px;
+    font-size: 11px;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   #nav2,
   .fullNav,
@@ -220,6 +225,7 @@
     margin-top: 45px;
   }
 }
+
 @media screen and (max-width: 600px) {
   #nav2,
   .fullNav,
