@@ -1,4 +1,4 @@
-@import "../theme_fonts/theme.css";
+@import "../theme_fonts/fonts.css";
 body {
   background-color: var(--secondary-background);
 }
@@ -80,6 +80,7 @@ body {
 }
 .BathwishlistBtn > img {
   width: 40%;
+  cursor: pointer;
 }
 .Bathcartbtn {
   display: flex;

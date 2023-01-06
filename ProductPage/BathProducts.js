@@ -1239,8 +1239,8 @@ window.addEventListener("scroll", function () {
   let ele = div.getBoundingClientRect();
   let cTop = ele.top;
   let oTop = ele.top + this.window.pageYOffset;
-  console.log("ctop", cTop);
-  console.log("otop", oTop);
+  // console.log("ctop", cTop);
+  // console.log("otop", oTop);
   if (cTop < 0) {
     div.style.top = "0";
     div.style.paddingTop = "40px";
