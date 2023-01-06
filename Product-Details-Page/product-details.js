@@ -1,26 +1,25 @@
-var faceData = [
-  {
-    name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
-    price: "₹419",
-    Keywords: "FEATURED",
-    image:
-      "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/35f92daNYKAC00000174_1.jpg",
-    discount_price: "₹599",
-    discount_percentage: "30% Off",
-    reviews: "3305",
-    shades: "15 Shades",
-    bonus: "Enjoy Free Gift",
-  },
-];
+// this for reference
+// var faceData = [
+//   {
+//     name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
+//     price: "₹419",
+//     Keywords: "FEATURED",
+//     image:
+//       "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/35f92daNYKAC00000174_1.jpg",
+//     discount_price: "₹599",
+//     discount_percentage: "30% Off",
+//     reviews: "3305",
+//     shades: "15 Shades",
+//     bonus: "Enjoy Free Gift",
+//   },
+// ];
 
 var productData = JSON.parse(localStorage.getItem("product-details")) || [];
 
 var wishListArr = JSON.parse(localStorage.getItem("product-wishlist")) || [];
 var bagArr = JSON.parse(localStorage.getItem("product-Bag")) || [];
 
-// this faceData should change to product data when we connect
-// with real key
-display(faceData);
+display(productData);
 
 function display(productData) {
   productData.forEach((elem, index) => {

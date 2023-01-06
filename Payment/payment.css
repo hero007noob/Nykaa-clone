@@ -1,132 +1,119 @@
-#header
-{
-    display: flex;
-    border-bottom: 1px solid lightgray;
-    padding-bottom: 10px;
-}   
-#location
-{
-    display: inline-flex;
-    gap: 20px;
-    margin: auto;
+/* nav  */
+#header {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
 }
-.modules
-{
-    display: flex;
-    gap: 20px;
-    width:200px
+#location {
+  display: inline-flex;
+  gap: 20px;
+  margin: auto;
 }
-.module-img
-{
-    width: 16%;
+.modules {
+  display: flex;
+  gap: 20px;
+  width: 200px;
 }
-.header-logo
-{
-    width: 60%;
-    margin-left: 50px;
-    margin-top: 10px;
+.module-img {
+  width: 16%;
 }
-.header-hr
-{
-    -webkit-transform:rotate(90deg);
-    color: black;
-    opacity: 10%;
-    height: 100%;
-    margin: auto;
+.header-logo {
+  width: 60%;
+  margin-left: 50px;
+  margin-top: 10px;
 }
-#content
-{
-    display: flex;
-    justify-content: space-around;
+.header-hr {
+  -webkit-transform: rotate(90deg);
+  color: black;
+  opacity: 10%;
+  height: 100%;
+  margin: auto;
+}
 
+
+
+
+/* body  */
+#content {
+  display: flex;
+  justify-content: space-around;
 }
 
 .collapse-content {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: white;
-    
-  }
-  
-  .collapsible{
-    background-color: white;
-    color: black;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    
-
-  }
-  .col1
-{
- border-top-left-radius: 10px;
- border-top-right-radius: 10px;  
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: white;
 }
 
-.col2
-{
- border-bottom-left-radius: 10px;
- border-bottom-right-radius: 10px;  
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
 }
-  .collapsible:after {
-    /* content: '\002B'; */
-    color: white;
-    font-weight: bold;
-    float: right;
-    margin-left: 5px;
-   
-  }
-  
+.col1 {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
-  #details-section{
-    width: 30%;
-    
-  }
-  #address-text-section{
-    width: 70%; 
-  }
-  #address-text{
-    width: 90%;
-    margin: auto;
-    padding-left: 100px;
-    padding-top: 20px;
-  }
-  #details{
-    width: 70%;
-    margin: auto;
-    float: left;
-    /* position: relative; */
-  }
-  #details>img{
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
-  }
- .spanelemright
-  {
-    float: right;
-  }
-  .cartitem
-  {
-    height: 150px;
-  }
-  #secure
-  {
-    display: flex;
-    background-color: #f9fafa;
-    padding: 0 10px 0 10px;
-    border-radius: 10px;
-    gap: 10px;
-    width: 100%;
-    margin: auto;
-  }
-   /* Style the tab */
+.col2 {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.collapsible:after {
+  /* content: '\002B'; */
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+#details-section {
+  width: 30%;
+}
+#address-text-section {
+  width: 70%;
+}
+#address-text {
+  width: 90%;
+  margin: auto;
+  padding-left: 100px;
+  padding-top: 20px;
+}
+#details {
+  width: 70%;
+  margin: auto;
+  float: left;
+  /* position: relative; */
+}
+#details > img {
+  display: block;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.spanelemright {
+  float: right;
+}
+.cartitem {
+  height: 150px;
+}
+#secure {
+  display: flex;
+  background-color: #f9fafa;
+  padding: 0 10px 0 10px;
+  border-radius: 10px;
+  gap: 10px;
+  width: 100%;
+  margin: auto;
+}
+/* Style the tab */
 .tab {
   float: left;
   border: 1px solid #ccc;
@@ -153,7 +140,7 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
- background-color: #ddd;
+  background-color: #ddd;
 }
 
 /* Create an active/current "tab button" class */
@@ -162,14 +149,13 @@
   border-color: currentcolor currentcolor currentcolor rgb(232, 0, 113);
   border-style: none none none solid;
   border-width: medium medium medium 4px;
- 
 }
 
 /* Style the tab content */
 .tabcontent {
- float: left;
- padding: 0px 12px;
- border: 1px solid rgba(0, 19, 37, 0.08);
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid rgba(0, 19, 37, 0.08);
   width: 40%;
   height: 500px;
   border-left: none;
@@ -177,36 +163,28 @@
   border-bottom-right-radius: 10px;
   display: none;
   box-sizing: border-box;
-} 
-.tab-button
-{
+}
+.tab-button {
   display: flex;
   margin: auto;
-  
 }
-.tab-button-img
-{
+.tab-button-img {
   width: 20%;
   margin: auto;
 }
-.tab-button-text
-{
+.tab-button-text {
   width: 80%;
   margin: auto;
   margin-left: -40px;
 }
-.tablinks
-{
+.tablinks {
   width: 20%;
   margin: auto;
 }
-#firsttab
-{
+#firsttab {
   border-top-left-radius: 20px;
-  
 }
-#lasttab
-{
+#lasttab {
   border-bottom-left-radius: 20px;
 }
 /* removing step from number tag */
@@ -217,49 +195,42 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 
-#upi-logos 
-{
+#upi-logos {
   display: flex;
   /* width: 100%; */
   height: 140px;
   text-align: center;
   justify-content: center;
-  
 }
-#upi-logos >div
-{
+#upi-logos > div {
   position: relative;
   width: 24%;
 }
-#upi-logos >div>div{ 
+#upi-logos > div > div {
   height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#upi-logos img
-{
+#upi-logos img {
   border: 1px solid gray;
   border-radius: 40px;
   padding: 5px;
   /* width: 100%; */
 }
 
-#upi-logos img:hover
-{
+#upi-logos img:hover {
   border: 2px solid rgb(232, 0, 113);
 }
 
-#upi *
-{
+#upi * {
   margin: 10px;
 }
-.payment-verify-btn
-{
+.payment-verify-btn {
   display: flex;
   flex-direction: row;
   -moz-box-align: center;
@@ -282,8 +253,7 @@ input[type=number] {
   width: 100%;
   /* box-sizing: border-box; */
 }
-.input-details
-{
+.input-details {
   background: rgb(243, 244, 245);
   border-color: currentcolor currentcolor rgba(0, 19, 37, 0.16);
   border-style: none none solid;
@@ -302,116 +272,91 @@ input[type=number] {
   caret-color: rgb(232, 0, 113);
   box-sizing: border-box;
 }
-.checkbox-payment
-{
+.checkbox-payment {
   margin: 0px;
   padding: 0px;
   background-color: rgb(63, 65, 77);
   box-sizing: border-box;
 }
-#credit *
-{
+#credit * {
   margin: 10px auto;
 }
-#credit>:nth-child(2)
-{
+#credit > :nth-child(2) {
   display: flex;
   margin: 0;
   width: 60%;
 }
-#credit>:nth-child(4)
-{
+#credit > :nth-child(4) {
   display: flex;
   margin: -20px 0 0 0;
   width: 50%;
   padding: px;
-
 }
-.month-cvv
-{
+.month-cvv {
   display: flex;
   gap: 10px;
 }
-.month-cvv input{
+.month-cvv input {
   width: 50%;
   text-align: center;
-
 }
-.Section-hr
-{
+.Section-hr {
   color: rgba(0, 19, 37, 0.08);
 }
-#upi-logos:hover
-{
+#upi-logos:hover {
   cursor: pointer;
 }
-#upi-logos img:focus
-{
+#upi-logos img:focus {
   border: 2px solid red;
 }
-.netbanking-checkbox
-{
+.netbanking-checkbox {
   display: flex;
   width: 100%;
   justify-content: space-between;
   padding: 0 20px 0 20px;
   box-sizing: border-box;
 }
-#netbanking *
-{
+#netbanking * {
   margin: 15px 0 0 0;
 }
-#netbanking button
-{
+#netbanking button {
   text-align: center;
 }
 
-#shopnow *
-{
-margin-top: 12px;
+#shopnow * {
+  margin-top: 12px;
 }
-.snpl-content
-{
+.snpl-content {
   display: flex;
   gap: 10px;
 }
-.snpl-content>div p
-{
+.snpl-content > div p {
   margin-top: -15px;
   color: red;
 }
-#cod *
-{
-margin: 20px 0 0 0;
+#cod * {
+  margin: 20px 0 0 0;
 }
-#cod>button
-{
+#cod > button {
   box-sizing: border-box;
   width: 100%;
 }
-#paytm *
-{
+#paytm * {
   margin-top: 12px;
 }
-#giftcard *
-{
+#giftcard * {
   margin-top: 12px;
 }
-#giftcard-pin
-{
+#giftcard-pin {
   display: flex;
   gap: 10px;
 }
-#giftcard-pin>input
-{
+#giftcard-pin > input {
   width: 30%;
-
 }
-#giftcard-pin>button
-{
+#giftcard-pin > button {
   width: 70%;
 }
-#emi *
-{
+#emi * {
   margin-top: 10px;
 }
