@@ -30,3 +30,10 @@ function checkPage() {
     }
   }
 }
+
+document.querySelector("#logout1").addEventListener("click",logout)
+document.querySelector("#logout2").addEventListener("click",logout)
+function logout()
+{
+  localStorage.setItem("loggedin","false");
+}
