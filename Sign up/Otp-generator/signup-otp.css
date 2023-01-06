@@ -1,0 +1,138 @@
+@import "/theme_fonts/theme.css";
+:root {
+  --home-carouse-item-border: rgb(236, 233, 233);
+  --btn-pink: rgb(232, 0, 112);
+  --btn-text-white: #fff;
+  --primary-text-black: #001325;
+}
+
+.otp-box {
+  width: 400px;
+  height: 350px;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  margin: auto;
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-top: 100px;
+  font-family: inter Roboto, Arial, sans-serif;
+}
+
+.otp-box p {
+  margin: 20px 0 0 0;
+}
+
+/* verification p  */
+.otp-box > p:nth-child(4) {
+  text-align: left;
+  margin: 0;
+  margin-top: 30px;
+  margin-left: 9px;
+}
+
+.otp-box > p:nth-child(5) {
+  font-size: 10px;
+}
+
+.mail-icon {
+  font-size: 2rem;
+}
+
+.otp-box > h1 {
+  display: inline-block;
+  margin: 0;
+  margin-left: 20px;
+}
+
+.otp-input-field {
+  height: 50px;
+  width: 100%;
+  padding-top: 4px;
+  padding-left: 10px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  justify-content: space-around;
+}
+
+.otp-input-field input {
+  width: 35px;
+  height: 35px;
+  border: 1px solid #c3c3c300;
+  caret-color: hsl(0, 0%, 100%);
+  background-color: #f6f5fa;
+  font-size: 30px;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.resend-otp {
+  font-size: 14px;
+}
+.otp-box button {
+  width: 100%;
+  background-color: var(--btn-pink);
+  border: none;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+
+.resend-otp {
+  text-decoration: none;
+}
+
+/* popup  */
+
+.pop-up-alert-view {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.pop-up-alert {
+  position: fixed;
+  height: 50px;
+  width: 200px;
+  bottom: 0;
+  margin-bottom: -100px;
+  border-radius: 10px;
+  background-color: #fc2779;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s ease;
+  padding: 10px;
+}
+.pop-up-alert > p {
+  padding: 10px;
+}
+.pop {
+  animation-name: example;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes example {
+  0% {
+    margin-bottom: -100px;
+  }
+  40% {
+    margin-bottom: 100px;
+  }
+  60% {
+    margin-bottom: 100px;
+  }
+  100% {
+    margin-bottom: -100px;
+  }
+}
