@@ -27,7 +27,7 @@
   <body>
     <header class="nav-header">
       <div id="nav1">
-        <ul>
+        <ul class="fullNav">
           <li>
             <img
               src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png"
@@ -39,11 +39,31 @@
           <li class="font-nav1-items"><a href="">Nykaa Fashion</a></li>
           <li class="font-nav1-items"><a href="">Beauty Advice</a></li>
         </ul>
+        <ul class="iconNav">
+          <li>
+            <img
+              src="./assets/logo-black.svg"
+            />
+          </li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/options-lines.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/brand-image.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/hot-sale.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/women.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/bag.png" alt=""></a></li>
+        </ul>
+        <div class="dropdown">
+          <div class="dropbtn"><img src="./assets/user.png" alt=""></div>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
         <div class="search">
           <button><i class="fa-solid fa-magnifying-glass"></i></button>
           <input type="text" placeholder="Search on Nykaa" />
           <button class="sign">Sign in</button>
-          <span><img src="./assets/cart-icon.svg" alt="" /></span>
+          <span class="cartIcon-click"><img src="./assets/cart-icon.svg" alt="" /></span>
         </div>
       </div>
       <div id="nav2">
@@ -67,7 +87,7 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header>  
     <div class="home-main-div">
       <div class="home-section-best-in-beauty">
         <p class="font-home-section-heading">Best In Beauty</p>

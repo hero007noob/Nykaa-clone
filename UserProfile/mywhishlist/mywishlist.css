@@ -1,5 +1,4 @@
-.profileList
-{
+.profileList {
   width: 20%;
 }
 .whishlistbox {
@@ -10,7 +9,7 @@
   text-align: center;
   padding: 4rem 0;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 /* .whishlistbox button {
   padding: 0.7rem;
@@ -23,13 +22,11 @@
 .whishlistbox img {
   width: 11rem;
 }
-.maindiv
-{
+.maindiv {
   width: 100%;
   /* box-sizing: border-box; */
 }
-.parentdiv
-{
+.parentdiv {
   width: 70%;
   margin: auto;
   padding: 10px;
@@ -38,30 +35,24 @@
   border-radius: 10px;
   /* height:  400px; */
 }
-.imgdiv
-{
+.imgdiv {
   width: 80%;
   margin: auto;
 }
-.imgdiv>img
-{
+.imgdiv > img {
   width: 100%;
   padding-top: 20px;
 }
-.textdiv
-{
+.textdiv {
   width: 80%;
   margin: auto;
 }
-.mrpdiv
-{
+.mrpdiv {
   display: flex;
   gap: 5px;
   justify-content: center;
-
 }
-.movetobag
-{
+.movetobag {
   align-items: center;
   justify-content: center;
   padding: 12px;
@@ -79,8 +70,7 @@
   text-align: center;
   width: 50%;
 }
-.buy
-{
+.buy {
   align-items: center;
   justify-content: center;
   padding: 12px;
@@ -98,22 +88,19 @@
   text-align: center;
   width: 50%;
 }
-.starsdiv
-{
+.starsdiv {
   display: flex;
   width: 30%;
 }
-.starsdiv>img{
+.starsdiv > img {
   width: 100%;
 }
-.reviewdiv
-{
- display: flex;
+.reviewdiv {
+  display: flex;
   gap: 10px;
   justify-content: center;
 }
-.bagdiv
-{
+.bagdiv {
   display: flex;
   gap: 10px;
 }
