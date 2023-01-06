@@ -243,6 +243,7 @@
   font-weight: 600;
   line-height: 40px;
   color: var(--primary-text-black92);
+  font-family: sans-serif;
 }
 .font-address-description {
   font-size: 14px;
