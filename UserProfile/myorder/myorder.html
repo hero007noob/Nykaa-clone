@@ -15,11 +15,6 @@
     <link rel="stylesheet" href="myorder.css" />
   </head>
   <body>
-    <div class="DisPageName">
-      <a href="">Home</a>
-      <span><i class="fa-solid fa-greater-than"></i></span>
-      <span class="PageName">My Order</span>
-    </div>
     <div class="profile">
       <ul class="profileList">
         <li>
@@ -190,12 +185,22 @@
           <i class="fa-solid fa-arrow-left"></i>
           <h4>My Order</h4>
         </div>
-        <div class="orderdiv">
+        <div class="trackorder">
+          <div>ORDER ID:- <span>#34654325</span></div>
+          <div id="tracking">TRACK ORDER</div>
+      </div>
+      <div class="orderdiv">
           <i class="fa-solid fa-cart-shopping"></i>
           <h5>No Order</h5>
           <h6>start Shoping</h6>
-        </div>
+      </div>
+      <div class="cancleorder">
+          <div>
+              <button id="cancelAll">Cancel Order</button>
+          </div> 
+          <div>
       </div>
     </div>
   </body>
+  <script src="./myorder.js"></script>
 </html>

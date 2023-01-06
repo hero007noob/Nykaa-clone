@@ -1,5 +1,9 @@
+.profileList
+{
+  width: 20%;
+}
 .profileback {
-  width: 70%;
+  width: 80%;
   background-image: url("https://www.freecodecamp.org/news/content/images/2021/06/w-qjCHPZbeXCQ-unsplash.jpg");
   margin: 2rem;
   /* margin-left: 1rem; */

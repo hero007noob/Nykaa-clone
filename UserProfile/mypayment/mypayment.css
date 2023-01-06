@@ -1,7 +1,11 @@
 .paymentbox {
-  width: 65%;
+  width: 80%;
   margin-left: 2.4rem;
   margin-top: 2rem;
+}
+.profileList
+{
+  width: 20%;
 }
 .payheading {
   padding-left: 1rem;

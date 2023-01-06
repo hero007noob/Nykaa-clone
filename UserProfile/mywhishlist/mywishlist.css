@@ -1,22 +1,121 @@
+.profileList
+{
+  width: 20%;
+}
 .whishlistbox {
-  width: 65%;
+  width: 80%;
   margin-left: 2.4rem;
   margin-top: 2rem;
   background-color: white;
   text-align: center;
   padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 }
-.whishlistbox button {
+/* .whishlistbox button {
   padding: 0.7rem;
-  color: #fc2779;
   background-color: white;
   border: none;
-}
-.whishlistbox button:hover {
+} */
+/* .whishlistbox button:hover {
   background-color: rgb(239, 235, 235);
-}
+} */
 .whishlistbox img {
   width: 11rem;
+}
+.maindiv
+{
+  width: 100%;
+  /* box-sizing: border-box; */
+}
+.parentdiv
+{
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  /* height:  400px; */
+}
+.imgdiv
+{
+  width: 80%;
+  margin: auto;
+}
+.imgdiv>img
+{
+  width: 100%;
+  padding-top: 20px;
+}
+.textdiv
+{
+  width: 80%;
+  margin: auto;
+}
+.mrpdiv
+{
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+
+}
+.movetobag
+{
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  border-color: rgb(232, 0, 113);
+  background-color: rgb(232, 0, 113);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 50%;
+}
+.buy
+{
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.1px;
+  border-color: black;
+  background-color: black;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  width: 50%;
+}
+.starsdiv
+{
+  display: flex;
+  width: 30%;
+}
+.starsdiv>img{
+  width: 100%;
+}
+.reviewdiv
+{
+ display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+.bagdiv
+{
+  display: flex;
+  gap: 10px;
 }
 @media only screen and (max-width: 1000px) {
   .profile {
@@ -27,7 +126,7 @@
   .profileList {
     width: 90%;
   }
-  .whishlistbox {
+  .orderbox {
     width: 90%;
     margin: auto;
   }
