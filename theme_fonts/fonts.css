@@ -280,6 +280,24 @@
   line-height: 20px;
   letter-spacing: 0;
 }
+<<<<<<< HEAD
+.font-product-bestseller{ 
+    color: #5cd285; 
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px; 
+    letter-spacing: 0;    
+    text-transform: uppercase;
+    text-align : left;
+}
+.font-product-featured{ 
+    color: #fc2779;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px; 
+    letter-spacing: 0;    
+    text-transform: uppercase;
+=======
 .font-product-item-btn {
   font-size: 16px;
   font-weight: 600;
@@ -302,6 +320,7 @@
   letter-spacing: 0.1px;
   color: var(--primary-text-white);
   text-transform: capitalize;
+>>>>>>> main
 }
 .font-product-bestseller {
   color: #5cd285;

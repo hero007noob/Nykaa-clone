@@ -1,0 +1,329 @@
+@import "../theme_fonts/theme.css";
+body {
+  background-color: var(--secondary-background);
+}
+* {
+  scroll-behavior: smooth !important;
+}
+.Bath-Pro {
+  width: 80%;
+  margin: auto;
+}
+.BathMainImg {
+  margin: auto;
+}
+.BathMainImg > img {
+  width: 100%;
+}
+.BathMainhead {
+  text-align: center;
+}
+.Bathchild {
+  display: flex;
+  position: relative;
+}
+
+.Bathchild2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 80%;
+  gap: 15px;
+}
+.Bathchild2 > div > div > img {
+  width: 100%;
+}
+.Bathchild2Box {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: var(--primary-background);
+  gap: 10px;
+  text-align: center;
+  padding: 10px;
+  /* height: 480px; */
+  border-radius: 10px;
+  /* display: table-column; */
+}
+.Bathchild2Box > img {
+  width: 100%;
+}
+.Bathchild2prcbox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40px;
+}
+.Bathchild2prcbox > :nth-child(2) {
+  text-decoration: line-through;
+}
+.Bathchild2prcbox > :nth-child(3) {
+  color: #5cd285;
+}
+.Bathchild2prcbox + h4 {
+  margin-top: 5px;
+}
+.Bath-bonus {
+  height: 20px;
+  display: block;
+}
+.Bathchild2btnbox {
+  display: flex;
+  border-radius: 0px 0px 10px 10px;
+  height: 50px;
+  overflow: hidden;
+  margin: -10px;
+  margin-top: 0;
+}
+.BathwishlistBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+.BathwishlistBtn > img {
+  width: 40%;
+}
+.Bathcartbtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: none;
+  background-color: #fc2779;
+  color: var(--primary-text-white);
+}
+.font-product-item-bonus {
+  margin-top: -10px;
+}
+.font-product-bestseller {
+  margin-top: 4px;
+  height: 20px;
+}
+.Bathmenu {
+  width: 30%;
+  position: sticky;
+}
+.Bathchild1 {
+  /* gap: 50px; */
+  position: sticky;
+  /* width: 100%; */
+  /* max-width: 320px; */
+  /* max-width: 320px; */
+  min-width: 140px;
+  margin-right: 35px;
+  transition: all 0.5s ease;
+}
+.Bc1-select-btn,
+.Bc1-select-btn2,
+.Bc1-select-btn3,
+.Bc1-select-btn4,
+.Bc1-select-btn5,
+.Bc1-select-btn6,
+.Bc1-select-btn7,
+.Bc1-select-btn8,
+.Bc1-select-btn9,
+.Bc1-select-btn10 {
+  display: flex;
+  height: 50px;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  justify-content: space-between;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background-color: var(--primary-background);
+  margin-bottom: 15px;
+}
+.Bc1-btn-text {
+  font-weight: 400;
+}
+.Bc1-arrow-dwn {
+  height: 18px;
+  width: 18px;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+}
+.Bc1-list-items,
+.Bc1-list-items-ul2,
+.Bc1-list-items-ul3,
+.Bc1-list-items-ul4,
+.Bc1-list-items-ul5,
+.Bc1-list-items-ul6,
+.Bc1-list-items-ul7,
+.Bc1-list-items-ul8,
+.Bc1-list-items-ul9,
+.Bc1-list-items-ul10 {
+  position: relative;
+  margin-top: 15px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--primary-background);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: none;
+}
+.Bc1-list-items1,
+.Bc1-list-items2,
+.Bc1-list-items3,
+.Bc1-list-items4,
+.Bc1-list-items5,
+.Bc1-list-items6,
+.Bc1-list-items7,
+.Bc1-list-items8,
+.Bc1-list-items9,
+.Bc1-list-items10 {
+  display: flex;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0 15px;
+  border-radius: 8 px;
+  align-items: center;
+  list-style: none;
+}
+.Bc1-list-items1 :hover,
+.Bc1-list-items2 :hover,
+.Bc1-list-items3 :hover,
+.Bc1-list-items4 :hover,
+.Bc1-list-items5 :hover,
+.Bc1-list-items6 :hover,
+.Bc1-list-items7 :hover,
+.Bc1-list-items8 :hover,
+.Bc1-list-items9 :hover,
+.Bc1-list-items10 :hover {
+  background-color: #e7edfe;
+}
+.Bc1-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 14px;
+  width: 14px;
+  border: 1.5px;
+  border-radius: 4px;
+  margin-right: 12px;
+  border: 1.5px solid #c0c0c0;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+}
+.check-icon {
+  font-size: 11px;
+  transform: scale(0);
+  transition: all 0.3s ease-in-out;
+}
+.Bc1-item-text {
+  color: #333;
+  pointer-events: none;
+}
+.Bc1-select-btn.open ~ .Bc1-list-items,
+.Bc1-select-btn2.open ~ .Bc1-list-items-ul2,
+.Bc1-select-btn3.open ~ .Bc1-list-items-ul3,
+.Bc1-select-btn4.open ~ .Bc1-list-items-ul4,
+.Bc1-select-btn5.open ~ .Bc1-list-items-ul5,
+.Bc1-select-btn6.open ~ .Bc1-list-items-ul6,
+.Bc1-select-btn7.open ~ .Bc1-list-items-ul7,
+.Bc1-select-btn8.open ~ .Bc1-list-items-ul8,
+.Bc1-select-btn9.open ~ .Bc1-list-items-ul9,
+.Bc1-select-btn10.open ~ .Bc1-list-items-ul10 {
+  display: block;
+}
+
+.Bc1-list-items1.checked .check-icon,
+.Bc1-list-items2.checked .check-icon,
+.Bc1-list-items3.checked .check-icon,
+.Bc1-list-items4.checked .check-icon,
+.Bc1-list-items5.checked .check-icon,
+.Bc1-list-items6.checked .check-icon,
+.Bc1-list-items7.checked .check-icon,
+.Bc1-list-items8.checked .check-icon,
+.Bc1-list-items9.checked .check-icon,
+.Bc1-list-items10.checked .check-icon {
+  transform: scale(1);
+}
+.Bath-Brand-Search {
+  border-radius: 5px;
+  border-color: grey;
+  align-items: center;
+}
+.Bath-Preference-Search {
+  border-radius: 5px;
+  border-color: grey;
+  align-items: center;
+}
+.pagination div a {
+  color: black;
+  border-radius: 50%;
+  float: left;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  /* padding: 8px 16px; */
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+.pagination {
+  padding-left: 15%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: start;
+}
+.pagination div:nth-child(1) {
+  width: 30%;
+}
+.pagination div:nth-child(2) {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  gap: 10px;
+}
+.pagination div a.active {
+  background-color: #fc2779;
+  color: white;
+}
+
+.pagination div a:hover:not(.active) {
+  background-color: var(--primary-background);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.Pro-img-StoreData{
+  cursor: pointer;
+}
+@media screen and (max-width: 912px) {
+  .Bathchild2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+    gap: 15px;
+  }
+  .pagination {
+    padding-left: 5%;
+  }
+  .Bath-Pro {
+    width: 100%;
+    margin: auto;
+  }
+  .Bc1-btn-text,
+  .Bc1-item-text {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 540px) {
+  .Bathchild2 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 80%;
+    gap: 15px;
+  }
+  .pagination {
+    padding-left: 0%;
+  }
+  .pagination div:nth-child(1) {
+    width: 50%;
+  }
+  .Bc1-btn-text,
+  .Bc1-item-text {
+    font-size: 12px;
+  }
+}
