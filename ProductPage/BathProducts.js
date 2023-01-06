@@ -854,8 +854,6 @@ display(pagefaceData);
 function display(list, clear) {
   if (!clear) document.querySelector(".Bathchild2").innerHTML = "";
   list.map(function (elem, index) {
-    var passingobj=event.target.textContent;
-    console.log(passingobj);
     var div = document.createElement("div");
     var keyword = document.createElement("h4");
     keyword.textContent = elem.Keywords;
@@ -864,7 +862,9 @@ function display(list, clear) {
     var img = document.createElement("img");
     img.setAttribute("src", elem.image);
     img.setAttribute("class","Pro-img-StoreData");
-    img.setAttribute("onclick","Prodatastoring(passingobj)")
+    img.addEventListener("click", function () {
+      Prodatastoring(elem);
+    });
     imgdiv.append(img);
     var title = document.createElement("h4");
     title.textContent = elem.name;
@@ -896,10 +896,17 @@ function display(list, clear) {
     var wishlistIcon = document.createElement("img");
     wishlistIcon.setAttribute("src", "./assets/heart.svg");
     wishlistIcon.addEventListener("click", wishList);
+    wishlist.addEventListener("click", function () {
+      callingwish(elem);
+    });
+    wishlistIcon.setAttribute("onclick", "callingcart()");
     wishlist.appendChild(wishlistIcon);
     var button = document.createElement("div");
     button.textContent = "Add to Bag";
     button.setAttribute("class", "Bathcartbtn");
+    button.addEventListener("click", function () {
+      callingbag(elem);
+    });
     buttonsDiv.append(wishlist, button);
     div.append(keyword, imgdiv, title, prcbox, bonus, buttonsDiv);
     div.setAttribute("class", "Bathchild2Box");
@@ -1245,12 +1252,19 @@ window.addEventListener("scroll", function () {
   }
 });
 
-var addingarr = JSON.parse(localStorage.getItem("product-list")) || [];
-function Prodatastoring(passingobj){
-  addingarr.push(passingobj);
-  console.log(passingobj);
-  localStorage.setItem("product-list", JSON.stringify(addingarr));
+function Prodatastoring(obj) {
+  let array = [];
+  array.push(obj);
+  localStorage.setItem("product-details", JSON.stringify(array));
 }
-// document.querySelector(.Pro-img-StoreData)
-
+var arrWishlist=JSON.parse(localStorage.getItem("product-wishlist"))||[];;
+function callingwish(obj) {
+  arrWishlist.push(obj);
+  localStorage.setItem("product-wishlist", JSON.stringify(arrWishlist));
+}
+var arrBag=JSON.parse(localStorage.getItem("product-Bag"))||[];;
+function callingbag(obj) {
+  arrBag.push(obj);
+  localStorage.setItem("product-Bag", JSON.stringify(arrBag));
+}
 
