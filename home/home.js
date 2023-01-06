@@ -846,44 +846,44 @@ function setCarouselRegular(allData, parentDiv) {
   });
 }
 setCarouselMovingData(
-  200,
+  250,
   essentialsData,
   "home-section-everyday-essentials-carousel"
 );
 setCarouselMovingData(
-  180,
+  250,
   discoverFavData,
   "home-section-discover-fav-carousel"
 );
-setCarouselMovingData(180, LuxeData, "home-section-luxe-carousel");
-setCarouselMovingData(180, MakeupData, "home-section-makeup-carousel");
-setCarouselMovingData(180, SkinData, "home-section-skin-carousel");
+setCarouselMovingData(250, LuxeData, "home-section-luxe-carousel");
+setCarouselMovingData(250, MakeupData, "home-section-makeup-carousel");
+setCarouselMovingData(250, SkinData, "home-section-skin-carousel");
 setCarouselMovingData(
-  180,
+  250,
   MoreInBeautyData,
   "home-section-MoreInBeauty-carousel"
 );
 setCarouselMovingData(
-  180,
+  250,
   GlobalFavesData,
   "home-section-globalFaves-carousel"
 );
 setCarouselMovingData(
-  290,
+  350,
   influencersData,
   "home-section-influencers-carousel"
 );
 setCarouselMovingData(
-  290,
+  350,
   buyingGuidesData,
   "home-section-buying-guides-carousel"
 );
 setCarouselMovingData(
-  180,
+  250,
   discovermoreData,
   "home-section-discover-more-carousel"
 );
-setCarouselMovingData(290, popupData, "home-section-pop-up-carousel");
+setCarouselMovingData(350, popupData, "home-section-pop-up-carousel");
 function setCarouselMovingData(width, allData, parentDiv) {
   let parent = document.querySelector(`.${parentDiv}`);
   let item = `
@@ -936,47 +936,61 @@ function rightAct(event, width, length) {
   let margin = carousel.style.marginLeft || "0px";
   let marginNum = margin.slice(0, -2);
   let push = `${Number(marginNum) - width}px`;
-  if (marginNum > -width * length + 900) carousel.style.marginLeft = push;
+  console.log(width, length, marginNum);
+  if (marginNum > -((width * length) / 2)) carousel.style.marginLeft = push;
 }
 
+const carouselSlide = document.querySelector(".carousel-slide");
+const carouselImages = document.querySelectorAll(".carousel-slide img");
+//Buttons
+const nextBtn = document.querySelector("#nextBtn");
+const prevBtn = document.querySelector("#prevBtn");
+//Counter
+let counter = 1;
+const size = carouselImages[0].clientWidth;
+carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 
-
-
-
-const carouselSlide = document.querySelector('.carousel-slide'); 
-const carouselImages = document.querySelectorAll('.carousel-slide img'); 
-//Buttons 
-const nextBtn = document.querySelector('#nextBtn'); 
-const prevBtn = document.querySelector('#prevBtn'); 
-//Counter 
-let counter = 1; 
-const size = carouselImages[0].clientWidth; 
-carouselSlide.style.transform = 'translateX(' + (-size *counter) + 'px)'; 
-
-//Button Listeners 
-prevBtn.addEventListener('click', () => { 
-    if (counter >= carouselImages.length - 1) return; 
-    carouselSlide.style.transition = "transform 0.4s ease-in-out"; 
-    counter++; 
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-}); 
-
-nextBtn.addEventListener('click', () => { 
-    if (counter <= 0) return; 
-    carouselSlide.style.transition = "transform 0.4s ease-in-out"; 
-    counter--; 
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
-}); 
-
-carouselSlide.addEventListener('transitionend', () => { 
-    if (carouselImages [counter].id === 'lastClone') { 
-        carouselSlide.style.transition = "none"; 
-        counter = carouselImages.length - 2;
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
-    } 
-    if (carouselImages [counter].id === 'firstClone') { 
-        carouselSlide.style.transition = "none"; 
-        counter = carouselImages.length - counter; 
-        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)'; 
-    } 
+//Button Listeners
+prevBtn.addEventListener("click", () => {
+  if (counter >= carouselImages.length - 1) return;
+  carouselSlide.style.transition = "transform 0.4s ease-in-out";
+  counter++;
+  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 });
+
+nextBtn.addEventListener("click", () => {
+  if (counter <= 0) return;
+  carouselSlide.style.transition = "transform 0.4s ease-in-out";
+  counter--;
+  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+});
+
+carouselSlide.addEventListener("transitionend", () => {
+  if (carouselImages[counter].id === "lastClone") {
+    carouselSlide.style.transition = "none";
+    counter = carouselImages.length - 2;
+    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+  }
+  if (carouselImages[counter].id === "firstClone") {
+    carouselSlide.style.transition = "none";
+    counter = carouselImages.length - counter;
+    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+  }
+});
+
+let cards = document.getElementsByClassName("home-carousel-item-regular");
+document
+  .querySelector(".home-section-buying-btn")
+  .addEventListener("click", goToProduct);
+let imgs = document.querySelectorAll(
+  ".home-section-gifting-nykaa-items>img,.home-section-in-focus-items>img,.home-section-game-zone-items>img,.home-section-everyday-essentials-crazy,.home-section-discover-fav-trending>img,.home-flat-off>img,.home-payday-image>img,.carousel-slide>img"
+);
+for (const img of imgs) {
+  img.addEventListener("click", goToProduct);
+}
+for (const card of cards) {
+  card.addEventListener("click", goToProduct);
+}
+function goToProduct(event) {
+  window.location.href = "../ProductPage/BathProducts.html";
+}
