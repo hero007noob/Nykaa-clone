@@ -104,3 +104,29 @@ margin: auto;
 .switch-tab-border {
   border-right: 3px solid #fc2779 !important;
 }
+ul.breadcrumb {
+  padding-top: 15px;
+  list-style: none;
+  /* background-color: #eee; */
+  align-items: center;
+  justify-content: center;
+  margin-left: 15%;
+  margin-bottom: -15px;
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 13px;
+}
+ul.breadcrumb li+li:before {
+  /* padding: 8px; */
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
