@@ -13,15 +13,17 @@ var faceData = [
   },
 ];
 
-// localStorage.setItem("product-details", JSON.stringify(productDetailsArr));
-//above activity happen inside product page
+var productData = JSON.parse(localStorage.getItem("product-details")) || [];
 
-var productData = JSON.parse(localStorage.getItem("product-details"));
+var wishListArr = JSON.parse(localStorage.getItem("product-wishlist")) || [];
+var bagArr = JSON.parse(localStorage.getItem("product-Bag")) || [];
 
+// this faceData should change to product data when we connect
+// with real key
 display(faceData);
 
 function display(productData) {
-  productData.forEach((elem, ind) => {
+  productData.forEach((elem, index) => {
     var productImg = document.querySelector(".product-img");
     productImg.setAttribute("src", elem.image);
 
@@ -39,18 +41,101 @@ function display(productData) {
 
     var review = document.querySelector(".reviews");
     review.textContent = elem.reviews;
+
+    // heart icon change functionalities
+    var addWishList = document.querySelector(".add-wishlist");
+    var removeWishList = document.querySelector(".remove-wishlist");
+
+    addWishList.addEventListener("click", function () {
+      addWishList.classList.add("disable-class");
+      removeWishList.classList.remove("disable-class");
+    });
+
+    removeWishList.addEventListener("click", function () {
+      addWishList.classList.remove("disable-class");
+      removeWishList.classList.add("disable-class");
+    });
+
+    //functionalites remove and add to cart and bag
+    // popup
+    var removeWish = document.querySelector(".add-wishlist");
+    removeWish.addEventListener("click", function () {
+      removeWishlistPopup();
+
+      //remove wishlist
+      wishListArr.splice(index, 1);
+      localStorage.setItem("product-wishlist", JSON.stringify(wishListArr));
+    });
+
+    var addwish = document.querySelector(".remove-wishlist");
+    addwish.addEventListener("click", function () {
+      addToWishlistPopup();
+
+      wishListArr.push(elem);
+      localStorage.setItem("product-wishlist", JSON.stringify(wishListArr));
+    });
+
+    var addToBagBtn = document.querySelector(".addToBagBtn");
+    addToBagBtn.addEventListener("click", function () {
+      if (addToBagBtn.textContent == "Added to Bag") {
+        console.log("working already");
+        alreadyAdded();
+      } else {
+        addBagPopup();
+        addToBagBtn.textContent = "Added to Bag";
+
+        bagArr.push(elem);
+        localStorage.setItem("product-Bag", JSON.stringify(bagArr));
+      }
+    });
   });
 }
 
-var addWishList = document.querySelector(".add-wishlist");
-var removeWishList = document.querySelector(".remove-wishlist");
+function addBagPopup() {
+  // popup
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  pop.classList.add("pop");
+  pop.classList.add("bgChange");
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Product added to bag";
 
-addWishList.addEventListener("click", function () {
-  addWishList.classList.add("disable-class");
-  removeWishList.classList.remove("disable-class");
-});
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 3000);
+}
 
-removeWishList.addEventListener("click", function () {
-  addWishList.classList.remove("disable-class");
-  removeWishList.classList.add("disable-class");
-});
+function alreadyAdded() {
+  // popup
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  pop.classList.add("pop");
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Product already in bag";
+
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 3000);
+}
+
+// popup msg otp sent to mail
+function addToWishlistPopup() {
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  pop.classList.add("pop");
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Add to wishlist";
+  console.log("working add");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 3000);
+}
+
+function removeWishlistPopup() {
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  pop.classList.add("pop");
+  let message = pop.querySelector(".pop-up-msg");
+  message.textContent = "Remove wishlist";
+  console.log("working remove");
+
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 3000);
+}
