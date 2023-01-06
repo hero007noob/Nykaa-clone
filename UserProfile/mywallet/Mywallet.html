@@ -10,8 +10,16 @@
     <link rel="stylesheet" href="../commonmyprofile.css" />
     <link rel="stylesheet" href="mywallet.css">
     <script src="../commonmyprofile.js" defer></script>
+    <link
+      rel="icon"
+      href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
+    />
 </head>
 <body>
+    <ul class="breadcrumb">
+        <li><a href="../../home/home.html">Home</a></li>
+        <li>My Wallet</li>
+      </ul>
     <div class="profile">
         <ul class="profileList">
             <li><a href="../myprofile/MyProfile.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><title>user profile icon</title><path fill="currentcolor" fill-rule="nonzero" d="M7 0C3.138 0 0 3.138 0 7c0 3.684 2.855 6.706 6.47 6.978l.022.002c.168.012.337.02.508.02.171 0 .34-.008.508-.02l.022-.002C11.145 13.706 14 10.684 14 7c0-3.862-3.138-7-7-7zm0 .609A6.387 6.387 0 0 1 13.391 7c0 1.75-.702 3.331-1.838 4.484-.521-.323-1.256-.4-1.801-.581-.616-.204-1.349-.517-1.535-.86.736-.093 2.435-.407 2.435-1.1a.304.304 0 0 0-.1-.225c-.21-.19-.197-1.18-.188-1.975.019-1.512.04-3.225-.845-4.09-.348-.34-.805-.513-1.358-.515-.282-.195-.687-.305-1.15-.305h-.005c-3.173.228-3.25 3.19-3.3 5.149-.02.737-.04 1.572-.255 1.762a.305.305 0 0 0-.103.228c0 .66 1.222.916 2.435 1.071-.172.356-1.206.71-1.826.914-.538.177-1.05.216-1.514.524A6.368 6.368 0 0 1 .61 7 6.387 6.387 0 0 1 7 .609z"></path></svg></i> My Profile</a></li>
@@ -24,8 +32,8 @@
         <div class="popup">
             <h3>Are you sure you want to logout?</h3>
             <ul>
-                <li>Logout</li>
-                <li>Logout from all devices</li>
+                <li id="logout1">Logout</li>
+          <li id="logout2">Logout from all devices</li>
                 <li class="cancle" id="popback">Cancle</li>
             </ul>
         </div>

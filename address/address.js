@@ -230,7 +230,7 @@ function changesymbol() {
 }
 
 var list=JSON.parse(localStorage.getItem("address-list"))||[];
-addingaddress();
+addingaddress(list);
 function called(){
   var x={
     name:document.querySelector(".add-name").value,
@@ -243,12 +243,13 @@ function called(){
   list.push(x);
   console.log(x);
   localStorage.setItem("address-list",JSON.stringify(list));
-  addingaddress();
+  var y=JSON.parse(localStorage.getItem("address-list")) ||[];
+  addingaddress(y);
 }
 
-function addingaddress() {
+function addingaddress(x) {
   // document.querySelector(".Adding-new-add").textContent="";
-  var x=JSON.parse(localStorage.getItem("address-list"));
+  
   for (var i=0;i<x.length;i++)
   {
     var div= document.createElement("div");
@@ -278,10 +279,13 @@ function addingaddress() {
     var div7= document.createElement("div");
     var div5= document.createElement("button");
     div5.textContent="Edit";
-    div5.setAttribute("class","ad-edit");
+    div5.setAttribute("class","ad-button1");
     var div6= document.createElement("button");
-    div6.textContent="Use this address";
+    div6.innerHTML = 'Deliver Here &nbsp;<span><i class="fa-solid fa-arrow-right"></i></span>';
     div6.setAttribute("class","ad-edit");
+    div6.addEventListener("click", function() {
+      window.location.href = "../UserProfile/mypayment/myPayment.html";
+    });
     div7.append(div5,div6);
     div7.setAttribute("class","buttonfunction");
     div.append(div1,div2,div3,div4,div7);

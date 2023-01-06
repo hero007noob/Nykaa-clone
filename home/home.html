@@ -21,13 +21,16 @@
     <link rel="stylesheet" href="home.css" />
     <link rel="stylesheet" href="../footer/footer.css">
     <link rel="stylesheet" href="../navBar/navbar.css">
-
+    <link
+      rel="icon"
+      href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
+    />
     <title>Home</title>
   </head>
   <body>
     <header class="nav-header">
       <div id="nav1">
-        <ul>
+        <ul class="fullNav">
           <li>
             <img
               src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png"
@@ -39,12 +42,45 @@
           <li class="font-nav1-items"><a href="">Nykaa Fashion</a></li>
           <li class="font-nav1-items"><a href="">Beauty Advice</a></li>
         </ul>
-        <div class="search">
-          <button><i class="fa-solid fa-magnifying-glass"></i></button>
+        <ul class="iconNav">
+          <li>
+            <img
+              src="./assets/logo-black.svg"
+            />
+          </li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/options-lines.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/brand-image.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/hot-sale.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/women.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="./assets/bag.png" alt=""></a></li>
+        </ul>
+        
+        <div class="search right">
+          <button class="serach-icon"><i class="fa fa-magnifying-glass"></i></button>
           <input type="text" placeholder="Search on Nykaa" />
           <button class="sign">Sign in</button>
-          <span><img src="./assets/cart-icon.svg" alt="" /></span>
+
+          <div class="dropdown">
+            <div class="dropbtn">
+              <img src="./assets/nav-user-icon.svg"  alt="usericon">
+             <span>  User</span>
+            </div>
+            <div class="dropdown-content">
+              <a href="#"><i class="fa-regular fa-user"></i> Profile</a>
+              <a href="#"> <i class="fa-solid fa-basket-shopping"></i> Orders</a>
+              <a href="#"><i class="fa-regular fa-heart"></i> Wishlist</a>
+              <a href="#"><i class="fa-solid fa-wallet"></i> Wallet</a>
+              <a href="#"><i class="fa-solid fa-power-off"></i> Log out</a>
+            </div>
+          </div>
+
+          
+          <img class="cartIcon-click" src="./assets/cart-icon.svg" alt="" />
+        
+          
         </div>
+        
+
       </div>
       <div id="nav2">
         <ul>
@@ -61,18 +97,43 @@
           <li class="font-nav2-items"><a href="">Pop Ups</a></li>
           <li class="font-nav2-items">
             <img
-              src="https://w7.pngwing.com/pngs/624/330/png-transparent-porsche-offer-text-logo-porsche.png"
-              alt=""
+              src="assets/offers-nav.jpg"
+              alt="offers"
             />
           </li>
         </ul>
       </div>
-    </header>
+    </header>  
     <div class="home-main-div">
       <div class="home-section-best-in-beauty">
         <p class="font-home-section-heading">Best In Beauty</p>
         <p class="font-home-section-subheading">Today’s Top Offers</p>
-        <div class="home-top-offer-carousel"></div>
+       
+         <div class="home-top-offer-carousel"> 
+
+          <div class="carousel-container"> 
+     
+            <i  id="prevBtn"></i>
+            <i  id="nextBtn"></i>
+            
+            <div class="carousel-slide"> 
+              <img src="https://images-static.nykaa.com/uploads/39b25aa2-a962-4e99-a3cf-f65133e73464.jpg?tr=w-2400,cm-pad_resize" id="lastClone" alt="1"> 
+              <img src="https://images-static.nykaa.com/uploads/5b1a50c9-4892-46b5-ba52-199e41a5acd1.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/39b25aa2-a962-4e99-a3cf-f65133e73464.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/c6707bec-86ec-4ad6-b388-75ecdcefa730.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/91a7243e-2182-4e18-a4da-cae2829ce40e.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/d3ab843c-238a-409f-86f2-6717ee845c7e.jpg?tr=w-2400,cm-pad_resize" alt=""> 
+              <img src="https://images-static.nykaa.com/uploads/bb70000a-8e8b-4588-bc33-a2c36f27ca9a.jpg?tr=w-2400,cm-pad_resize" alt="">
+              <img src="https://images-static.nykaa.com/uploads/bb70000a-8e8b-4588-bc33-a2c36f27ca9a.jpg?tr=w-2400,cm-pad_resize" id="firstClone" alt=""> 
+            </div> 
+          </div> 
+
+
+
+
+
+
+        </div>
         <div class="home-payday-image">
           <img src="./assets/paydayX4.jpg" alt="" />
         </div>
@@ -138,15 +199,15 @@
         <p class="font-home-section-subheading">More Offers On Beauty</p>
         <div class="home-section-brand-miss-items">
           <p class="font-home-carousel-title">Luxe</p>
-          <div class="home-section-brand-miss-carousel"></div>
+          <div class="home-section-brand-miss-carousel home-section-luxe-carousel"></div>
           <p class="font-home-carousel-title">Makeup</p>
-          <div class="home-section-brand-miss-carousel"></div>
+          <div class="home-section-brand-miss-carousel home-section-makeup-carousel"></div>
           <p class="font-home-carousel-title">Skin</p>
-          <div class="home-section-brand-miss-carousel"></div>
+          <div class="home-section-brand-miss-carousel home-section-skin-carousel"></div>
           <p class="font-home-carousel-title">More In Beauty</p>
-          <div class="home-section-brand-miss-carousel"></div>
+          <div class="home-section-brand-miss-carousel home-section-MoreInBeauty-carousel"></div>
           <p class="font-home-carousel-title">Global Faves</p>
-          <div class="home-section-brand-miss-carousel"></div>
+          <div class="home-section-brand-miss-carousel home-section-globalFaves-carousel"></div>
         </div>
       </div>
       <div class="home-section-influencers">

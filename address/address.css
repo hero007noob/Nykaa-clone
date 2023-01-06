@@ -34,16 +34,19 @@
 }
 #addnewaddress {
   display: grid;
-  text-align: center;
-  padding: 10px;
-  border: 1px dotted red;
+  text-align: left;
+  padding: 20px;
+  border: 1px dashed rgba(0, 19, 37, 0.16);
   border-radius: 10px;
   width: 80%;
   margin-top: 40px;
   height: 150px;
   gap:1px;
 }
-
+#addnewaddress:hover{
+  background: rgba(232, 0, 113, 0.08);
+  border-color: rgb(232, 0, 113);
+}
 .collapse-content {
   max-height: 0;
   overflow: hidden;
@@ -95,7 +98,8 @@
 }
 #address-text {
   width: 80%;
-  margin: auto;
+  /* margin: auto; */
+  margin-left: 160px;
 }
 #details {
   width: 60%;
@@ -130,7 +134,9 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin-top: -15px;
 }
-
+.font-address-title{
+  margin-bottom: 5px;
+}
 .address-header {
   position: fixed;
   top: 0;
@@ -142,6 +148,9 @@
   align-items: center;
   box-sizing: border-box;
   padding: 0 10px;
+}
+.font-address-description{
+  margin: 0;
 }
 .address-Data .add-area {
   height: 90px;
@@ -258,7 +267,7 @@ input:checked + .slider:before {
 }
 
 .ad-edit {
-     display: flex;
+    display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
@@ -277,10 +286,14 @@ input:checked + .slider:before {
     text-align: center;
     width: 100%;
     margin-right: 1px;
-    height: 15px;
+    height: 36px;
+    width: 60%
 }
 .buttonfunction{
   display: flex;
+  gap: 15px;
+  margin-right: 30%;
+  height: 20px;
   
 }
 .Adding-new-add{
@@ -289,4 +302,26 @@ input:checked + .slider:before {
 }
 .Adding-new-add>div p{
   margin: 0 auto;
+}
+.addingset{
+  padding: 40px;
+  align-items: center;
+  text-align: center;
+ 
+}
+.ad-button1{
+  border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    border-color: rgba(111, 121, 129, 0.36);
+    background-color: rgb(255, 255, 255);
+    color: rgba(0, 19, 37, 0.64);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    height: 36px;
+    width: 30%;
 }

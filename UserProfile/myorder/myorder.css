@@ -43,7 +43,7 @@
 .trackorder{
   display:flex;
   justify-content: space-between;
-  height:123px;
+  /* height:123px; */
   background-color: white;
 
 }
@@ -119,6 +119,7 @@ margin-left: -45px;
     display: block !important;
     flex-direction: column;
     width: 100%;
+    
   }
   .profileList {
     width: 90%;
