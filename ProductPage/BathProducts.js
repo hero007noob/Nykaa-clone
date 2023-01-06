@@ -862,8 +862,12 @@ function display(list, clear) {
     var img = document.createElement("img");
     img.setAttribute("src", elem.image);
     img.setAttribute("class","Pro-img-StoreData");
+
     img.addEventListener("click", function () {
       Prodatastoring(elem);
+      window.location.href = "../Product-Details-Page/product-details.html";
+
+
     });
     imgdiv.append(img);
     var title = document.createElement("h4");
@@ -892,6 +896,7 @@ function display(list, clear) {
     var buttonsDiv = document.createElement("div");
     buttonsDiv.setAttribute("class", "Bathchild2btnbox");
     var wishlist = document.createElement("div");
+
     wishlist.setAttribute("class", "BathwishlistBtn");
     var wishlistIcon = document.createElement("img");
     wishlistIcon.setAttribute("src", "./assets/heart.svg");
@@ -899,7 +904,8 @@ function display(list, clear) {
     wishlist.addEventListener("click", function () {
       callingwish(elem);
     });
-    wishlistIcon.setAttribute("onclick", "callingcart()");
+    // wishlistIcon.setAttribute("onclick", "callingcart()");
+
     wishlist.appendChild(wishlistIcon);
     var button = document.createElement("div");
     button.textContent = "Add to Bag";
