@@ -40,7 +40,10 @@
   border-radius: 10px;
   width: 80%;
   margin-top: 40px;
+  height: 150px;
+  gap:1px;
 }
+
 .collapse-content {
   max-height: 0;
   overflow: hidden;
@@ -85,17 +88,17 @@
 }
 
 #details-section {
-  width: 50%;
+  width: 40%;
 }
 #address-text-section {
-  width: 50%;
+  width: 60%;
 }
 #address-text {
-  width: 50%;
+  width: 80%;
   margin: auto;
 }
 #details {
-  width: 45%;
+  width: 60%;
   margin: auto;
   /* position: relative; */
 }
@@ -183,6 +186,7 @@
 .Shipping-Button > p {
   margin: 0;
   padding: 10px;
+  cursor: pointer;
 }
 .Address-Form {
   height: 100vh;
@@ -251,4 +255,38 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.ad-edit {
+     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+    border-color: rgb(232, 0, 113);
+    background-color: rgb(232, 0, 113);
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+    margin-right: 1px;
+    height: 15px;
+}
+.buttonfunction{
+  display: flex;
+  
+}
+.Adding-new-add{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.Adding-new-add>div p{
+  margin: 0 auto;
 }

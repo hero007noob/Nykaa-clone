@@ -154,7 +154,7 @@ function addPriceDetails() {
   );
   // parentDiv.appendChild(priceDetailsDiv);
 }
-console.log("syed");
+// console.log("syed");
 
 // var warnmsg = document.querySelector(".Shipping-Button");
 // warnmsg.addEventListener("click", function (e) {
@@ -227,4 +227,65 @@ function changesymbol() {
   } else {
     symbolchanged[1].setAttribute("class", "fa-solid fa-toggle-off");
   }
+}
+
+var list=JSON.parse(localStorage.getItem("address-list"))||[];
+addingaddress();
+function called(){
+  var x={
+    name:document.querySelector(".add-name").value,
+    flat:document.querySelector(".add-flat").value,
+    area:document.querySelector(".add-area").value,
+    pincode:document.querySelector(".add-pincode").value,
+    phone:document.querySelector(".add-phone").value,
+    email:document.querySelector(".add-mail").value,
+  }
+  list.push(x);
+  console.log(x);
+  localStorage.setItem("address-list",JSON.stringify(list));
+  addingaddress();
+}
+
+function addingaddress() {
+  // document.querySelector(".Adding-new-add").textContent="";
+  var x=JSON.parse(localStorage.getItem("address-list"));
+  for (var i=0;i<x.length;i++)
+  {
+    var div= document.createElement("div");
+    div.setAttribute("id","addnewaddress")
+    var div1= document.createElement("div");
+    var title = document.createElement("p");
+    title.textContent=x[i].name;
+    div1.append(title);
+    var div2= document.createElement("div");
+    var road = document.createElement("p");
+    road.textContent=x[i].flat;
+    road.setAttribute("class","font-address-description");
+    div2.append(road);
+    var div3= document.createElement("div");
+    var local = document.createElement("p");
+    local.textContent=x[i].area;
+    local.setAttribute("class","font-address-description");
+    var pin = document.createElement("p");
+    pin.textContent=x[i].pincode;
+    div3.append(local,pin);
+    pin.setAttribute("class","font-address-description");
+    var div4= document.createElement("div");
+    var phn = document.createElement("p");
+    phn.setAttribute("class","font-address-description");
+    phn.textContent=x[i].phone;
+    div4.append(phn);
+    var div7= document.createElement("div");
+    var div5= document.createElement("button");
+    div5.textContent="Edit";
+    div5.setAttribute("class","ad-edit");
+    var div6= document.createElement("button");
+    div6.textContent="Use this address";
+    div6.setAttribute("class","ad-edit");
+    div7.append(div5,div6);
+    div7.setAttribute("class","buttonfunction");
+    div.append(div1,div2,div3,div4,div7);
+    document.querySelector(".Adding-new-add").append(div);
+  }
+  
 }
