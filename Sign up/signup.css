@@ -14,6 +14,7 @@ body
   margin: 0;
   font-family: Roboto, Arial, sans-serif;
   padding-top: 50px;
+  margin-bottom: 100px;
 }
 
 .sign-up-body > form > img {
@@ -106,7 +107,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 5%;
 }
 
-.sign-up-submit{
+.sign-up-submit {
   width: 100%;
 }
 .input-container input {
@@ -139,7 +140,6 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* eye icons  */
 .eye-icon {
-  
   position: relative;
   bottom: 26px;
   left: 92%;
@@ -147,7 +147,7 @@ input[type="number"]::-webkit-inner-spin-button {
   width: 19px;
   height: 18px;
   color: rgb(156 156 156);
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 
 .hide-icon {
@@ -222,45 +222,38 @@ input[type="number"]::-webkit-inner-spin-button {
   text-decoration: none;
 }
 
-
 /* form validation  */
-.signup-warning{
+.signup-warning {
   color: var(--btn-pink);
   height: 16px;
   width: 100%;
-  font-size: .7rem;
+  font-size: 0.7rem;
   font-weight: 600;
   position: relative;
   top: 6px;
 }
 
-
 /* responsive  */
 @media screen and (max-width: 1024px) {
   #sign-up-form {
-
     width: 39%;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   #sign-up-form {
-
     width: 50%;
   }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   #sign-up-form {
-
     width: 50%;
   }
 }
 
-@media screen and (max-width: 560px){
+@media screen and (max-width: 560px) {
   #sign-up-form {
     width: 70%;
   }
 }
-
-
