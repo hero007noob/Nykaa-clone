@@ -896,10 +896,17 @@ function display(list, clear) {
     var wishlistIcon = document.createElement("img");
     wishlistIcon.setAttribute("src", "./assets/heart.svg");
     wishlistIcon.addEventListener("click", wishList);
+    wishlist.addEventListener("click", function () {
+      callingwish(elem);
+    });
+    wishlistIcon.setAttribute("onclick", "callingcart()");
     wishlist.appendChild(wishlistIcon);
     var button = document.createElement("div");
     button.textContent = "Add to Bag";
     button.setAttribute("class", "Bathcartbtn");
+    button.addEventListener("click", function () {
+      callingbag(elem);
+    });
     buttonsDiv.append(wishlist, button);
     div.append(keyword, imgdiv, title, prcbox, bonus, buttonsDiv);
     div.setAttribute("class", "Bathchild2Box");
@@ -1250,5 +1257,14 @@ function Prodatastoring(obj) {
   array.push(obj);
   localStorage.setItem("product-details", JSON.stringify(array));
 }
-
+var arrWishlist=JSON.parse(localStorage.getItem("product-wishlist"))||[];;
+function callingwish(obj) {
+  arrWishlist.push(obj);
+  localStorage.setItem("product-wishlist", JSON.stringify(arrWishlist));
+}
+var arrBag=JSON.parse(localStorage.getItem("product-Bag"))||[];;
+function callingbag(obj) {
+  arrBag.push(obj);
+  localStorage.setItem("product-Bag", JSON.stringify(arrBag));
+}
 
