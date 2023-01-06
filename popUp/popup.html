@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/f2944b6a6a.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+    <!-- import popup.css in your file -->
+    <link rel="stylesheet" href="./popup.css" />
+
+     <!-- google font  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com" />
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+     <link
+       href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Roboto:wght@300&display=swap"
+       rel="stylesheet"
+     />
+
+
+
+  </head>
+  <body>
+    <!-- copy paste this div in your body -->
+    <div class="pop-up-alert-view">
+      <div class="pop-up-alert">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>Product has been added to Wishlist.</p>
+      </div>
+    </div>
+  </body>
+  <script>
+    // put this in your js file
+    //put btn id below
+    document.getElementById("Btn-Id").addEventListener("click", popUp);
+    function popUp() {
+      // put all code in if() if you need to run some validation
+      let pop = document.getElementsByClassName("pop-up-alert")[0];
+      let message = pop.querySelector("p");
+      message.textContent = "Put text here";
+      pop.classList.add("pop");
+      setTimeout(() => {
+        pop.classList.remove("pop");
+      }, 3000);
+    }
+  </script>
+</html>

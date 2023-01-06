@@ -1,0 +1,236 @@
+@import "/theme_fonts/theme.css";
+:root {
+  --home-carouse-item-border: rgb(236, 233, 233);
+  --btn-pink: rgb(232, 0, 112);
+  --btn-text-white: #fff;
+  --primary-text-black: #001325;
+}
+
+.sign-up-body {
+  margin: 0;
+  font-family: Roboto, Arial, sans-serif;
+  padding-top: 50px;
+}
+
+.sign-up-body > form > img {
+  width: 100px;
+  height: 50px;
+  margin: auto;
+  display: block;
+}
+
+#sign-up-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 27%;
+  padding: 10px 25px 15px;
+  box-sizing: border-box;
+  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  margin: auto;
+  height: 520px;
+  border-radius: 20px;
+}
+
+#sign-up-form > h1 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+#sign-up-form input {
+  height: 29px;
+  border-radius: 3px;
+  border: 1px solid #dbdbdb;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* phonenumber */
+
+.input-container {
+  position: relative;
+}
+
+.phonenumber-input {
+  width: 100%;
+}
+
+.input-container::before {
+  content: "+91 ";
+  position: absolute;
+  left: 5px;
+  top: 4px;
+  bottom: 0;
+  font-size: 1rem;
+  width: 10%;
+  text-align: center;
+  height: 23px;
+}
+
+.input-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 5%;
+}
+
+.sign-up-submit{
+  width: 100%;
+}
+.input-container input {
+  padding-left: 14%;
+  box-sizing: border-box;
+}
+
+#sign-up-form input[type="submit"] {
+  background-color: #fc2779;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#sign-up-form input[type="submit"]:hover {
+  background-color: #e71364;
+  color: white;
+  border: none;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* eye icons  */
+.eye-icon {
+  
+  position: relative;
+  bottom: 26px;
+  left: 92%;
+  cursor: pointer;
+  width: 19px;
+  height: 18px;
+  color: rgb(156 156 156);
+  font-size: .9rem;
+}
+
+.hide-icon {
+  display: none;
+}
+
+.hr-left {
+  height: 0px;
+  width: 40.5%;
+  position: relative;
+  top: 31px;
+  right: 97px;
+  border: 1px solid #ebdddd;
+}
+
+.hr-right {
+  height: 0px;
+  width: 40.5%;
+  position: relative;
+  left: 94px;
+  bottom: 11px;
+  border: 1px solid #ebdddd;
+}
+
+.sign-up-or {
+  text-align: center;
+  margin: 0;
+  height: 20px;
+  position: relative;
+  top: 10px;
+  display: inline-block;
+}
+
+.sign-up-google-btn {
+  background-color: white;
+  height: 44px;
+  border-radius: 10px;
+  position: relative;
+  border: none;
+  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  cursor: pointer;
+}
+
+.sign-up-google-btn:hover {
+  box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px,
+    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+}
+
+.sign-up-google-btn img {
+  margin-right: 10px;
+  margin-top: 0px;
+  position: relative;
+  top: 5px;
+}
+.sign-up-google-btn p {
+  display: inline-block;
+}
+
+.sign-up-already-ac {
+  position: relative;
+  font-size: 14px;
+}
+
+.already-ac {
+  color: var(--btn-pink);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.sign-up-body a {
+  text-decoration: none;
+}
+
+
+/* form validation  */
+.signup-warning{
+  color: var(--btn-pink);
+  height: 16px;
+  width: 100%;
+  font-size: .7rem;
+  font-weight: 600;
+  position: relative;
+  top: 6px;
+}
+
+
+/* responsive  */
+@media screen and (max-width: 1024px) {
+  #sign-up-form {
+
+    width: 39%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #sign-up-form {
+
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px){
+  #sign-up-form {
+
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 560px){
+  #sign-up-form {
+    width: 70%;
+  }
+}
+
+
