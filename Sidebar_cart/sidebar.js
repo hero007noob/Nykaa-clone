@@ -1883,7 +1883,12 @@ const faceData = [
   },
 ];
 const sampleCartItems = faceData.slice(0, 15);
-document.querySelector(".cart-btn").addEventListener("click", openNav);
+addSideBarCartData(sampleCartItems);
+
+let addAdrs = document.querySelector("#addnewaddress");
+addAdrs && addAdrs.addEventListener("click", openNav);
+let cartBtn = document.querySelector(".cart-btn");
+cartBtn && cartBtn.addEventListener("click", openNav);
 document
   .querySelector(".sidebar-dim-overlay")
   .addEventListener("click", closeNav);
@@ -1916,6 +1921,7 @@ function addSideBarCartData(data) {
 }
 function addSideBarCartDataItem(item, index) {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
+  if (!parentDiv) return;
   const itemDiv = `
   <div class="sidebar-item-parent" >
   <div class="sidebar-item">
@@ -1980,6 +1986,7 @@ function addSideBarCartDataItem(item, index) {
 }
 function addCoupon() {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
+  if (!parentDiv) return;
   let couponDiv = document.createElement("div");
   couponDiv.setAttribute("class", "sidebar-coupon");
   let logoDiv = document.createElement("div");
