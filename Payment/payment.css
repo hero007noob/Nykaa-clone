@@ -24,24 +24,12 @@
 }
 .module-img {
   width: 16%;
-.module-img {
-  width: 16%;
 }
 .header-logo {
   width: 60%;
   margin-left: 50px;
   margin-top: 10px;
-.header-logo {
-  width: 60%;
-  margin-left: 50px;
-  margin-top: 10px;
 }
-.header-hr {
-  -webkit-transform: rotate(90deg);
-  color: black;
-  opacity: 10%;
-  height: 100%;
-  margin: auto;
 .header-hr {
   -webkit-transform: rotate(90deg);
   color: black;
@@ -76,32 +64,8 @@
 .col1 {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  padding: 0 18px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  background-color: white;
 }
 
-.collapsible {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-.col1 {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.col2 {
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 .col2 {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -190,7 +154,6 @@
 /* Change background color of buttons on hover */
 .tab button:hover {
   background-color: #ddd;
-  background-color: #ddd;
 }
 
 /* Create an active/current "tab button" class */
@@ -206,9 +169,6 @@
   float: left;
   padding: 0px 12px;
   border: 1px solid rgba(0, 19, 37, 0.08);
-  float: left;
-  padding: 0px 12px;
-  border: 1px solid rgba(0, 19, 37, 0.08);
   width: 40%;
   height: 500px;
   border-left: none;
@@ -218,32 +178,25 @@
   box-sizing: border-box;
 }
 .tab-button {
-}
-.tab-button {
   display: flex;
   margin: auto;
 }
 .tab-button-img {
-.tab-button-img {
   width: 20%;
   margin: auto;
 }
-.tab-button-text {
 .tab-button-text {
   width: 80%;
   margin: auto;
   margin-left: -40px;
 }
 .tablinks {
-.tablinks {
   width: 20%;
   margin: auto;
 }
 #firsttab {
-#firsttab {
   border-top-left-radius: 20px;
 }
-#lasttab {
 #lasttab {
   border-bottom-left-radius: 20px;
 }
@@ -256,11 +209,9 @@ input::-webkit-inner-spin-button {
 
 /* Firefox */
 input[type="number"] {
-input[type="number"] {
   -moz-appearance: textfield;
 }
 
-#upi-logos {
 #upi-logos {
   display: flex;
   /* width: 100%; */
@@ -269,18 +220,15 @@ input[type="number"] {
   justify-content: center;
 }
 #upi-logos > div {
-#upi-logos > div {
   position: relative;
   width: 24%;
 }
-#upi-logos > div > div {
 #upi-logos > div > div {
   height: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#upi-logos img {
 #upi-logos img {
   border: 1px solid gray;
   border-radius: 40px;
@@ -289,15 +237,12 @@ input[type="number"] {
 }
 
 #upi-logos img:hover {
-#upi-logos img:hover {
   border: 2px solid rgb(232, 0, 113);
 }
 
 #upi * {
-#upi * {
   margin: 10px;
 }
-.payment-verify-btn {
 .payment-verify-btn {
   display: flex;
   flex-direction: row;
@@ -322,7 +267,6 @@ input[type="number"] {
   /* box-sizing: border-box; */
 }
 .input-details {
-.input-details {
   background: rgb(243, 244, 245);
   border-color: currentcolor currentcolor rgba(0, 19, 37, 0.16);
   border-style: none none solid;
@@ -342,23 +286,19 @@ input[type="number"] {
   box-sizing: border-box;
 }
 .checkbox-payment {
-.checkbox-payment {
   margin: 0px;
   padding: 0px;
   background-color: rgb(63, 65, 77);
   box-sizing: border-box;
 }
 #credit * {
-#credit * {
   margin: 10px auto;
 }
-#credit > :nth-child(2) {
 #credit > :nth-child(2) {
   display: flex;
   margin: 0;
   width: 60%;
 }
-#credit > :nth-child(4) {
 #credit > :nth-child(4) {
   display: flex;
   margin: -20px 0 0 0;
@@ -366,28 +306,22 @@ input[type="number"] {
   padding: px;
 }
 .month-cvv {
-.month-cvv {
   display: flex;
   gap: 10px;
 }
-.month-cvv input {
 .month-cvv input {
   width: 50%;
   text-align: center;
 }
 .Section-hr {
-.Section-hr {
   color: rgba(0, 19, 37, 0.08);
 }
-#upi-logos:hover {
 #upi-logos:hover {
   cursor: pointer;
 }
 #upi-logos img:focus {
-#upi-logos img:focus {
   border: 2px solid red;
 }
-.netbanking-checkbox {
 .netbanking-checkbox {
   display: flex;
   width: 100%;
@@ -396,62 +330,46 @@ input[type="number"] {
   box-sizing: border-box;
 }
 #netbanking * {
-#netbanking * {
   margin: 15px 0 0 0;
 }
-#netbanking button {
 #netbanking button {
   text-align: center;
 }
 
 #shopnow * {
   margin-top: 12px;
-#shopnow * {
-  margin-top: 12px;
 }
-.snpl-content {
 .snpl-content {
   display: flex;
   gap: 10px;
 }
-.snpl-content > div p {
 .snpl-content > div p {
   margin-top: -15px;
   color: red;
 }
 #cod * {
   margin: 20px 0 0 0;
-#cod * {
-  margin: 20px 0 0 0;
 }
-#cod > button {
 #cod > button {
   box-sizing: border-box;
   width: 100%;
 }
 #paytm * {
-#paytm * {
   margin-top: 12px;
 }
 #giftcard * {
-#giftcard * {
   margin-top: 12px;
 }
-#giftcard-pin {
 #giftcard-pin {
   display: flex;
   gap: 10px;
 }
 #giftcard-pin > input {
-#giftcard-pin > input {
   width: 30%;
 }
-#giftcard-pin > button {
 #giftcard-pin > button {
   width: 70%;
 }
 #emi * {
-#emi * {
   margin-top: 10px;
 }
-
