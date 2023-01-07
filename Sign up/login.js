@@ -105,6 +105,8 @@ function LoginSuccessfulPopup(username) {
   setTimeout(() => {
     pop.classList.remove("pop");
   }, 4000);
+  localStorage.setItem("loggedin","true");
+  window.location.href=".././index.html"
 }
 
 function loginFailedPopup() {

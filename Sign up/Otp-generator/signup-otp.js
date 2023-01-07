@@ -69,7 +69,11 @@ function otpSuccessful() {
   setTimeout(() => {
     pop.classList.remove("pop");
   }, 4000);
-  window.location.href="../../index.html"
+  localStorage.setItem("loggedin","true");
+  setTimeout(() => {
+    window.location.href="../../index.html"
+  }, 4000);
+  
 }
 
 function otpFailed() {
