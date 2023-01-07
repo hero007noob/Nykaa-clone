@@ -71,10 +71,19 @@ function addSideBarCartDataItem(item, index) {
 </div>`;
   parentDiv.innerHTML += itemDiv;
 }
+
 function addPriceDetails() {
   let priceDetailsDiv = document.getElementsByClassName("pricesection")[0];
-  let price_details = JSON.parse(localStorage.getItem("price-details"));
+  let price_details = JSON.parse(localStorage.getItem("price-details")) || {
+    itemCount: 0,
+    bagMrp: 0,
+    bagDiscount:  0,
+    youPay: 0,
+  };;
+
+
   priceDetailsDiv.setAttribute("class", "sidebar-price-details");
+
   let title = document.createElement("p");
   title.textContent = "Price Details";
   title.setAttribute("class", "font-sidebar-price-details");
@@ -83,6 +92,10 @@ function addPriceDetails() {
   bagMrp.textContent = "Bag MRP ";
   bagMrpDiv.setAttribute("class", "font-sidebar-item-small");
   let bagItemCount = document.createElement("span");
+
+  // var checkPriceDetails = price_details.itemCount == "" ? 0: price_details.itemc;
+
+
   bagItemCount.textContent = `(${price_details.itemCount} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
