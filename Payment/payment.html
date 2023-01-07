@@ -33,7 +33,7 @@
             class="module-img"
             src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/desktop-icons/tick-icon.svg"
             alt="" />
-          <p>Sign-Up</p>
+          <p>Sign Up</p>
           <hr class="header-hr"">
         </div>
         <div class="modules">
@@ -56,12 +56,14 @@
     <div id="content">
       <div id="address-text-section">
         <div id="address-text">
-          <h1 class="font-address-title">Choose Payment Method</h1>
+          <h1 class="font-address-title">Choose payment method</h1>
           <p class="font-address-description">
             Choose the payment method you prefer.
           </p>
-          <div id="addpaymentmethod">
-            <h2>Payment Method Options</h2>
+
+          <!-- <div id="addpaymentmethod"> -->
+
+            <h2 class="payment-method-h2">Payment Method Options</h2>
             <div class="tab">
               <button
                 id="firsttab"
@@ -218,7 +220,11 @@
                   alt="" />
               </div>
               <div>
+
                 <div>
+                  <div class="payment-warning cardnumber-warning">
+                    Card number is not valid
+                  </div>
                   <input
                     id="cardnumber"
                     class="input-details"
@@ -227,6 +233,8 @@
                     max="16"
                     placeholder="Card Number" />
                 </div>
+
+                
                 <div class="month-cvv">
                   <input
                     type="text"
@@ -241,11 +249,16 @@
                     autocomplete="off"
                     placeholder="CVV" />
                 </div>
+                <div class="payement-warning month-warning">
+                  <span> Invalid expiry </span>
+                  <span> Required</span>
+                </div>
               </div>
-              <div>
+
+              <div id="know-more">
                 <input type="checkbox" />
                 <p class="font-payment-content-p"
-                  >Save this card securely for future</p
+                  >Save this card securely for future <a href="#"> know more</a></p
                 >
               </div>
               <button class="payment-verify-btn">Submit</button>
@@ -444,7 +457,7 @@
                 ></button>
               </div>
             </div>
-          </div>
+          <!-- </div> -->
         </div>
       </div>
       <div id="details-section">

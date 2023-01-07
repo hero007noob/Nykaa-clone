@@ -166,3 +166,20 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 document.getElementById("firsttab").click();
+
+
+
+
+// payment page form validation 
+var cardnumberInput = document.querySelector("#cardnumber");
+
+var monthCvv = document.querySelector(".month-cvv").value;
+var cvv = document.querySelector(".input-details").value;
+cardnumberInput.addEventListener("blur", function (){
+  let cardnumber = cardnumberInput.value;
+  
+  if (!cardnumber){
+    
+  }
+
+})
