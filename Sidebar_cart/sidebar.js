@@ -1883,7 +1883,6 @@ const faceData = [
   },
 ];
 const sampleCartItems = faceData.slice(0, 15);
-addSideBarCartData(sampleCartItems);
 
 let addAdrs = document.querySelector("#addnewaddress");
 addAdrs && addAdrs.addEventListener("click", openNav);
@@ -1895,7 +1894,11 @@ document
 document
   .querySelector(".cart-sidebar-back-arrow")
   .addEventListener("click", closeNav);
-
+// localStorage.setItem("product-Bag", JSON.stringify(sampleCartItems));
+let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+let totalPriceVal = 0;
+let totalDiscount = 0;
+addSideBarCartData(data);
 function openNav(event) {
   console.log("open");
   let sidebar = document.querySelector(".cart-sidebar");
@@ -1912,16 +1915,26 @@ function closeNav(event) {
   closeCoupon();
 }
 function addSideBarCartData(data) {
+  totalDiscount = 0;
+  totalPriceVal = 0;
   data.forEach((item, index) => {
     addSideBarCartDataItem(item, index);
+    let priceVal = 0;
+    let discountVal = 0;
+    if (item.price) priceVal = Number(item.price.substring(1));
+    if (item.discount_price)
+      discountVal = Number(item.discount_price.substring(1));
+    totalPriceVal += priceVal;
+    totalDiscount += discountVal;
   });
   addCoupon();
 }
 function addSideBarCartDataItem(item, index) {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
   if (!parentDiv) return;
-  const itemDiv = `
-  <div class="sidebar-item-parent" >
+  let div = document.createElement("div");
+  div.setAttribute("class", "sidebar-item-parent");
+  const itemDiv = ` 
   <div class="sidebar-item">
   <div class="sidebar-item-top">
     <div class="sidebar-item-img-sec">
@@ -1965,12 +1978,23 @@ function addSideBarCartDataItem(item, index) {
 <p class="font-sidebar-item-price" >Remove Item from Bag?</p>
 <p class="font-cart-sidebar-subheading">Add it to your wishlist to purchase it later!</p>
 <div>
-<div class="sidebar-item-removeAction"><span class="font-sidebar-item-price">Remove</span></div>
-<div class="sidebar-item-wishlistAction"><span class="font-sidebar-item-price">Add To Wishlist</span></div>
+<div class="sidebar-item-removeAction" ><span class="font-sidebar-item-price">Remove</span></div>
+<div class="sidebar-item-wishlistAction" ><span class="font-sidebar-item-price">Add To Wishlist</span></div>
 </div>
 <div>
-</div>`;
-  parentDiv.innerHTML += itemDiv;
+`;
+  div.innerHTML += itemDiv;
+  div
+    .querySelector(".sidebar-item-removeAction")
+    .addEventListener("click", function (event) {
+      removeItem(event, index);
+    });
+  div
+    .querySelector(".sidebar-item-wishlistAction")
+    .addEventListener("click", function (event) {
+      wishListItem(event, index);
+    });
+  parentDiv.appendChild(div);
 }
 function addCoupon() {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
@@ -2017,17 +2041,17 @@ function addPriceDetails() {
   bagMrp.textContent = "Bag MRP ";
   bagMrpDiv.setAttribute("class", "font-sidebar-item-small");
   let bagItemCount = document.createElement("span");
-  bagItemCount.textContent = "(15 items)";
+  bagItemCount.textContent = `(${data.length} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
   let bagMrpPrice = document.createElement("p");
-  bagMrpPrice.textContent = "₹7147";
+  bagMrpPrice.textContent = `₹${totalDiscount + totalPriceVal}`;
   bagMrpDiv.append(bagMrp, bagMrpPrice);
   let bagDiscountDiv = document.createElement("div");
   let bagDiscount = document.createElement("p");
   bagDiscount.textContent = "Bag Discount";
   let bagDiscountPrice = document.createElement("p");
-  bagDiscountPrice.textContent = "₹1768";
+  bagDiscountPrice.textContent = `₹${totalDiscount}`;
   bagDiscountDiv.append(bagDiscount, bagDiscountPrice);
   bagDiscountDiv.setAttribute("class", "font-sidebar-item-small");
   let shippingDiv = document.createElement("div");
@@ -2051,7 +2075,10 @@ function addPriceDetails() {
   let youPay = document.createElement("p");
   youPay.textContent = "You Pay";
   let youPayPrice = document.createElement("p");
-  youPayPrice.textContent = "₹5379";
+  youPayPrice.textContent = `₹${totalPriceVal}`;
+  document.getElementsByClassName(
+    "cart-sidebar__grand-total"
+  )[0].textContent = `₹${totalPriceVal}`;
   youPayDiv.append(youPay, youPayPrice);
   youPayDiv.setAttribute("class", "font-sidebar-price-details");
   priceDetailsDiv.append(
@@ -2062,6 +2089,13 @@ function addPriceDetails() {
     youPayDiv
   );
   parentDiv.appendChild(priceDetailsDiv);
+  let price_details = {
+    itemCount: data.length,
+    bagMrp: totalDiscount + totalPriceVal,
+    bagDiscount: totalDiscount,
+    youPay: totalPriceVal,
+  };
+  localStorage.setItem("price-details", JSON.stringify(price_details));
 }
 function openCoupon() {
   console.log("open coupon");
@@ -2110,13 +2144,35 @@ function addCouponBody(sidebar) {
   sidebar.innerHTML += header;
   sidebar.innerHTML += body;
 }
+
 function deleteAct(event) {
   let item = document.querySelector(".sidebar-item-parent");
-  event.target.parentNode.parentNode.parentNode.classList.toggle(
-    "sidebar-item-flip"
-  );
+  let parent = event.target.parentNode.parentNode.parentNode;
+  parent.classList.toggle("sidebar-item-flip");
 }
 function cancelAct(event) {
   let item = document.querySelector(".sidebar-item-parent");
   event.target.parentNode.parentNode.classList.toggle("sidebar-item-flip");
+}
+let parentDiv = document.querySelector(".cart-sidebar-all-items");
+function removeItem(event, index) {
+  data.splice(index, 1);
+  localStorage.setItem("product-Bag", JSON.stringify(data));
+  parentDiv.innerHTML = null;
+  addSideBarCartData(data);
+}
+function wishListItem(event, index) {
+  let wishlist = JSON.parse(localStorage.getItem("product-wishlist")) || [];
+  wishlist.push(data.splice(index, 1));
+  localStorage.setItem("product-Bag", JSON.stringify(data));
+  localStorage.setItem("product-wishlist", JSON.stringify(wishlist));
+  parentDiv.innerHTML = null;
+  addSideBarCartData(data);
+}
+parentDiv &&
+  document
+    .querySelector(".cart-proceed-btn")
+    .addEventListener("click", proceedToPay);
+function proceedToPay(event) {
+  window.location.href = "/address/address.html";
 }

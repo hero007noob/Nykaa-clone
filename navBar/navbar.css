@@ -202,6 +202,16 @@
   display: block;
 }
 
+@media screen and (max-width: 1200px) {
+  #nav1 li,
+  #nav2 li {
+    display: block;
+    margin: auto;
+    margin-left: 16px;
+    font-size: 11px;
+  }
+}
+
 @media screen and (max-width: 1080px) {
   #nav2,
   .fullNav,
@@ -216,6 +226,7 @@
     margin-top: 45px;
   }
 }
+
 @media screen and (max-width: 600px) {
   #nav2,
   .fullNav,
