@@ -172,14 +172,41 @@ document.getElementById("firsttab").click();
 
 // payment page form validation 
 var cardnumberInput = document.querySelector("#cardnumber");
+var cvvInput = document.querySelector(".input-cvv");
+var monthInput = document.querySelector(".month-input");
 
-var monthCvv = document.querySelector(".month-cvv").value;
-var cvv = document.querySelector(".input-details").value;
-cardnumberInput.addEventListener("blur", function (){
+var monthCvv = document.querySelector("#expdate").value;
+var cvv = document.querySelector("#input-cvv").value;
+
+cardnumberInput.addEventListener("keyup", function (){
   let cardnumber = cardnumberInput.value;
+  let cardWarning = document.querySelector(".cardnumber-warning");
   
-  if (!cardnumber){
-    
+  
+  if (!cardnumber || cardnumber.length != 12){
+    cardWarning.classList.remove("hide");
+  }
+  
+  if (cardnumber && cardnumber.length == 12){
+    cardWarning.classList.add("hide");
+  }
+})
+  
+
+
+monthInput.addEventListener("keyup", function (){
+  let month = monthInput.value;
+  let monthWarning = document.querySelector(".cardnumber-warning");
+  
+  
+  if (!month || month.length != 5){
+    monthWarning.classList.remove("hide");
+    console.log(month);
+  }else{
+    monthWarning.classList.add("hide");
   }
 
+
 })
+
+
