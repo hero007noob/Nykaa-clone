@@ -69,7 +69,7 @@ function otpSuccessful() {
   setTimeout(() => {
     pop.classList.remove("pop");
   }, 4000);
-  window.href="../../home/home.html"
+  window.location.href="../../index.html"
 }
 
 function otpFailed() {
