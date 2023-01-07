@@ -63,7 +63,7 @@ window.onload = function () {
 
 function otpSuccessful() {
   let pop = document.getElementsByClassName("pop-up-alert")[0];
-  pop.classList.add("pop");``
+  pop.classList.add("pop");
   let message = pop.querySelector(".pop-up-msg");
   message.textContent = "Registration completed ";
   setTimeout(() => {
