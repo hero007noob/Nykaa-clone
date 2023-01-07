@@ -129,6 +129,7 @@ ul{
   color: #8c8d94;
     line-height: 1rem;
 }
+
 @media only screen and (max-width: 1000px) {
   .profile {
     display: block !important;

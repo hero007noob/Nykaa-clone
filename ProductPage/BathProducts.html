@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/theme_fonts/fonts.css" />
     <link rel="stylesheet" href="/navBar/navbar.css">
     <link rel="stylesheet" href="/Sidebar_cart/sidebar.css">
+    <link rel="stylesheet" href="../UserProfile/commonmyprofile.css" />
     <!-- Css of this page -->
     <link rel="stylesheet" href="Bathproducts.css" />
     <!-- Css of this page -->
@@ -74,7 +75,7 @@
               <a href="/UserProfile/myorder/myorder.html"> <i class="fa-solid fa-basket-shopping"></i> Orders</a>
               <a href="/UserProfile/mywhishlist/mywishllist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
               <a href="/UserProfile/mywallet/Mywallet.html"><i class="fa-solid fa-wallet"></i> Wallet</a>
-              <a href="#"><i class="fa-solid fa-power-off"></i> Log out</a>
+              <a href="#" id="forPopup"><i class="fa-solid fa-power-off"></i> Log out</a>
             </div>
           </div>
 
@@ -108,6 +109,14 @@
         </ul>
       </div>
     </header>
+    <div class="logoutPopup">
+      <h3>Are you sure you want to logout?</h3>
+      <ul>
+        <li id="logout1">Logout</li>
+        <li id="logout2">Logout from all devices</li>
+        <li class="cancleLogout" id="logoutPopback">Cancel</li>
+      </ul>
+    </div>
     <div class="cart-sidebar-view">
       <div class="sidebar-dim-overlay"></div>
       <div class="coupon-sidebar"></div>
@@ -1191,3 +1200,4 @@
 <script src="BathProducts.js"></script>
 <script src="/navBar/navbar.js"></script>
 <script src="/Sidebar_cart/sidebar.js"></script>
+<script src="../UserProfile/logoutForIndex.js"></script>
