@@ -2149,6 +2149,9 @@ function addCouponBody(sidebar) {
 
   sidebar.innerHTML += header;
   sidebar.innerHTML += body;
+  sidebar.querySelector(".coupon-apply").addEventListener("click", function () {
+    localStorage.setItem("coupon", true);
+  });
 }
 
 function deleteAct(event) {

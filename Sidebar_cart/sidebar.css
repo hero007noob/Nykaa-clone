@@ -320,6 +320,10 @@ body {
   font-size: large;
   color: #999;
 }
+.coupon-apply:hover {
+  color: #fc2779;
+  cursor: pointer;
+}
 #coupon-input-field {
   display: block;
   width: 100%;
