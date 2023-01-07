@@ -1,13 +1,14 @@
 // document.getElementById('firsttab').();
 var coll = document.getElementsByClassName("collapsible");
-var i;
+
 
 let bagitems = document.getElementsByClassName("bagitems")[0];
 let pricesection = document.getElementsByClassName("pricesection")[0];
 let bagItemsData = JSON.parse(localStorage.getItem("product-Bag")) || [];
+
 addSideBarCartData(bagItemsData);
 addPriceDetails();
-for (i = 0; i < coll.length; i++) {
+for (var i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     if (this.querySelector("img").src.includes("down"))
