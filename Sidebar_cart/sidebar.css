@@ -197,6 +197,10 @@ body {
 .sidebar-item-delete > div:first-of-type > img {
   pointer-events: none;
 }
+.sidebar-item-removeAction *,
+.sidebar-item-wishlistAction * {
+  pointer-events: none;
+}
 .sidebar-item-delete > p:nth-child(3) {
   margin-top: 20px;
 }

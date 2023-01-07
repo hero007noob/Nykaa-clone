@@ -842,6 +842,14 @@ var faceData = [
     bonus: "Enjoy Free Gift",
   },
 ];
+faceData.forEach(function (obj, index) {
+  obj["id"] = index;
+});
+var arrWishlist = JSON.parse(localStorage.getItem("product-wishlist")) || [];
+let wishListedItems = JSON.parse(localStorage.getItem("wishListedItems")) || {};
+arrWishlist.forEach(function (obj) {
+  wishListedItems[`${obj.id}`] = obj.id;
+});
 var classchanging = document.querySelectorAll(".pagination>div:nth-child(2)>*");
 var symbolstrt = classchanging[0].textContent;
 var symbolclose = classchanging[classchanging.length - 1].textContent;
@@ -861,13 +869,11 @@ function display(list, clear) {
     var imgdiv = document.createElement("div");
     var img = document.createElement("img");
     img.setAttribute("src", elem.image);
-    img.setAttribute("class","Pro-img-StoreData");
+    img.setAttribute("class", "Pro-img-StoreData");
 
     img.addEventListener("click", function () {
       Prodatastoring(elem);
       window.location.href = "../Product-Details-Page/product-details.html";
-
-
     });
     imgdiv.append(img);
     var title = document.createElement("h4");
@@ -899,10 +905,11 @@ function display(list, clear) {
 
     wishlist.setAttribute("class", "BathwishlistBtn");
     var wishlistIcon = document.createElement("img");
-    wishlistIcon.setAttribute("src", "./assets/heart.svg");
-    wishlistIcon.addEventListener("click", wishList);
-    wishlist.addEventListener("click", function () {
-      callingwish(elem);
+    if (wishListedItems.hasOwnProperty(elem.id))
+      wishlistIcon.setAttribute("src", "./assets/heartselected.svg");
+    else wishlistIcon.setAttribute("src", "./assets/heart.svg");
+    wishlistIcon.addEventListener("click", function (event) {
+      wishList(event, elem);
     });
     // wishlistIcon.setAttribute("onclick", "callingcart()");
 
@@ -1230,10 +1237,11 @@ function sortData(event) {
   }
   console.log(query);
 }
-function wishList(event) {
+function wishList(event, elem) {
   if (event.target.getAttribute("src") == "./assets/heartselected.svg") {
     event.target.setAttribute("src", "./assets/heart.svg");
   } else event.target.setAttribute("src", "./assets/heartselected.svg");
+  callingwish(elem);
 }
 window.addEventListener("scroll", function () {
   // console.log(this.window.scroll);
@@ -1263,14 +1271,22 @@ function Prodatastoring(obj) {
   array.push(obj);
   localStorage.setItem("product-details", JSON.stringify(array));
 }
-var arrWishlist=JSON.parse(localStorage.getItem("product-wishlist"))||[];;
+
 function callingwish(obj) {
-  arrWishlist.push(obj);
+  let isCopy = false;
+  arrWishlist.forEach(function (product, index) {
+    if (product.id == obj.id) {
+      isCopy = true;
+      arrWishlist.splice(index, 1);
+    }
+  });
+  if (!isCopy) {
+    arrWishlist.push(obj);
+  }
   localStorage.setItem("product-wishlist", JSON.stringify(arrWishlist));
 }
-var arrBag=JSON.parse(localStorage.getItem("product-Bag"))||[];;
+var arrBag = JSON.parse(localStorage.getItem("product-Bag")) || [];
 function callingbag(obj) {
   arrBag.push(obj);
   localStorage.setItem("product-Bag", JSON.stringify(arrBag));
 }
-
