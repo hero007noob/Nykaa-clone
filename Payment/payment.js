@@ -1,13 +1,14 @@
 // document.getElementById('firsttab').();
 var coll = document.getElementsByClassName("collapsible");
-var i;
+
 
 let bagitems = document.getElementsByClassName("bagitems")[0];
 let pricesection = document.getElementsByClassName("pricesection")[0];
 let bagItemsData = JSON.parse(localStorage.getItem("product-Bag")) || [];
+
 addSideBarCartData(bagItemsData);
 addPriceDetails();
-for (i = 0; i < coll.length; i++) {
+for (var i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
     if (this.querySelector("img").src.includes("down"))
@@ -70,10 +71,19 @@ function addSideBarCartDataItem(item, index) {
 </div>`;
   parentDiv.innerHTML += itemDiv;
 }
+
 function addPriceDetails() {
   let priceDetailsDiv = document.getElementsByClassName("pricesection")[0];
-  let price_details = JSON.parse(localStorage.getItem("price-details"));
+  let price_details = JSON.parse(localStorage.getItem("price-details")) || {
+    itemCount: 0,
+    bagMrp: 0,
+    bagDiscount:  0,
+    youPay: 0,
+  };;
+
+
   priceDetailsDiv.setAttribute("class", "sidebar-price-details");
+
   let title = document.createElement("p");
   title.textContent = "Price Details";
   title.setAttribute("class", "font-sidebar-price-details");
@@ -82,6 +92,10 @@ function addPriceDetails() {
   bagMrp.textContent = "Bag MRP ";
   bagMrpDiv.setAttribute("class", "font-sidebar-item-small");
   let bagItemCount = document.createElement("span");
+
+  // var checkPriceDetails = price_details.itemCount == "" ? 0: price_details.itemc;
+
+
   bagItemCount.textContent = `(${price_details.itemCount} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
@@ -152,3 +166,20 @@ function openCity(evt, cityName) {
   evt.currentTarget.className += " active";
 }
 document.getElementById("firsttab").click();
+
+
+
+
+// payment page form validation 
+var cardnumberInput = document.querySelector("#cardnumber");
+
+var monthCvv = document.querySelector(".month-cvv").value;
+var cvv = document.querySelector(".input-details").value;
+cardnumberInput.addEventListener("blur", function (){
+  let cardnumber = cardnumberInput.value;
+  
+  if (!cardnumber){
+    
+  }
+
+})
