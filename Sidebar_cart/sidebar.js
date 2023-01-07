@@ -2150,7 +2150,11 @@ function addCouponBody(sidebar) {
   sidebar.innerHTML += header;
   sidebar.innerHTML += body;
   sidebar.querySelector(".coupon-apply").addEventListener("click", function () {
+    var a=document.querySelector("#coupon-input-field").value;
+    if(a=="masai20"|| a=="masai30")
+    {
     localStorage.setItem("coupon", true);
+    }
   });
 }
 
