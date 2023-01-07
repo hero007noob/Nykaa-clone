@@ -5,8 +5,8 @@ window.onload = function () {
 
   function otpSendToMail() {
    
+    let pop = document.getElementsByClassName("pop-up-alert")[0];
     setTimeout(() => {
-      let pop = document.getElementsByClassName("pop-up-alert")[0];
       pop.classList.add("pop");
       let message = pop.querySelector(".pop-up-msg");
       message.textContent = "OTP sent to your mail ";
@@ -69,6 +69,7 @@ function otpSuccessful() {
   setTimeout(() => {
     pop.classList.remove("pop");
   }, 4000);
+  window.href="../../home/home.html"
 }
 
 function otpFailed() {
