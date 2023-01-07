@@ -3,8 +3,7 @@
   margin-left: 2.4rem;
   margin-top: 2rem;
 }
-.profileList
-{
+.profileList {
   width: 20%;
 }
 .orderheading {
@@ -34,49 +33,64 @@
   padding-bottom: 6rem;
 }
 
-
-#orderedItem button{
+#orderedItem button {
   height: 2rem;
-  margin-top:2rem;
-  margin-left:1rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
 }
-.trackorder{
-  display:flex;
-  justify-content: space-between;
-  /* height:123px; */
+.trackorder {
+  display: flex;
   background-color: white;
-
 }
-.trackorder div{
+
+#pdf-download{
+  position: relative;
+  bottom: 28px;
+  left: 59px;
+  cursor: pointer;
+  width: 13%;
+  height: 23px;
+}
+
+#pdf-download>button{
+  background-color: black;
+  border-radius: 8px;
+  color: white;
+  
+}
+
+.trackorder div {
   height: 100%;
-  margin: 0 3rem ;
+  margin: 0 1rem;
+  position: relative;
   box-sizing: border-box;
   padding: 12px;
   border-radius: 12px;
   margin-bottom: 12px;
-
+  bottom: 1rem;
+  left: 2rem;
 }
-.trackorder div:nth-child(2){
+.trackorder div:nth-child(2) {
   background-color: #fc2779;
-color:white;
-font-weight: 600;
-
+  color: white;
+  font-weight: 600;
+  position: relative;
+  left: 21rem;  
 }
-.trackorder div:nth-child(1){
+.trackorder div:nth-child(1) {
   color: rgb(10, 147, 168);
   font-weight: 600;
-
 }
-.cancleorder{
+.cancleorder {
   display: flex;
   justify-content: space-between;
   background-color: white;
   align-items: center;
 }
-.cancleorder>div{
+.cancleorder > div {
   margin: 0 4rem;
 }
-.cancleorder div button{
+.cancleorder div button {
   padding: 1rem;
   font-weight: 600;
   border-radius: 8px;
@@ -85,58 +99,59 @@ font-weight: 600;
   color: white;
   margin-bottom: 12px;
 }
-.order
-{
+.order {
   margin-top: 15px;
 }
-.items
-{
+.items {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   width: 95%;
 }
 
-.imgdiv>img{
+.imgdiv > img {
   width: 50%;
   padding: 20px;
 }
-.namediv
-{
+.namediv {
   text-align: left;
 }
-.status>p
-{
-text-align: center;
-margin-top: 40px;
-margin-bottom: -20px;
-margin-left: -45px;
-}.status>h3{
+.status > p {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: -20px;
+  margin-left: -45px;
+}
+.status > h3 {
   color: #ef9e27;
 }
-.titlename{
+.titlename {
   font-size: 14px !important;
   font-weight: 600;
   letter-spacing: 0.1px;
   text-transform: capitalize;
   color: rgb(61, 54, 54);
 }
-.featuredtxt{
+.featuredtxt {
   color: #fc2779 !important;
-    font-weight: 300;
-    font-size: 14px;
+  font-weight: 300;
+  font-size: 14px;
 }
-.transist{
-  color: rgb(10, 147, 168) !important;;
+.transist {
+  color: rgb(10, 147, 168) !important;
   font-weight: 600;
   margin-left: -30px;
 }
+
+#footer {
+  top: 100px;
+}
+
 @media only screen and (max-width: 1000px) {
   .profile {
     display: block !important;
     flex-direction: column;
     width: 100%;
-    
   }
   .profileList {
     width: 90%;
@@ -145,5 +160,4 @@ margin-left: -45px;
     width: 90%;
     margin: auto;
   }
-  
 }
