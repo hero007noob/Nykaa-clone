@@ -31,33 +31,46 @@ function displayProduct(doc) {
   doc.map(function (x, ind) {
       
       let cart=document.querySelector(".orderdiv");
-    
-      cart.innerHTML +=`
-      <div class="order">
+    let item = document.createElement('div');
+    item.setAttribute('class',"order");
+    let content=` 
       <div class="items">
       <div class="imgdiv">
           <img src="${x.image}" alt="">
       </div>
       <div class="namediv">
-          <p>${x.name}</p>
-          <p>${x.Keywords}</p>
-          <p>${x.price}</p>
+          <p class="titlename">${x.name}</p>
+          <p class="featuredtxt">${x.Keywords}</p>
+          <p class="titlename">${x.price}</p>
       </div>
       <div class="status">
           <p class="font-product-item-MRP">Status</p>
-          <h3>In - Transit</h3>
+          <h3 class="transist">In - Transit</h3>
       </div>
       <div class="deliverydiv">
-          <p>Delivery Expected by</p>
-          <h3>x Date xxxx</h3>
-      </div>
-      </div>
+          <p class="featuredtxt">Delivery Expected by</p>
+          <h3 class="datee">XXXX</h3>
+      </div> 
   </div>`
+  item.innerHTML+=content;
+  cart.appendChild(item);
+  var d=item.querySelector(".datee");
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2, "0");
+  let mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+  let yyyy = today.getFullYear();
+  today = dd + "/" + mm + "/" + yyyy;
+  console.log(today); 
+  d.innerHTML = today;
   });
+  
 }
 
-document.querySelector("#cancelAll").addEventListener("click",change);
 
+  
+
+
+document.querySelector("#cancelAll").addEventListener("click",change);
 function change()
 {
     let a=document.querySelector("#cancelAll").textContent
