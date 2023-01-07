@@ -120,6 +120,14 @@
   line-height: initial !important;
 }
 /* Product page fonts */
+.font-product-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.3px;
+  font-stretch: normal;
+  font-style: normal;
+}
 .font-product-item-title {
   font-size: 14px;
   font-weight: 500;

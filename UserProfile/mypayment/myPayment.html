@@ -8,16 +8,134 @@
     <script
       src="https://kit.fontawesome.com/09ea9ed7f5.js"
       crossorigin="anonymous"></script>
+        <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap"
+  rel="stylesheet"
+  />
     <link rel="stylesheet" href="../../theme_fonts/fonts.css" />
     <link rel="stylesheet" href="../commonmyprofile.css" />
     <link rel="stylesheet" href="mypayment.css" />
     <link rel="stylesheet" href="../../footer/footer.css" />
+    <link rel="stylesheet" href="/navBar/navbar.css">
+    <link rel="stylesheet" href="/Sidebar_cart/sidebar.css">
     <link
       rel="icon"
       href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png" />
     <script src="../commonmyprofile.js" defer></script>
   </head>
   <body>
+    <header class="nav-header">
+      <div id="white-sides"></div>
+      <div id="nav1">
+        <ul class="fullNav">
+          <li>
+            <img
+              src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png"
+            />
+          </li>
+          <li class="font-nav1-items"><a href="">Caregories</a></li>
+          <li class="font-nav1-items"><a href="">Brands</a></li>
+          <li class="font-nav1-items"><a href="">Luxe</a></li>
+          <li class="font-nav1-items"><a href="">Nykaa Fashion</a></li>
+          <li class="font-nav1-items"><a href="">Beauty Advice</a></li>
+        </ul>
+        <ul class="iconNav">
+          <li>
+            <img
+              src="/assets/logo-black.svg"
+            />
+          </li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/options-lines.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/brand-image.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/hot-sale.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/women.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/bag.png" alt=""></a></li>
+        </ul>
+        
+        <div class="search right">
+          <button class="serach-icon"><i class="fa fa-magnifying-glass"></i></button>
+          <input type="text" placeholder="Search on Nykaa" />
+          <button class="sign">Sign in</button>
+
+          <div class="dropdown">
+            <div class="dropbtn">
+              <img src="/assets/nav-user-icon.svg"  alt="usericon">
+             <span>  User</span>
+            </div>
+            <div class="dropdown-content">
+              <a href="/UserProfile/myprofile/MyProfile.html"><i class="fa-regular fa-user"></i> Profile</a>
+              <a href="/UserProfile/myorder/myorder.html"> <i class="fa-solid fa-basket-shopping"></i> Orders</a>
+              <a href="/UserProfile/mywhishlist/mywishllist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+              <a href="/UserProfile/mywallet/Mywallet.html"><i class="fa-solid fa-wallet"></i> Wallet</a>
+              <a href="#"><i class="fa-solid fa-power-off"></i> Log out</a>
+            </div>
+          </div>
+
+          
+          <img class="cartIcon-click" src="/assets/cart-icon.svg" alt="" />
+        
+          
+        </div>
+        
+
+      </div>
+      <div id="nav2">
+        <ul>
+          <li class="font-nav2-items"><a href="">Makeup</a></li>
+          <li class="font-nav2-items"><a href="">Skin</a></li>
+          <li class="font-nav2-items"><a href="">Hair</a></li>
+          <li class="font-nav2-items"><a href="">Appliances</a></li>
+          <li class="font-nav2-items"><a href="">Bath & Body</a></li>
+          <li class="font-nav2-items"><a href="">Natural</a></li>
+          <li class="font-nav2-items"><a href="">Mom & Baby</a></li>
+          <li class="font-nav2-items"><a href="">Health & Wellness</a></li>
+          <li class="font-nav2-items"><a href="">Men</a></li>
+          <li class="font-nav2-items"><a href="">Fragrance</a></li>
+          <li class="font-nav2-items"><a href="">Pop Ups</a></li>
+          <li class="font-nav2-items">
+            <img
+              src="/assets/offers-nav.jpg"
+              alt="offers"
+            />
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="cart-sidebar-view">
+      <div class="sidebar-dim-overlay"></div>
+      <div class="coupon-sidebar"></div>
+      <div class="cart-sidebar">
+        <div class="cart-sidebar__header">
+          <div>
+            <div class="cart-sidebar-back-arrow">
+              <img src="/assets/sidebar-back-arrow.svg" alt="" />
+            </div>
+            <p class="font-cart-sidebar-heading">Bag</p>
+            <p class="font-cart-sidebar-subheading">15 items</p>
+          </div>
+          <p class="font-sidebar-item-small_pinkBold">View Wishlist</p>
+        </div>
+        <div class="cart-sidebar-all-items"></div>
+        <div class="cart-sidebar__footer">
+          <div class="cart-sidebar__grand-total__div">
+            <p class="font-cart-sidebar-heading cart-sidebar__grand-total">
+              ₹4832
+            </p>
+            <p class="font-sidebar-item-small cart-sidebar__grand-total_disp">
+              Grand Total
+              <img src="/assets/small-warn.svg" alt="" />
+            </p>
+          </div>
+          <button class="font-cart-sidebar-headingWhite cart-proceed-btn">
+            <p>Proceed</p>
+            <img src="/assets/sidebar-proceed-arrow.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
     <ul class="breadcrumb">
       <li><a href="/index.html">Home</a></li>
       <li>My Saved Payment</li>
@@ -423,4 +541,6 @@
       </div>
     </footer>
   </body>
+  <script src="/navBar/navbar.js"></script>
+  <script src="/Sidebar_cart/sidebar.js"></script>
 </html>

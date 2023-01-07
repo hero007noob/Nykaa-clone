@@ -1,4 +1,4 @@
-const faceData = [
+const sampleCartItems = [
   {
     name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
     price: "₹419",
@@ -1882,25 +1882,27 @@ const faceData = [
     shades: "8 Shades",
   },
 ];
-const sampleCartItems = faceData.slice(0, 15);
+const sample = sampleCartItems.slice(0, 15);
 
 let addAdrs = document.querySelector("#addnewaddress");
 addAdrs && addAdrs.addEventListener("click", openNav);
 let cartBtn = document.querySelector(".cart-btn");
 cartBtn && cartBtn.addEventListener("click", openNav);
+let cartBtnIcon = document.querySelector(".cartIcon-click");
+cartBtnIcon && cartBtnIcon.addEventListener("click", openNav);
 document
   .querySelector(".sidebar-dim-overlay")
   .addEventListener("click", closeNav);
 document
   .querySelector(".cart-sidebar-back-arrow")
   .addEventListener("click", closeNav);
-// localStorage.setItem("product-Bag", JSON.stringify(sampleCartItems));
-let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+// localStorage.setItem("product-Bag", JSON.stringify(sample));
 let totalPriceVal = 0;
 let totalDiscount = 0;
-addSideBarCartData(data);
 function openNav(event) {
   console.log("open");
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+  addSideBarCartData(data);
   let sidebar = document.querySelector(".cart-sidebar");
   let dimOverlay = document.querySelector(".sidebar-dim-overlay");
   sidebar.classList.add("show-sidebar");
@@ -1917,6 +1919,8 @@ function closeNav(event) {
 function addSideBarCartData(data) {
   totalDiscount = 0;
   totalPriceVal = 0;
+  let parentDiv = document.querySelector(".cart-sidebar-all-items");
+  parentDiv.innerHTML = "";
   data.forEach((item, index) => {
     addSideBarCartDataItem(item, index);
     let priceVal = 0;
@@ -1929,6 +1933,7 @@ function addSideBarCartData(data) {
   });
   addCoupon();
 }
+
 function addSideBarCartDataItem(item, index) {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
   if (!parentDiv) return;
@@ -1950,7 +1955,7 @@ function addSideBarCartDataItem(item, index) {
       <p class="font-sidebar-item-small_pink">${item.bonus || " "}</p>
     </div>
     <div class="sidebar-item__delete-icon" onclick="deleteAct(event)">
-      <img src="./assets/sidebar-item-delete.svg" alt="" />
+      <img src="/assets/sidebar-item-delete.svg" alt="" />
     </div>
   </div>
   <div class="sidebar-item-bottom">
@@ -1973,7 +1978,7 @@ function addSideBarCartDataItem(item, index) {
 </div>
 <div class="sidebar-item-delete">
 <div onclick="cancelAct(event)">
-<img src="./assets/sidebar-item-cancel.svg" alt="" >
+<img src="/assets/sidebar-item-cancel.svg" alt="" >
 </div>
 <p class="font-sidebar-item-price" >Remove Item from Bag?</p>
 <p class="font-cart-sidebar-subheading">Add it to your wishlist to purchase it later!</p>
@@ -2003,7 +2008,7 @@ function addCoupon() {
   couponDiv.setAttribute("class", "sidebar-coupon");
   let logoDiv = document.createElement("div");
   let logo = document.createElement("img");
-  logo.setAttribute("src", "./assets/coupon-logo.svg");
+  logo.setAttribute("src", "/assets/coupon-logo.svg");
   logoDiv.appendChild(logo);
   logoDiv.setAttribute("class", "sidebar-coupon-logo");
   let textDiv = document.createElement("div");
@@ -2030,6 +2035,7 @@ function addCoupon() {
   addPriceDetails();
 }
 function addPriceDetails() {
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
   let priceDetailsDiv = document.createElement("div");
   priceDetailsDiv.setAttribute("class", "sidebar-price-details");
@@ -2119,7 +2125,7 @@ function addCouponBody(sidebar) {
   <div class="cart-sidebar__header">
   <div>
     <div class="coupon-sidebar-back-arrow">
-      <img src="./assets/sidebar-back-arrow-pink.svg" alt="" /> 
+      <img src="/assets/sidebar-back-arrow-pink.svg" alt="" /> 
     </div> 
     <p class="font-cart-sidebar-heading">Coupons</p>
   </div> 
@@ -2156,12 +2162,14 @@ function cancelAct(event) {
 }
 let parentDiv = document.querySelector(".cart-sidebar-all-items");
 function removeItem(event, index) {
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
   data.splice(index, 1);
   localStorage.setItem("product-Bag", JSON.stringify(data));
   parentDiv.innerHTML = null;
   addSideBarCartData(data);
 }
 function wishListItem(event, index) {
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
   let wishlist = JSON.parse(localStorage.getItem("product-wishlist")) || [];
   wishlist.push(data.splice(index, 1));
   localStorage.setItem("product-Bag", JSON.stringify(data));
