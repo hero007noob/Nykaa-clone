@@ -56,9 +56,9 @@ body {
 .profile i {
   font-size: 0.7rem;
 }
-.popup {
+/* .popup {
   background-color: white;
-  width: 17rem;
+  width: 14rem;
   text-align: center;
   padding: 1rem;
   position: absolute;
@@ -85,8 +85,41 @@ body {
   align-items: center;
   justify-content: center;
   margin-left: -2.4rem;
-  border: #fc2779;
   color: #fc2779;
+} */
+.logoutPopup{
+  background-color: white;
+  width:13rem;
+  text-align: center;
+  padding:1rem;
+  border-radius: 5px;
+  position:absolute;
+  left:50%;
+  top:0;
+  transform: translate(-50%,-50%) scale(0.1);
+  visibility: hidden;
+  transition: transform .5s;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+.logoutPopback{
+  top:50%;
+  transform: translate(-50%,-50%) scale(1);
+  visibility: visible;
+  z-index: 100;
+}
+.logoutPopup li{
+  display: block;
+  border: 1px solid rgb(199, 196, 196);
+  height: 1.5rem;
+  padding-top:1rem;
+  position:relative;
+}
+.logoutPopup ul{
+  width:99%;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  color:#fc2779;
 }
 .icon {
   margin-right: 10px;
