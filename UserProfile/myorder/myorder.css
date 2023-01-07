@@ -57,7 +57,7 @@
 
 }
 .trackorder div:nth-child(2){
-background: rgb(241, 165, 24);
+  background-color: #fc2779;
 color:white;
 font-weight: 600;
 
@@ -114,6 +114,23 @@ margin-left: -45px;
 }.status>h3{
   color: #ef9e27;
 }
+.titlename{
+  font-size: 14px !important;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+  text-transform: capitalize;
+  color: rgb(61, 54, 54);
+}
+.featuredtxt{
+  color: #fc2779 !important;
+    font-weight: 300;
+    font-size: 14px;
+}
+.transist{
+  color: rgb(10, 147, 168) !important;;
+  font-weight: 600;
+  margin-left: -30px;
+}
 @media only screen and (max-width: 1000px) {
   .profile {
     display: block !important;
@@ -128,4 +145,5 @@ margin-left: -45px;
     width: 90%;
     margin: auto;
   }
+  
 }
