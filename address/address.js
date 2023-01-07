@@ -38,11 +38,18 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 let bagitems = document.getElementsByClassName("bagitems")[0];
 let pricesection = document.getElementsByClassName("pricesection")[0];
-addSideBarCartData(demoData);
+let bagItemsData = JSON.parse(localStorage.getItem("product-Bag")) || [];
+addSideBarCartData(bagItemsData);
 addPriceDetails();
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function () {
     this.classList.toggle("active");
+    if (this.querySelector("img").src.includes("down"))
+      this.querySelector("img").src =
+        "https://adn-static1.nykaa.com/media/wysiwyg/Payments/Up.svg";
+    else
+      this.querySelector("img").src =
+        "https://adn-static1.nykaa.com/media/wysiwyg/Payments/down.svg";
     var content = this.nextElementSibling;
     if (content.style.maxHeight) {
       content.style.maxHeight = null;
@@ -99,6 +106,7 @@ function addSideBarCartDataItem(item, index) {
 }
 function addPriceDetails() {
   let priceDetailsDiv = document.getElementsByClassName("pricesection")[0];
+  let price_details = JSON.parse(localStorage.getItem("price-details"));
   priceDetailsDiv.setAttribute("class", "sidebar-price-details");
   let title = document.createElement("p");
   title.textContent = "Price Details";
@@ -108,17 +116,17 @@ function addPriceDetails() {
   bagMrp.textContent = "Bag MRP ";
   bagMrpDiv.setAttribute("class", "font-sidebar-item-small");
   let bagItemCount = document.createElement("span");
-  bagItemCount.textContent = "(15 items)";
+  bagItemCount.textContent = `(${price_details.itemCount} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
   let bagMrpPrice = document.createElement("p");
-  bagMrpPrice.textContent = "₹7147";
+  bagMrpPrice.textContent = `₹${price_details.bagMrp}`;
   bagMrpDiv.append(bagMrp, bagMrpPrice);
   let bagDiscountDiv = document.createElement("div");
   let bagDiscount = document.createElement("p");
   bagDiscount.textContent = "Bag Discount";
   let bagDiscountPrice = document.createElement("p");
-  bagDiscountPrice.textContent = "₹1768";
+  bagDiscountPrice.textContent = `₹${price_details.bagDiscount}`;
   bagDiscountDiv.append(bagDiscount, bagDiscountPrice);
   bagDiscountDiv.setAttribute("class", "font-sidebar-item-small");
   let shippingDiv = document.createElement("div");
@@ -142,7 +150,7 @@ function addPriceDetails() {
   let youPay = document.createElement("p");
   youPay.textContent = "You Pay";
   let youPayPrice = document.createElement("p");
-  youPayPrice.textContent = "₹5379";
+  youPayPrice.textContent = `₹${price_details.youPay}`;
   youPayDiv.append(youPay, youPayPrice);
   youPayDiv.setAttribute("class", "font-sidebar-price-details");
   priceDetailsDiv.append(
@@ -152,6 +160,10 @@ function addPriceDetails() {
     shippingDiv,
     youPayDiv
   );
+  document.querySelector(
+    "#numberofitems"
+  ).textContent = `${price_details.itemCount} Items`;
+  document.querySelector("#cartvalue").textContent = `₹${price_details.bagMrp}`;
   // parentDiv.appendChild(priceDetailsDiv);
 }
 // console.log("syed");
@@ -229,67 +241,68 @@ function changesymbol() {
   }
 }
 
-var list=JSON.parse(localStorage.getItem("address-list"))||[];
+var list = JSON.parse(localStorage.getItem("address-list")) || [];
 addingaddress(list);
-function called(){
-  var x={
-    name:document.querySelector(".add-name").value,
-    flat:document.querySelector(".add-flat").value,
-    area:document.querySelector(".add-area").value,
-    pincode:document.querySelector(".add-pincode").value,
-    phone:document.querySelector(".add-phone").value,
-    email:document.querySelector(".add-mail").value,
-  }
+function called() {
+  var x = {
+    name: document.querySelector(".add-name").value,
+    flat: document.querySelector(".add-flat").value,
+    area: document.querySelector(".add-area").value,
+    pincode: document.querySelector(".add-pincode").value,
+    phone: document.querySelector(".add-phone").value,
+    email: document.querySelector(".add-mail").value,
+  };
   list.push(x);
   console.log(x);
-  localStorage.setItem("address-list",JSON.stringify(list));
-  var y=JSON.parse(localStorage.getItem("address-list")) ||[];
-  addingaddress(y);
+  localStorage.setItem("address-list", JSON.stringify(list));
+  var y = JSON.parse(localStorage.getItem("address-list")) || [];
+  let oneItem = [];
+  oneItem.push(x);
+  addingaddress(oneItem);
 }
 
 function addingaddress(x) {
   // document.querySelector(".Adding-new-add").textContent="";
-  
-  for (var i=0;i<x.length;i++)
-  {
-    var div= document.createElement("div");
-    div.setAttribute("id","addnewaddress")
-    var div1= document.createElement("div");
+
+  for (var i = 0; i < x.length; i++) {
+    var div = document.createElement("div");
+    div.setAttribute("id", "addnewaddress");
+    var div1 = document.createElement("div");
     var title = document.createElement("p");
-    title.textContent=x[i].name;
+    title.textContent = x[i].name;
     div1.append(title);
-    var div2= document.createElement("div");
+    var div2 = document.createElement("div");
     var road = document.createElement("p");
-    road.textContent=x[i].flat;
-    road.setAttribute("class","font-address-description");
+    road.textContent = x[i].flat;
+    road.setAttribute("class", "font-address-description");
     div2.append(road);
-    var div3= document.createElement("div");
+    var div3 = document.createElement("div");
     var local = document.createElement("p");
-    local.textContent=x[i].area;
-    local.setAttribute("class","font-address-description");
+    local.textContent = x[i].area;
+    local.setAttribute("class", "font-address-description");
     var pin = document.createElement("p");
-    pin.textContent=x[i].pincode;
-    div3.append(local,pin);
-    pin.setAttribute("class","font-address-description");
-    var div4= document.createElement("div");
+    pin.textContent = x[i].pincode;
+    div3.append(local, pin);
+    pin.setAttribute("class", "font-address-description");
+    var div4 = document.createElement("div");
     var phn = document.createElement("p");
-    phn.setAttribute("class","font-address-description");
-    phn.textContent=x[i].phone;
+    phn.setAttribute("class", "font-address-description");
+    phn.textContent = x[i].phone;
     div4.append(phn);
-    var div7= document.createElement("div");
-    var div5= document.createElement("button");
-    div5.textContent="Edit";
-    div5.setAttribute("class","ad-button1");
-    var div6= document.createElement("button");
-    div6.innerHTML = 'Deliver Here &nbsp;<span><i class="fa-solid fa-arrow-right"></i></span>';
-    div6.setAttribute("class","ad-edit");
-    div6.addEventListener("click", function() {
+    var div7 = document.createElement("div");
+    var div5 = document.createElement("button");
+    div5.textContent = "Edit";
+    div5.setAttribute("class", "ad-button1");
+    var div6 = document.createElement("button");
+    div6.innerHTML =
+      'Deliver Here &nbsp;<span><i class="fa-solid fa-arrow-right"></i></span>';
+    div6.setAttribute("class", "ad-edit");
+    div6.addEventListener("click", function () {
       window.location.href = "../UserProfile/mypayment/myPayment.html";
     });
-    div7.append(div5,div6);
-    div7.setAttribute("class","buttonfunction");
-    div.append(div1,div2,div3,div4,div7);
+    div7.append(div5, div6);
+    div7.setAttribute("class", "buttonfunction");
+    div.append(div1, div2, div3, div4, div7);
     document.querySelector(".Adding-new-add").append(div);
   }
-  
 }
