@@ -1,121 +1,3 @@
-let allImages = [
-  "https://adn-static2.nykaa.com/media/wysiwyg/2019/Maybelline1211.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/lakme_mega_menu_header.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/nykaa-cosmetics.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/mac.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2019/lorealparis.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Huda.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2018/Biotique_new.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/natural-logo.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2018/Brandslogo/FacesCanadaa.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/HeaderIcons/The-Face-Shop.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2018/colorbar-logoforui.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2018/Brandslogo/nyx_New.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2018/Brandslogo/LOTUS-HERBALS.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2019/niveaa.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/clinique.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2018/neutrogena.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Estee-Lauder.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2020/Olay_logos.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/cms/beauty/menu/kay-beauty.png",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2020/BrandslogoMenubar/Herbal-Essences.png",
-  "https://www.nykaa.com/media/wysiwyg/2022/megamenu_winterwear.jpeg",
-  "https://adn-static2.nykaa.com/media/wysiwyg/beautybook_2img.jpg",
-  "https://adn-static2.nykaa.com/media/wysiwyg/megamenu/nykaatv_1_img.png",
-  "https://images-static.naikaa.com/media/wysiwyg/2021/Buying-Guide-Mega-menu-new.jpg",
-  "https://images-static.nykaa.com/uploads/bec43a83-f2cd-4e2d-8136-5393d1f28b6b.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/e3e452fd-5b64-47a2-a6cf-d19a7132cb15.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/7960dfa3-bd54-44cb-92fb-63f360334b40.png?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/a3e8131c-ffe1-4af0-803c-5d7c8acc8446.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/1b668ccd-33c2-4821-81ab-4b1ef04951e8.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/2b3099ea-f2fb-49c8-b28a-b7369ed3ee6f.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/14af2ad3-289b-474d-8cda-415974630eb2.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/aeff738e-fa9a-49f0-8b32-3ff81221e904.png?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/1631adbb-8a5c-49f9-99ef-dea8405020b6.jpg?tr=w-1200,cm-pad_resize",
-  "------------             ___________________               ------------------",
-  "https://images-static.nykaa.com/uploads/12ea9993-f29d-4732-aa66-2de20275f641.jpg?tr=w-600,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/14dab399-cf31-4731-992e-1845321187d6.jpg?tr=w-600,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/82eed1ab-64b2-4cb9-818b-9b39cd9284ec.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/144c95cd-e1d3-4b0d-8d5a-a9ecda42e737.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/b2df2716-c39d-40a7-b2a5-76c728a2590b.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/bf0ec2a2-952d-45f5-9e30-7b872906c42d.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/4162f650-31a3-4d41-a420-ac02caccce89.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/4ea35342-cbb3-44ef-a556-9f1c0f749d93.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/a75736c9-793c-4e69-9dce-558bcd011968.jpg?tr=w-240,cm-pad_resize",
-  "---------------------------------------------------_____________________________------------------",
-  "https://images-static.nykaa.com/uploads/c59db0d6-872e-4fd1-bc64-8331897b3965.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/8f8b55d5-0bfc-4545-ba05-df0177672474.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/aff3b609-5b3e-4d8c-8ccb-ad9157824b2d.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/e3424d3e-3c6f-4dd2-9cd3-d9ce46570133.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/4bec33e3-9145-442b-9171-308834402eb3.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/d4eba2cb-bbf9-4f6c-ac47-281819f52385.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/278adfbe-b973-4eff-a964-d1e933e8daea.jpg?tr=w-600,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/442497de-0e94-49f0-a055-296caf4a4506.jpg?tr=w-600,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/2cddf31b-3553-450e-b552-9953d3ceaa04.jpg?tr=w-1200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/61fb6fec-6694-487f-8a13-005e4ee50fdf.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/b638c1ad-4c7b-425d-b435-983bd3cc12a0.png?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/a242046a-ca1b-4394-9e67-40e1e30abd60.jpeg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/8041211a-7f36-438b-abc3-25c2c517daa2.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/bc5ac3c4-f1d5-48fd-a3c0-f002d1e1b1b2.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/7fbe51fb-f11e-44bb-8188-5f624c1285e0.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/fbf9e414-4cfe-4305-88cf-5282db32df8e.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/23951d99-e2f3-48e2-ac05-49d88e4d52f1.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/9543baff-6b4e-4d1d-ab9c-e7bded753c9c.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/bc0600c5-ddaf-41d7-8596-285e88067b63.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/6e7e4281-e7ac-4f2d-a67e-636847ffd929.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/27d2c518-32f0-4d8a-a956-6baf9a27d00a.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/039f970d-6b63-44e5-8ca8-81cb58901791.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/d47623b5-c3bc-43dc-a99d-fb0c35a67fe9.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/e0beebe9-eecc-4444-b53b-e5264b95d844.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/292a2c1b-ed8c-47a2-a654-79b9d6e9eb96.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/114c1761-45a9-4d86-82ba-c7acc91d4dd6.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/f0ea4956-76d4-4b7c-95b5-ea1a1b8768b3.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/4e9cc366-fb38-4f44-8e81-08a44d2a8aa8.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/3d11cde9-4383-47cd-9dab-8db6cb61be37.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/78d421db-e0b5-402f-862a-bf1fb2924e03.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/fc5d9749-ae5a-4b5f-acc5-2683ddade305.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/1208f0cc-cb69-4c28-8aa7-fe8da2dc1ad4.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/b9984d64-309c-4ee2-829f-48376374ebaa.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/50521780-8e4d-4a97-b361-0d7908850ebf.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/7d8bb59e-bc55-4c40-84a3-5de6669c41a3.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/51910950-e8c3-4576-817e-62c7cc60a610.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/f9b87034-38a8-4d9a-aaa4-507de599ee0d.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/8b98c847-92eb-490c-b8db-ef7726ac73e1.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/a94ce07a-a504-45e3-9e97-d3bdb19bd24b.jpg?tr=w-240,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/953cb9a3-4f45-49a1-98b1-1afe5a4a03ed.jpg?tr=w-300,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/31dd444f-229a-4aa6-b978-4d5fee60e618.jpg?tr=w-300,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/84954473-cd91-41d7-aefe-aac2a49c1e2f.jpg?tr=w-300,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/ce929d73-4070-434e-beaf-78caa3120377.jpg?tr=w-300,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/895b00eb-22cd-4dcc-b9e7-0301ee93325f.jpg?tr=w-400,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/9d94fa15-f514-4e73-a224-832c3d485b4c.jpg?tr=w-400,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/e4e15937-f726-40d3-9589-eb7c605d9b50.jpg?tr=w-400,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/11ab58b8-8aa1-4164-9601-c827bae5e4d8.jpg?tr=w-400,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/f4c3f4d7-a236-4e7a-92f8-e5ba0417c05e.png?tr=w-1200,cm-pad_resize",
-  "_______________________________________________________________________________________________________",
-
-  "https://images-static.nykaa.com/uploads/4ebe90ae-8b35-43a9-b307-fd16313f4f15.jpg?tr=w-400,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/d4a3fc4d-3fb7-4303-b1e4-95fee8e06b50.jpg?tr=w-400,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/722cbc0f-ca72-47a8-baa3-ecec4522eaf0.jpg?tr=w-400,cm-pad_resize",
-  " ------------------------------------------ _______________________---------------",
-  "https://images-static.nykaa.com/uploads/fb7ade3e-737f-4f2c-94f2-7c3726df87c4.jpg?tr=w-200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/720b7002-2278-4c47-a25a-3497f7c8a29f.jpg?tr=w-200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/f918e299-3184-4170-9952-64ebd85ae2ed.jpg?tr=w-200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/8484e0a6-fd1b-43cf-8f31-c38d684af4d4.jpg?tr=w-200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/92806b9a-69b4-48bb-8a9a-4a8c480a7c84.jpg?tr=w-200,cm-pad_resize",
-  "https://images-static.nykaa.com/uploads/3e446743-2508-43c3-9f57-ad804e627e6c.jpg?tr=w-200,cm-pad_resize",
-  "--------------------------------------------------- ----------------------------",
-  "https://images-static.nykaa.com/uploads/49e43a50-37b5-405a-be2d-ab90055115ec.jpg?tr=w-1200,cm-pad_resize",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg",
-  "https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg",
-  "https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-instagram-filled.svg",
-  "https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-facebook-filled.svg",
-  "https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-youtube-filled.svg",
-  "https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-twitter-filled.svg",
-  "https://images-static.naikaa.com/media/wysiwyg/2021/icons/ic_social-pinterest-filled.svg",
-  "https://www.facebook.com/tr?id=1591183734470216&ev=PageView&noscript=1",
-];
 let homeTopBrandsData = [
   {
     image:
@@ -333,6 +215,56 @@ let arrayPlaceholder = [
 let LuxeData = [
   {
     image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/2/4/tr:w-300,/242846bJJ-143296003_1.jpg?rnd=20200526195200",
+    title: "Jack & Jones",
+    subtitle: "20% Off",
+  },
+  {
+    image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/0/6/tr:w-300,/06ae16fKN004BLAC_1.jpg?rnd=20200526195200",
+    title: "Fable street",
+    subtitle: "Rib sweater",
+  },
+  {
+    image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/a/7/tr:w-300,/a752ab3110500_1.jpg?rnd=20200526195200",
+    title: "House of Jamoti",
+    subtitle: "Forest Green's Lehenga",
+  },
+  {
+    image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/9/2/tr:w-300,/9211a97LEIV-WJ285_1.jpg?rnd=20200526195200",
+    title: "Levis",
+    subtitle: "Baggy Dad",
+  },
+  {
+    image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/b/6/tr:w-300,/b6474780EA106ZU06_1.jpg?rnd=20200526195200",
+    title: "Shaye",
+    subtitle: "Floral printed",
+  },
+  {
+    image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/7/f/tr:w-300,/7fe196dT02984_1.jpg?rnd=20200526195200",
+    title: "Zink London",
+    subtitle: "Printed",
+  },
+  {
+    image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/2/1/tr:w-300,/21a62e1MAHI404_HS_1.jpg?rnd=20200526195200",
+    title: "Akhilam",
+    subtitle: "Golden woven Design",
+  },
+  {
+    image:
+      "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/8/tr:w-300,/58180e0EP7090B_1.jpg?rnd=20200526195200",
+    title: "rare",
+    subtitle: "Sheath Midi Dress",
+  },
+];
+let MakeupData = [
+  {
+    image:
       "https://images-static.nykaa.com/uploads/818a802d-4e6a-45f6-affe-ed4b378e6997.png?tr=w-240,cm-pad_resize",
     title: "Legendary Makeup",
     subtitle: "By Pat McGrath",
@@ -344,36 +276,6 @@ let LuxeData = [
     title: "Exclusive Gifts",
     subtitle: "On Entire Range",
   },
-
-  {
-    image:
-      "https://images-static.nykaa.com/uploads/8041211a-7f36-438b-abc3-25c2c517daa2.jpg?tr=w-240,cm-pad_resize",
-    title: "Signature Scents",
-    subtitle: "By Huda & Mona Kattan",
-  },
-
-  {
-    image:
-      "https://images-static.nykaa.com/uploads/02f7845d-7108-4b17-96f3-665f1a16bb91.jpg?tr=w-240,cm-pad_resize",
-    title: "Exciting Gifts",
-    subtitle: "On Order of ₹1500",
-  },
-
-  {
-    image:
-      "https://images-static.nykaa.com/uploads/61fb6fec-6694-487f-8a13-005e4ee50fdf.jpg?tr=w-240,cm-pad_resize",
-    title: "On ₹2300",
-    subtitle: "Get Mascara Sample",
-  },
-
-  {
-    image:
-      "https://images-static.nykaa.com/uploads/7fbe51fb-f11e-44bb-8188-5f624c1285e0.jpg?tr=w-240,cm-pad_resize",
-    title: "View All",
-    subtitle: "Luxe",
-  },
-];
-let MakeupData = [
   {
     image:
       "https://images-static.nykaa.com/uploads/23951d99-e2f3-48e2-ac05-49d88e4d52f1.jpg?tr=w-240,cm-pad_resize",
@@ -419,6 +321,19 @@ let MakeupData = [
 let SkinData = [
   {
     image:
+      "https://images-static.nykaa.com/uploads/8041211a-7f36-438b-abc3-25c2c517daa2.jpg?tr=w-240,cm-pad_resize",
+    title: "Signature Scents",
+    subtitle: "By Huda & Mona Kattan",
+  },
+
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/02f7845d-7108-4b17-96f3-665f1a16bb91.jpg?tr=w-240,cm-pad_resize",
+    title: "Exciting Gifts",
+    subtitle: "On Order of ₹1500",
+  },
+  {
+    image:
       "https://images-static.nykaa.com/uploads/114c1761-45a9-4d86-82ba-c7acc91d4dd6.jpg?tr=w-240,cm-pad_resize",
     title: "For Brighter",
     subtitle: "More Radiant Skin",
@@ -461,6 +376,19 @@ let SkinData = [
 ];
 
 let MoreInBeautyData = [
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/61fb6fec-6694-487f-8a13-005e4ee50fdf.jpg?tr=w-240,cm-pad_resize",
+    title: "On ₹2300",
+    subtitle: "Get Mascara Sample",
+  },
+
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/7fbe51fb-f11e-44bb-8188-5f624c1285e0.jpg?tr=w-240,cm-pad_resize",
+    title: "View All",
+    subtitle: "Luxe",
+  },
   {
     image:
       "https://images-static.nykaa.com/uploads/1208f0cc-cb69-4c28-8aa7-fe8da2dc1ad4.jpg?tr=w-240,cm-pad_resize",
@@ -575,6 +503,30 @@ let influencersData = [
       "https://images-static.nykaa.com/uploads/ce929d73-4070-434e-beaf-78caa3120377.jpg?tr=w-300,cm-pad_resize",
     title: "Shraddha Gurung's",
     subtitle: "Everyday Essentials",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/26ea10d2-146c-42c8-8462-b1973798643f.jpg?tr=w-400,cm-pad_resize",
+    title: "Salon Secret for Frizz Free Hair!",
+    subtitle: "Up To 10% off on Haircare Regimes ",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/creatives/721c813c-3b8d-4c13-863c-55239826879f/default.png?tr=w-400,cm-pad_resize",
+    title: "Up To 30% Off",
+    subtitle: "Say 'Absolutely I do' to perfection ",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/creatives/741a3a0c-f9a6-470e-9f16-5082daaab35a/default.jpg?tr=w-400,cm-pad_resize",
+    title: "Starting at ₹895 +",
+    subtitle: "Offers You Can’t Resist! ",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/creatives/87da03f9-c298-4d52-8e0a-6bf8153aa593/default.png?tr=w-400,cm-pad_resize",
+    title: "Get 2 Gifts on ₹2000",
+    subtitle: "Gift the best of Huda Beauty!",
   },
 ];
 let buyingGuidesData = [
@@ -694,6 +646,36 @@ let discovermoreData = [
 let popupData = [
   {
     image:
+      "https://images-static.nykaa.com/uploads/c2f16e0e-e425-4bd0-937c-3a0f8e9c70aa.jpg?tr=w-400,cm-pad_resize",
+    title: "Up To 35% Off",
+    subtitle: "100+ Lipsticks to Choose From ",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/e0d94ef5-39b9-4e15-9cd6-166d49ca5fcc.jpg?tr=w-400,cm-pad_resize",
+    title: "Up To 35% Off",
+    subtitle: "Salon Quality Hair Color at Home",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/dbe653d4-8e4c-4162-b414-388700442f23.jpg?tr=w-400,cm-pad_resize",
+    title: "Min. 25% +",
+    subtitle: "Free Kajal on ₹699+ ",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/1837f2a5-b8f5-4679-9242-dd19aae88dc7.jpg?tr=w-400,cm-pad_resize",
+    title: "On ₹6000: 2 Gifts",
+    subtitle: "NEW! Limited Edition Gift Sets ",
+  },
+  {
+    image:
+      "https://images-static.nykaa.com/uploads/71037604-efe8-4411-bc66-97c3d70408ea.jpg?tr=w-400,cm-pad_resize",
+    title: "Up To 40% Off + Free Kajal on ₹899",
+    subtitle: "Luxurious matte lipstick ",
+  },
+  {
+    image:
       "https://images-static.nykaa.com/uploads/4ebe90ae-8b35-43a9-b307-fd16313f4f15.jpg?tr=w-400,cm-pad_resize",
     title: "Conveted Niche Brands For You",
     subtitle: "",
@@ -770,7 +752,6 @@ let discoverFavData = [
     subtitle: "",
   },
 ];
-
 let essentialsData = [
   {
     image:

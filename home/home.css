@@ -29,6 +29,7 @@ body {
   width: 120%;
   display: inline-flex;
 }
+
 .carousel-slide img {
   width: 100%;
   border-radius: 10px;
@@ -204,6 +205,7 @@ body {
 }
 .home-carousel-item-regular {
   pointer-events: all;
+  cursor: pointer;
 }
 .home-carousel-item-regular > * {
   pointer-events: none;
