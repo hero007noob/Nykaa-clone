@@ -6,6 +6,7 @@
 }
 body {
   overflow-x: hidden;
+  background-color: white;
 }
 .home-main-div {
   width: 80%;
@@ -101,6 +102,7 @@ body {
   overflow: hidden;
   /* border: 1px solid var(--home-carouse-item-border); */
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: white;
 }
 .home-carousel-item > div:first-child > img {
   width: 100%;

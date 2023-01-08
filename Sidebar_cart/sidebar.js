@@ -1889,13 +1889,25 @@ let cartBtn = document.querySelector(".cart-btn");
 cartBtn && cartBtn.addEventListener("click", openNav);
 let cartBtnIcon = document.querySelector(".cartIcon-click");
 cartBtnIcon && cartBtnIcon.addEventListener("click", openNav);
-let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+let allData = JSON.parse(localStorage.getItem("product-Bag")) || [];
+
+let log = this.localStorage.getItem("loggedin") || "false";
 let count = 0;
-data.forEach(function (e) {
-  count += Number(e.qty);
-});
 let cartItemCountUpdate = document.querySelector(".cartItemNumText");
-if (cartItemCountUpdate) cartItemCountUpdate.textContent = count;
+if (log == "true") {
+  allData.forEach(function (e) {
+    count += Number(e.qty);
+  });
+  if (cartItemCountUpdate) {
+    console.log("what", count);
+    cartItemCountUpdate.style.visibility = "visible !important";
+    cartItemCountUpdate.textContent = count;
+  }
+} else {
+  console.log("what");
+  cartItemCountUpdate.style.visibility = "hidden";
+}
+
 document
   .querySelector(".sidebar-dim-overlay")
   .addEventListener("click", closeNav);

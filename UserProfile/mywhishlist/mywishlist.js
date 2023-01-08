@@ -60,7 +60,8 @@ function displaywish(data) {
     var title = document.createElement("p");
     title.textContent = elem.name;
     title.setAttribute("class", "font-product-item-title");
-
+    var setflex=document.createElement("div");
+    setflex.setAttribute("class", "settingFlex");
     var mrpdiv = document.createElement("div");
     mrpdiv.setAttribute("class", "mrpdiv");
 
@@ -89,8 +90,8 @@ function displaywish(data) {
     starsdiv.setAttribute("class", "starsdiv");
     
     var review = document.createElement("p");
-    review.textContent = elem.reviews;
-    review.setAttribute("class", "font-product-item-MRP");
+    review.textContent = "("+ elem.reviews+')';
+    review.setAttribute("class", "font-product-item-MRP reviewset");
     var parentReview = document.createElement("div");
 
     var movetobag = document.createElement("button");
@@ -110,7 +111,8 @@ function displaywish(data) {
     imgdiv.append(img);
     reviewdiv.append(starsdiv, review);
     mrpdiv.append(mrp, price);
-    textdiv.append(title, mrpdiv, reviewdiv);
+    setflex.append(mrpdiv,reviewdiv);
+    textdiv.append(title,setflex);
     bagdiv.append(buy, movetobag);
     parentdiv.append(imgdiv, textdiv, bagdiv);
     maindiv.append(remove,parentdiv);
