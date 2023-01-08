@@ -1,33 +1,34 @@
-var Data = [
-  {
-    name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
-    price: "₹419",
-    Keywords: "FEATURED",
-    image:
-      "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/35f92daNYKAC00000174_1.jpg",
-    discount_price: "₹599",
-    discount_percentage: "30% Off",
-    reviews: "3305",
-    shades: "15 Shades",
-    bonus: "Enjoy Free Gift",
-  },
-  {
-    name: "Maybelline New York Super Stay Full Coverage Foundation",
-    price: "₹639",
-    Keywords: "FEATURED\nBESTSELLER",
-    image:
-      "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/7/875be506902395685715.jpg",
-    discount_price: "₹799",
-    discount_percentage: "20% Off",
-    reviews: "29761",
-    shades: "9 Shades",
-  },
+// var Data = [
+//   {
+//     name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
+//     price: "₹419",
+//     Keywords: "FEATURED",
+//     image:
+//       "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/35f92daNYKAC00000174_1.jpg",
+//     discount_price: "₹599",
+//     discount_percentage: "30% Off",
+//     reviews: "3305",
+//     shades: "15 Shades",
+//     bonus: "Enjoy Free Gift",
+//   },
+//   {
+//     name: "Maybelline New York Super Stay Full Coverage Foundation",
+//     price: "₹639",
+//     Keywords: "FEATURED\nBESTSELLER",
+//     image:
+//       "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/8/7/875be506902395685715.jpg",
+//     discount_price: "₹799",
+//     discount_percentage: "20% Off",
+//     reviews: "29761",
+//     shades: "9 Shades",
+//   },
   
-];
-localStorage.setItem("product-wishlist",JSON.stringify(Data))
+// ];
+
+// localStorage.setItem("product-wishlist",JSON.stringify(Data))
 
 
-var faceData = JSON.parse(localStorage.getItem("product-wishlist"))
+var faceData = JSON.parse(localStorage.getItem("product-wishlist")) || [];
 displaywish(faceData);
 
 function displaywish(data) {
