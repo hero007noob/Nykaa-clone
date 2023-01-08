@@ -298,7 +298,7 @@ function addingaddress(x) {
       'Deliver Here &nbsp;<span><i class="fa-solid fa-arrow-right"></i></span>';
     div6.setAttribute("class", "ad-edit");
     div6.addEventListener("click", function () {
-      window.location.href = "../UserProfile/mypayment/myPayment.html";
+      window.location.href = "/Payment/payment.html";
     });
     div7.append(div5, div6);
     div7.setAttribute("class", "buttonfunction");
@@ -306,3 +306,13 @@ function addingaddress(x) {
     document.querySelector(".Adding-new-add").append(div);
   }
 }
+document
+  .getElementsByClassName("sign-up-module")[0]
+  .addEventListener("click", function () {
+    window.location.href = "/Signup/signup.html";
+  });
+document
+  .getElementsByClassName("payment-module")[0]
+  .addEventListener("click", function () {
+    window.location.href = "/Payment/payment.html";
+  });

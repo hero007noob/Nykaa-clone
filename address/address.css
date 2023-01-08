@@ -12,6 +12,7 @@
   display: flex;
   gap: 20px;
   width: 200px;
+  cursor: pointer;
 }
 .module-img {
   width: 16%;
