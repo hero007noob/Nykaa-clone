@@ -87,3 +87,22 @@ function change()
         document.querySelector("#cancelAll").textContent="Cancel Order"
     }
 }
+
+
+
+
+
+
+// print pdf
+function printPdf (){
+  const pdfFrame = document.querySelector("#pdf-frame");
+  const pdfUrl = pdfFrame.src;
+  const a = document.createElement("a");
+  a.style.display = "none";
+  a.href= "../Asset/invoice.pdf";
+  a.download = 'invoice.pdf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  console.log('worked');
+}

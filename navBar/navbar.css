@@ -47,6 +47,7 @@
 
 #nav1 > ul:first-child > li > img {
   width: 5rem;
+  cursor: pointer;
 }
 
 #nav1 li a,
