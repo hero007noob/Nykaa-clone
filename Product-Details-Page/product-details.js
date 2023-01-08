@@ -103,7 +103,7 @@ function addBagPopup() {
 
   setTimeout(() => {
     pop.classList.remove("pop");
-  }, 3000);
+  }, 2000);
 }
 
 function alreadyAdded() {
@@ -116,7 +116,7 @@ function alreadyAdded() {
 
   setTimeout(() => {
     pop.classList.remove("pop");
-  }, 3000);
+  }, 2000);
 }
 
 // popup msg otp sent to mail
@@ -130,7 +130,7 @@ function addToWishlistPopup() {
   console.log("working add");
   setTimeout(() => {
     pop.classList.remove("pop");
-  }, 3000);
+  }, 2000);
 }
 
 function removeWishlistPopup() {
@@ -143,5 +143,5 @@ function removeWishlistPopup() {
 
   setTimeout(() => {
     pop.classList.remove("pop");
-  }, 3000);
+  }, 2000);
 }

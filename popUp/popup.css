@@ -26,7 +26,7 @@
 }
 .pop {
   animation-name: example;
-  animation-duration: 2s;
+  animation-duration: 3s;
   animation-timing-function: ease-in-out;
 }
 
@@ -34,10 +34,10 @@
   0% {
     margin-bottom: -100px;
   }
-  40% {
+  25% {
     margin-bottom: 100px;
   }
-  60% {
+  75% {
     margin-bottom: 100px;
   }
   100% {

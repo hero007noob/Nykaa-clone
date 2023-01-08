@@ -623,10 +623,10 @@ input::-webkit-inner-spin-button {
   0% {
     margin-bottom: -100px;
   }
-  40% {
+  25% {
     margin-bottom: 100px;
   }
-  60% {
+  75% {
     margin-bottom: 100px;
   }
   100% {
