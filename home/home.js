@@ -975,3 +975,4 @@ for (const card of cards) {
 function goToProduct(event) {
   window.location.href = "../ProductPage/BathProducts.html";
 }
+
