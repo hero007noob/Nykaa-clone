@@ -1,4 +1,7 @@
 :root {
+  --profile-text-gray: #5c6873;
+  --text-color-black37: rgb(0, 19, 37);
+  --primary-background-black: black;
   --primary-background: white;
   --secondary-background: rgb(243, 243, 243);
   --primary-text-white: white;
@@ -14,7 +17,7 @@
   --bottom-border: rgba(0, 19, 37, 0.08);
 }
 .dark-mode {
-  --primary-background: black;
+  --primary-background: rgb(66, 66, 66);
   --primary-text-white: black;
   --primary-text-black: white;
   --primary-text-black92: white;

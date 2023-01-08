@@ -4,9 +4,16 @@
   --btn-pink: rgb(232, 0, 112);
   --btn-text-white: #fff;
   --primary-text-black: #001325;
+  --sign-up-shadow: #0000003d;
+  --form-input: rgb(243, 244, 245);
+  --form-input-border: rgba(0, 19, 37, 0.16);
+  --eye-color: rgb(156 156 156);
+  --hr-left-border: #ebdddd;
+  --sign-up-google: #32325d40;
+  --sign-up-google-box: #0000004d;
+  --sign-up-google-box-grayv: #ffffff40;
 }
-body
-{
+body {
   background-image: url("./Images/low-poly-grid-haikei.svg");
 }
 
@@ -30,12 +37,12 @@ body
   width: 25%;
   padding: 10px 25px 15px;
   box-sizing: border-box;
-  box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+  box-shadow: var(--sign-up-shadow) 0px 3px 8px;
   margin: auto;
   margin-top: 100px;
   height: 540px;
   border-radius: 20px;
-  background-color: white;
+  background-color: var(--primary-background);
 }
 
 #sign-up-form > h1 {
@@ -43,10 +50,12 @@ body
   margin: 0;
 }
 
-#sign-up-form input[type="text"], input[type="email"],input[type="password"] {
+#sign-up-form input[type="text"],
+input[type="email"],
+input[type="password"] {
   width: 99%;
-  background: rgb(243, 244, 245);
-  border-color: currentcolor currentcolor rgba(0, 19, 37, 0.16);
+  background: var(--form-input);
+  border-color: currentcolor currentcolor var(--form-input-border);
   border-style: none none solid;
   border-width: 0px 0px 1px;
   border-radius: 8px;
@@ -72,8 +81,8 @@ input[type="number"]::-webkit-inner-spin-button {
 
 .phonenumber-input {
   width: 101%;
-  background: rgb(243, 244, 245);
-  border-color: currentcolor currentcolor rgba(0, 19, 37, 0.16);
+  background: var(--form-input);
+  border-color: currentcolor currentcolor var(--form-input-border);
   border-style: none none solid;
   border-width: 0px 0px 1px;
   border-radius: 8px;
@@ -117,7 +126,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #sign-up-form input[type="submit"] {
   background-color: #fc2779;
-  color: white;
+  color: var(--primary-background);
   border: none;
   height: 40px;
   border-radius: 10px;
@@ -129,7 +138,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #sign-up-form input[type="submit"]:hover {
   background-color: #e71364;
-  color: white;
+  color: var(--primary-background);
   border: none;
   height: 40px;
   border-radius: 10px;
@@ -146,7 +155,7 @@ input[type="number"]::-webkit-inner-spin-button {
   cursor: pointer;
   width: 19px;
   height: 18px;
-  color: rgb(156 156 156);
+  color: var(--eye-color);
   font-size: 0.9rem;
 }
 
@@ -160,7 +169,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   top: 31px;
   right: 97px;
-  border: 1px solid #ebdddd;
+  border: 1px solid var(--hr-left-border);
 }
 
 .hr-right {
@@ -169,7 +178,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   left: 94px;
   bottom: 11px;
-  border: 1px solid #ebdddd;
+  border: 1px solid var(--hr-left-border);
 }
 
 .sign-up-or {
@@ -182,19 +191,19 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .sign-up-google-btn {
-  background-color: white;
+  background-color: var(--primary-background);
   height: 44px;
   border-radius: 10px;
   position: relative;
   border: none;
-  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
-    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  box-shadow: var(--sign-up-google) 0px 2px 5px -1px,
+    var(--sign-up-google-box) 0px 1px 3px -1px;
   cursor: pointer;
 }
 
 .sign-up-google-btn:hover {
-  box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px,
-    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  box-shadow: var(--sign-up-google-box-grayv) 0px 2px 5px -1px,
+    var(--sign-up-google-box) 0px 1px 3px -1px;
 }
 
 .sign-up-google-btn img {

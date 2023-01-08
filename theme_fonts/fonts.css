@@ -311,7 +311,7 @@
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.1px;
-  color: rgba(0, 19, 37, 0.92);
+  color: var(--primary-text-black92);
   margin: 0px;
 }
 .font-payment-tab-button-p {
@@ -319,7 +319,7 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0px;
-  color: rgba(0, 19, 37, 0.64);
+  color: var(--primary-text-black64);
   margin: 0px;
 }
 
@@ -328,7 +328,7 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.1px;
-  color: rgba(0, 19, 37, 0.92);
+  color: var(--primary-text-black92);
   margin: 0px;
 }
 
@@ -337,7 +337,7 @@
   font-weight: 400;
   line-height: 16px;
   letter-spacing: 0px;
-  color: rgba(0, 19, 37, 0.64);
+  color: var(--primary-text-black64);
   margin: 0px;
 }
 .net-bankig-p {
@@ -345,7 +345,7 @@
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0px;
-  color: rgb(0, 19, 37);
+  color: var(--text-color-black37);
   margin: 0px;
 }
 /* beauty */
@@ -469,7 +469,7 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0px;
-  color: rgb(0, 19, 37);
+  color: var(--text-color-black37);
 }
 .font-sidebar-item-discount {
   color: var(--discount-text);
