@@ -1902,7 +1902,8 @@ let totalDiscount = 0;
 function openNav(event) {
   console.log("open");
   let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
-  addSideBarCartData(data);
+  let parentDiv = document.querySelector(".cart-sidebar-all-items");
+  if (parentDiv) addSideBarCartData(data);
   let sidebar = document.querySelector(".cart-sidebar");
   let dimOverlay = document.querySelector(".sidebar-dim-overlay");
   sidebar.classList.add("show-sidebar");
