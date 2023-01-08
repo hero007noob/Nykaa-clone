@@ -47,9 +47,13 @@
 }
 .mrpdiv {
   display: flex;
-  gap: 5px;
-  justify-content: center;
+    gap: 0px;
+    justify-content: flex-start;
+    width: 57%;
 }
+
+
+
 .movetobag {
   align-items: center;
   justify-content: center;
@@ -91,10 +95,9 @@
 .starsdiv {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 70%;
+  width: 38%;
   align-items: center;
-  padding-left: 5px;
-  /* gap: 10px; */
+  padding-left: 76px;
 }
 .starsdiv > img {
   width: 100%;
@@ -109,6 +112,9 @@
   gap: 10px;
   justify-content: space-between;
 }
+
+
+
 .bagdiv {
   display: flex;
   gap: 10px;
