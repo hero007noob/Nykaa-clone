@@ -26,10 +26,10 @@
   width: 100%;
 }
 .parentdiv {
-  width: 80%;
+  width: 87%;
   margin: auto;
   padding: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
   margin-bottom: 40px;
   border-radius: 10px;
 }
@@ -139,7 +139,8 @@
   color: white;
   font-size: large;
   float: right;
-  margin-right: 30px;
+  margin-top: 20px;
+  margin-right: 25px;
 }
 .rmvbtn:hover {
   cursor: pointer;
