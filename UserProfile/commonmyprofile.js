@@ -8,6 +8,17 @@ function popup() {
 function popback() {
   a.classList.remove("logoutPopback");
 }
+document.querySelector("#logout1").addEventListener("click", logout);
+document.querySelector("#logout2").addEventListener("click", logout);
+function logout(){
+  console.log("xyz0")
+  a.classList.remove("logoutPopback");
+  localStorage.setItem("loggedin", "false");
+    window.location.href = "/index.html";
+    console.log("xyz")
+}
+
+
 checkPage();
 // let allLists =
 // for (const list of allLists) {
@@ -29,11 +40,4 @@ function checkPage() {
         [num].setAttribute("class", "switch-tab-text");
     }
   }
-}
-
-document.querySelector("#logout1").addEventListener("click",logout)
-document.querySelector("#logout2").addEventListener("click",logout)
-function logout()
-{
-  localStorage.setItem("loggedin","false");
 }

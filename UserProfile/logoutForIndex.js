@@ -11,3 +11,15 @@ function popup() {
 function popback() {
   a.classList.remove("logoutPopback");
 }
+document.querySelector("#logout1").addEventListener("click", logout);
+document.querySelector("#logout2").addEventListener("click", logout);
+function logout(){
+  console.log("abc0")
+  localStorage.setItem("loggedin", "false");
+    window.location.href = "/index.html";
+    a.classList.remove("logoutPopback");
+    console.log("abc")
+}
+
+
+
