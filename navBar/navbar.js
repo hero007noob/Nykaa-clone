@@ -5,10 +5,18 @@ window.addEventListener("scroll", function () {
 });
 const right = document.querySelector("#nav1 div");
 const left = document.querySelector("#nav1 ul");
-document.querySelector(".cartIcon-click").addEventListener("click", openNav);
+let cartBtnClick = document.querySelector(".cartIcon-click");
+cartBtnClick.addEventListener("click", openNav);
+let text = document.createElement("div");
+text.textContent = "0";
+text.setAttribute("class", "cartItemNumText");
+let cartItemCount = document.querySelector(".search");
+if (cartItemCount) cartItemCount.appendChild(text);
+
 function openNav() {
   console.log("test");
 }
+
 setUser();
 function setUser() {
   let userPlaceholder = document.querySelector(".dropbtn>span");
