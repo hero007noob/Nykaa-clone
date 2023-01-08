@@ -1,6 +1,21 @@
+@import "/theme_fonts/theme.css";
+:root {
+  --payment-header-border:lightgray;
+  --black:black;
+  --white:white;
+  --payment-secure:#f9fafa;
+  --payment-tab:#f1f1f1;
+  --payment-tab-btn-hover:#ddd; 
+  --payment-tab-active:rgb(232, 0, 113);
+  --gray:gray;
+  --payment-input-bg:#f3f4f5;
+  --payment-cardnumber-warning:rgb(203, 33, 33);
+  --red: red;
+}
+
 #header {
   display: flex;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var (--payment-header-border);
   height: 4.065rem;
 }
 #location {
@@ -32,7 +47,7 @@
 }
 .header-hr {
   -webkit-transform: rotate(90deg);
-  color: black;
+  color: var(--black);
   opacity: 10%;
   height: 100%;
   margin: auto;
@@ -50,7 +65,7 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: white;
+  background-color: var(--white);;
   border-style: solid;
     border-width: 1px;
     border-color: rgba(0, 19, 37, 0.08);
@@ -58,8 +73,8 @@
 }
 
 .collapsible {
-  background-color: white;
-  color: black;
+  background-color: var(--primary-text-white);
+  color: var(--black);
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -69,7 +84,7 @@
   font-size: 15px;
   border-style: solid;
     border-width: 1px;
-    border-color: rgba(0, 19, 37, 0.08);
+    border-color: var(--bottom-border);
 }
 .col1 {
   border-top-left-radius: 10px;
@@ -82,7 +97,7 @@
 }
 .collapsible:after {
   /* content: '\002B'; */
-  color: white;
+  color: var(--white);;
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -136,7 +151,7 @@
 }
 #secure {
   display: flex;
-  background-color: #f9fafa;
+  background-color: var(--payment-secure);
   padding: 0 10px 0 10px;
   border-radius: 10px;
   gap: 10px;
@@ -148,7 +163,7 @@
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
-  color: rgba(0, 19, 37, 0.92);
+  color: var (--primary-text-black92);
   position: relative;
   top: 50px;
 }
@@ -157,7 +172,7 @@
 .tab {
   float: left;
   border: none;
-  background-color: #f1f1f1;
+  background-color: var(--payment-tab);
   width: 46%;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
@@ -169,7 +184,7 @@
 .tab button {
   display: block;
   background-color: inherit;
-  color: black;
+  color: var(--black);
   padding: 22px 16px;
   width: 100%;
   border: none;
@@ -182,13 +197,13 @@
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-  background-color: #ddd;
+  background-color: var(--payment-tab-btn-hover);
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: white;
-  border-color: currentcolor currentcolor currentcolor rgb(232, 0, 113);
+  background-color: var(--white);;
+  border-color:currentcolor currentcolor currentcolor var(--payment-tab-active);
   border-style: none none none solid;
   border-width: medium medium medium 4px;
 }
@@ -197,7 +212,7 @@
 .tabcontent {
   float: left;
   padding: 0px 12px;
-  border: 1px solid rgba(0, 19, 37, 0.08);
+  border: 1px solid var(--payment-tabcontent-border);
   width: 50%;
   height: 500px;
   border-left: none;
@@ -269,14 +284,14 @@ input[type="number"] {
   align-items: center;
 }
 #upi-logos img {
-  border: 1px solid gray;
+  border: 1px solid var(--gray);
   border-radius: 40px;
   padding: 5px;
   /* width: 100%; */
 }
 
 #upi-logos img:hover {
-  border: 2px solid rgb(232, 0, 113);
+  border: 2px solid var(--payment-upi-logos-img-hover);
 }
 
 #upi * {
@@ -296,9 +311,9 @@ input[type="number"] {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.1px;
-  border-color: rgb(232, 0, 113);
-  background-color: rgb(232, 0, 113);
-  color: rgb(255, 255, 255);
+  border-color:var(--payment-tab-active);
+  background-color:  var(--payment-tab-active);
+  color: var(--white);
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
@@ -306,12 +321,12 @@ input[type="number"] {
   /* box-sizing: border-box; */
 }
 .input-details {
-  background: rgb(243, 244, 245);
-  border-color: currentcolor currentcolor rgba(0, 19, 37, 0.16);
+  background: var(--payment-input-bg);
+  border-color: currentcolor currentcolor var(--bottom-border);
   border-style: none none solid;
   border-width: 0px 0px 1px;
   border-radius: 8px;
-  color: rgba(0, 19, 37, 0.92);
+  color: var(--primary-text-black92);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -369,13 +384,13 @@ input[type="number"] {
   text-align: center;
 }
 .Section-hr {
-  color: rgba(0, 19, 37, 0.08);
+  color: var(--bottom-border);
 }
 #upi-logos:hover {
   cursor: pointer;
 }
 #upi-logos img:focus {
-  border: 2px solid red;
+  border: 2px solid var(--red);
 }
 .netbanking-checkbox {
   display: flex;
@@ -400,7 +415,7 @@ input[type="number"] {
 }
 .snpl-content > div p {
   margin-top: -15px;
-  color: red;
+  color: var(--red);
 }
 #cod * {
   margin: 20px 0 0 0;
@@ -433,7 +448,7 @@ input[type="number"] {
 
 /* form validation css  */
 #cardnumber-warn, .payment-warning{
-  color: rgb(203, 33, 33);
+  color: var(--payment-cardnumber-warning);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
@@ -462,7 +477,6 @@ input[type="number"] {
 .mtyr{
   display: flex;
   position: relative;
-  /* left: 25px; */
   height: 20px;
   text-align: center;
   justify-content: center;
