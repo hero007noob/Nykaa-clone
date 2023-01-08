@@ -279,7 +279,6 @@ input:checked + .slider:before {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 12px;
   border-style: solid;
   border-width: 1px;
   font-size: 12px;
@@ -330,6 +329,23 @@ input:checked + .slider:before {
   text-align: center;
   height: 36px;
   width: 30%;
+}
+.hide,
+.hide1,
+.hide2,
+.hide4,
+.hide5{
+  display: none;
+}
+
+.ai1{
+  padding: 2px;
+}
+.ah1,.ah2,.ah3,.ah4,.ah5{
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgb(203, 33, 33);
 }
 @media screen and (max-width: 912px) {
   .Adding-new-add {

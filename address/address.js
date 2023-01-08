@@ -166,67 +166,78 @@ function addPriceDetails() {
   document.querySelector("#cartvalue").textContent = `₹${price_details.bagMrp}`;
   // parentDiv.appendChild(priceDetailsDiv);
 }
-// console.log("syed");
 
-// var warnmsg = document.querySelector(".Shipping-Button");
-// warnmsg.addEventListener("click", function (e) {
-//   e.preventDefault();
-//   var adPincode = document.querySelector(".add-pincode").value;
-//   var adFlat = document.querySelector(".add-flat").value;
-//   var adArea = document.querySelector(".add-area").value;
-//   var adName = document.querySelector("add-name").value;
-//   var adPhone = document.querySelector("add-phone").value;
-//   var VadPincode = false;
-//   var VadFlat = false;
-//   var VadArea = false;
-//   var VadName = false;
-//   var VadPhone = false;
-//   var wpin = document.querySelector("address-pinwarning");
-//   if (!adPincode) {
-//     wpin.innerHTML = "This Feild is required";
-//   } else if (!(adPincode.length == 6)) {
-//     wpin.innerHTML = "Pincode must be of 6 digit. Enter valid pincode.";
-//   } else {
-//     wpin.innerHTML = "";
-//     VadPincode = true;
-//   }
-//   var wflat = document.querySelector("address-flatwarning");
-//   if (!adFlat) {
-//     wflat.innerHTML = "This Feild is required.";
-//   } else if (!(adFlat.length > 4)) {
-//     wflat.innerHTML = "This Feild is required.";
-//   } else {
-//     wflat.innerHTML = "";
-//     VadFlat = true;
-//   }
-//   var wArea = document.querySelector(".address-areawarning");
-//   if (!adArea ) {
-//     wArea.innerHTML = "This Feild is required.";
-//   } else if (!(adArea .length > 4)) {
-//     wArea.innerHTML = "This Feild is required.";
-//   } else {
-//     wArea.innerHTML = "";
-//     VadArea  = true;
-//   }
-//   var wName = document.querySelector(".address-namewarning");
-//   if (!adName ) {
-//     wName.innerHTML = "This Feild is required.";
-//   } else if (!(adName .length > 3)) {
-//     wName.innerHTML = "This Feild is required.";
-//   } else {
-//     wName.innerHTML = "";
-//     VadName  = true;
-//   }
-//   var wPhone= document.querySelector(".address-phonewarning");
-//   if (!adPhone ) {
-//     wPhone.innerHTML = "Enter 10 digit Mobile number.";
-//   } else if (!(adPhone .length == 10)) {
-//     wPhone.innerHTML = "Enter 10 digit Mobile number.";
-//   } else {
-//     wPhone.innerHTML = "";
-//     VadPhone  = true;
-//   }
-// });
+
+
+var pinInput = document.querySelector(".add-pincode");
+pinInput.addEventListener("keyup", function (){
+  let pin = pinInput.value;
+  let pinwarn = document.querySelector(".ad-pinwarn");
+
+  if (!pin || pin.length != 6){
+    pinwarn.classList.remove("hide");
+  }
+  
+  if (pin && pin.length == 6){
+    pinwarn.classList.add("hide");
+  }
+});
+var flatInput = document.querySelector(".add-flat");
+flatInput.addEventListener("keyup", function (){
+  let flat = flatInput.value;
+  let flatwarn = document.querySelector(".address-flatwarning");
+
+  if (!flat || flat.length != 4){
+    flatwarn.classList.remove("hide1");
+  }
+  
+  if (!flat || flat.length == 4){
+    flatwarn.classList.add("hide1");
+  }
+});
+var areaInput = document.querySelector(".add-area");
+areaInput.addEventListener("keyup", function (){
+  let area = areaInput.value;
+  let areawarn = document.querySelector(".address-areawarning");
+
+  if (!area || area.length != 4){
+    areawarn.classList.remove("hide2");
+  }
+  
+  if (!area || area.length == 4){
+    areawarn.classList.add("hide2");
+  }
+});
+
+var nameInput = document.querySelector(".add-name");
+nameInput.addEventListener("keyup", function (){
+  let name = nameInput.value;
+  let namewarn = document.querySelector(".address-namewarning");
+
+  if (!name || name.length != 4){
+    namewarn.classList.remove("hide4");
+  }
+  
+  if (!name || name.length == 4){
+    namewarn.classList.add("hide4");
+  }
+});
+
+var phoneInput = document.querySelector(".add-phone");
+phoneInput.addEventListener("keyup", function (){
+  let phone = phoneInput.value;
+  let phonewarn = document.querySelector(".address-phonewarning");
+
+  if (!phone || phone.length != 10){
+    phonewarn.classList.remove("hide5");
+  }
+  
+  if (!phone || phone.length == 10){
+    phonewarn.classList.add("hide5");
+  }
+});
+
+
 
 function changesymbol() {
   let symbolchanged = document.querySelectorAll(".toggleInsert");
