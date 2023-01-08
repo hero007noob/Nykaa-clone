@@ -110,6 +110,7 @@ function alreadyAdded() {
   // popup
   let pop = document.getElementsByClassName("pop-up-alert")[0];
   pop.classList.add("pop");
+  pop.classList.add("bgChange");
   let message = pop.querySelector(".pop-up-msg");
   message.textContent = "Product already in bag";
 
@@ -120,8 +121,10 @@ function alreadyAdded() {
 
 // popup msg otp sent to mail
 function addToWishlistPopup() {
+
   let pop = document.getElementsByClassName("pop-up-alert")[0];
   pop.classList.add("pop");
+  pop.classList.remove("bgChange");
   let message = pop.querySelector(".pop-up-msg");
   message.textContent = "Add to wishlist";
   console.log("working add");
@@ -133,6 +136,7 @@ function addToWishlistPopup() {
 function removeWishlistPopup() {
   let pop = document.getElementsByClassName("pop-up-alert")[0];
   pop.classList.add("pop");
+  pop.classList.remove("bgChange");
   let message = pop.querySelector(".pop-up-msg");
   message.textContent = "Remove wishlist";
   console.log("working remove");
