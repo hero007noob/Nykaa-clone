@@ -1,5 +1,5 @@
 
-
+@import"../theme_fonts/theme.css";
 .pop-up-alert-view {
   display: flex;
   justify-content: center;
@@ -13,7 +13,7 @@
   margin-bottom: -100px;
   border-radius: 10px;
   background-color: #fc2779;
-  color: #fff;
+  color: var(--primary-background);
   display: flex;
   justify-content: center;
   align-items: center;

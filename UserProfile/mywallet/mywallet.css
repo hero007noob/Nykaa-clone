@@ -1,3 +1,8 @@
+@import"../../theme_fonts/theme.css"
+:root
+{
+  --grey: rgb(128,128,128);
+}
 .nykaawallet {
   display: flex;
   margin: auto;
@@ -27,7 +32,7 @@
   display: flex;
   align-items: center;
   margin: 2rem;
-  border-top: 1px solid grey;
+  border-top: 1px solid var(--grey);
   width: 40%;
   justify-content: space-between;
 }
@@ -42,7 +47,7 @@
   display: flex;
   align-items: center;
   margin: 2rem;
-  border-top: 1px solid grey;
+  border-top: 1px solid var(--grey);
   width: 40%;
   justify-content: space-between;
   margin-top: -2.8rem;
@@ -72,7 +77,7 @@
 .walletbox {
   width: 80%;
   margin-left: 2.4rem;
-  background-color: white;
+  background-color: var(--primary-background);
   margin-top: 2rem;
 }
 @media only screen and (max-width: 1000px) {

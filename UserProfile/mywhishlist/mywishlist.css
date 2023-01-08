@@ -1,3 +1,9 @@
+@import"../../theme_fonts/theme.css";
+:root
+{
+  --box-shad: rgb(99 99 99 / 20%);
+  --box-black: black;
+}
 .profileList {
   width: 26%;
 }
@@ -5,7 +11,7 @@
   width: 80%;
   margin-left: 2.4rem;
   margin-top: 2rem;
-  background-color: white;
+  background-color: var(--primary-background);
   text-align: center;
   padding: 4rem 0;
   display: grid;
@@ -29,7 +35,7 @@
   width: 87%;
   margin: auto;
   padding: 10px;
-  box-shadow: rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+  box-shadow: var(--box-shad) 0px 2px 8px 0px;
   margin-bottom: 40px;
   border-radius: 10px;
 }
@@ -62,7 +68,7 @@
   letter-spacing: 0.1px;
   border-color: rgb(232, 0, 113);
   background-color: rgb(232, 0, 113);
-  color: rgb(255, 255, 255);
+  color: var(--primary-background);
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
@@ -79,9 +85,9 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.1px;
-  border-color: black;
-  background-color: black;
-  color: rgb(255, 255, 255);
+  border-color: var(--box-black);
+  background-color: var(--box-black);
+  color: var(--primary-background);
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
@@ -134,9 +140,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  border: 1px solid black;
-  color: white;
+  background-color: var(--box-black);
+  border: 1px solid var(--box-black);
+  color: var(--primary-background);
   font-size: large;
   float: right;
   margin-top: 20px;
@@ -146,7 +152,7 @@
   cursor: pointer;
   background-color: #fc2779;
   border-color: #fc2779;
-  color: white;
+  color: var(--primary-background);
 }
 
 .pop-up-alert-view {
@@ -162,7 +168,7 @@
   margin-bottom: -100px;
   border-radius: 10px;
   background-color: #fc2779;
-  color: #fff;
+  color: var(--primary-background);
   display: flex;
   justify-content: center;
   align-items: center;

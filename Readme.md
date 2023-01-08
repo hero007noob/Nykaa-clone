@@ -122,7 +122,7 @@ Clone down this repository using this <a href="https://github.com/hero007noob/Ny
 - **Github Link** : https://github.com/rasikaG23
 - **Linkedin** :   https://www.linkedin.com/in/rasika-gujar-06a9841b3/
 
-
+[![GitHub commit activity](https://img.shields.io/github/commit-activity/m/hero007noob/Nykaa-clone.svg)](https://github.com/hero007noob/Nykaa-clone)
 
 
 

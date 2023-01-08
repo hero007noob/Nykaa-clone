@@ -1,3 +1,10 @@
+@import "../../theme_fonts/theme.css";
+:root{
+  --order-black: black;
+  --trackorder-blue: rgb(10, 147, 168);
+  --status-yellow: #ef9e27
+}
+
 .orderbox {
   width: 80%;
   margin-left: 2.4rem;
@@ -10,7 +17,7 @@
   padding-left: 1rem;
   display: flex;
   align-items: center;
-  background-color: white;
+  background-color: var(--primary-background);
 }
 .orderheading i {
   margin: 0 1rem;
@@ -18,7 +25,7 @@
 }
 .orderdiv {
   text-align: center;
-  background-color: white;
+  background-color: var(--primary-background);
   margin-top: 0.2rem;
   border-radius: 5px;
 }
@@ -40,7 +47,7 @@
 }
 .trackorder {
   display: flex;
-  background-color: white;
+  background-color: var(--primary-background);
 }
 
 #pdf-download{
@@ -53,9 +60,9 @@
 }
 
 #pdf-download>button{
-  background-color: black;
+  background-color: var(--order-black);
   border-radius: 8px;
-  color: white;
+  color: var(--primary-background);
   cursor: pointer;
 }
 
@@ -72,19 +79,19 @@
 }
 .trackorder div:nth-child(2) {
   background-color: #fc2779;
-  color: white;
+  color: var(--primary-background);
   font-weight: 600;
   position: relative;
   left: 21rem;  
 }
 .trackorder div:nth-child(1) {
-  color: rgb(10, 147, 168);
+  color: var(--trackorder-blue);
   font-weight: 600;
 }
 .cancleorder {
   display: flex;
   justify-content: space-between;
-  background-color: white;
+  background-color: var(--primary-background);
   align-items: center;
 }
 .cancleorder > div {
@@ -96,7 +103,7 @@
   border-radius: 8px;
   border: none;
   background-color: #fc2779;
-  color: white;
+  color: var(--primary-background);
   margin-bottom: 12px;
 }
 .order {
@@ -123,7 +130,7 @@
   margin-left: -45px;
 }
 .status > h3 {
-  color: #ef9e27;
+  color: var(--status-yellow);
 }
 .titlename {
   font-size: 14px !important;
@@ -138,7 +145,7 @@
   font-size: 14px;
 }
 .transist {
-  color: rgb(10, 147, 168) !important;
+  color: var(--trackorder-blue) !important;
   font-weight: 600;
   margin-left: -30px;
 }
