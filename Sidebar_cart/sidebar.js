@@ -2160,19 +2160,21 @@ function addCouponBody(sidebar) {
     var a = document.querySelector("#coupon-input-field").value;
     if (a == "masai20" || a == "masai30") {
       let coupon = localStorage.getItem("coupon") || "false";
-      if (coupon !== "true") localStorage.setItem("coupon", true);
-      let price_details =
-        JSON.parse(localStorage.getItem("price-details")) || {};
-      let couponDiscount = (price_details.youPay / 10) * 3;
-      let youpayPrice = document.querySelector(".youpayprice");
-      let newPrice = price_details.youPay - couponDiscount;
-      price_details.bagDiscount += couponDiscount;
-      price_details.youPay = newPrice;
-      youpayPrice.textContent = `₹${newPrice.toFixed(0)}`;
-      document.getElementsByClassName(
-        "cart-sidebar__grand-total"
-      )[0].textContent = `₹${newPrice.toFixed(0)}`;
-      localStorage.setItem("price-details", JSON.stringify(price_details));
+      if (coupon !== "true") {
+        localStorage.setItem("coupon", true);
+        let price_details =
+          JSON.parse(localStorage.getItem("price-details")) || {};
+        let couponDiscount = (price_details.youPay / 10) * 3;
+        let youpayPrice = document.querySelector(".youpayprice");
+        let newPrice = price_details.youPay - couponDiscount;
+        price_details.bagDiscount += couponDiscount;
+        price_details.youPay = newPrice;
+        youpayPrice.textContent = `₹${newPrice.toFixed(0)}`;
+        document.getElementsByClassName(
+          "cart-sidebar__grand-total"
+        )[0].textContent = `₹${newPrice.toFixed(0)}`;
+        localStorage.setItem("price-details", JSON.stringify(price_details));
+      }
     }
   });
 }
