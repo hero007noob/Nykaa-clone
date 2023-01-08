@@ -22,6 +22,19 @@
   z-index: -1;
   background-color: white;
 }
+.cartItemNumText {
+  position: absolute;
+  margin-left: 442px;
+  margin-bottom: 26px;
+  border-radius: 50%;
+  background-color: #fc2779;
+  width: 20px;
+  height: 20px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* #nav1 ul,
 #nav2 ul {
     width: 45%;

@@ -844,6 +844,7 @@ var faceData = [
 ];
 faceData.forEach(function (obj, index) {
   obj["id"] = index;
+  obj["qty"] = 1;
 });
 var arrWishlist = JSON.parse(localStorage.getItem("product-wishlist")) || [];
 let wishListedItems = JSON.parse(localStorage.getItem("wishListedItems")) || {};
@@ -1049,24 +1050,24 @@ function display(list, clear) {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }, 100);
-    console.log(event);
+    // console.log(event);
     // var classname=document.getElementById('myButton')
     //   .className;
     var classchanging = document.querySelectorAll(
       ".pagination>div:nth-child(2)>*"
     );
     var activated = event.target.textContent;
-    console.log(activated);
+    // console.log(activated);
     for (var x = 0; x < classchanging.length; x++) {
       if (classchanging[x].textContent !== activated) {
-        console.log(classchanging[x]);
+        // console.log(classchanging[x]);
         classchanging[x].setAttribute("class", "");
       } else {
         classchanging[x].setAttribute("class", "active");
       }
     }
     var pageNo = document.querySelector(".active").textContent;
-    console.log(pageNo);
+    // console.log(pageNo);
     if (pageNo == 4) {
       var classchanging = document.querySelectorAll(
         ".pagination>div:nth-child(2)>*"
@@ -1290,13 +1291,27 @@ function callingwish(obj) {
   }
   localStorage.setItem("product-wishlist", JSON.stringify(arrWishlist));
 }
-var arrBag = JSON.parse(localStorage.getItem("product-Bag")) || [];
 function callingbag(obj) {
+  var arrBag = JSON.parse(localStorage.getItem("product-Bag")) || [];
   let loggedIn = localStorage.getItem("loggedin") || "false";
   if (loggedIn == "false") {
     window.location.href = "/Signup/signup.html";
     return;
   }
-  arrBag.push(obj);
+  let cartItemNumText = document.querySelector(".cartItemNumText");
+  let cartItemCount = Number(cartItemNumText.textContent) + 1;
+  cartItemNumText.textContent = cartItemCount;
+  // let bagData = JSON.parse(localStorage.getItem("product-Bag")) || [];
+  let found = false;
+  arrBag.forEach(function (item, index) {
+    if (item.id == obj.id) {
+      let x = item;
+      x.qty += 1;
+      arrBag[index] = x;
+      found = true;
+    }
+  });
+  if (!found) arrBag.push(obj);
+  console.log(arrBag);
   localStorage.setItem("product-Bag", JSON.stringify(arrBag));
 }

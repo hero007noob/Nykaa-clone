@@ -1883,13 +1883,19 @@ const sampleCartItems = [
   },
 ];
 const sample = sampleCartItems.slice(0, 15);
-
 let addAdrs = document.querySelector("#addnewaddress");
 addAdrs && addAdrs.addEventListener("click", openNav);
 let cartBtn = document.querySelector(".cart-btn");
 cartBtn && cartBtn.addEventListener("click", openNav);
 let cartBtnIcon = document.querySelector(".cartIcon-click");
 cartBtnIcon && cartBtnIcon.addEventListener("click", openNav);
+let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+let count = 0;
+data.forEach(function (e) {
+  count += Number(e.qty);
+});
+let cartItemCountUpdate = document.querySelector(".cartItemNumText");
+if (cartItemCountUpdate) cartItemCountUpdate.textContent = count;
 document
   .querySelector(".sidebar-dim-overlay")
   .addEventListener("click", closeNav);
@@ -1899,6 +1905,7 @@ document
 // localStorage.setItem("product-Bag", JSON.stringify(sample));
 let totalPriceVal = 0;
 let totalDiscount = 0;
+let totalCount = 0;
 function openNav(event) {
   console.log("open");
   let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
@@ -1926,11 +1933,13 @@ function addSideBarCartData(data) {
     addSideBarCartDataItem(item, index);
     let priceVal = 0;
     let discountVal = 0;
-    if (item.price) priceVal = Number(item.price.substring(1));
-    if (item.discount_price)
-      discountVal = Number(item.discount_price.substring(1));
+    if (item.price && item.qty)
+      priceVal = Number(item.price.substring(1)) * item.qty;
+    if (item.discount_price && item.qty)
+      discountVal = Number(item.discount_price.substring(1)) * item.qty;
     totalPriceVal += priceVal;
     totalDiscount += discountVal;
+    if (item.price) totalCount += item.qty;
   });
   addCoupon();
 }
@@ -1963,7 +1972,7 @@ function addSideBarCartDataItem(item, index) {
     <div class="sidebar-item-quantity-sec">
       <p class="font-sidebar-item-regular">
         Quantity : <span class="sidebar-item-quantity font-sidebar-item-regular"
-          > 1</span
+          > ${item.qty}</span
         >
         <img
           src="https://adn-static1.nykaa.com/media/wysiwyg/Payments/down.svg"
@@ -2054,7 +2063,7 @@ function addPriceDetails() {
   bagMrp.textContent = "Bag MRP ";
   bagMrpDiv.setAttribute("class", "font-sidebar-item-small");
   let bagItemCount = document.createElement("span");
-  bagItemCount.textContent = `(${data.length} items)`;
+  bagItemCount.textContent = `(${totalCount} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
   let bagMrpPrice = document.createElement("p");
