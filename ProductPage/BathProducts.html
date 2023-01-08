@@ -5,29 +5,155 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Products Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap"
-      rel="stylesheet"
-    />
+  <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap"
+  rel="stylesheet"
+  />
     <!-- title favicon icon  -->
     <link
-      rel="icon"
-      href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
+    rel="icon"
+    href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
     />
     <link rel="stylesheet" href="/theme_fonts/fonts.css" />
+    <link rel="stylesheet" href="/navBar/navbar.css">
+    <link rel="stylesheet" href="/Sidebar_cart/sidebar.css">
+    <link rel="stylesheet" href="../UserProfile/commonmyprofile.css" />
     <!-- Css of this page -->
     <link rel="stylesheet" href="Bathproducts.css" />
     <!-- Css of this page -->
+    <link rel="stylesheet" href="../footer/footer.css">
     <script
       src="https://kit.fontawesome.com/b78a585d56.js"
       crossorigin="anonymous"
     ></script>
+
   </head>
-  <body class="Bath-Pro">
+  <body >
+    <header class="nav-header">
+      <div id="white-sides"></div>
+      <div id="nav1">
+        <ul class="fullNav">
+          <li>
+            <img
+              src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png"
+            />
+          </li>
+          <li class="font-nav1-items"><a href="">Caregories</a></li>
+          <li class="font-nav1-items"><a href="">Brands</a></li>
+          <li class="font-nav1-items"><a href="">Luxe</a></li>
+          <li class="font-nav1-items"><a href="">Nykaa Fashion</a></li>
+          <li class="font-nav1-items"><a href="">Beauty Advice</a></li>
+        </ul>
+        <ul class="iconNav">
+          <li>
+            <img
+              src="/assets/logo-black.svg"
+            />
+          </li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/options-lines.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/brand-image.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/hot-sale.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/women.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/bag.png" alt=""></a></li>
+        </ul>
+        
+        <div class="search right">
+          <button class="serach-icon"><i class="fa fa-magnifying-glass"></i></button>
+          <input type="text" placeholder="Search on Nykaa" />
+          <button class="sign">Sign in</button>
+
+          <div class="dropdown">
+            <div class="dropbtn">
+              <img src="/assets/nav-user-icon.svg"  alt="usericon">
+             <span>  User</span>
+            </div>
+            <div class="dropdown-content">
+              <a href="/UserProfile/myprofile/MyProfile.html"><i class="fa-regular fa-user"></i> Profile</a>
+              <a href="/UserProfile/myorder/myorder.html"> <i class="fa-solid fa-basket-shopping"></i> Orders</a>
+              <a href="/UserProfile/mywhishlist/mywishllist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+              <a href="/UserProfile/mywallet/Mywallet.html"><i class="fa-solid fa-wallet"></i> Wallet</a>
+              <a href="#" id="forPopup"><i class="fa-solid fa-power-off"></i> Log out</a>
+            </div>
+          </div>
+
+          
+          <img class="cartIcon-click" src="/assets/cart-icon.svg" alt="" />
+        
+          
+        </div>
+        
+
+      </div>
+      <div id="nav2">
+        <ul>
+          <li class="font-nav2-items"><a href="">Makeup</a></li>
+          <li class="font-nav2-items"><a href="">Skin</a></li>
+          <li class="font-nav2-items"><a href="">Hair</a></li>
+          <li class="font-nav2-items"><a href="">Appliances</a></li>
+          <li class="font-nav2-items"><a href="">Bath & Body</a></li>
+          <li class="font-nav2-items"><a href="">Natural</a></li>
+          <li class="font-nav2-items"><a href="">Mom & Baby</a></li>
+          <li class="font-nav2-items"><a href="">Health & Wellness</a></li>
+          <li class="font-nav2-items"><a href="">Men</a></li>
+          <li class="font-nav2-items"><a href="">Fragrance</a></li>
+          <li class="font-nav2-items"><a href="">Pop Ups</a></li>
+          <li class="font-nav2-items">
+            <img
+              src="/assets/offers-nav.jpg"
+              alt="offers"
+            />
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="logoutPopup">
+      <h3>Are you sure you want to logout?</h3>
+      <ul>
+        <li id="logout1">Logout</li>
+        <li id="logout2">Logout from all devices</li>
+        <li class="cancleLogout" id="logoutPopback">Cancel</li>
+      </ul>
+    </div>
+    <div class="cart-sidebar-view">
+      <div class="sidebar-dim-overlay"></div>
+      <div class="coupon-sidebar"></div>
+      <div class="cart-sidebar">
+        <div class="cart-sidebar__header">
+          <div>
+            <div class="cart-sidebar-back-arrow">
+              <img src="/assets/sidebar-back-arrow.svg" alt="" />
+            </div>
+            <p class="font-cart-sidebar-heading">Bag</p>
+            <p class="font-cart-sidebar-subheading">15 items</p>
+          </div>
+          <p class="font-sidebar-item-small_pinkBold">View Wishlist</p>
+        </div>
+        <div class="cart-sidebar-all-items"></div>
+        <div class="cart-sidebar__footer">
+          <div class="cart-sidebar__grand-total__div">
+            <p class="font-cart-sidebar-heading cart-sidebar__grand-total">
+              ₹4832
+            </p>
+            <p class="font-sidebar-item-small cart-sidebar__grand-total_disp">
+              Grand Total
+              <img src="/assets/small-warn.svg" alt="" />
+            </p>
+          </div>
+          <button class="font-cart-sidebar-headingWhite cart-proceed-btn">
+            <p>Proceed</p>
+            <img src="/assets/sidebar-proceed-arrow.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="Bath-Pro">
+
+
     <div class="BathMaindiv">
-      <h3 class="BathMainhead">Bath & Body</h3>
+      <h3 class="BathMainhead font-product-page-title">Bath & Body</h3>
       <div class="BathMainImg">
         <img
           src="https://images-static.nykaa.com/uploads/a0617c8d-9a93-4da0-ab70-b10d41f91e2e.jpg?tr=w-1200,cm-pad_resize"
@@ -35,7 +161,7 @@
         />
       </div>
     </div>
-    <h3 class="BathMainhead">All Products</h3>
+    <h3 class="BathMainhead font-product-page-title" >All Products</h3>
     <div class="Bathchild">
       <div class="Bathmenu">
         <div class="Bathchild1">
@@ -831,6 +957,247 @@
         <a class="" href="#" onclick="changeprev(2); return false">&raquo;</a>
       </div>
     </div>
+  </div>
+    <div class="footer-playstore">
+      <div>
+        <i class="fa fa-mobile"></i>
+        EXPERIENCE THE NYKAA MOBILE APP
+      </div>
+
+      <div>
+        <img src="Asset/google-play.svg" alt="google play store" />
+        <img src="Asset/google-play.svg" alt="Apple play store" />
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="footer-layer-1">
+        <div class="footer-list-div">
+          <header><img src="./Asset/nyka-log.svg" alt="" /></header>
+          <ul>
+            <li>Who are we</li>
+            <li>Careers</li>
+            <li>Authenticity</li>
+            <li>Press</li>
+            <li>Testimonials</li>
+            <li>Nykaa CSR</li>
+            <li>Responsible Disclosure</li>
+            <li>Investor Relations</li>
+          </ul>
+        </div>
+
+        <div class="footer-list-div">
+          <header>Help</header>
+          <ul>
+            <li>Contact Us</li>
+            <li>Frequently asked questions</li>
+            <li>Store Locator</li>
+            <li>Cancellation & Return</li>
+            <li>Shipping & Delivery</li>
+            <li>Sell on Nykaa</li>
+          </ul>
+        </div>
+
+        <div class="footer-list-div">
+          <header>Inspire Me</header>
+          <ul>
+            <li>Beauty Book</li>
+            <li>Nykaa TV</li>
+            <li>Nykaa Network</li>
+            <li>Buying Guides</li>
+          </ul>
+        </div>
+
+        <div class="footer-list-div">
+          <header>Quick Links</header>
+          <ul>
+            <li>Offer Zone</li>
+            <li>New Launches</li>
+            <li>Nykaa Man</li>
+            <li>Nykaa Fashion</li>
+            <li>Nykaa Pro</li>
+          </ul>
+        </div>
+
+        <div class="footer-list-div">
+          <header>Top Categories</header>
+          <ul>
+            <li>Makeup</li>
+            <li>Skin</li>
+            <li>Hair</li>
+            <li>Bath & Body</li>
+            <li>Appliances</li>
+            <li>Mom and Baby</li>
+            <li>Wellness</li>
+            <li>Fragrance</li>
+            <li>Natural</li>
+            <li>Luxe</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-layer-2">
+        <div class="footer-activity">
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg"
+            alt="footer-icons"
+          />
+          <div>
+            <h4>FREE SHIPPING</h4>
+            <p>
+              On Orders Above 
+              ₹299
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-activity">
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg"
+            alt="footer-icons"
+          />
+          <div>
+            <h4>EASY RETURNS</h4>
+            <p>15-Day Return Policy</p>
+          </div>
+        </div>
+
+        <div class="footer-activity">
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg"
+            alt="footer-icons"
+          />
+          <div>
+            <h4>
+              100% 
+              AUTHENTIC
+            </h4>
+            <p>
+              Products Sourced <span> Directly </span>
+            </p>
+          </div>
+        </div>
+
+        <div class="footer-activity">
+          <img
+            src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg"
+            alt="footer-icons"
+          />
+
+          <div>
+            <h4>1900+ BRANDS</h4>
+            <p>1.2 Lakh+ Products</p>
+          </div>
+        </div>
+
+        <div class="footer-social-media">
+          <span> Show us some love ❤ on social media </span>
+
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/mynykaa/?ref=badge">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/MyNykaa">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCoaH2UtB1PsV7av17woV1BA"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/mynykaa/">
+                <i class="fa-brands fa-pinterest"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/MyNykaa">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="footer-social-media phone-social-media">
+        <span> Show us some love ❤ on social media </span>
+
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/mynykaa/?ref=badge">
+              <i class="fa-brands fa-square-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/MyNykaa">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.youtube.com/channel/UCoaH2UtB1PsV7av17woV1BA"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.pinterest.com/mynykaa/">
+              <i class="fa-brands fa-pinterest"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/MyNykaa">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+      <div class="footer-layer-3">
+        <div>
+          <div>
+            <a href="https://www.nykaa.com/policy#terms-conditions">
+              Terms & Conditions</a
+            >
+          </div>
+
+          <div>
+            <a href="https://www.nykaa.com/policy#shipping-policy">
+              Shipping Policy
+            </a>
+          </div>
+
+          <div>
+            <a
+              href="https://www.nykaa.com/policy#cancellation-and-return-policy"
+            >
+              Cancellation Policy
+            </a>
+          </div>
+
+          <div>
+            <a href="https://www.nykaa.com/policy#privacy-policy"
+              >Privacy Policy
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-credit">
+          © 2023 Nykaa E-Retail Pvt. Ltd. All Rights Reserved.
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
 <script src="BathProducts.js"></script>
+<script src="/navBar/navbar.js"></script>
+<script src="/Sidebar_cart/sidebar.js"></script>
+<script src="../UserProfile/logoutForIndex.js"></script>

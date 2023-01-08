@@ -1,6 +1,7 @@
 @import "../theme_fonts/fonts.css";
 body {
   background-color: var(--secondary-background);
+  /* overflow-x: hidden; */
 }
 * {
   scroll-behavior: smooth !important;
@@ -8,6 +9,7 @@ body {
 .Bath-Pro {
   width: 80%;
   margin: auto;
+  margin-top: 120px;
 }
 .BathMainImg {
   margin: auto;
@@ -288,7 +290,7 @@ body {
   background-color: var(--primary-background);
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
-.Pro-img-StoreData{
+.Pro-img-StoreData {
   cursor: pointer;
 }
 @media screen and (max-width: 912px) {

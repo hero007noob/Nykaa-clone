@@ -1,4 +1,4 @@
-const faceData = [
+const sampleCartItems = [
   {
     name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
     price: "₹419",
@@ -1882,22 +1882,27 @@ const faceData = [
     shades: "8 Shades",
   },
 ];
-const sampleCartItems = faceData.slice(0, 15);
-addSideBarCartData(sampleCartItems);
+const sample = sampleCartItems.slice(0, 15);
 
 let addAdrs = document.querySelector("#addnewaddress");
 addAdrs && addAdrs.addEventListener("click", openNav);
 let cartBtn = document.querySelector(".cart-btn");
 cartBtn && cartBtn.addEventListener("click", openNav);
+let cartBtnIcon = document.querySelector(".cartIcon-click");
+cartBtnIcon && cartBtnIcon.addEventListener("click", openNav);
 document
   .querySelector(".sidebar-dim-overlay")
   .addEventListener("click", closeNav);
 document
   .querySelector(".cart-sidebar-back-arrow")
   .addEventListener("click", closeNav);
-
+// localStorage.setItem("product-Bag", JSON.stringify(sample));
+let totalPriceVal = 0;
+let totalDiscount = 0;
 function openNav(event) {
   console.log("open");
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+  addSideBarCartData(data);
   let sidebar = document.querySelector(".cart-sidebar");
   let dimOverlay = document.querySelector(".sidebar-dim-overlay");
   sidebar.classList.add("show-sidebar");
@@ -1912,16 +1917,29 @@ function closeNav(event) {
   closeCoupon();
 }
 function addSideBarCartData(data) {
+  totalDiscount = 0;
+  totalPriceVal = 0;
+  let parentDiv = document.querySelector(".cart-sidebar-all-items");
+  parentDiv.innerHTML = "";
   data.forEach((item, index) => {
     addSideBarCartDataItem(item, index);
+    let priceVal = 0;
+    let discountVal = 0;
+    if (item.price) priceVal = Number(item.price.substring(1));
+    if (item.discount_price)
+      discountVal = Number(item.discount_price.substring(1));
+    totalPriceVal += priceVal;
+    totalDiscount += discountVal;
   });
   addCoupon();
 }
+
 function addSideBarCartDataItem(item, index) {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
   if (!parentDiv) return;
-  const itemDiv = `
-  <div class="sidebar-item-parent" >
+  let div = document.createElement("div");
+  div.setAttribute("class", "sidebar-item-parent");
+  const itemDiv = ` 
   <div class="sidebar-item">
   <div class="sidebar-item-top">
     <div class="sidebar-item-img-sec">
@@ -1937,7 +1955,7 @@ function addSideBarCartDataItem(item, index) {
       <p class="font-sidebar-item-small_pink">${item.bonus || " "}</p>
     </div>
     <div class="sidebar-item__delete-icon" onclick="deleteAct(event)">
-      <img src="./assets/sidebar-item-delete.svg" alt="" />
+      <img src="/assets/sidebar-item-delete.svg" alt="" />
     </div>
   </div>
   <div class="sidebar-item-bottom">
@@ -1960,17 +1978,28 @@ function addSideBarCartDataItem(item, index) {
 </div>
 <div class="sidebar-item-delete">
 <div onclick="cancelAct(event)">
-<img src="./assets/sidebar-item-cancel.svg" alt="" >
+<img src="/assets/sidebar-item-cancel.svg" alt="" >
 </div>
 <p class="font-sidebar-item-price" >Remove Item from Bag?</p>
 <p class="font-cart-sidebar-subheading">Add it to your wishlist to purchase it later!</p>
 <div>
-<div class="sidebar-item-removeAction"><span class="font-sidebar-item-price">Remove</span></div>
-<div class="sidebar-item-wishlistAction"><span class="font-sidebar-item-price">Add To Wishlist</span></div>
+<div class="sidebar-item-removeAction" ><span class="font-sidebar-item-price">Remove</span></div>
+<div class="sidebar-item-wishlistAction" ><span class="font-sidebar-item-price">Add To Wishlist</span></div>
 </div>
 <div>
-</div>`;
-  parentDiv.innerHTML += itemDiv;
+`;
+  div.innerHTML += itemDiv;
+  div
+    .querySelector(".sidebar-item-removeAction")
+    .addEventListener("click", function (event) {
+      removeItem(event, index);
+    });
+  div
+    .querySelector(".sidebar-item-wishlistAction")
+    .addEventListener("click", function (event) {
+      wishListItem(event, index);
+    });
+  parentDiv.appendChild(div);
 }
 function addCoupon() {
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
@@ -1979,7 +2008,7 @@ function addCoupon() {
   couponDiv.setAttribute("class", "sidebar-coupon");
   let logoDiv = document.createElement("div");
   let logo = document.createElement("img");
-  logo.setAttribute("src", "./assets/coupon-logo.svg");
+  logo.setAttribute("src", "/assets/coupon-logo.svg");
   logoDiv.appendChild(logo);
   logoDiv.setAttribute("class", "sidebar-coupon-logo");
   let textDiv = document.createElement("div");
@@ -2006,6 +2035,13 @@ function addCoupon() {
   addPriceDetails();
 }
 function addPriceDetails() {
+  let coupon = localStorage.getItem("coupon") || "false";
+  if (coupon == "true") {
+    let couponDiscount = (totalPriceVal / 10) * 3;
+    totalDiscount += couponDiscount;
+    totalPriceVal -= couponDiscount;
+  }
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
   let priceDetailsDiv = document.createElement("div");
   priceDetailsDiv.setAttribute("class", "sidebar-price-details");
@@ -2017,17 +2053,17 @@ function addPriceDetails() {
   bagMrp.textContent = "Bag MRP ";
   bagMrpDiv.setAttribute("class", "font-sidebar-item-small");
   let bagItemCount = document.createElement("span");
-  bagItemCount.textContent = "(15 items)";
+  bagItemCount.textContent = `(${data.length} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
   let bagMrpPrice = document.createElement("p");
-  bagMrpPrice.textContent = "₹7147";
+  bagMrpPrice.textContent = `₹${totalDiscount + totalPriceVal}`;
   bagMrpDiv.append(bagMrp, bagMrpPrice);
   let bagDiscountDiv = document.createElement("div");
   let bagDiscount = document.createElement("p");
   bagDiscount.textContent = "Bag Discount";
   let bagDiscountPrice = document.createElement("p");
-  bagDiscountPrice.textContent = "₹1768";
+  bagDiscountPrice.textContent = `₹${totalDiscount}`;
   bagDiscountDiv.append(bagDiscount, bagDiscountPrice);
   bagDiscountDiv.setAttribute("class", "font-sidebar-item-small");
   let shippingDiv = document.createElement("div");
@@ -2051,7 +2087,11 @@ function addPriceDetails() {
   let youPay = document.createElement("p");
   youPay.textContent = "You Pay";
   let youPayPrice = document.createElement("p");
-  youPayPrice.textContent = "₹5379";
+  youPayPrice.setAttribute("class", "youpayprice");
+  youPayPrice.textContent = `₹${totalPriceVal}`;
+  document.getElementsByClassName(
+    "cart-sidebar__grand-total"
+  )[0].textContent = `₹${totalPriceVal}`;
   youPayDiv.append(youPay, youPayPrice);
   youPayDiv.setAttribute("class", "font-sidebar-price-details");
   priceDetailsDiv.append(
@@ -2062,6 +2102,13 @@ function addPriceDetails() {
     youPayDiv
   );
   parentDiv.appendChild(priceDetailsDiv);
+  let price_details = {
+    itemCount: data.length,
+    bagMrp: totalDiscount + totalPriceVal,
+    bagDiscount: totalDiscount,
+    youPay: totalPriceVal,
+  };
+  localStorage.setItem("price-details", JSON.stringify(price_details));
 }
 function openCoupon() {
   console.log("open coupon");
@@ -2085,7 +2132,7 @@ function addCouponBody(sidebar) {
   <div class="cart-sidebar__header">
   <div>
     <div class="coupon-sidebar-back-arrow">
-      <img src="./assets/sidebar-back-arrow-pink.svg" alt="" /> 
+      <img src="/assets/sidebar-back-arrow-pink.svg" alt="" /> 
     </div> 
     <p class="font-cart-sidebar-heading">Coupons</p>
   </div> 
@@ -2109,14 +2156,59 @@ function addCouponBody(sidebar) {
 
   sidebar.innerHTML += header;
   sidebar.innerHTML += body;
+  sidebar.querySelector(".coupon-apply").addEventListener("click", function () {
+    var a = document.querySelector("#coupon-input-field").value;
+    if (a == "masai20" || a == "masai30") {
+      let coupon = localStorage.getItem("coupon") || "false";
+      if (coupon !== "true") {
+        localStorage.setItem("coupon", true);
+        let price_details =
+          JSON.parse(localStorage.getItem("price-details")) || {};
+        let couponDiscount = (price_details.youPay / 10) * 3;
+        let youpayPrice = document.querySelector(".youpayprice");
+        let newPrice = price_details.youPay - couponDiscount;
+        price_details.bagDiscount += couponDiscount;
+        price_details.youPay = newPrice;
+        youpayPrice.textContent = `₹${newPrice.toFixed(0)}`;
+        document.getElementsByClassName(
+          "cart-sidebar__grand-total"
+        )[0].textContent = `₹${newPrice.toFixed(0)}`;
+        localStorage.setItem("price-details", JSON.stringify(price_details));
+      }
+    }
+  });
 }
+
 function deleteAct(event) {
   let item = document.querySelector(".sidebar-item-parent");
-  event.target.parentNode.parentNode.parentNode.classList.toggle(
-    "sidebar-item-flip"
-  );
+  let parent = event.target.parentNode.parentNode.parentNode;
+  parent.classList.toggle("sidebar-item-flip");
 }
 function cancelAct(event) {
   let item = document.querySelector(".sidebar-item-parent");
   event.target.parentNode.parentNode.classList.toggle("sidebar-item-flip");
+}
+let parentDiv = document.querySelector(".cart-sidebar-all-items");
+function removeItem(event, index) {
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+  data.splice(index, 1);
+  localStorage.setItem("product-Bag", JSON.stringify(data));
+  parentDiv.innerHTML = null;
+  addSideBarCartData(data);
+}
+function wishListItem(event, index) {
+  let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
+  let wishlist = JSON.parse(localStorage.getItem("product-wishlist")) || [];
+  wishlist.push(data.splice(index, 1));
+  localStorage.setItem("product-Bag", JSON.stringify(data));
+  localStorage.setItem("product-wishlist", JSON.stringify(wishlist));
+  parentDiv.innerHTML = null;
+  addSideBarCartData(data);
+}
+parentDiv &&
+  document
+    .querySelector(".cart-proceed-btn")
+    .addEventListener("click", proceedToPay);
+function proceedToPay(event) {
+  window.location.href = "/address/address.html";
 }

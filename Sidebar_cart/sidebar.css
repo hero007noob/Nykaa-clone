@@ -13,6 +13,7 @@
   width: 100vw;
   top: 0;
   pointer-events: none;
+  z-index: 10;
 }
 .cart-sidebar {
   position: relative;
@@ -197,6 +198,10 @@ body {
 .sidebar-item-delete > div:first-of-type > img {
   pointer-events: none;
 }
+.sidebar-item-removeAction *,
+.sidebar-item-wishlistAction * {
+  pointer-events: none;
+}
 .sidebar-item-delete > p:nth-child(3) {
   margin-top: 20px;
 }
@@ -314,6 +319,10 @@ body {
   align-items: center;
   font-size: large;
   color: #999;
+}
+.coupon-apply:hover {
+  color: #fc2779;
+  cursor: pointer;
 }
 #coupon-input-field {
   display: block;

@@ -1,26 +1,25 @@
-var faceData = [
-  {
-    name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
-    price: "₹419",
-    Keywords: "FEATURED",
-    image:
-      "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/35f92daNYKAC00000174_1.jpg",
-    discount_price: "₹599",
-    discount_percentage: "30% Off",
-    reviews: "3305",
-    shades: "15 Shades",
-    bonus: "Enjoy Free Gift",
-  },
-];
+// this for reference
+// var faceData = [
+//   {
+//     name: "Nykaa All Day Matte Long Wear Liquid Foundation With Pump",
+//     price: "₹419",
+//     Keywords: "FEATURED",
+//     image:
+//       "https://images-static.nykaa.com/media/catalog/product/tr:w-220,h-220,cm-pad_resize/3/5/35f92daNYKAC00000174_1.jpg",
+//     discount_price: "₹599",
+//     discount_percentage: "30% Off",
+//     reviews: "3305",
+//     shades: "15 Shades",
+//     bonus: "Enjoy Free Gift",
+//   },
+// ];
 
 var productData = JSON.parse(localStorage.getItem("product-details")) || [];
 
 var wishListArr = JSON.parse(localStorage.getItem("product-wishlist")) || [];
 var bagArr = JSON.parse(localStorage.getItem("product-Bag")) || [];
 
-// this faceData should change to product data when we connect
-// with real key
-display(faceData);
+display(productData);
 
 function display(productData) {
   productData.forEach((elem, index) => {
@@ -34,10 +33,13 @@ function display(productData) {
     productPrice.textContent = elem.price;
 
     var productMrp = document.querySelector(".product-mrp");
-    productMrp.innerHTML = ` <s> ${elem.discount_price} </s> `;
+    var discountValue = elem.discount_price || "";
+    productMrp.innerHTML = ` <s> ${discountValue} </s> `;
+
 
     var discountPercent = document.querySelector(".offer");
-    discountPercent.textContent = elem.discount_percentage;
+    var percentageCheck = elem.discount_percentage || "";
+    discountPercent.textContent = percentageCheck;
 
     var review = document.querySelector(".reviews");
     review.textContent = elem.reviews;

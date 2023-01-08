@@ -1,70 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Profile</title>
-    <script src="https://kit.fontawesome.com/09ea9ed7f5.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/09ea9ed7f5.js"
+      crossorigin="anonymous"
+    ></script>
+      <!-- google fonts  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+  href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@300&display=swap"
+  rel="stylesheet"
+  />
     <link rel="stylesheet" href="../../theme_fonts/fonts.css" />
     <link rel="stylesheet" href="../commonmyprofile.css" />
-    <link rel="stylesheet" href="mywallet.css">
+    <link rel="stylesheet" href="../../footer/footer.css" />
+    <link rel="stylesheet" href="/navBar/navbar.css">
+    <link rel="stylesheet" href="/Sidebar_cart/sidebar.css">
+    <link rel="stylesheet" href="mywallet.css" />
     <script src="../commonmyprofile.js" defer></script>
     <link
       rel="icon"
       href="https://cdn.shopper.com/images/store-logos/nykaa-1558082513563.png"
     />
-</head>
-<body>
-    <ul class="breadcrumb">
-        <li><a href="../../home/home.html">Home</a></li>
-        <li>My Wallet</li>
-      </ul>
-    <div class="profile">
-        <ul class="profileList">
-            <li><a href="../myprofile/MyProfile.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><title>user profile icon</title><path fill="currentcolor" fill-rule="nonzero" d="M7 0C3.138 0 0 3.138 0 7c0 3.684 2.855 6.706 6.47 6.978l.022.002c.168.012.337.02.508.02.171 0 .34-.008.508-.02l.022-.002C11.145 13.706 14 10.684 14 7c0-3.862-3.138-7-7-7zm0 .609A6.387 6.387 0 0 1 13.391 7c0 1.75-.702 3.331-1.838 4.484-.521-.323-1.256-.4-1.801-.581-.616-.204-1.349-.517-1.535-.86.736-.093 2.435-.407 2.435-1.1a.304.304 0 0 0-.1-.225c-.21-.19-.197-1.18-.188-1.975.019-1.512.04-3.225-.845-4.09-.348-.34-.805-.513-1.358-.515-.282-.195-.687-.305-1.15-.305h-.005c-3.173.228-3.25 3.19-3.3 5.149-.02.737-.04 1.572-.255 1.762a.305.305 0 0 0-.103.228c0 .66 1.222.916 2.435 1.071-.172.356-1.206.71-1.826.914-.538.177-1.05.216-1.514.524A6.368 6.368 0 0 1 .61 7 6.387 6.387 0 0 1 7 .609z"></path></svg></i> My Profile</a></li>
-            <li><a href="../mywallet/Mywallet.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 36 36"><title>wallet icon</title><path fill="currentColor" d="M26.25 0c-.67.01-1.41.154-2.33.393-2.642.681-17.84 4.791-17.84 4.791-2.487.914-4.004 1.748-4.928 2.959C.234 9.347.03 10.793.027 12.515v.55c-.01.105-.027.21-.027.314v17.908C0 33.876 2.173 36 4.821 36H31.18c2.647 0 4.82-2.124 4.82-4.713V13.248c0-2.67-2.444-4.896-5.143-4.896H5.143c-.961 0-.96.008-1.68.447.213-.447 1.678-1.107 4.492-1.956.15-.053 14.056-3.782 16.61-4.44.851-.22 1.316-.051 1.685.215.37.266.396.59.396 1.257v2.802h2.497V3.875c0-.726-.047-1.341-.188-1.91-.14-.57-.415-1.13-.91-1.493C27.549.109 26.92-.01 26.25 0zM5.747 10.573h24.672c1.603 0 3.29 1.557 3.29 3.09V30.97c0 1.614-1.33 2.914-2.981 2.914H5.438c-1.654 0-2.98-1.297-2.98-2.914V14.968l.025-1.331c.048-.547.334-1.325.874-1.935.588-.665 1.39-1.13 2.39-1.13zm9.187 9.82s-.468 7.619-.57 8.762c-.103 1.143.037 1.966 1.062 1.966 1.025 0 1.449-1.19 1.449-1.19s.85-2.571 2.474-6.157c1.623-3.587 2.428-5.067 2.428-5.067s2.196-4.286 2.669-5.225c.472-.94.417-1.144.02-1.342-.397-.199-1.315-.314-1.925.334-.61.648-2.108 3.88-2.108 3.88l-2.835 5.719s-.105-1.2.127-3.57c.231-2.368.667-5.428-.138-5.833-.805-.405-1.482-.116-2.104.825-.621.94-3.238 6.503-3.238 6.503s-4.422 9.453-4.527 9.937c-.105.484-.08 1.23 1.099 1.23s1.7-.354 2.563-2.512c.864-2.16 3.554-8.26 3.554-8.26zm14.637-.31c-1.185 0-2.142.936-2.142 2.094 0 1.159.957 2.095 2.142 2.095 1.182 0 2.143-.936 2.143-2.095 0-1.158-.96-2.094-2.143-2.094z"></path></svg></i> My Wallet</a></li>
-            <li><a href="../myorder/myorder.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"><title>order icon</title><path fill="currentcolor" d="M2.013 0a.89.89 0 0 0-.893.892v2.162h.227c.342 0 .646.16.867.402.215-.968 1.603-1.443 4.226-1.443 2.956 0 4.562.505 4.786 1.487.22-.25.543-.411.901-.411h.193V.893c0-.495-.418-.893-.928-.893h-9.38zM6.44 2.572c-1.355 0-3.637.147-3.693 1.112l-.2 1.548-.158 1.147-.114.901h-.262a1.473 1.473 0 0 0-.403.061c-.035.01-.071.023-.105.035-.06.022-.112.042-.166.07-.013.007-.022.02-.035.027-.063.036-.127.07-.184.113-.078.06-.145.136-.21.21-.012.014-.024.021-.035.035A1.516 1.516 0 0 0 .7 8.12c-.013.028-.023.058-.035.088-.026.068-.054.135-.07.21-.004.017-.005.035-.009.052a1.473 1.473 0 0 0-.026.262v1.908h12.32V8.732c0-.09-.01-.177-.026-.262l-.009-.053a1.454 1.454 0 0 0-.061-.21c-.011-.029-.03-.059-.044-.087a1.366 1.366 0 0 0-.07-.131 1.36 1.36 0 0 0-.105-.158c-.01-.014-.023-.02-.035-.035a1.466 1.466 0 0 0-.21-.21c-.057-.043-.121-.077-.184-.114-.013-.006-.022-.02-.035-.026-.054-.03-.107-.048-.166-.07-.034-.012-.069-.025-.105-.035a1.455 1.455 0 0 0-.402-.061h-.263l-.122-.954-.114-.875-.236-1.741c-.064-1.077-3.554-1.138-4.253-1.138zm0 .56c2.36 0 3.595.42 3.701.63l.28 2.153c-.414.07-1.645.245-3.701.245s-3.287-.174-3.701-.245l.288-2.179c.007-.12.583-.604 3.133-.604zm-5.548.482a.663.663 0 0 0-.638.639v1.54c0 .355.298.673.638.673h.42c.356 0 .674-.297.674-.639v-1.54c0-.355-.298-.673-.639-.673H.892zm11.236.035a.64.64 0 0 0-.64.638v1.54c0 .354.287.64.64.64h.42a.663.663 0 0 0 .638-.64v-1.54a.64.64 0 0 0-.639-.638h-.42zM5.205 7.56h3.028c.192 0 .346.114.411.28.02.051.035.106.035.166v1.348a.44.44 0 0 1-.446.446H5.206a.44.44 0 0 1-.446-.446V8.006a.46.46 0 0 1 .035-.166.433.433 0 0 1 .411-.28zM2.152 8.68h1.295c.112 0 .193.08.193.193v.735c0 .111-.08.192-.193.192H2.152a.186.186 0 0 1-.192-.193v-.734c0-.112.08-.193.192-.193zm7.84 0h1.295c.112 0 .193.08.193.193v.735c0 .111-.08.192-.193.192H9.992a.186.186 0 0 1-.192-.193v-.734c0-.112.08-.193.192-.193zM.56 11.2v1.4h12.32v-1.4H.56zm0 1.96c0 .463.377.84.84.84h1.12c.463 0 .84-.377.84-.84H.56zm9.52 0c0 .463.377.84.84.84h1.12c.463 0 .84-.377.84-.84h-2.8z"></path></svg></i> My Order</a></li>
-            <li><a href="../mywhishlist/mywishllist.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="14" viewBox="0 0 16 14"><title>wishlist icon</title><path fill="currentcolor" d="M4.472 0C2.006 0 0 1.963 0 4.375c0 4.967 5.743 7.419 7.697 9.012l.215.179.215-.179c1.954-1.593 7.697-4.045 7.697-9.012C15.824 1.963 13.817 0 11.352 0c-1.395 0-2.62.648-3.44 1.63C7.092.648 5.867 0 4.472 0z"></path></svg></i> My Wishlist</a></li>
-            <li><a href="../mypayment/myPayment.html"><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" class="width-full height-full" viewBox="0 0 20 20" height="17" width="17"><defs><filter id="4bng7liola" width="107.8%" height="164%" x="-3.9%" y="-32%" filterUnits="objectBoundingBox"><feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset><feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="3"></feGaussianBlur><feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"></feColorMatrix><feMerge><feMergeNode in="shadowMatrixOuter1"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs><g fill="none" fill-rule="evenodd"><g><g><g filter="url(#4bng7liola)" transform="translate(-20 -661) translate(0 142) translate(0 504)"><g><path fill="#3F414D" fill-rule="nonzero" d="M17.826 3C19.022 3 20 3.978 20 5.174v9.565c0 1.196-.978 2.174-2.174 2.174H2.174C.978 16.913 0 15.935 0 14.739V5.174C0 3.978.978 3 2.174 3zM10 10.522H3.043v.87H10v-.87zm9.13-4.479H.87v2h18.26v-2z" transform="translate(20 15)"></path></g></g></g></g></g></svg></i> My Saved Payment</a></li>
-            <li class="logout"><a><i class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="14" viewBox="0 0 13 14"><path fill="currentcolor" fill-rule="nonzero" d="M6.492.552a.552.552 0 0 0-.534.568v6.16c-.002.202.1.39.269.492a.526.526 0 0 0 .546 0 .564.564 0 0 0 .269-.492V1.12a.57.57 0 0 0-.16-.404.533.533 0 0 0-.39-.164zM3.79 1.24a.528.528 0 0 0-.245.065C1.443 2.416 0 4.674 0 7.28 0 10.985 2.917 14 6.5 14S13 10.985 13 7.28c0-2.605-1.443-4.864-3.545-5.976a.533.533 0 0 0-.73.244.57.57 0 0 0 .237.753c1.752.928 2.955 2.8 2.955 4.979 0 3.1-2.42 5.6-5.417 5.6-2.998 0-5.417-2.5-5.417-5.6 0-2.178 1.203-4.051 2.955-4.979a.566.566 0 0 0 .287-.634.545.545 0 0 0-.535-.428z"></path></svg></i> Log Out</a></li>
+  </head>
+  <body>
+    <header class="nav-header">
+      <div id="white-sides"></div>
+      <div id="nav1">
+        <ul class="fullNav">
+          <li>
+            <img
+              src="https://logos-download.com/wp-content/uploads/2021/01/Nykaa_Logo.png"
+            />
+          </li>
+          <li class="font-nav1-items"><a href="">Caregories</a></li>
+          <li class="font-nav1-items"><a href="">Brands</a></li>
+          <li class="font-nav1-items"><a href="">Luxe</a></li>
+          <li class="font-nav1-items"><a href="">Nykaa Fashion</a></li>
+          <li class="font-nav1-items"><a href="">Beauty Advice</a></li>
         </ul>
-        <div class="popup">
-            <h3>Are you sure you want to logout?</h3>
+        <ul class="iconNav">
+          <li>
+            <img
+              src="/assets/logo-black.svg"
+            />
+          </li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/options-lines.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/brand-image.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/hot-sale.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/women.png" alt=""></a></li>
+          <li class="font-nav1-items"><a href=""><img src="/assets/bag.png" alt=""></a></li>
+        </ul>
+        
+        <div class="search right">
+          <button class="serach-icon"><i class="fa fa-magnifying-glass"></i></button>
+          <input type="text" placeholder="Search on Nykaa" />
+          <button class="sign">Sign in</button>
+
+          <div class="dropdown">
+            <div class="dropbtn">
+              <img src="/assets/nav-user-icon.svg"  alt="usericon">
+             <span>  User</span>
+            </div>
+            <div class="dropdown-content">
+              <a href="/UserProfile/myprofile/MyProfile.html"><i class="fa-regular fa-user"></i> Profile</a>
+              <a href="/UserProfile/myorder/myorder.html"> <i class="fa-solid fa-basket-shopping"></i> Orders</a>
+              <a href="/UserProfile/mywhishlist/mywishllist.html"><i class="fa-regular fa-heart"></i> Wishlist</a>
+              <a href="/UserProfile/mywallet/Mywallet.html"><i class="fa-solid fa-wallet"></i> Wallet</a>
+              <a href="#" id="forPopup"><i class="fa-solid fa-power-off"></i> Log out</a>
+            </div>
+          </div>
+
+          
+          <img class="cartIcon-click" src="/assets/cart-icon.svg" alt="" />
+        
+          
+        </div>
+        
+
+      </div>
+      <div id="nav2">
+        <ul>
+          <li class="font-nav2-items"><a href="">Makeup</a></li>
+          <li class="font-nav2-items"><a href="">Skin</a></li>
+          <li class="font-nav2-items"><a href="">Hair</a></li>
+          <li class="font-nav2-items"><a href="">Appliances</a></li>
+          <li class="font-nav2-items"><a href="">Bath & Body</a></li>
+          <li class="font-nav2-items"><a href="">Natural</a></li>
+          <li class="font-nav2-items"><a href="">Mom & Baby</a></li>
+          <li class="font-nav2-items"><a href="">Health & Wellness</a></li>
+          <li class="font-nav2-items"><a href="">Men</a></li>
+          <li class="font-nav2-items"><a href="">Fragrance</a></li>
+          <li class="font-nav2-items"><a href="">Pop Ups</a></li>
+          <li class="font-nav2-items">
+            <img
+              src="/assets/offers-nav.jpg"
+              alt="offers"
+            />
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="logoutPopup">
+      <h3>Are you sure you want to logout?</h3>
+      <ul>
+        <li id="logout1">Logout</li>
+        <li id="logout2">Logout from all devices</li>
+        <li class="cancleLogout" id="logoutPopback">Cancel</li>
+      </ul>
+    </div>
+    <div class="cart-sidebar-view">
+      <div class="sidebar-dim-overlay"></div>
+      <div class="coupon-sidebar"></div>
+      <div class="cart-sidebar">
+        <div class="cart-sidebar__header">
+          <div>
+            <div class="cart-sidebar-back-arrow">
+              <img src="/assets/sidebar-back-arrow.svg" alt="" />
+            </div>
+            <p class="font-cart-sidebar-heading">Bag</p>
+            <p class="font-cart-sidebar-subheading">15 items</p>
+          </div>
+          <p class="font-sidebar-item-small_pinkBold">View Wishlist</p>
+        </div>
+        <div class="cart-sidebar-all-items"></div>
+        <div class="cart-sidebar__footer">
+          <div class="cart-sidebar__grand-total__div">
+            <p class="font-cart-sidebar-heading cart-sidebar__grand-total">
+              ₹4832
+            </p>
+            <p class="font-sidebar-item-small cart-sidebar__grand-total_disp">
+              Grand Total
+              <img src="/assets/small-warn.svg" alt="" />
+            </p>
+          </div>
+          <button class="font-cart-sidebar-headingWhite cart-proceed-btn">
+            <p>Proceed</p>
+            <img src="/assets/sidebar-proceed-arrow.svg" alt="" />
+          </button>
+        </div>
+      </div>
+    </div>
+    <ul class="breadcrumb">
+      <li><a href="/index.html">Home</a></li>
+      <li>My Wallet</li>
+    </ul>
+    <div class="profile">
+      <ul class="profileList">
+        <li>
+          <a href="../myprofile/MyProfile.html"
+            ><i class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+              >
+                <title>user profile icon</title>
+                <path
+                  fill="currentcolor"
+                  fill-rule="nonzero"
+                  d="M7 0C3.138 0 0 3.138 0 7c0 3.684 2.855 6.706 6.47 6.978l.022.002c.168.012.337.02.508.02.171 0 .34-.008.508-.02l.022-.002C11.145 13.706 14 10.684 14 7c0-3.862-3.138-7-7-7zm0 .609A6.387 6.387 0 0 1 13.391 7c0 1.75-.702 3.331-1.838 4.484-.521-.323-1.256-.4-1.801-.581-.616-.204-1.349-.517-1.535-.86.736-.093 2.435-.407 2.435-1.1a.304.304 0 0 0-.1-.225c-.21-.19-.197-1.18-.188-1.975.019-1.512.04-3.225-.845-4.09-.348-.34-.805-.513-1.358-.515-.282-.195-.687-.305-1.15-.305h-.005c-3.173.228-3.25 3.19-3.3 5.149-.02.737-.04 1.572-.255 1.762a.305.305 0 0 0-.103.228c0 .66 1.222.916 2.435 1.071-.172.356-1.206.71-1.826.914-.538.177-1.05.216-1.514.524A6.368 6.368 0 0 1 .61 7 6.387 6.387 0 0 1 7 .609z"
+                ></path></svg
+            ></i>
+            My Profile</a
+          >
+        </li>
+        <li>
+          <a href="../mywallet/Mywallet.html"
+            ><i class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 36 36"
+              >
+                <title>wallet icon</title>
+                <path
+                  fill="currentColor"
+                  d="M26.25 0c-.67.01-1.41.154-2.33.393-2.642.681-17.84 4.791-17.84 4.791-2.487.914-4.004 1.748-4.928 2.959C.234 9.347.03 10.793.027 12.515v.55c-.01.105-.027.21-.027.314v17.908C0 33.876 2.173 36 4.821 36H31.18c2.647 0 4.82-2.124 4.82-4.713V13.248c0-2.67-2.444-4.896-5.143-4.896H5.143c-.961 0-.96.008-1.68.447.213-.447 1.678-1.107 4.492-1.956.15-.053 14.056-3.782 16.61-4.44.851-.22 1.316-.051 1.685.215.37.266.396.59.396 1.257v2.802h2.497V3.875c0-.726-.047-1.341-.188-1.91-.14-.57-.415-1.13-.91-1.493C27.549.109 26.92-.01 26.25 0zM5.747 10.573h24.672c1.603 0 3.29 1.557 3.29 3.09V30.97c0 1.614-1.33 2.914-2.981 2.914H5.438c-1.654 0-2.98-1.297-2.98-2.914V14.968l.025-1.331c.048-.547.334-1.325.874-1.935.588-.665 1.39-1.13 2.39-1.13zm9.187 9.82s-.468 7.619-.57 8.762c-.103 1.143.037 1.966 1.062 1.966 1.025 0 1.449-1.19 1.449-1.19s.85-2.571 2.474-6.157c1.623-3.587 2.428-5.067 2.428-5.067s2.196-4.286 2.669-5.225c.472-.94.417-1.144.02-1.342-.397-.199-1.315-.314-1.925.334-.61.648-2.108 3.88-2.108 3.88l-2.835 5.719s-.105-1.2.127-3.57c.231-2.368.667-5.428-.138-5.833-.805-.405-1.482-.116-2.104.825-.621.94-3.238 6.503-3.238 6.503s-4.422 9.453-4.527 9.937c-.105.484-.08 1.23 1.099 1.23s1.7-.354 2.563-2.512c.864-2.16 3.554-8.26 3.554-8.26zm14.637-.31c-1.185 0-2.142.936-2.142 2.094 0 1.159.957 2.095 2.142 2.095 1.182 0 2.143-.936 2.143-2.095 0-1.158-.96-2.094-2.143-2.094z"
+                ></path></svg
+            ></i>
+            My Wallet</a
+          >
+        </li>
+        <li>
+          <a href="../myorder/myorder.html"
+            ><i class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+              >
+                <title>order icon</title>
+                <path
+                  fill="currentcolor"
+                  d="M2.013 0a.89.89 0 0 0-.893.892v2.162h.227c.342 0 .646.16.867.402.215-.968 1.603-1.443 4.226-1.443 2.956 0 4.562.505 4.786 1.487.22-.25.543-.411.901-.411h.193V.893c0-.495-.418-.893-.928-.893h-9.38zM6.44 2.572c-1.355 0-3.637.147-3.693 1.112l-.2 1.548-.158 1.147-.114.901h-.262a1.473 1.473 0 0 0-.403.061c-.035.01-.071.023-.105.035-.06.022-.112.042-.166.07-.013.007-.022.02-.035.027-.063.036-.127.07-.184.113-.078.06-.145.136-.21.21-.012.014-.024.021-.035.035A1.516 1.516 0 0 0 .7 8.12c-.013.028-.023.058-.035.088-.026.068-.054.135-.07.21-.004.017-.005.035-.009.052a1.473 1.473 0 0 0-.026.262v1.908h12.32V8.732c0-.09-.01-.177-.026-.262l-.009-.053a1.454 1.454 0 0 0-.061-.21c-.011-.029-.03-.059-.044-.087a1.366 1.366 0 0 0-.07-.131 1.36 1.36 0 0 0-.105-.158c-.01-.014-.023-.02-.035-.035a1.466 1.466 0 0 0-.21-.21c-.057-.043-.121-.077-.184-.114-.013-.006-.022-.02-.035-.026-.054-.03-.107-.048-.166-.07-.034-.012-.069-.025-.105-.035a1.455 1.455 0 0 0-.402-.061h-.263l-.122-.954-.114-.875-.236-1.741c-.064-1.077-3.554-1.138-4.253-1.138zm0 .56c2.36 0 3.595.42 3.701.63l.28 2.153c-.414.07-1.645.245-3.701.245s-3.287-.174-3.701-.245l.288-2.179c.007-.12.583-.604 3.133-.604zm-5.548.482a.663.663 0 0 0-.638.639v1.54c0 .355.298.673.638.673h.42c.356 0 .674-.297.674-.639v-1.54c0-.355-.298-.673-.639-.673H.892zm11.236.035a.64.64 0 0 0-.64.638v1.54c0 .354.287.64.64.64h.42a.663.663 0 0 0 .638-.64v-1.54a.64.64 0 0 0-.639-.638h-.42zM5.205 7.56h3.028c.192 0 .346.114.411.28.02.051.035.106.035.166v1.348a.44.44 0 0 1-.446.446H5.206a.44.44 0 0 1-.446-.446V8.006a.46.46 0 0 1 .035-.166.433.433 0 0 1 .411-.28zM2.152 8.68h1.295c.112 0 .193.08.193.193v.735c0 .111-.08.192-.193.192H2.152a.186.186 0 0 1-.192-.193v-.734c0-.112.08-.193.192-.193zm7.84 0h1.295c.112 0 .193.08.193.193v.735c0 .111-.08.192-.193.192H9.992a.186.186 0 0 1-.192-.193v-.734c0-.112.08-.193.192-.193zM.56 11.2v1.4h12.32v-1.4H.56zm0 1.96c0 .463.377.84.84.84h1.12c.463 0 .84-.377.84-.84H.56zm9.52 0c0 .463.377.84.84.84h1.12c.463 0 .84-.377.84-.84h-2.8z"
+                ></path></svg
+            ></i>
+            My Order</a
+          >
+        </li>
+        <li>
+          <a href="../mywhishlist/mywishllist.html"
+            ><i class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="14"
+                viewBox="0 0 16 14"
+              >
+                <title>wishlist icon</title>
+                <path
+                  fill="currentcolor"
+                  d="M4.472 0C2.006 0 0 1.963 0 4.375c0 4.967 5.743 7.419 7.697 9.012l.215.179.215-.179c1.954-1.593 7.697-4.045 7.697-9.012C15.824 1.963 13.817 0 11.352 0c-1.395 0-2.62.648-3.44 1.63C7.092.648 5.867 0 4.472 0z"
+                ></path></svg
+            ></i>
+            My Wishlist</a
+          >
+        </li>
+        <li>
+          <a href="../mypayment/myPayment.html"
+            ><i class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="width-full height-full"
+                viewBox="0 0 20 20"
+                height="17"
+                width="17"
+              >
+                <defs>
+                  <filter
+                    id="4bng7liola"
+                    width="107.8%"
+                    height="164%"
+                    x="-3.9%"
+                    y="-32%"
+                    filterUnits="objectBoundingBox"
+                  >
+                    <feOffset
+                      dy="2"
+                      in="SourceAlpha"
+                      result="shadowOffsetOuter1"
+                    ></feOffset>
+                    <feGaussianBlur
+                      in="shadowOffsetOuter1"
+                      result="shadowBlurOuter1"
+                      stdDeviation="3"
+                    ></feGaussianBlur>
+                    <feColorMatrix
+                      in="shadowBlurOuter1"
+                      result="shadowMatrixOuter1"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.19 0"
+                    ></feColorMatrix>
+                    <feMerge>
+                      <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
+                      <feMergeNode in="SourceGraphic"></feMergeNode>
+                    </feMerge>
+                  </filter>
+                </defs>
+                <g fill="none" fill-rule="evenodd">
+                  <g>
+                    <g>
+                      <g
+                        filter="url(#4bng7liola)"
+                        transform="translate(-20 -661) translate(0 142) translate(0 504)"
+                      >
+                        <g>
+                          <path
+                            fill="#3F414D"
+                            fill-rule="nonzero"
+                            d="M17.826 3C19.022 3 20 3.978 20 5.174v9.565c0 1.196-.978 2.174-2.174 2.174H2.174C.978 16.913 0 15.935 0 14.739V5.174C0 3.978.978 3 2.174 3zM10 10.522H3.043v.87H10v-.87zm9.13-4.479H.87v2h18.26v-2z"
+                            transform="translate(20 15)"
+                          ></path>
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g></svg
+            ></i>
+            My Saved Payment</a
+          >
+        </li>
+        <li class="logout">
+          <a
+            ><i class="icon"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="13"
+                height="14"
+                viewBox="0 0 13 14"
+              >
+                <path
+                  fill="currentcolor"
+                  fill-rule="nonzero"
+                  d="M6.492.552a.552.552 0 0 0-.534.568v6.16c-.002.202.1.39.269.492a.526.526 0 0 0 .546 0 .564.564 0 0 0 .269-.492V1.12a.57.57 0 0 0-.16-.404.533.533 0 0 0-.39-.164zM3.79 1.24a.528.528 0 0 0-.245.065C1.443 2.416 0 4.674 0 7.28 0 10.985 2.917 14 6.5 14S13 10.985 13 7.28c0-2.605-1.443-4.864-3.545-5.976a.533.533 0 0 0-.73.244.57.57 0 0 0 .237.753c1.752.928 2.955 2.8 2.955 4.979 0 3.1-2.42 5.6-5.417 5.6-2.998 0-5.417-2.5-5.417-5.6 0-2.178 1.203-4.051 2.955-4.979a.566.566 0 0 0 .287-.634.545.545 0 0 0-.535-.428z"
+                ></path></svg
+            ></i>
+            Log Out</a
+          >
+        </li>
+      </ul>
+      <div class="walletbox">
+        <div class="nykaawallet">
+          <div class="nykswalletlogo">
+            <i class="pt10 pr20 wallet-icon"
+              ><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+                <path
+                  fill="#FC2779"
+                  d="M26.25 0c-.67.01-1.41.154-2.33.393-2.642.681-17.84 4.791-17.84 4.791-2.487.914-4.004 1.748-4.928 2.959C.234 9.347.03 10.793.027 12.515v.55c-.01.105-.027.21-.027.314v17.908C0 33.876 2.173 36 4.821 36H31.18c2.647 0 4.82-2.124 4.82-4.713V13.248c0-2.67-2.444-4.896-5.143-4.896H5.143c-.961 0-.96.008-1.68.447.213-.447 1.678-1.107 4.492-1.956.15-.053 14.056-3.782 16.61-4.44.851-.22 1.316-.051 1.685.215.37.266.396.59.396 1.257v2.802h2.497V3.875c0-.726-.047-1.341-.188-1.91-.14-.57-.415-1.13-.91-1.493C27.549.109 26.92-.01 26.25 0zM5.747 10.573h24.672c1.603 0 3.29 1.557 3.29 3.09V30.97c0 1.614-1.33 2.914-2.981 2.914H5.438c-1.654 0-2.98-1.297-2.98-2.914V14.968l.025-1.331c.048-.547.334-1.325.874-1.935.588-.665 1.39-1.13 2.39-1.13zm9.187 9.82s-.468 7.619-.57 8.762c-.103 1.143.037 1.966 1.062 1.966 1.025 0 1.449-1.19 1.449-1.19s.85-2.571 2.474-6.157c1.623-3.587 2.428-5.067 2.428-5.067s2.196-4.286 2.669-5.225c.472-.94.417-1.144.02-1.342-.397-.199-1.315-.314-1.925.334-.61.648-2.108 3.88-2.108 3.88l-2.835 5.719s-.105-1.2.127-3.57c.231-2.368.667-5.428-.138-5.833-.805-.405-1.482-.116-2.104.825-.621.94-3.238 6.503-3.238 6.503s-4.422 9.453-4.527 9.937c-.105.484-.08 1.23 1.099 1.23s1.7-.354 2.563-2.512c.864-2.16 3.554-8.26 3.554-8.26zm14.637-.31c-1.185 0-2.142.936-2.142 2.094 0 1.159.957 2.095 2.142 2.095 1.182 0 2.143-.936 2.143-2.095 0-1.158-.96-2.094-2.143-2.094z"
+                ></path></svg
+            ></i>
+          </div>
+          <div class="wallerdiscription">
+            <p class="font-wallet-title">Nykaa Wallet</p>
+            <p class="font-wallet-description">
+              A purse you carry to shop Baeuty
+            </p>
+          </div>
+        </div>
+        <div class="walletbalance">
+          <p>Wallet Balance</p>
+          <h2>Rs. <span></span></h2>
+        </div>
+        <div class="nykaacash">
+          <h3>NYKAA CASH</h3>
+          <div>
+            <h5>Rs.<span>0</span></h5>
+            <h6>HISTORY</h6>
+          </div>
+        </div>
+        <div class="reward">
+          <h3>REWARD POINTS(2000)</h3>
+          <div>
+            <h5>Rs.<span>0</span></h5>
+            <h6>HISTORY</h6>
+          </div>
+        </div>
+        <div class="walletlogo">
+          <img
+            src="https://www.nykaa.com/media/wysiwyg/NykaaWallet/wallet_footer_banner_3.png"
+            alt="bottom wallet logo"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="footer-playstore">
+        <div>
+          <i class="fa fa-mobile"></i>
+          EXPERIENCE THE NYKAA MOBILE APP
+        </div>
+  
+        <div>
+          <img src="../Asset/google-play.svg" alt="google play store" />
+          <img src="../Asset/google-play.svg" alt="Apple play store" />
+        </div>
+      </div>
+  
+      <footer id="footer">
+        <div class="footer-layer-1">
+          <div class="footer-list-div">
+            <header><img src="../Asset/nyka-log.svg" alt="" /></header>
             <ul>
-                <li id="logout1">Logout</li>
-          <li id="logout2">Logout from all devices</li>
-                <li class="cancle" id="popback">Cancle</li>
+              <li>Who are we</li>
+              <li>Careers</li>
+              <li>Authenticity</li>
+              <li>Press</li>
+              <li>Testimonials</li>
+              <li>Nykaa CSR</li>
+              <li>Responsible Disclosure</li>
+              <li>Investor Relations</li>
             </ul>
+          </div>
+  
+          <div class="footer-list-div">
+            <header>Help</header>
+            <ul>
+              <li>Contact Us</li>
+              <li>Frequently asked questions</li>
+              <li>Store Locator</li>
+              <li>Cancellation & Return</li>
+              <li>Shipping & Delivery</li>
+              <li>Sell on Nykaa</li>
+            </ul>
+          </div>
+  
+          <div class="footer-list-div">
+            <header>Inspire Me</header>
+            <ul>
+              <li>Beauty Book</li>
+              <li>Nykaa TV</li>
+              <li>Nykaa Network</li>
+              <li>Buying Guides</li>
+            </ul>
+          </div>
+  
+          <div class="footer-list-div">
+            <header>Quick Links</header>
+            <ul>
+              <li>Offer Zone</li>
+              <li>New Launches</li>
+              <li>Nykaa Man</li>
+              <li>Nykaa Fashion</li>
+              <li>Nykaa Pro</li>
+            </ul>
+          </div>
+  
+          <div class="footer-list-div">
+            <header>Top Categories</header>
+            <ul>
+              <li>Makeup</li>
+              <li>Skin</li>
+              <li>Hair</li>
+              <li>Bath & Body</li>
+              <li>Appliances</li>
+              <li>Mom and Baby</li>
+              <li>Wellness</li>
+              <li>Fragrance</li>
+              <li>Natural</li>
+              <li>Luxe</li>
+            </ul>
+          </div>
         </div>
-        <div class="walletbox">
-            <div class="nykaawallet">
-                <div class="nykswalletlogo"><i class="pt10 pr20  wallet-icon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"><path fill="#FC2779" d="M26.25 0c-.67.01-1.41.154-2.33.393-2.642.681-17.84 4.791-17.84 4.791-2.487.914-4.004 1.748-4.928 2.959C.234 9.347.03 10.793.027 12.515v.55c-.01.105-.027.21-.027.314v17.908C0 33.876 2.173 36 4.821 36H31.18c2.647 0 4.82-2.124 4.82-4.713V13.248c0-2.67-2.444-4.896-5.143-4.896H5.143c-.961 0-.96.008-1.68.447.213-.447 1.678-1.107 4.492-1.956.15-.053 14.056-3.782 16.61-4.44.851-.22 1.316-.051 1.685.215.37.266.396.59.396 1.257v2.802h2.497V3.875c0-.726-.047-1.341-.188-1.91-.14-.57-.415-1.13-.91-1.493C27.549.109 26.92-.01 26.25 0zM5.747 10.573h24.672c1.603 0 3.29 1.557 3.29 3.09V30.97c0 1.614-1.33 2.914-2.981 2.914H5.438c-1.654 0-2.98-1.297-2.98-2.914V14.968l.025-1.331c.048-.547.334-1.325.874-1.935.588-.665 1.39-1.13 2.39-1.13zm9.187 9.82s-.468 7.619-.57 8.762c-.103 1.143.037 1.966 1.062 1.966 1.025 0 1.449-1.19 1.449-1.19s.85-2.571 2.474-6.157c1.623-3.587 2.428-5.067 2.428-5.067s2.196-4.286 2.669-5.225c.472-.94.417-1.144.02-1.342-.397-.199-1.315-.314-1.925.334-.61.648-2.108 3.88-2.108 3.88l-2.835 5.719s-.105-1.2.127-3.57c.231-2.368.667-5.428-.138-5.833-.805-.405-1.482-.116-2.104.825-.621.94-3.238 6.503-3.238 6.503s-4.422 9.453-4.527 9.937c-.105.484-.08 1.23 1.099 1.23s1.7-.354 2.563-2.512c.864-2.16 3.554-8.26 3.554-8.26zm14.637-.31c-1.185 0-2.142.936-2.142 2.094 0 1.159.957 2.095 2.142 2.095 1.182 0 2.143-.936 2.143-2.095 0-1.158-.96-2.094-2.143-2.094z"></path></svg></i></div>
-                <div class="wallerdiscription">
-                    <p class="font-wallet-title">Nykaa Wallet</p>
-                    <p class="font-wallet-description">A purse you carry to shop Baeuty</p>
-                </div>
+        <div class="footer-layer-2">
+          <div class="footer-activity">
+            <img
+              src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Free-shipping.svg"
+              alt="footer-icons"
+            />
+            <div>
+              <h4>FREE SHIPPING</h4>
+              <p>
+                On Orders Above 
+                ₹299
+              </p>
             </div>
-            <div class="walletbalance">
-                <p>Wallet Balance</p>
-                <h2>Rs.  <span></span></h2>
+          </div>
+  
+          <div class="footer-activity">
+            <img
+              src="https://adn-static2.nykaa.com/media/wysiwyg/2021/return_accepted.svg"
+              alt="footer-icons"
+            />
+            <div>
+              <h4>EASY RETURNS</h4>
+              <p>15-Day Return Policy</p>
             </div>
-            <div class="nykaacash">
-                <h3>NYKAA CASH</h3>
-                <div>
-                    <h5>Rs.<span>0</span></h5>
-                    <h6>HISTORY</h6>
-                </div>
+          </div>
+  
+          <div class="footer-activity">
+            <img
+              src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Authenticity.svg"
+              alt="footer-icons"
+            />
+            <div>
+              <h4>
+                100% 
+                AUTHENTIC
+              </h4>
+              <p>
+                Products Sourced <span> Directly </span>
+              </p>
             </div>
-            <div class="reward">
-                <h3>REWARD POINTS(2000)</h3>
-                <div>
-                    <h5>Rs.<span>0</span></h5>
-                    <h6>HISTORY</h6>
-                </div>
+          </div>
+  
+          <div class="footer-activity">
+            <img
+              src="https://adn-static2.nykaa.com/media/wysiwyg/2021/Brands.svg"
+              alt="footer-icons"
+            />
+  
+            <div>
+              <h4>1900+ BRANDS</h4>
+              <p>1.2 Lakh+ Products</p>
             </div>
-            <div class="walletlogo"><img src="https://www.nykaa.com/media/wysiwyg/NykaaWallet/wallet_footer_banner_3.png" alt="bottom wallet logo"></div>
+          </div>
+  
+          <div class="footer-social-media">
+            <span> Show us some love ❤ on social media </span>
+  
+            <ul>
+              <li>
+                <a href="https://www.instagram.com/mynykaa/?ref=badge">
+                  <i class="fa-brands fa-square-instagram"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/MyNykaa">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/channel/UCoaH2UtB1PsV7av17woV1BA"
+                >
+                  <i class="fa-brands fa-youtube"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.com/mynykaa/">
+                  <i class="fa-brands fa-pinterest"></i>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/MyNykaa">
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-    
-</body>
+  
+  
+        <div class="footer-social-media phone-social-media">
+          <span> Show us some love ❤ on social media </span>
+  
+          <ul>
+            <li>
+              <a href="https://www.instagram.com/mynykaa/?ref=badge">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/MyNykaa">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UCoaH2UtB1PsV7av17woV1BA"
+              >
+                <i class="fa-brands fa-youtube"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/mynykaa/">
+                <i class="fa-brands fa-pinterest"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/MyNykaa">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+  
+        <div class="footer-layer-3">
+          <div>
+            <div>
+              <a href="https://www.nykaa.com/policy#terms-conditions">
+                Terms & Conditions</a
+              >
+            </div>
+  
+            <div>
+              <a href="https://www.nykaa.com/policy#shipping-policy">
+                Shipping Policy
+              </a>
+            </div>
+  
+            <div>
+              <a
+                href="https://www.nykaa.com/policy#cancellation-and-return-policy"
+              >
+                Cancellation Policy
+              </a>
+            </div>
+  
+            <div>
+              <a href="https://www.nykaa.com/policy#privacy-policy"
+                >Privacy Policy
+              </a>
+            </div>
+          </div>
+  
+          <div class="footer-credit">
+            © 2023 Nykaa E-Retail Pvt. Ltd. All Rights Reserved.
+          </div>
+        </div>
+      </footer>
+  </body>
+  <script src="/navBar/navbar.js"></script>
+  <script src="/Sidebar_cart/sidebar.js"></script>
 </html>
