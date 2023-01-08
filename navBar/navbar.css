@@ -192,6 +192,7 @@
   line-height: 20px;
   color: white;
   border-radius: 15px;
+  margin-right: 50px;
 }
 .dropbtn {
   display: flex;

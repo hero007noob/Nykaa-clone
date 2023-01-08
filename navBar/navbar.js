@@ -32,7 +32,8 @@ function setUser() {
     if (dropdownBtn) dropdownBtn.style.display = "initial";
     if (signupbtn)
       signupbtn.addEventListener("click", function () {
-        window.location.href = "/Signup/signup.html";
+        console.log("login");
+        window.location.href = "/Signup/login.html";
       });
   } else {
     let dropdownBtn = document.querySelector(".dropdown");
@@ -41,7 +42,8 @@ function setUser() {
     if (signupbtn) signupbtn.style.display = "initial";
     if (signupbtn)
       signupbtn.addEventListener("click", function () {
-        window.location.href = "/Signup/signup.html";
+        console.log("login");
+        window.location.href = "/Signup/login.html";
       });
     // userPlaceholder.textContent = "User";
     document.querySelector("#forPopup").textContent = " Log in";
@@ -105,7 +107,7 @@ for (const nav2item of nav2items) {
     window.location.href = "/ProductPage/BathProducts.html";
   });
 }
-let nav1items = document.getElementsByClassName("font-nav1-items");
+let nav1items = document.querySelectorAll(".fullNav>.font-nav1-items");
 for (const nav1item of nav1items) {
   nav1item.addEventListener("click", function () {
     window.location.href = "/index.html";
