@@ -92,6 +92,13 @@ body {
   border: none;
   background-color: #fc2779;
   color: var(--primary-text-white);
+  transition: all 250ms ease;
+  cursor: pointer;
+}
+.Bathcartbtn:active {
+  background-color: white;
+  color: #fc2779;
+  transform: scale(1.01);
 }
 .font-product-item-bonus {
   margin-top: -10px;
