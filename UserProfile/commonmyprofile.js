@@ -1,13 +1,13 @@
-document.querySelector("#popback").addEventListener("click", popback);
+document.querySelector("#logoutPopback").addEventListener("click", popback);
 document.querySelector(".logout").addEventListener("click", popup);
-var a = document.querySelector(".popup");
+document.querySelector("#forPopup").addEventListener("click", popup);
+var a = document.querySelector(".logoutPopup");
 function popup() {
-  a.classList.add("popback");
+  a.classList.add("logoutPopback");
 }
 function popback() {
-  a.classList.remove("popback");
+  a.classList.remove("logoutPopback");
 }
-
 checkPage();
 // let allLists =
 // for (const list of allLists) {

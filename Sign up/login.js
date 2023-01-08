@@ -60,8 +60,7 @@ form.addEventListener("submit", function (e) {
 
     if (!verifyCredentials(emailOrPhone, password)) {
       loginFailedPopup();
-    } 
-
+    }
   }
 });
 
@@ -87,7 +86,7 @@ function verifyCredentials(emailOrPhone, password) {
       elem.password == password
     ) {
       LoginSuccessfulPopup(elem.userName);
-
+      localStorage.setItem("loggedInUser", JSON.stringify(elem));
       credentialMatch = true;
       return credentialMatch;
     }
@@ -100,13 +99,13 @@ function LoginSuccessfulPopup(username) {
   // put all code in if() if you need to run some validation
   let pop = document.getElementsByClassName("pop-up-alert")[0];
   let message = pop.querySelector(".pop-up-msg");
-  message.textContent = "Welcome back "+username;
+  message.textContent = "Welcome back " + username;
   pop.classList.add("pop");
   setTimeout(() => {
     pop.classList.remove("pop");
   }, 4000);
-  localStorage.setItem("loggedin","true");
-  window.location.href=".././index.html"
+  localStorage.setItem("loggedin", "true");
+  window.location.href = ".././index.html";
 }
 
 function loginFailedPopup() {

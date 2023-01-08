@@ -47,6 +47,7 @@
 
 #nav1 > ul:first-child > li > img {
   width: 5rem;
+  cursor: pointer;
 }
 
 #nav1 li a,
@@ -162,20 +163,25 @@
 }
 
 .dropdown {
-  width: 100px;
+  width: 170px;
 }
 
 .dropbtn {
-  width: 77px;
+  display: flex;
+  width: 170px;
   height: 30px;
+  align-items: center;
 }
 
 .dropbtn > img {
   position: relative;
-  top: 4px;
+  /* top: 4px; */
 }
 .dropbtn span {
-  display: inline-block;
+  display: inline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* .dropbtn > img {
@@ -234,6 +240,17 @@
     margin-right: 100px;
     margin-top: 45px;
   }
+  .iconNav {
+    padding-left: 100px;
+  }
+  #nav1 > ul {
+    padding: 0 0 0 0px;
+    width: 120%;
+    margin-right: -17px;
+  }
+  #nav1 > ul > li:first-child {
+    margin-right: 18px;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -252,5 +269,12 @@
   .iconNav {
     display: flex !important;
     padding: 30px 10px 40px 30px !important;
+  }
+  #white-sides,
+  #nav1 {
+    height: 80px;
+  }
+  .iconNav {
+    margin-top: -20px;
   }
 }

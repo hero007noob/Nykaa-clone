@@ -51,6 +51,10 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: white;
+  border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 19, 37, 0.08);
+    border-top: none;
 }
 
 .collapsible {
@@ -63,6 +67,9 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 19, 37, 0.08);
 }
 .col1 {
   border-top-left-radius: 10px;
@@ -83,21 +90,27 @@
 
 #details-section {
   width: 30%;
+  
 }
 #address-text-section {
   width: 55%;
   position: relative;
   left: 6%;
-  
+  overflow: scroll;
 }
 #address-text {
   width: 90%;
   padding-top: 20px;
 }
+.scroll{
+  box-sizing: border-box;
+  overflow: scroll;
+}
 #details {
   width: 80%;
   margin: auto;
   float: left;
+ 
   /* position: relative; */
 }
 #details > img {
@@ -317,6 +330,7 @@ input[type="number"] {
 }
 #credit * {
   margin: 10px auto;
+  
 }
 
 #credit > :nth-child(2) {
@@ -417,13 +431,47 @@ input[type="number"] {
 
 
 
-
 /* form validation css  */
-.payment-warning{
+#cardnumber-warn, .payment-warning{
   color: rgb(203, 33, 33);
   font-size: 14px;
   font-weight: 400;
   letter-spacing: 0px;
+  position: relative;
+  top: -2px;
+  margin: 0;
 }
+
+.payment-warning:first-of-type{
+  top: 18px;
+}
+
+#month-warning{
+  position: relative;
+    top: -30px;
+    left: -30px;
+    width: 60%;
+}
+
+#cvv-warning{
+  position: relative;
+    top: -30px;
+    right: 0px;
+}
+
+.mtyr{
+  display: flex;
+  position: relative;
+  /* left: 25px; */
+  height: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.hide,.hide1,.hide2{
+  display: none;
+}
+
+
 
 

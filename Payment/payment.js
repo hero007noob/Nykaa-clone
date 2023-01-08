@@ -95,7 +95,6 @@ function addPriceDetails() {
 
   // var checkPriceDetails = price_details.itemCount == "" ? 0: price_details.itemc;
 
-
   bagItemCount.textContent = `(${price_details.itemCount} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
@@ -172,14 +171,61 @@ document.getElementById("firsttab").click();
 
 // payment page form validation 
 var cardnumberInput = document.querySelector("#cardnumber");
+var cvvInput = document.querySelector(".cvv-input");
+var monthInput = document.querySelector(".month-input");
 
-var monthCvv = document.querySelector(".month-cvv").value;
-var cvv = document.querySelector(".input-details").value;
-cardnumberInput.addEventListener("blur", function (){
+// var monthCvv = document.querySelector("#expdate").value;
+// var cvv = document.querySelector("#input-cvv").value;
+
+cardnumberInput.addEventListener("keyup", function (){
   let cardnumber = cardnumberInput.value;
+  let cardWarning = document.querySelector(".cardnumber-warning");
   
-  if (!cardnumber){
-    
+  
+  if (!cardnumber || cardnumber.length != 12){
+    cardWarning.classList.remove("hide");
+  }
+  
+  if (cardnumber && cardnumber.length == 12){
+    cardWarning.classList.add("hide");
+  }
+})
+  
+
+
+monthInput.addEventListener("keyup", function (){
+  let month = monthInput.value;
+  let monthWarning = document.querySelector("#month-warning");
+  console.log(month);
+  console.log(monthWarning);
+  if (!month || month.length != 5){
+    monthWarning.classList.remove("hide1");
+    // console.log(month);
+  }else{
+    monthWarning.classList.add("hide1");
   }
 
+
 })
+
+cvvInput.addEventListener("keyup", function (){
+  let cvv = cvvInput.value;
+  let cvvWarn = document.querySelector("#cvv-warning");
+  console.log(cvv);
+  if (!cvv || cvv.length != 3){
+    cvvWarn.classList.remove("hide2");
+    // console.log(month);
+  }else{
+    cvvWarn.classList.add("hide2");
+  }
+
+
+})
+// 
+
+function redirect() {
+  window.location.assign("../UserProfile/myorder/myorder.html");
+}
+
+
+

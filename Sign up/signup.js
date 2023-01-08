@@ -100,15 +100,14 @@ form.addEventListener("submit", function (e) {
 
     userCredentialArr.push(credentialObj);
     localStorage.setItem("userCredentials", JSON.stringify(userCredentialArr));
-
+    localStorage.setItem("loggedInUser", JSON.stringify(credentialObj));
     openOTPpage();
   }
 });
 
-
 // redirect to otp verification page
-function openOTPpage (){
-  window.open('Otp-generator/signup-otp.html', '_blank');
+function openOTPpage() {
+  window.open("Otp-generator/signup-otp.html", "_blank");
 }
 
 function validateEmail(email) {
@@ -132,8 +131,7 @@ function validatePassword(password) {
 let otpArr = JSON.parse(localStorage.getItem("otp")) || [];
 
 // otp feature
-function sendOtpToMail (credentialObj){
-
+function sendOtpToMail(credentialObj) {
   let name = credentialObj.userName;
   let mail = credentialObj.email;
   let otp = generateOTP();
@@ -141,15 +139,15 @@ function sendOtpToMail (credentialObj){
   let otpObj = {
     name: name,
     mail: mail,
-    otp : otp,
-  }
-  
+    otp: otp,
+  };
+
   otpArr.push(otpObj);
   localStorage.setItem("otp", JSON.stringify(otpArr));
 
   // nykaa
-  const serviceId = "service_sd99ved"; 
-  const templateId = "template_pjdhzua"; 
+  const serviceId = "service_sd99ved";
+  const templateId = "template_pjdhzua";
   const apiKey = "hhZwXWGy44N1Xx-mB";
 
   // Send the email
@@ -169,4 +167,3 @@ function generateOTP() {
   var otp = Math.floor(Math.random() * 900000) + 100000;
   return otp;
 }
-
