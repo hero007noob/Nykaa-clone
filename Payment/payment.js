@@ -94,12 +94,19 @@ function addPriceDetails() {
   let bagItemCount = document.createElement("span");
 
   // var checkPriceDetails = price_details.itemCount == "" ? 0: price_details.itemc;
-
+  if(price_details.itemCount==0)
+  {
+    price_details.itemCount=2;
+  }
 
   bagItemCount.textContent = `(${price_details.itemCount} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
   let bagMrpPrice = document.createElement("p");
+  if(price_details.bagMrp==0)
+  {
+    price_details.bagMrp=1250;
+  }
   bagMrpPrice.textContent = `₹${price_details.bagMrp}`;
   bagMrpDiv.append(bagMrp, bagMrpPrice);
   let bagDiscountDiv = document.createElement("div");
@@ -130,6 +137,10 @@ function addPriceDetails() {
   let youPay = document.createElement("p");
   youPay.textContent = "You Pay";
   let youPayPrice = document.createElement("p");
+  if(price_details.youPay==0)
+  {
+    price_details.youPay=1250;
+  }
   youPayPrice.textContent = `₹${price_details.youPay}`;
   youPayDiv.append(youPay, youPayPrice);
   youPayDiv.setAttribute("class", "font-sidebar-price-details");
@@ -140,9 +151,17 @@ function addPriceDetails() {
     shippingDiv,
     youPayDiv
   );
+  if(price_details.itemCount==0)
+  {
+    price_details.itemCount=2;
+  }
   document.querySelector(
     "#numberofitems"
   ).textContent = `${price_details.itemCount} Items`;
+  if(price_details.bagMrp=='0')
+  {
+    price_details.bagMrp=1250;
+  }
   document.querySelector("#cartvalue").textContent = `₹${price_details.bagMrp}`;
   // parentDiv.appendChild(priceDetailsDiv);
 }
@@ -172,11 +191,11 @@ document.getElementById("firsttab").click();
 
 // payment page form validation 
 var cardnumberInput = document.querySelector("#cardnumber");
-var cvvInput = document.querySelector(".input-cvv");
+var cvvInput = document.querySelector(".cvv-input");
 var monthInput = document.querySelector(".month-input");
 
-var monthCvv = document.querySelector("#expdate").value;
-var cvv = document.querySelector("#input-cvv").value;
+// var monthCvv = document.querySelector("#expdate").value;
+// var cvv = document.querySelector("#input-cvv").value;
 
 cardnumberInput.addEventListener("keyup", function (){
   let cardnumber = cardnumberInput.value;
@@ -196,17 +215,37 @@ cardnumberInput.addEventListener("keyup", function (){
 
 monthInput.addEventListener("keyup", function (){
   let month = monthInput.value;
-  let monthWarning = document.querySelector(".cardnumber-warning");
-  
-  
+  let monthWarning = document.querySelector("#month-warning");
+  console.log(month);
+  console.log(monthWarning);
   if (!month || month.length != 5){
-    monthWarning.classList.remove("hide");
-    console.log(month);
+    monthWarning.classList.remove("hide1");
+    // console.log(month);
   }else{
-    monthWarning.classList.add("hide");
+    monthWarning.classList.add("hide1");
   }
 
 
 })
+
+cvvInput.addEventListener("keyup", function (){
+  let cvv = cvvInput.value;
+  let cvvWarn = document.querySelector("#cvv-warning");
+  console.log(cvv);
+  if (!cvv || cvv.length != 3){
+    cvvWarn.classList.remove("hide2");
+    // console.log(month);
+  }else{
+    cvvWarn.classList.add("hide2");
+  }
+
+
+})
+// 
+
+function redirect() {
+  window.location.assign("../UserProfile/myorder/myorder.html");
+}
+
 
 

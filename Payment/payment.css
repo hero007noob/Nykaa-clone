@@ -51,6 +51,10 @@
   overflow: hidden;
   transition: max-height 0.2s ease-out;
   background-color: white;
+  border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 19, 37, 0.08);
+    border-top: none;
 }
 
 .collapsible {
@@ -63,6 +67,9 @@
   text-align: left;
   outline: none;
   font-size: 15px;
+  border-style: solid;
+    border-width: 1px;
+    border-color: rgba(0, 19, 37, 0.08);
 }
 .col1 {
   border-top-left-radius: 10px;
@@ -83,21 +90,27 @@
 
 #details-section {
   width: 30%;
+  
 }
 #address-text-section {
   width: 55%;
   position: relative;
   left: 6%;
-  
+  overflow: scroll;
 }
 #address-text {
   width: 90%;
   padding-top: 20px;
 }
+.scroll{
+  box-sizing: border-box;
+  overflow: scroll;
+}
 #details {
   width: 80%;
   margin: auto;
   float: left;
+ 
   /* position: relative; */
 }
 #details > img {
@@ -317,6 +330,7 @@ input[type="number"] {
 }
 #credit * {
   margin: 10px auto;
+  
 }
 
 #credit > :nth-child(2) {
@@ -415,8 +429,45 @@ input[type="number"] {
   margin-top: 10px;
 }
 
-
-
+.bparent>.img{
+  height: 110px;
+  display: flex;
+  gap: 10px;
+}
+.bn>p:nth-child(2){
+  text-align: end;
+}
+.bchild>p:nth-child(2){
+  color: rgb(0, 19, 37);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.bchild>p:nth-child(1){
+  color: rgb(0, 19, 37);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.bn{
+  justify-content: space-between;
+  padding: 10px;
+  font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+.bchild>p:nth-child(2){
+  color: rgb(0, 19, 37);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+}
+.bagitems div img{
+  width: 50%;
+}
+.bn{
+  display: flex;
+}
 
 /* form validation css  */
 #cardnumber-warn, .payment-warning{
@@ -425,9 +476,8 @@ input[type="number"] {
   font-weight: 400;
   letter-spacing: 0px;
   position: relative;
+  top: -2px;
   margin: 0;
-  position: absolute;
-  top: 83px;
 }
 
 .payment-warning:first-of-type{
@@ -436,14 +486,27 @@ input[type="number"] {
 
 #month-warning{
   position: relative;
-  bottom: 15px; 
-}
-#month-warning>span:first-child{
-  margin-right: 29%;
+    top: -30px;
+    left: -30px;
+    width: 60%;
 }
 
+#cvv-warning{
+  position: relative;
+    top: -30px;
+    right: 0px;
+}
 
-.hide{
+.mtyr{
+  display: flex;
+  position: relative;
+  /* left: 25px; */
+  height: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.hide,.hide1,.hide2{
   display: none;
 }
 
