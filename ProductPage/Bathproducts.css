@@ -300,6 +300,11 @@ body {
 .Pro-img-StoreData {
   cursor: pointer;
 }
+
+.bgBlack {
+  background-color: black;
+  color: white;
+}
 @media screen and (max-width: 912px) {
   .Bathchild2 {
     display: grid;
@@ -337,3 +342,5 @@ body {
     font-size: 12px;
   }
 }
+
+

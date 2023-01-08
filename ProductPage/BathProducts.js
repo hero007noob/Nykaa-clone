@@ -905,11 +905,40 @@ function display(list, clear) {
 
     wishlist.setAttribute("class", "BathwishlistBtn");
     var wishlistIcon = document.createElement("img");
-    if (wishListedItems.hasOwnProperty(elem.id))
+
+    if (wishListedItems.hasOwnProperty(elem.id)) {
+      console.log(elem.id, " sdfd  ");
       wishlistIcon.setAttribute("src", "./assets/heartselected.svg");
-    else wishlistIcon.setAttribute("src", "./assets/heart.svg");
+    } else {
+      wishlistIcon.setAttribute("src", "./assets/heart.svg");
+    }
     wishlistIcon.addEventListener("click", function (event) {
       wishList(event, elem);
+
+      // popup
+
+      let wishlistBtn = document.querySelectorAll(".BathwishlistBtn");
+      wishlistBtn.forEach((elem) => {
+        elem.addEventListener("click", popUp);
+        function popUp() {
+          let pop = document.getElementsByClassName("pop-up-alert")[0];
+          let message = pop.querySelector("p");
+
+          if (wishlistIcon.getAttribute("src") == "./assets/heart.svg") {
+            message.textContent = "Remove wishlist";
+            pop.classList.add("pop");
+            setTimeout(() => {
+              pop.classList.remove("pop");
+            }, 1500);
+          } else {
+            message.textContent = "Added to wishlist";
+            pop.classList.add("pop");
+            setTimeout(() => {
+              pop.classList.remove("pop");
+            }, 1500);
+          }
+        }
+      });
     });
     // wishlistIcon.setAttribute("onclick", "callingcart()");
 
@@ -918,6 +947,14 @@ function display(list, clear) {
     button.textContent = "Add to Bag";
     button.setAttribute("class", "Bathcartbtn");
     button.addEventListener("click", function () {
+      
+      if (button.innerHTML == "Added to Bag"){
+        alreadyAdded(); 
+      }else {
+        addedBagPopup();
+      }
+
+      button.innerHTML = "Added to Bag";
       callingbag(elem);
     });
     buttonsDiv.append(wishlist, button);
@@ -1299,4 +1336,32 @@ function callingbag(obj) {
   }
   arrBag.push(obj);
   localStorage.setItem("product-Bag", JSON.stringify(arrBag));
+}
+
+
+
+// popup bag 
+function addedBagPopup() {
+  console.log("worked");
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector("p");
+    message.textContent = "Added to bag";
+    pop.classList.add("pop");
+    pop.classList.add("bgBlack");
+    setTimeout(() => {
+      pop.classList.remove("pop");
+    }, 1500);
+   
+}
+
+function alreadyAdded() {
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector("p");
+    message.textContent = "Already Added to bag";
+    pop.classList.add("pop");
+    pop.classList.add("bgBlack");
+    setTimeout(() => {
+      pop.classList.remove("pop");
+    }, 1500);
+   
 }
