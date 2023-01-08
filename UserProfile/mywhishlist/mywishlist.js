@@ -87,10 +87,11 @@ function displaywish(data) {
     var starsimg5 = document.createElement("img");
     starsimg5.src = "./product-star-white.svg";
     starsdiv.setAttribute("class", "starsdiv");
-
+    
     var review = document.createElement("p");
     review.textContent = elem.reviews;
     review.setAttribute("class", "font-product-item-MRP");
+    var parentReview = document.createElement("div");
 
     var movetobag = document.createElement("button");
     var buy = document.createElement("button");
