@@ -6,7 +6,8 @@
   --grey-bb: rgba(202, 197, 197, 0.685);
   --grey-cc: #666;
   --grey-bggh: #eceff0;
-  --grey-box-g: #999
+  --grey-box-g: #999;
+  --btn-text-white: var(--primary-background);
 }
 .cart-sidebar-view {
   display: flex;
@@ -29,8 +30,12 @@
   height: 90%;
   transition: all 250ms;
   background-color: var(--primary-background);
+  background-color: var(--primary-background);
   overflow-y: scroll;
   overflow-x: hidden;
+}
+.cartItemNumText {
+  visibility: visible;
 }
 .coupon-sidebar {
   position: absolute;
@@ -75,11 +80,12 @@ body {
   height: 50px;
   display: flex;
   background-color: var(--primary-background);
+  background-color: var(--primary-background);
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   padding: 0 10px;
-  border-bottom: 1px solid ;
+  border-bottom: 1px solid;
 }
 .cart-sidebar__header > div {
   display: flex;

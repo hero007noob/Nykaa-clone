@@ -25,6 +25,12 @@
 /* .whishlistbox button:hover {
   background-color: rgb(239, 235, 235);
 } */
+.settingFlex{
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  margin-left: -5px;
+}
 .whishlistbox img {
   width: 11rem;
 }
@@ -53,9 +59,13 @@
 }
 .mrpdiv {
   display: flex;
-  gap: 5px;
-  justify-content: center;
+    gap: 10px;
+    justify-content: flex-start;
+    width: 38%;
 }
+
+
+
 .movetobag {
   align-items: center;
   justify-content: center;
@@ -94,16 +104,15 @@
   width: 50%;
   height: 50px;
 }
+
 .starsdiv {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  width: 70%;
+  width: 78%;
   align-items: center;
-  padding-left: 5px;
-  /* gap: 10px; */
 }
 .starsdiv > img {
-  width: 100%;
+  width: 70%;
 }
 .font-product-item-MRP {
   width: 30%;
@@ -112,9 +121,11 @@
 }
 .reviewdiv {
   display: flex;
-  gap: 10px;
   justify-content: space-between;
 }
+
+
+
 .bagdiv {
   display: flex;
   gap: 10px;

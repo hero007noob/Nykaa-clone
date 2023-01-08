@@ -1,4 +1,16 @@
 @import "../theme_fonts/fonts.css";
+@import "../theme_fonts/theme.css";
+:root{
+  --Bathchild2Box-boxshadow: rgba(100, 100, 111, 0.2);
+  --Bathcartbtn-color:#fc2779;
+  --Page-clour-black:black;
+  --Pagination-hover:rgba(0, 0, 0, 0.12);
+  --Pagination-hover1:rgba(0, 0, 0, 0.24);
+  --Bath-Prference:grey;
+  --Bc1-item-text:#333;
+  --bc1-checkbox-border:#c0c0c0;
+  --bc1-list-background:#e7edfe;
+}
 body {
   background-color: var(--secondary-background);
   /* overflow-x: hidden; */
@@ -35,7 +47,7 @@ body {
   width: 100%;
 }
 .Bathchild2Box {
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--Bathchild2Box-boxshadow) 0px 7px 29px 0px;
   background-color: var(--primary-background);
   gap: 10px;
   text-align: center;
@@ -90,14 +102,14 @@ body {
   justify-content: center;
   width: 100%;
   border: none;
-  background-color: #fc2779;
+  background-color: var(--Bathcartbtn-color);
   color: var(--primary-text-white);
   transition: all 250ms ease;
   cursor: pointer;
 }
 .Bathcartbtn:active {
-  background-color: white;
-  color: #fc2779;
+  background-color: var(--primary-background);
+  color: var(--Bathcartbtn-color);
   transform: scale(1.01);
 }
 .font-product-item-bonus {
@@ -138,7 +150,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   justify-content: space-between;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--Bathchild2Box-boxshadow) 0px 7px 29px 0px;
   background-color: var(--primary-background);
   margin-bottom: 15px;
 }
@@ -167,7 +179,7 @@ body {
   border-radius: 8px;
   padding: 16px;
   background-color: var(--primary-background);
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: var(--Bathchild2Box-boxshadow) 0px 7px 29px 0px;
   display: none;
 }
 .Bc1-list-items1,
@@ -199,7 +211,7 @@ body {
 .Bc1-list-items8 :hover,
 .Bc1-list-items9 :hover,
 .Bc1-list-items10 :hover {
-  background-color: #e7edfe;
+  background-color: var(--bc1-list-background);
 }
 .Bc1-checkbox {
   display: flex;
@@ -210,7 +222,7 @@ body {
   border: 1.5px;
   border-radius: 4px;
   margin-right: 12px;
-  border: 1.5px solid #c0c0c0;
+  border: 1.5px solid var(--bc1-checkbox-border);
   transition: all 0.3s ease-in-out;
   pointer-events: none;
 }
@@ -220,7 +232,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 .Bc1-item-text {
-  color: #333;
+  color: var(--Bc1-item-text);
   pointer-events: none;
 }
 .Bc1-select-btn.open ~ .Bc1-list-items,
@@ -250,16 +262,16 @@ body {
 }
 .Bath-Brand-Search {
   border-radius: 5px;
-  border-color: grey;
+  border-color: var( --Bath-Prference);
   align-items: center;
 }
 .Bath-Preference-Search {
   border-radius: 5px;
-  border-color: grey;
+  border-color: var( --Bath-Prference);
   align-items: center;
 }
 .pagination div a {
-  color: black;
+  color: var(--Page-clour-black);
   border-radius: 50%;
   float: left;
   display: flex;
@@ -289,21 +301,21 @@ body {
   gap: 10px;
 }
 .pagination div a.active {
-  background-color: #fc2779;
-  color: white;
+  background-color: var(--Bathcartbtn-color);
+  color: var(--primary-background);
 }
 
 .pagination div a:hover:not(.active) {
   background-color: var(--primary-background);
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow: var(--Pagination-hover) 0px 1px 3px, var(--Pagination-hover1) 0px 1px 2px;
 }
 .Pro-img-StoreData {
   cursor: pointer;
 }
 
 .bgBlack {
-  background-color: black;
-  color: white;
+  background-color: var(--Page-clour-black);
+  color: var(--primary-background);
 }
 @media screen and (max-width: 912px) {
   .Bathchild2 {
