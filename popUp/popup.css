@@ -2,7 +2,6 @@
 
 .pop-up-alert-view {
   display: flex;
-  height: 100vh;
   justify-content: center;
   font-family:inter, Roboto, Arial, sans-serif;
 }
