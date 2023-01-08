@@ -921,43 +921,79 @@ function rightAct(event, width, length) {
   if (marginNum > -((width * length) / 2)) carousel.style.marginLeft = push;
 }
 
-const carouselSlide = document.querySelector(".carousel-slide");
-const carouselImages = document.querySelectorAll(".carousel-slide img");
-//Buttons
-const nextBtn = document.querySelector("#nextBtn");
-const prevBtn = document.querySelector("#prevBtn");
-//Counter
-let counter = 1;
-const size = carouselImages[0].clientWidth;
-carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+const slideContainer = document.querySelector('.carousel-container');
+const slide = document.querySelector('.carousel-slide');
+const nextBtn = document.getElementById('prevBtn');
+const prevBtn = document.getElementById('nextBtn');
+const interval = 3000;
 
-//Button Listeners
-prevBtn.addEventListener("click", () => {
-  if (counter >= carouselImages.length - 1) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter++;
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-});
+let slides = document.querySelectorAll('.carousel-slide img');
+let index = 1;
+let slideId;
 
-nextBtn.addEventListener("click", () => {
-  if (counter <= 0) return;
-  carouselSlide.style.transition = "transform 0.4s ease-in-out";
-  counter--;
-  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
-});
+const firstClone = slides[0].cloneNode(true);
+const lastClone = slides[slides.length - 1].cloneNode(true);
 
-carouselSlide.addEventListener("transitionend", () => {
-  if (carouselImages[counter].id === "lastClone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - 2;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+firstClone.id = 'first-clone';
+lastClone.id = 'last-clone';
+
+slide.append(firstClone);
+slide.prepend(lastClone);
+
+const slideWidth = slides[index].clientWidth;
+
+slide.style.transform = `translateX(${-slideWidth * index}px)`;
+
+console.log(slides);
+
+const startSlide = () => {
+  slideId = setInterval(() => {
+    moveToNextSlide();
+  }, interval);
+};
+
+const getSlides = () => document.querySelectorAll('.carousel-slide img');
+
+slide.addEventListener('transitionend', () => {
+  slides = getSlides();
+  if (slides[index].id === firstClone.id) {
+    slide.style.transition = 'none';
+    index = 1;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
   }
-  if (carouselImages[counter].id === "firstClone") {
-    carouselSlide.style.transition = "none";
-    counter = carouselImages.length - counter;
-    carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
+
+  if (slides[index].id === lastClone.id) {
+    slide.style.transition = 'none';
+    index = slides.length - 2;
+    slide.style.transform = `translateX(${-slideWidth * index}px)`;
   }
 });
+
+const moveToNextSlide = () => {
+  slides = getSlides();
+  if (index >= slides.length - 1) return;
+  index++;
+  slide.style.transition = '.7s ease-out';
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+};
+
+const moveToPreviousSlide = () => {
+  if (index <= 0) return;
+  index--;
+  slide.style.transition = '.7s ease-out';
+  slide.style.transform = `translateX(${-slideWidth * index}px)`;
+};
+
+slideContainer.addEventListener('mouseenter', () => {
+  clearInterval(slideId);
+});
+
+slideContainer.addEventListener('mouseleave', startSlide);
+nextBtn.addEventListener('click', moveToNextSlide);
+prevBtn.addEventListener('click', moveToPreviousSlide);
+
+startSlide();
+
 
 let cards = document.getElementsByClassName("home-carousel-item-regular");
 document
@@ -972,6 +1008,7 @@ for (const img of imgs) {
 for (const card of cards) {
   card.addEventListener("click", goToProduct);
 }
-function goToProduct(event) {
+function goToProduct(event) { 
   window.location.href = "../ProductPage/BathProducts.html";
 }
+
