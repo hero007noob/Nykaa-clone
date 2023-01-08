@@ -230,7 +230,7 @@ input[type="number"]::-webkit-inner-spin-button {
   font-size: 0.7rem;
   font-weight: 600;
   position: relative;
-  top: 6px;
+  top: 2px;
 }
 
 /* responsive  */
