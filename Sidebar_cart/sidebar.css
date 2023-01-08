@@ -2,6 +2,11 @@
 :root {
   --sidebar-width: 390px;
   --btn-text-white: #fff;
+  --grey-gg: rgba(180, 183, 201, 0.4);
+  --grey-bb: rgba(202, 197, 197, 0.685);
+  --grey-cc: #666;
+  --grey-bggh: #eceff0;
+  --grey-box-g: #999
 }
 .cart-sidebar-view {
   display: flex;
@@ -23,7 +28,7 @@
   margin: 0;
   height: 90%;
   transition: all 250ms;
-  background-color: white;
+  background-color: var(--primary-background);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -58,7 +63,7 @@ body {
   width: var(--sidebar-width);
 }
 .sidebar-dim-overlay-enable {
-  background-color: rgba(180, 183, 201, 0.4);
+  background-color: var(--grey-gg);
   pointer-events: all;
 }
 /* ? cart-sidebar specific classes */
@@ -69,12 +74,12 @@ body {
   width: var(--sidebar-width);
   height: 50px;
   display: flex;
-  background-color: white;
+  background-color: var(--primary-background);
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
   padding: 0 10px;
-  border-bottom: 1px solid rgba(202, 197, 197, 0.685);
+  border-bottom: 1px solid ;
 }
 .cart-sidebar__header > div {
   display: flex;
@@ -93,12 +98,12 @@ body {
   width: var(--sidebar-width);
   height: 60px;
   display: flex;
-  background-color: white;
+  background-color: var(--primary-background);
   justify-content: space-between;
   padding: 0 20px;
   box-sizing: border-box;
   align-items: center;
-  border-top: 1px solid rgba(202, 197, 197, 0.685);
+  border-top: 1px solid var(--grey-bb);
 }
 .cart-sidebar__grand-total__div {
   height: 60px;
@@ -115,7 +120,7 @@ body {
 }
 .cart-proceed-btn {
   padding: 5px 12px 8px 18px;
-  color: white;
+  color: var(--primary-background);
   height: 40px;
   border: none;
   border-radius: 10px;
@@ -135,7 +140,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #666;
+  background: var(--grey-cc);
   border-radius: 15px;
 }
 
@@ -305,9 +310,9 @@ body {
 .coupon-input {
   width: 85%;
   margin: 60px auto;
-  background-color: #eceff0;
+  background-color: var(--grey-bggh);
   border-radius: 10px;
-  box-shadow: 0 2px 0 0 #999;
+  box-shadow: 0 2px 0 0 var(--grey-box-g);
   padding: 8px 10px;
   display: flex;
 }
@@ -318,7 +323,7 @@ body {
   display: flex;
   align-items: center;
   font-size: large;
-  color: #999;
+  color: var(--grey-box-g);
 }
 .coupon-apply:hover {
   color: #fc2779;
@@ -332,7 +337,7 @@ body {
   font-size: medium;
 }
 ::placeholder {
-  color: #999;
+  color: var(--grey-box-g);
 }
 #coupon-input-field,
 #coupon-input-field:focus {
