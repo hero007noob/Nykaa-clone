@@ -429,45 +429,7 @@ input[type="number"] {
   margin-top: 10px;
 }
 
-.bparent>.img{
-  height: 110px;
-  display: flex;
-  gap: 10px;
-}
-.bn>p:nth-child(2){
-  text-align: end;
-}
-.bchild>p:nth-child(2){
-  color: rgb(0, 19, 37);
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 16px;
-}
-.bchild>p:nth-child(1){
-  color: rgb(0, 19, 37);
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}
-.bn{
-  justify-content: space-between;
-  padding: 10px;
-  font-size: 14px;
-    font-weight: 400;
-    line-height: 20px;
-}
-.bchild>p:nth-child(2){
-  color: rgb(0, 19, 37);
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 16px;
-}
-.bagitems div img{
-  width: 50%;
-}
-.bn{
-  display: flex;
-}
+
 
 /* form validation css  */
 #cardnumber-warn, .payment-warning{

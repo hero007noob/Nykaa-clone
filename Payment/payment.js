@@ -94,19 +94,11 @@ function addPriceDetails() {
   let bagItemCount = document.createElement("span");
 
   // var checkPriceDetails = price_details.itemCount == "" ? 0: price_details.itemc;
-  if(price_details.itemCount==0)
-  {
-    price_details.itemCount=2;
-  }
 
   bagItemCount.textContent = `(${price_details.itemCount} items)`;
   bagItemCount.setAttribute("class", "sidebar-bag-item-count");
   bagMrp.appendChild(bagItemCount);
   let bagMrpPrice = document.createElement("p");
-  if(price_details.bagMrp==0)
-  {
-    price_details.bagMrp=1250;
-  }
   bagMrpPrice.textContent = `₹${price_details.bagMrp}`;
   bagMrpDiv.append(bagMrp, bagMrpPrice);
   let bagDiscountDiv = document.createElement("div");
@@ -137,10 +129,6 @@ function addPriceDetails() {
   let youPay = document.createElement("p");
   youPay.textContent = "You Pay";
   let youPayPrice = document.createElement("p");
-  if(price_details.youPay==0)
-  {
-    price_details.youPay=1250;
-  }
   youPayPrice.textContent = `₹${price_details.youPay}`;
   youPayDiv.append(youPay, youPayPrice);
   youPayDiv.setAttribute("class", "font-sidebar-price-details");
@@ -151,17 +139,9 @@ function addPriceDetails() {
     shippingDiv,
     youPayDiv
   );
-  if(price_details.itemCount==0)
-  {
-    price_details.itemCount=2;
-  }
   document.querySelector(
     "#numberofitems"
   ).textContent = `${price_details.itemCount} Items`;
-  if(price_details.bagMrp=='0')
-  {
-    price_details.bagMrp=1250;
-  }
   document.querySelector("#cartvalue").textContent = `₹${price_details.bagMrp}`;
   // parentDiv.appendChild(priceDetailsDiv);
 }
