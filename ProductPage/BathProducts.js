@@ -1238,6 +1238,11 @@ function sortData(event) {
   console.log(query);
 }
 function wishList(event, elem) {
+  let loggedIn = localStorage.getItem("loggedin") || "false";
+  if (loggedIn == "false") {
+    window.location.href = "/Signup/signup.html";
+    return;
+  }
   if (event.target.getAttribute("src") == "./assets/heartselected.svg") {
     event.target.setAttribute("src", "./assets/heart.svg");
   } else event.target.setAttribute("src", "./assets/heartselected.svg");
@@ -1287,6 +1292,11 @@ function callingwish(obj) {
 }
 var arrBag = JSON.parse(localStorage.getItem("product-Bag")) || [];
 function callingbag(obj) {
+  let loggedIn = localStorage.getItem("loggedin") || "false";
+  if (loggedIn == "false") {
+    window.location.href = "/Signup/signup.html";
+    return;
+  }
   arrBag.push(obj);
   localStorage.setItem("product-Bag", JSON.stringify(arrBag));
 }
