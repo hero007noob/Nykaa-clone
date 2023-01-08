@@ -1,5 +1,18 @@
+@import".././theme_fonts/theme.css";
+:root
+{
+  --profile-border: rgb(231, 229, 229);
+  --black-bb: black;
+  --black-m:rgb(51, 50, 50);
+  --black-a:rgb(43, 42, 42);
+  --box1:rgba(14, 30, 37, 0.12);
+  --box2:rgba(14, 30, 37, 0.32);
+  --log-bor:rgb(199, 196, 196);
+  --breadc:#0275d8;
+  --breadch:#01447e;
+}
 body {
-  background: rgb(231, 229, 229);
+  background: var(--primary-background);
 }
 .profile .profileList {
   /* display: flex; */
@@ -16,8 +29,8 @@ body {
 .profileList li {
   display: flex;
   width: 100%;
-  border: 1px solid rgb(231, 229, 229);
-  background: white;
+  border: 1px solid var(--profile-border);
+  background: var(--primary-background);
   padding: 10px;
   font-size: 14px;
   font-weight: 400;
@@ -31,7 +44,7 @@ body {
 }
 .DisPageName a {
   text-decoration: none;
-  color: black;
+  color: var(--black-bb);
 }
 .profileList > li a {
   display: flex;
@@ -39,7 +52,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
-  color: rgb(51, 50, 50);
+  color: var(--black-m);
 }
 .profileList li :hover {
   color: #fc2779;
@@ -50,7 +63,7 @@ body {
 }
 .profile a {
   text-decoration: none;
-  color: rgb(43, 42, 42);
+  color: var(--black-a);
 }
 .profile i {
   font-size: 0.7rem;
@@ -87,7 +100,7 @@ body {
   color: #fc2779;
 } */
 .logoutPopup{
-  background-color: white;
+  background-color: var(--primary-background);
   width:13rem;
   text-align: center;
   padding:1rem;
@@ -98,7 +111,7 @@ body {
   transform: translate(-50%,-50%) scale(0.1);
   visibility: hidden;
   transition: transform .5s;
-  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  box-shadow: var(--box1) 0px 2px 4px 0px, var(--box2) 0px 2px 16px 0px;
 }
 .logoutPopback{
   top:50%;
@@ -108,7 +121,7 @@ body {
 }
 .logoutPopup li{
   display: block;
-  border: 1px solid rgb(199, 196, 196);
+  border: 1px solid var(--log-bor);
   height: 1.5rem;
   padding-top:1rem;
   position:relative;
@@ -151,15 +164,15 @@ ul.breadcrumb li {
 }
 ul.breadcrumb li + li:before {
   /* padding: 8px; */
-  color: black;
+  color: var(--black-bb);
   content: "/\00a0";
 }
 ul.breadcrumb li a {
-  color: #0275d8;
+  color: var(--breadc);
   text-decoration: none;
 }
 ul.breadcrumb li a:hover {
-  color: #01447e;
+  color: var(--breadch);
   text-decoration: underline;
 }
 

@@ -1,3 +1,11 @@
+@import "../../theme_fonts/theme.css";
+:root
+{
+  --box-black: rgba(0, 0, 0, 0.35);
+  --box-black2: rgba(99, 99, 99, 0.2);
+  --black-back: black;
+  --gray-text: rgb(140, 141, 148);
+}
 ul{
   /* margin: 0; */
   padding: 0;
@@ -22,10 +30,10 @@ ul{
 .profilebox {
   display: flex;
   margin: 0 auto;
-  background-color: white;
+  background-color: var(--primary-background);
   width: 420px;
   height: 180px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: var(--box-black) 0px 5px 15px;
   /* margin-top: 2rem; */
   padding: 10px;
 }
@@ -44,7 +52,7 @@ ul{
 .address-section {
   width: 100%;
   height: 500px;
-  background-color: white;
+  background-color: var(--primary-background);
   margin-top: 20px;
   /* height: 25rem; */
   /* padding: 10px; */
@@ -87,7 +95,7 @@ ul{
 
 }
 #adress-content{
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: var(--box-black2) 0px 2px 8px 0px;
   width: 30%;
   margin-left: 1rem;
   padding: 5px 10px;
@@ -116,8 +124,8 @@ ul{
 }
 #adress-content>p:first-child
 {
-  color: white;
-  background-color: black;
+  color: var(--primary-background);
+  background-color: var(--black-back);
   width: 25%;
   border-radius: 10px;
   padding: 5px;
@@ -126,7 +134,7 @@ ul{
 
 .font-profile-details-key
 {
-  color: #8c8d94;
+  color: var(--gray-text);
     line-height: 1rem;
 }
 

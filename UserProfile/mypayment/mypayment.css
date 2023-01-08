@@ -1,3 +1,7 @@
+@import "../../theme_fonts/theme.css";
+:root{
+  --paydiv-white: rgb(230, 225, 225);
+}
 .paymentbox {
   width: 80%;
   margin-left: 2.4rem;
@@ -10,16 +14,16 @@
 .payheading {
   padding-left: 1rem;
   display: flex;
-  background-color: white;
+  background-color: var(--primary-background);
 }
 .paydiv {
   text-align: center;
-  background-color: white;
+  background-color: var(--primary-background);
   margin-top: 0.2rem;
 }
 .paydiv i {
   font-size: 11rem;
-  color: rgb(230, 225, 225);
+  color: var(--paydiv-white);
   margin-top: 2rem;
 }
 .paydiv p:last-child {
