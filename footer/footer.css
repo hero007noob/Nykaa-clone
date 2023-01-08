@@ -1,4 +1,4 @@
-
+@import "/theme_fonts/theme.css";
 /* you can change this  */
 body {
   margin: 0;
@@ -7,9 +7,9 @@ body {
 .footer-playstore {
   width: 100%;
   padding: 40px 0;
-  background-color: #3f414d;
+  background-color: var(--beauty-text-gray);
   align-items: center;
-  color: white;
+  color: var(--primary-background);
   display: none;
   flex-direction: column;
   justify-content: center;
@@ -33,14 +33,13 @@ body {
   width: 100vw;
   position: relative;
   top: 100px;
-  
 }
 
 .footer-layer-1 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  background-color: #3f414d;
-  color: white;
+  background-color: var(--beauty-text-gray);
+  color: var(--primary-background);
   padding: 2.81rem 6rem 1.81rem 6rem;
 }
 
@@ -117,13 +116,13 @@ body {
 }
 
 .footer-social-media li {
-  color: black;
+  color: var(--primary-background-black);
 }
 
 .footer-social-media a {
   font-size: 18px;
   text-decoration: none;
-  color: black;
+  color: var(--primary-background-black);
 }
 
 /*************/
@@ -131,12 +130,12 @@ body {
 .footer-layer-3 {
   height: 81px;
   background-color: #fc2779;
-  color: white;
+  color: var(--primary-background);
 }
 
 .footer-layer-3 > div a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-background);
 }
 
 .footer-layer-3 > div:first-child {
@@ -153,7 +152,6 @@ body {
   text-align: center;
   font-size: 11px;
 }
-
 
 /* responsive  */
 @media screen and (max-width: 1199px) {
@@ -272,5 +270,4 @@ body {
   .footer-activity img {
     width: 20%;
   }
-
 }

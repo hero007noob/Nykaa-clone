@@ -1,7 +1,7 @@
 @import "../theme_fonts/theme.css";
 :root {
   --sidebar-width: 390px;
-  --btn-text-white: #fff;
+  --btn-text-white: var(--primary-background);
 }
 .cart-sidebar-view {
   display: flex;
@@ -23,7 +23,7 @@
   margin: 0;
   height: 90%;
   transition: all 250ms;
-  background-color: white;
+  background-color: var(--primary-background);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -72,7 +72,7 @@ body {
   width: var(--sidebar-width);
   height: 50px;
   display: flex;
-  background-color: white;
+  background-color: var(--primary-background);
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;

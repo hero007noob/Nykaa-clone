@@ -4,9 +4,14 @@
   --btn-pink: rgb(232, 0, 112);
   --btn-text-white: #fff;
   --primary-text-black: #001325;
+  --form-background: rgb(243, 244, 245);
+  --form-input-border: rgba(0, 19, 37, 0.16);
+  --hr-left-border: #ebdddd;
+  --sign-up-google-box-grayv: #ffffff40;
+  --sign-up-google: #32325d40;
+  --sign-up-google-box: #0000004d;
 }
-body
-{
+body {
   background-image: url("./Images/low-poly-grid-haikei.svg");
 }
 .sign-up-body {
@@ -33,7 +38,7 @@ body
   margin-top: 100px;
   height: 500px;
   border-radius: 20px;
-  background-color: white;
+  background-color: var(--primary-background);
 }
 
 #sign-up-form > h1 {
@@ -57,8 +62,8 @@ body
 }
 
 #sign-up-form input {
-  background: rgb(243, 244, 245);
-  border-color: currentcolor currentcolor rgba(0, 19, 37, 0.16);
+  background: var(--form-background);
+  border-color: currentcolor currentcolor --form-input-border;
   border-style: none none solid;
   border-width: 0px 0px 1px;
   /* border-image: none 100% / 1 / 0 stretch; */
@@ -85,7 +90,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #sign-up-form input[type="submit"] {
   background-color: #fc2779;
-  color: white;
+  color: var(--primary-background);
   border: none;
   height: 40px;
   border-radius: 10px;
@@ -97,7 +102,7 @@ input[type="number"]::-webkit-inner-spin-button {
 
 #sign-up-form input[type="submit"]:hover {
   background-color: #e71364;
-  color: white;
+  color: var(--primary-background);
   border: none;
   height: 40px;
   border-radius: 10px;
@@ -112,7 +117,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   top: 29px;
   right: 97px;
-  border: 1px solid #ebdddd;
+  border: 1px solid var(--hr-left-border);
 }
 
 .hr-right {
@@ -121,7 +126,7 @@ input[type="number"]::-webkit-inner-spin-button {
   position: relative;
   left: 94px;
   bottom: 12px;
-  border: 1px solid #ebdddd;
+  border: 1px solid var(--hr-left-border);
 }
 
 .sign-up-or {
@@ -134,19 +139,19 @@ input[type="number"]::-webkit-inner-spin-button {
 }
 
 .sign-up-google-btn {
-  background-color: white;
+  background-color: var(--primary-background);
   height: 44px;
   border-radius: 10px;
   position: relative;
   border: none;
-  box-shadow: rgb(50 50 93 / 25%) 0px 2px 5px -1px,
-    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  box-shadow: var(--sign-up-google) 0px 2px 5px -1px,
+    var(--sign-up-google-box) 0px 1px 3px -1px;
   cursor: pointer;
 }
 
 .sign-up-google-btn:hover {
-  box-shadow: rgba(255, 255, 255, 0.25) 0px 2px 5px -1px,
-    rgb(0 0 0 / 30%) 0px 1px 3px -1px;
+  box-shadow: var(--sign-up-google-box-grayv) 0px 2px 5px -1px,
+    var(--sign-up-google-box) 0px 1px 3px -1px;
 }
 
 .sign-up-google-btn img {
@@ -201,7 +206,7 @@ input[type="number"]::-webkit-inner-spin-button {
   margin-bottom: -100px;
   border-radius: 10px;
   background-color: #fc2779;
-  color: #fff;
+  color: var(--primary-background);
   display: flex;
   justify-content: center;
   align-items: center;

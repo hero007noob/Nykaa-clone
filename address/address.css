@@ -1,6 +1,15 @@
+@import "/theme_fonts/theme.css";
+:root {
+  --addres-header-border: lightgray;
+  --new-address-hover: rgba(232, 0, 113, 0.08);
+  --new-address-border: rgb(232, 0, 113);
+  --address-slider-gray: #ccc;
+  --address-shipping-btn: #f3f4f5;
+  --ah-red: rgb(203, 33, 33);
+}
 #header {
   display: flex;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var(--addres-header-border);
   padding-bottom: 10px;
 }
 #location {
@@ -45,14 +54,14 @@
   gap: 1px;
 }
 #addnewaddress:hover {
-  background: rgba(232, 0, 113, 0.08);
-  border-color: rgb(232, 0, 113);
+  background: var(--new-address-hover);
+  border-color: var(--new-address-border);
 }
 .collapse-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: white;
+  background-color: var(--primary-background);
 }
 .cart-item-parent {
   position: relative;
@@ -64,7 +73,7 @@
   transition: all 0.5s ease;
 }
 .collapsible {
-  background-color: white;
+  background-color: var(--primary-background);
   color: black;
   cursor: pointer;
   padding: 18px;
@@ -85,7 +94,7 @@
 }
 .collapsible:after {
   /* content: '\002B'; */
-  color: white;
+  color: var(--primary-background);
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -151,7 +160,7 @@
   width: var(--sidebar-width);
   height: 50px;
   display: flex;
-  background-color: white;
+  background-color: var(--primary-background);
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
@@ -195,7 +204,7 @@
   box-sizing: border-box;
   margin: 120px auto;
   border-radius: 8px;
-  color: #f3f4f5;
+  color: var(--address-shipping-btn);
   border: none;
   height: 50px;
   text-decoration: double;
@@ -239,7 +248,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: var(--address-slider-gray);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -251,7 +260,7 @@
   width: 16px;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: var(--primary-background);
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
@@ -287,7 +296,7 @@ input:checked + .slider:before {
   letter-spacing: 0.1px;
   border-color: rgb(232, 0, 113);
   background-color: rgb(232, 0, 113);
-  color: rgb(255, 255, 255);
+  color: var(--primary-background);
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
@@ -321,9 +330,9 @@ input:checked + .slider:before {
   font-weight: 600;
   line-height: 16px;
   letter-spacing: 0.1px;
-  border-color: rgba(111, 121, 129, 0.36);
-  background-color: rgb(255, 255, 255);
-  color: rgba(0, 19, 37, 0.64);
+  border-color: var(--primary-text-black64);
+  background-color: var(--primary-background);
+  color: var(--primary-text-black64);
   border-radius: 8px;
   cursor: pointer;
   text-align: center;
@@ -334,18 +343,22 @@ input:checked + .slider:before {
 .hide1,
 .hide2,
 .hide4,
-.hide5{
+.hide5 {
   display: none;
 }
 
-.ai1{
+.ai1 {
   padding: 2px;
 }
-.ah1,.ah2,.ah3,.ah4,.ah5{
+.ah1,
+.ah2,
+.ah3,
+.ah4,
+.ah5 {
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
-  color: rgb(203, 33, 33);
+  color: var(--ah-red);
 }
 @media screen and (max-width: 912px) {
   .Adding-new-add {
