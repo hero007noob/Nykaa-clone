@@ -2035,6 +2035,12 @@ function addCoupon() {
   addPriceDetails();
 }
 function addPriceDetails() {
+  let coupon = localStorage.getItem("coupon") || "false";
+  if (coupon == "true") {
+    let couponDiscount = (totalPriceVal / 10) * 3;
+    totalDiscount += couponDiscount;
+    totalPriceVal -= couponDiscount;
+  }
   let data = JSON.parse(localStorage.getItem("product-Bag")) || [];
   let parentDiv = document.querySelector(".cart-sidebar-all-items");
   let priceDetailsDiv = document.createElement("div");
@@ -2081,6 +2087,7 @@ function addPriceDetails() {
   let youPay = document.createElement("p");
   youPay.textContent = "You Pay";
   let youPayPrice = document.createElement("p");
+  youPayPrice.setAttribute("class", "youpayprice");
   youPayPrice.textContent = `₹${totalPriceVal}`;
   document.getElementsByClassName(
     "cart-sidebar__grand-total"
@@ -2150,10 +2157,24 @@ function addCouponBody(sidebar) {
   sidebar.innerHTML += header;
   sidebar.innerHTML += body;
   sidebar.querySelector(".coupon-apply").addEventListener("click", function () {
-    var a=document.querySelector("#coupon-input-field").value;
-    if(a=="masai20"|| a=="masai30")
-    {
-    localStorage.setItem("coupon", true);
+    var a = document.querySelector("#coupon-input-field").value;
+    if (a == "masai20" || a == "masai30") {
+      let coupon = localStorage.getItem("coupon") || "false";
+      if (coupon !== "true") {
+        localStorage.setItem("coupon", true);
+        let price_details =
+          JSON.parse(localStorage.getItem("price-details")) || {};
+        let couponDiscount = (price_details.youPay / 10) * 3;
+        let youpayPrice = document.querySelector(".youpayprice");
+        let newPrice = price_details.youPay - couponDiscount;
+        price_details.bagDiscount += couponDiscount;
+        price_details.youPay = newPrice;
+        youpayPrice.textContent = `₹${newPrice.toFixed(0)}`;
+        document.getElementsByClassName(
+          "cart-sidebar__grand-total"
+        )[0].textContent = `₹${newPrice.toFixed(0)}`;
+        localStorage.setItem("price-details", JSON.stringify(price_details));
+      }
     }
   });
 }
