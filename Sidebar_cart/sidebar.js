@@ -2175,9 +2175,16 @@ function addCouponBody(sidebar) {
    <img src='https://gallery.yopriceville.com/var/albums/Free-Clipart-Pictures/Black-Friday-PNG/Black_Friday_Half_Price_Coupon_PNG_Clipart_Image.png?m=1438397702'></img>
    </div>
     `;
-
+  let pop_up = `<!-- pop up  -->
+    <div class="pop-up-alert-view">
+      <div class="pop-up-alert">
+        <i class="fa-solid fa-circle-check"></i>
+        <p>Product has been added to Wishlist.</p>
+      </div>
+    </div>`;
   sidebar.innerHTML += header;
   sidebar.innerHTML += body;
+  sidebar.innerHTML += pop_up;
   sidebar.querySelector(".coupon-apply").addEventListener("click", function () {
     var a = document.querySelector("#coupon-input-field").value;
     if (a == "masai20" || a == "masai30") {
@@ -2196,14 +2203,21 @@ function addCouponBody(sidebar) {
           "cart-sidebar__grand-total"
         )[0].textContent = `₹${newPrice.toFixed(0)}`;
         localStorage.setItem("price-details", JSON.stringify(price_details));
-      }
-
-      coponPopup();
-
-    }
+        couponPopUp("coupon applied");
+      } else couponPopUp("coupon already applied");
+    } else couponPopUp("wrong coupon");
   });
 }
-
+function couponPopUp(text) {
+  let couponBody = document.querySelector(".coupon-sidebar");
+  let pop = couponBody.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector("p");
+  message.textContent = text;
+  pop.classList.add("pop");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 1500);
+}
 function deleteAct(event) {
   let item = document.querySelector(".sidebar-item-parent");
   let parent = event.target.parentNode.parentNode.parentNode;
@@ -2236,18 +2250,4 @@ parentDiv &&
     .addEventListener("click", proceedToPay);
 function proceedToPay(event) {
   window.location.href = "/address/address.html";
-}
-
-
-// coupon applied popup 
-function coponPopup() {
-  console.log('workied')
-  // put all code in if() if you need to run some validation
-  let pop = document.getElementsByClassName("pop-up-alert")[0];
-  let message = pop.querySelector("p");
-  message.textContent = "Coupon Applied";
-  pop.classList.add("pop");
-  setTimeout(() => {
-    pop.classList.remove("pop");
-  }, 3000);
 }
