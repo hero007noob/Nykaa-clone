@@ -2197,6 +2197,9 @@ function addCouponBody(sidebar) {
         )[0].textContent = `₹${newPrice.toFixed(0)}`;
         localStorage.setItem("price-details", JSON.stringify(price_details));
       }
+
+      coponPopup();
+
     }
   });
 }
@@ -2233,4 +2236,18 @@ parentDiv &&
     .addEventListener("click", proceedToPay);
 function proceedToPay(event) {
   window.location.href = "/address/address.html";
+}
+
+
+// coupon applied popup 
+function coponPopup() {
+  console.log('workied')
+  // put all code in if() if you need to run some validation
+  let pop = document.getElementsByClassName("pop-up-alert")[0];
+  let message = pop.querySelector("p");
+  message.textContent = "Coupon Applied";
+  pop.classList.add("pop");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 3000);
 }
