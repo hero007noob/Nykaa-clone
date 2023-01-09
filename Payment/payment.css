@@ -1,16 +1,5 @@
 @import "/theme_fonts/theme.css";
 :root {
-  --payment-header-border:lightgray;
-  --black:black;
-  --white:white;
-  --payment-secure:#f9fafa;
-  --payment-tab:#f1f1f1;
-  --payment-tab-btn-hover:#ddd; 
-  --payment-tab-active:rgb(232, 0, 113);
-  --gray:gray;
-  --payment-input-bg:#f3f4f5;
-  --payment-cardnumber-warning:rgb(203, 33, 33);
-  --red: red;
 }
 
 #header {
@@ -42,8 +31,8 @@
 }
 .header-logo {
   width: 60%;
-  margin-left:3.125rem;
-  margin-top: .9rem;
+  margin-left: 3.125rem;
+  margin-top: 0.9rem;
 }
 .header-hr {
   -webkit-transform: rotate(90deg);
@@ -52,7 +41,6 @@
   height: 100%;
   margin: auto;
 }
-
 
 #content {
   display: flex;
@@ -65,11 +53,11 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: var(--white);;
+  background-color: var(--white);
   border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 19, 37, 0.08);
-    border-top: none;
+  border-width: 1px;
+  border-color: rgba(0, 19, 37, 0.08);
+  border-top: none;
 }
 
 .collapsible {
@@ -83,8 +71,8 @@
   outline: none;
   font-size: 15px;
   border-style: solid;
-    border-width: 1px;
-    border-color: var(--bottom-border);
+  border-width: 1px;
+  border-color: var(--bottom-border);
 }
 .col1 {
   border-top-left-radius: 10px;
@@ -97,7 +85,7 @@
 }
 .collapsible:after {
   /* content: '\002B'; */
-  color: var(--white);;
+  color: var(--white);
   font-weight: bold;
   float: right;
   margin-left: 5px;
@@ -105,7 +93,6 @@
 
 #details-section {
   width: 30%;
-  
 }
 #address-text-section {
   width: 55%;
@@ -117,7 +104,7 @@
   width: 90%;
   padding-top: 20px;
 }
-.scroll{
+.scroll {
   box-sizing: border-box;
   overflow: scroll;
 }
@@ -125,7 +112,7 @@
   width: 80%;
   margin: auto;
   float: left;
- 
+
   /* position: relative; */
 }
 #details > img {
@@ -159,7 +146,7 @@
   margin: auto;
 }
 
-.payment-method-h2{
+.payment-method-h2 {
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -202,8 +189,8 @@
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-  background-color: var(--white);;
-  border-color:currentcolor currentcolor currentcolor var(--payment-tab-active);
+  background-color: var(--white);
+  border-color: currentcolor currentcolor currentcolor var(--payment-tab-active);
   border-style: none none none solid;
   border-width: medium medium medium 4px;
 }
@@ -232,8 +219,8 @@
   margin: auto;
 }
 
-.tab-button-text h3{
- font-size: 1rem;
+.tab-button-text h3 {
+  font-size: 1rem;
 }
 .tab-button-text p {
   font-size: 0.875rem;
@@ -311,8 +298,8 @@ input[type="number"] {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.1px;
-  border-color:var(--payment-tab-active);
-  background-color:  var(--payment-tab-active);
+  border-color: var(--payment-tab-active);
+  background-color: var(--payment-tab-active);
   color: var(--white);
   border-radius: 8px;
   cursor: pointer;
@@ -345,7 +332,6 @@ input[type="number"] {
 }
 #credit * {
   margin: 10px auto;
-  
 }
 
 #credit > :nth-child(2) {
@@ -355,25 +341,24 @@ input[type="number"] {
   cursor: pointer;
 }
 #credit > :nth-child(4) {
-  display: flex; display: flex;
+  display: flex;
+  display: flex;
   align-items: center;
   justify-content: flex-start;
   margin: 0;
 }
 
-
-#know-more>input[type="checkbox"] {
-  margin: 0 .5rem 0 .2rem;
+#know-more > input[type="checkbox"] {
+  margin: 0 0.5rem 0 0.2rem;
   font-size: 20px;
 }
-#know-more> p{
+#know-more > p {
   margin: 0;
 }
 
 #know-more a {
   text-decoration: none;
 }
-
 
 .month-cvv {
   display: flex;
@@ -444,10 +429,9 @@ input[type="number"] {
   margin-top: 10px;
 }
 
-
-
 /* form validation css  */
-#cardnumber-warn, .payment-warning{
+#cardnumber-warn,
+.payment-warning {
   color: var(--payment-cardnumber-warning);
   font-size: 14px;
   font-weight: 400;
@@ -457,24 +441,24 @@ input[type="number"] {
   margin: 0;
 }
 
-.payment-warning:first-of-type{
+.payment-warning:first-of-type {
   top: 18px;
 }
 
-#month-warning{
+#month-warning {
   position: relative;
-    top: -30px;
-    left: -30px;
-    width: 60%;
+  top: -30px;
+  left: -30px;
+  width: 60%;
 }
 
-#cvv-warning{
+#cvv-warning {
   position: relative;
-    top: -30px;
-    right: 0px;
+  top: -30px;
+  right: 0px;
 }
 
-.mtyr{
+.mtyr {
   display: flex;
   position: relative;
   height: 20px;
@@ -482,10 +466,8 @@ input[type="number"] {
   justify-content: center;
 }
 
-.hide,.hide1,.hide2{
+.hide,
+.hide1,
+.hide2 {
   display: none;
 }
-
-
-
-

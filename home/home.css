@@ -1,9 +1,5 @@
 @import "/theme_fonts/theme.css";
 :root {
-  --home-carouse-item-border: rgb(236, 233, 233);
-  --btn-pink: rgb(232, 0, 112);
-  --btn-text-white: #fff;
-  --home-carousel-item-border: rgba(0, 0, 0, 0.16);
 }
 body {
   overflow-x: hidden;

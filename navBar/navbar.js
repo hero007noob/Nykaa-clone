@@ -1,5 +1,5 @@
 window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
+  // console.log(window.scrollY);
   var nav2 = document.querySelector("#nav2");
   if (nav2) nav2.classList.toggle("sticky", window.scrollY > 0);
 });

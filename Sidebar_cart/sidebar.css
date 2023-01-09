@@ -1,13 +1,5 @@
-@import "../theme_fonts/theme.css";
+@import "/theme_fonts/theme.css";
 :root {
-  --sidebar-width: 390px;
-  --btn-text-white: #fff;
-  --grey-gg: rgba(180, 183, 201, 0.4);
-  --grey-bb: rgba(202, 197, 197, 0.685);
-  --grey-cc: #666;
-  --grey-bggh: #eceff0;
-  --grey-box-g: #999;
-  --btn-text-white: var(--primary-background);
 }
 .cart-sidebar-view {
   display: flex;

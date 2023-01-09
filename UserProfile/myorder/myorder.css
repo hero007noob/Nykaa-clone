@@ -1,8 +1,5 @@
-@import "../../theme_fonts/theme.css";
-:root{
-  --order-black: black;
-  --trackorder-blue: rgb(10, 147, 168);
-  --status-yellow: #ef9e27
+@import "/theme_fonts/theme.css";
+:root {
 }
 
 .orderbox {
@@ -50,7 +47,7 @@
   background-color: var(--primary-background);
 }
 
-#pdf-download{
+#pdf-download {
   position: relative;
   bottom: 28px;
   left: 59px;
@@ -59,7 +56,7 @@
   height: 23px;
 }
 
-#pdf-download>button{
+#pdf-download > button {
   background-color: var(--order-black);
   border-radius: 8px;
   color: var(--primary-background);
@@ -82,7 +79,7 @@
   color: var(--primary-background);
   font-weight: 600;
   position: relative;
-  left: 21rem;  
+  left: 21rem;
 }
 .trackorder div:nth-child(1) {
   color: var(--trackorder-blue);
@@ -154,7 +151,7 @@
   top: 100px;
 }
 
-#tracking{
+#tracking {
   margin-left: 400px;
 }
 

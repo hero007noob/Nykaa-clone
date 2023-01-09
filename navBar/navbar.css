@@ -1,16 +1,6 @@
 @import "../theme_fonts/fonts.css";
 @import "/theme_fonts/theme.css";
 :root {
-  --nav-a: rgb(61, 54, 54);
-  --search-background: rgb(238, 235, 235);
-  --search-input: #eeebeb;
-  --nav-box-shadow: #0000003d;
-  --nav-header-nav-border: rgb(211, 207, 207);
-  --nav-header-bottom-border: #d9d3d3;
-  --nav2-a: rgb(139, 133, 133);
-  --dropdown-background: #f1f1f1;
-  --dropdown-dropdown: rgba(0, 0, 0, 0.2);
-  --dropdown-gray: #ddd;
 }
 #nav0 {
   background-image: url(https://static.vecteezy.com/system/resources/previews/001/410/432/original/pink-fluid-dynamic-abstract-background-free-vector.jpg);
