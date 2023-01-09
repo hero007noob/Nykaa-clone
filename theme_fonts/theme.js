@@ -1,18 +1,25 @@
 // Create the button element
-const button = document.createElement("button");
+const button = document.createElement("div");
 
 // Set the text content of the button
-button.textContent = "Click me";
+// button.textContent = "Click me";
 button.setAttribute("class", "toggle-dark");
-button.style.backgroundColor = "white";
+// button.style.backgroundColor = "white";
 button.style.zIndex = "100";
 button.style.color = "white";
 button.style.border = "none";
+button.style.width = "40px";
+button.style.height = "40px";
+let icon = document.createElement("img");
+icon.src = "/theme_fonts/white-mode.png";
+icon.style.width = "100%";
+button.appendChild(icon);
 // #212121
 // Set the button's position to fixed and top right
 button.style.position = "fixed";
 button.style.top = "0";
 button.style.right = "0";
+button.style.marginRight = "20px";
 
 // Append the button to the body
 document.body.appendChild(button);

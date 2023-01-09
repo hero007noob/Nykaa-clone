@@ -127,6 +127,7 @@
   letter-spacing: -0.3px;
   font-stretch: normal;
   font-style: normal;
+  color: var(--primary-text-black);
 }
 .font-product-item-title {
   font-size: 14px;

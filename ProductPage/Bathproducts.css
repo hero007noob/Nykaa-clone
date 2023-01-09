@@ -143,6 +143,7 @@ body {
   justify-content: space-between;
   box-shadow: var(--Bathchild2Box-boxshadow) 0px 7px 29px 0px;
   background-color: var(--primary-background);
+  color: var(--primary-text-black);
   margin-bottom: 15px;
 }
 .Bc1-btn-text {
