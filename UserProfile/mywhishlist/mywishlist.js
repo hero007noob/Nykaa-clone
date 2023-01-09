@@ -41,7 +41,7 @@ function displaywish(data) {
     removeText.src = "../Asset/remove.png";
     remove.appendChild(removeText);
     remove.addEventListener("click", function () {
-      del(index);
+      del(index, elem);
     });
     var parentdiv = document.createElement("div");
     parentdiv.setAttribute("class", "parentdiv");
@@ -141,8 +141,12 @@ function addtobag(item, index) {
   localStorage.setItem("product-wishlist", JSON.stringify(faceData));
   displaywish(faceData);
 }
-function del(index) {
-  faceData.splice(index, 1);
+function del(index, elem) {
+  faceData.forEach(function (item, idx) {
+    if (elem.id == item.id) {
+      faceData.splice(idx, 1);
+    }
+  });
   localStorage.setItem("product-wishlist", JSON.stringify(faceData));
   displaywish(faceData);
 }
