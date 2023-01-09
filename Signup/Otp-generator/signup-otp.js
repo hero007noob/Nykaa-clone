@@ -1,10 +1,8 @@
 window.onload = function () {
-
   // popup msg otp sent to mail
   otpSendToMail();
 
   function otpSendToMail() {
-   
     let pop = document.getElementsByClassName("pop-up-alert")[0];
     setTimeout(() => {
       pop.classList.add("pop");
@@ -69,11 +67,10 @@ function otpSuccessful() {
   setTimeout(() => {
     pop.classList.remove("pop");
   }, 4000);
-  localStorage.setItem("loggedin","true");
+  localStorage.setItem("loggedin", "true");
   setTimeout(() => {
-    window.location.href="../../index.html"
-  }, 4000);
-  
+    window.location.href = "../../index.html";
+  }, 2400);
 }
 
 function otpFailed() {

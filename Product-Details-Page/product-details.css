@@ -1,26 +1,6 @@
 @import "/theme_fonts/fonts.css";
 @import "/theme_fonts/theme.css";
 :root {
-  --home-carouse-item-border: rgb(236, 233, 233);
-  --btn-pink: rgb(232, 0, 112);
-  --btn-text-white: #fff;
-  --primary-text-black: #001325;
-  --primary-background: white;
-  --footer-playstore:#3f414d;
-  --footer-lastdiv:red;
-  --footer-theblack:black;
-  --footer-layer:#fc2779;
-  --nyka-featre:rgba(101, 119, 134, 0.08);
-  --product-page:#f3f3f3;
-  --product-container:rgba(0, 0, 0, 0.1);
-  --pd-container: rgba(0, 0, 0, 0.05);
-  --delivary-options:rgba(101, 119, 134, 0.22);
-  --addtoBag:#ffffff;
-  --pincode-div:rgba(0, 19, 37, 0.72);
-  --boder-b:#eeeeee;
-  --product-price:#008945;
-  --pd-prcie-line:#001325;
-  --rating-review:#e8e7e7;
 }
 body {
   margin: 0;

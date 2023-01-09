@@ -1,17 +1,11 @@
 @import "../../theme_fonts/theme.css";
-:root
-{
-  --box-black: rgba(0, 0, 0, 0.35);
-  --box-black2: rgba(99, 99, 99, 0.2);
-  --black-back: black;
-  --gray-text: rgb(140, 141, 148);
+:root {
 }
-ul{
+ul {
   /* margin: 0; */
   padding: 0;
 }
-.profileList
-{
+.profileList {
   width: 20%;
 }
 .profileback {
@@ -58,43 +52,35 @@ ul{
   /* padding: 10px; */
 }
 
-#add-header
-{
+#add-header {
   display: flex;
   justify-content: space-between;
   padding: 0 10px 0 10px;
 }
-#myadd
-{
-  display: flex;
-  width: 25%;
-  justify-content: left;
-  align-items: center;
-  gap: 5px;
-
-}
-#myadd>img
-{
-  width: 20px;
-  height: 20px;
-
-}
-
-#addadd
-{
+#myadd {
   display: flex;
   width: 25%;
   justify-content: left;
   align-items: center;
   gap: 5px;
 }
-#addadd>img
-{
+#myadd > img {
   width: 20px;
   height: 20px;
-
 }
-#adress-content{
+
+#addadd {
+  display: flex;
+  width: 25%;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+}
+#addadd > img {
+  width: 20px;
+  height: 20px;
+}
+#adress-content {
   box-shadow: var(--box-black2) 0px 2px 8px 0px;
   width: 30%;
   margin-left: 1rem;
@@ -102,28 +88,23 @@ ul{
   height: 300px;
   margin-bottom: px;
   border-radius: 10px;
-  
 }
-.edit{
+.edit {
   display: flex;
   justify-content: space-between;
 }
-.edit-btn
-{
- display: flex;
+.edit-btn {
+  display: flex;
   width: 25%;
   justify-content: left;
   align-items: center;
   gap: 5px;
 }
-.edit-btn>img
-{
+.edit-btn > img {
   width: 20px;
   height: 20px;
-
 }
-#adress-content>p:first-child
-{
+#adress-content > p:first-child {
   color: var(--primary-background);
   background-color: var(--black-back);
   width: 25%;
@@ -132,10 +113,9 @@ ul{
   text-align: center;
 }
 
-.font-profile-details-key
-{
+.font-profile-details-key {
   color: var(--gray-text);
-    line-height: 1rem;
+  line-height: 1rem;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -153,8 +133,7 @@ ul{
     margin-top: 1rem;
     background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000");
   }
-  body
-  {
+  body {
     width: 100%;
     margin: auto;
   }

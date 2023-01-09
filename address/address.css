@@ -1,11 +1,5 @@
 @import "/theme_fonts/theme.css";
 :root {
-  --addres-header-border: lightgray;
-  --new-address-hover: rgba(232, 0, 113, 0.08);
-  --new-address-border: rgb(232, 0, 113);
-  --address-slider-gray: #ccc;
-  --address-shipping-btn: #f3f4f5;
-  --ah-red: rgb(203, 33, 33);
 }
 #header {
   display: flex;

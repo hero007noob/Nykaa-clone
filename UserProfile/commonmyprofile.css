@@ -1,15 +1,5 @@
-@import".././theme_fonts/theme.css";
-:root
-{
-  --profile-border: rgb(231, 229, 229);
-  --black-bb: black;
-  --black-m:rgb(51, 50, 50);
-  --black-a:rgb(43, 42, 42);
-  --box1:rgba(14, 30, 37, 0.12);
-  --box2:rgba(14, 30, 37, 0.32);
-  --log-bor:rgb(199, 196, 196);
-  --breadc:#0275d8;
-  --breadch:#01447e;
+@import ".././theme_fonts/theme.css";
+:root {
 }
 body {
   background: var(--primary-background);
@@ -99,39 +89,39 @@ body {
   margin-left: -2.4rem;
   color: #fc2779;
 } */
-.logoutPopup{
+.logoutPopup {
   background-color: var(--primary-background);
-  width:13rem;
+  width: 13rem;
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
   border-radius: 5px;
-  position:absolute;
-  left:50%;
-  top:0;
-  transform: translate(-50%,-50%) scale(0.1);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0.1);
   visibility: hidden;
-  transition: transform .5s;
+  transition: transform 0.5s;
   box-shadow: var(--box1) 0px 2px 4px 0px, var(--box2) 0px 2px 16px 0px;
 }
-.logoutPopback{
-  top:50%;
-  transform: translate(-50%,-50%) scale(1);
+.logoutPopback {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
   visibility: visible;
   z-index: 100;
 }
-.logoutPopup li{
+.logoutPopup li {
   display: block;
   border: 1px solid var(--log-bor);
   height: 1.5rem;
-  padding-top:1rem;
-  position:relative;
+  padding-top: 1rem;
+  position: relative;
 }
-.logoutPopup ul{
-  width:99%;
+.logoutPopup ul {
+  width: 99%;
   padding: 0;
   align-items: center;
   justify-content: center;
-  color:#fc2779;
+  color: #fc2779;
 }
 .icon {
   margin-right: 10px;
@@ -175,4 +165,3 @@ ul.breadcrumb li a:hover {
   color: var(--breadch);
   text-decoration: underline;
 }
-

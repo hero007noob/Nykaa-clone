@@ -1,14 +1,12 @@
-@import "../../theme_fonts/theme.css";
-:root{
-  --paydiv-white: rgb(230, 225, 225);
+@import "/theme_fonts/theme.css";
+:root {
 }
 .paymentbox {
   width: 80%;
   margin-left: 2.4rem;
   margin-top: 2rem;
 }
-.profileList
-{
+.profileList {
   width: 20%;
 }
 .payheading {

@@ -1,7 +1,5 @@
-@import"../../theme_fonts/theme.css"
-:root
-{
-  --grey: rgb(128,128,128);
+@import "/theme_fonts/theme.css";
+:root {
 }
 .nykaawallet {
   display: flex;
@@ -67,11 +65,10 @@
   align-items: center;
   justify-content: center;
 }
-.font-wallet-description{
+.font-wallet-description {
   margin-top: -2rem;
 }
-.profileList
-{
+.profileList {
   width: 20%;
 }
 .walletbox {

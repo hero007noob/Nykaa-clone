@@ -1,15 +1,6 @@
 @import "../theme_fonts/fonts.css";
 @import "../theme_fonts/theme.css";
-:root{
-  --Bathchild2Box-boxshadow: rgba(100, 100, 111, 0.2);
-  --Bathcartbtn-color:#fc2779;
-  --Page-clour-black:black;
-  --Pagination-hover:rgba(0, 0, 0, 0.12);
-  --Pagination-hover1:rgba(0, 0, 0, 0.24);
-  --Bath-Prference:grey;
-  --Bc1-item-text:#333;
-  --bc1-checkbox-border:#c0c0c0;
-  --bc1-list-background:#e7edfe;
+:root {
 }
 body {
   background-color: var(--secondary-background);
@@ -262,12 +253,12 @@ body {
 }
 .Bath-Brand-Search {
   border-radius: 5px;
-  border-color: var( --Bath-Prference);
+  border-color: var(--Bath-Prference);
   align-items: center;
 }
 .Bath-Preference-Search {
   border-radius: 5px;
-  border-color: var( --Bath-Prference);
+  border-color: var(--Bath-Prference);
   align-items: center;
 }
 .pagination div a {
@@ -307,7 +298,8 @@ body {
 
 .pagination div a:hover:not(.active) {
   background-color: var(--primary-background);
-  box-shadow: var(--Pagination-hover) 0px 1px 3px, var(--Pagination-hover1) 0px 1px 2px;
+  box-shadow: var(--Pagination-hover) 0px 1px 3px,
+    var(--Pagination-hover1) 0px 1px 2px;
 }
 .Pro-img-StoreData {
   cursor: pointer;
@@ -354,5 +346,3 @@ body {
     font-size: 12px;
   }
 }
-
-

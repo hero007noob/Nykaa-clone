@@ -1,15 +1,5 @@
 @import "/theme_fonts/theme.css";
 :root {
-  --home-carouse-item-border: rgb(236, 233, 233);
-  --btn-pink: rgb(232, 0, 112);
-  --btn-text-white: #fff;
-  --primary-text-black: #001325;
-  --form-background: rgb(243, 244, 245);
-  --form-input-border: rgba(0, 19, 37, 0.16);
-  --hr-left-border: #ebdddd;
-  --sign-up-google-box-grayv: #ffffff40;
-  --sign-up-google: #32325d40;
-  --sign-up-google-box: #0000004d;
 }
 body {
   background-image: url("./Images/low-poly-grid-haikei.svg");
