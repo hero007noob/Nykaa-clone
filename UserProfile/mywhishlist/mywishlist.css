@@ -138,13 +138,13 @@
   }
 }
 .rmvbtn {
-  border-radius: 55%;
+  border-radius: 50%;
   width: 25px;
   height: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--box-black);
+  /* background-color: var(--box-black); */
   border: 1px solid var(--box-black);
   color: var(--primary-background);
   font-size: large;
@@ -152,10 +152,13 @@
   margin-top: 20px;
   margin-right: 25px;
 }
+.rmvbtn > img {
+  width: 100%;
+}
 .rmvbtn:hover {
   cursor: pointer;
-  background-color: #fc2779;
-  border-color: #fc2779;
+  /* background-color: #fc2779; */
+  /* border-color: #fc2779; */
   color: var(--primary-background);
 }
 

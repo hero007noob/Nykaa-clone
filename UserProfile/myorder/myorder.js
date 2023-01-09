@@ -1,5 +1,3 @@
-
-
 // product-Bag
 // [
 //     {
@@ -30,7 +28,7 @@ function displayProduct(doc) {
       </div>
       <div class="namediv">
           <p class="titlename">${x.name}</p>
-          <p class="featuredtxt">${x.Keywords}</p>
+          <p class="featuredtxt">${x.Keywords || ""}</p>
           <p class="titlename">${x.price}</p>
       </div>
       <div class="status">
@@ -46,7 +44,7 @@ function displayProduct(doc) {
     cart.appendChild(item);
     var d = item.querySelector(".datee");
     let today = new Date();
-    let dd = String(today.getDate()).padStart(2, "0");
+    let dd = String(today.getDate() + 3).padStart(2, "0");
     let mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
     let yyyy = today.getFullYear();
     today = dd + "/" + mm + "/" + yyyy;

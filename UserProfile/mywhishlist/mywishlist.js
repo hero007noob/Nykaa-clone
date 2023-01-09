@@ -22,11 +22,10 @@
 //     reviews: "29761",
 //     shades: "9 Shades",
 //   },
-  
+
 // ];
 
 // localStorage.setItem("product-wishlist",JSON.stringify(Data))
-
 
 var faceData = JSON.parse(localStorage.getItem("product-wishlist")) || [];
 displaywish(faceData);
@@ -36,9 +35,11 @@ function displaywish(data) {
   data.map(function (elem, index) {
     var maindiv = document.createElement("div");
     maindiv.setAttribute("class", "maindiv");
-    var remove=document.createElement("button");
-    remove.setAttribute("class","rmvbtn")
-    remove.textContent="x"
+    var remove = document.createElement("div");
+    remove.setAttribute("class", "rmvbtn");
+    var removeText = document.createElement("img");
+    removeText.src = "../Asset/remove.png";
+    remove.appendChild(removeText);
     remove.addEventListener("click", function () {
       del(index);
     });
@@ -60,7 +61,7 @@ function displaywish(data) {
     var title = document.createElement("p");
     title.textContent = elem.name;
     title.setAttribute("class", "font-product-item-title");
-    var setflex=document.createElement("div");
+    var setflex = document.createElement("div");
     setflex.setAttribute("class", "settingFlex");
     var mrpdiv = document.createElement("div");
     mrpdiv.setAttribute("class", "mrpdiv");
@@ -88,9 +89,9 @@ function displaywish(data) {
     var starsimg5 = document.createElement("img");
     starsimg5.src = "./product-star-white.svg";
     starsdiv.setAttribute("class", "starsdiv");
-    
+
     var review = document.createElement("p");
-    review.textContent = "("+ elem.reviews+')';
+    review.textContent = "(" + elem.reviews + ")";
     review.setAttribute("class", "font-product-item-MRP reviewset");
     var parentReview = document.createElement("div");
 
@@ -101,7 +102,7 @@ function displaywish(data) {
     movetobag.setAttribute("class", "movetobag");
     buy.setAttribute("class", "buy");
     buy.addEventListener("click", function () {
-      addtobuy(elem,index);
+      addtobuy(elem, index);
     });
 
     movetobag.addEventListener("click", function () {
@@ -111,43 +112,39 @@ function displaywish(data) {
     imgdiv.append(img);
     reviewdiv.append(starsdiv, review);
     mrpdiv.append(mrp, price);
-    setflex.append(mrpdiv,reviewdiv);
-    textdiv.append(title,setflex);
+    setflex.append(mrpdiv, reviewdiv);
+    textdiv.append(title, setflex);
     bagdiv.append(buy, movetobag);
     parentdiv.append(imgdiv, textdiv, bagdiv);
-    maindiv.append(remove,parentdiv);
+    maindiv.append(remove, parentdiv);
     document.querySelector(".whishlistbox").append(maindiv);
   });
 }
 // window.location.href = "../../address/address.html"
 
-var buy= JSON.parse(localStorage.getItem("buy-list")) || [];
-function addtobuy(item,index)
-{
+var buy = JSON.parse(localStorage.getItem("buy-list")) || [];
+function addtobuy(item, index) {
   buy.push(item);
-  localStorage.setItem("buy-list",JSON.stringify(buy));
-  faceData.splice(index,1);
-  localStorage.setItem("product-wishlist",JSON.stringify(faceData))
-  displaywish(faceData)
-  window.location.href = "../../address/address.html"
+  localStorage.setItem("buy-list", JSON.stringify(buy));
+  faceData.splice(index, 1);
+  localStorage.setItem("product-wishlist", JSON.stringify(faceData));
+  displaywish(faceData);
+  window.location.href = "../../address/address.html";
 }
 
-var bag= JSON.parse(localStorage.getItem("product-Bag")) || [];
-function addtobag(item,index)
-{
+var bag = JSON.parse(localStorage.getItem("product-Bag")) || [];
+function addtobag(item, index) {
   popUp();
   bag.push(item);
-  localStorage.setItem("product-Bag",JSON.stringify(bag));
-  faceData.splice(index,1);
-  localStorage.setItem("product-wishlist",JSON.stringify(faceData))
-  displaywish(faceData)
-  
+  localStorage.setItem("product-Bag", JSON.stringify(bag));
+  faceData.splice(index, 1);
+  localStorage.setItem("product-wishlist", JSON.stringify(faceData));
+  displaywish(faceData);
 }
-function del(index)
-{
-  faceData.splice(index,1);
-  localStorage.setItem("product-wishlist",JSON.stringify(faceData))
-  displaywish(faceData)
+function del(index) {
+  faceData.splice(index, 1);
+  localStorage.setItem("product-wishlist", JSON.stringify(faceData));
+  displaywish(faceData);
 }
 
 function popUp() {
@@ -160,5 +157,3 @@ function popUp() {
     pop.classList.remove("pop");
   }, 3000);
 }
-
-
