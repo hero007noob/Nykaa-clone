@@ -629,3 +629,16 @@ input::-webkit-inner-spin-button {
     margin-bottom: -100px;
   }
 }
+
+
+/* quantity drop down  */
+.qty-drop{
+  position: absolute;
+  top: 107px;
+  left: 63%;
+
+}
+
+.qty-drop-content{
+  border: 1px solid #eee;
+}
