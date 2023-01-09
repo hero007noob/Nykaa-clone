@@ -31,6 +31,7 @@
   margin-bottom: 26px;
   border-radius: 50%;
   background-color: #fc2779;
+  color: white;
   width: 20px;
   height: 20px;
   font-size: 12px;
@@ -213,6 +214,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  color: var(--primary-background-black);
 }
 
 /* .dropbtn > img {

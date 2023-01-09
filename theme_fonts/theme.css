@@ -151,7 +151,7 @@
 
   --text-color-black37: rgb(255, 255, 255);
 
-  --primary-background-black: black;
+  --primary-background-black: white;
 
   --primary-background: #303030;
 
@@ -281,7 +281,7 @@
   --rating-review: #444444;
 
   --Bathchild2Box-boxshadow: rgba(100, 100, 111, 0.8);
-  --Bathcartbtn-color: #ffffff;
+  /* --Bathcartbtn-color: #ffffff; */
   --Page-clour-black: white;
   --Pagination-hover: rgba(255, 255, 255, 0.12);
   --Pagination-hover1: rgba(255, 255, 255, 0.24);
