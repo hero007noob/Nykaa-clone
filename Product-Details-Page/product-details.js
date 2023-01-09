@@ -29,20 +29,67 @@ function display(productData) {
     var productName = document.querySelector(".product-details-section>h1");
     productName.textContent = elem.name;
 
+    //area;
     var productPrice = document.querySelector(".product-price");
-    productPrice.textContent = elem.price;
-
     var productMrp = document.querySelector(".product-mrp");
-    var discountValue = elem.discount_price || "";
-    productMrp.innerHTML = ` <s> ${discountValue} </s> `;
+    
+    var discountValue = parseInt(elem.discount_price.match(/\d+/)[0]) || 0;
+    var normalPrice =  parseInt(elem.price.match(/\d+/)[0]);
+    
+    
+    // quantity feature 
 
+    console.log(normalPrice, discountValue, 'hje');
+    var qtyDrop = document.querySelector(".qty-drop-content");
+    qtyDrop.addEventListener("change", function() {
+      let totalQty = qtyDrop.value;
+      
+      if (totalQty == 1){
+
+        productMrp.innerHTML = ` <s>₹ ${discountValue} </s> `;
+        productPrice.textContent = " ₹"+normalPrice;
+
+
+      }else if (totalQty == 2){
+
+        let newPrice = normalPrice * 2;
+        productPrice.textContent = " ₹"+newPrice;
+
+        let newDiscount = discountValue*2;
+        productMrp.innerHTML = ` <s>₹ ${newDiscount} </s> `;
+      
+      }else if (totalQty == 3){
+
+        let newPrice = normalPrice * 3;
+        productPrice.textContent = " ₹"+newPrice;
+
+        let newDiscount = discountValue*3;
+        productMrp.innerHTML = ` <s>₹ ${newDiscount} </s> `;
+
+
+      }else if (totalQty == 4){
+
+        let newPrice = normalPrice * 4;
+        productPrice.textContent = " ₹"+newPrice;
+
+        let newDiscount = discountValue*4;
+        productMrp.innerHTML = ` <s>₹ ${newDiscount} </s> `;
+
+      }else {
+        let newPrice = normalPrice * 5;
+        productPrice.textContent = " ₹"+newPrice;
+
+        let newDiscount = discountValue*5;
+        productMrp.innerHTML = ` <s>₹ ${newDiscount} </s> `;
+      }
+    })
 
     var discountPercent = document.querySelector(".offer");
     var percentageCheck = elem.discount_percentage || "";
     discountPercent.textContent = percentageCheck;
 
     var review = document.querySelector(".reviews");
-    review.textContent = elem.reviews;
+    review.textContent = elem.reviews;  
 
     // heart icon change functionalities
     var addWishList = document.querySelector(".add-wishlist");
@@ -145,3 +192,5 @@ function removeWishlistPopup() {
     pop.classList.remove("pop");
   }, 2000);
 }
+
+
