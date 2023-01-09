@@ -46,6 +46,7 @@ body {
   background: url(https://images-static.nykaa.com/uploads/45d5a7b6-86eb-4850-9568-4d6ed91731fe.svg)
     no-repeat;
   right: 8px;
+  visibility: hidden;
 }
 #nextBtn {
   transform: initial;
@@ -61,6 +62,7 @@ body {
   background: url(https://images-static.nykaa.com/uploads/3df01759-af0c-4d81-b2f7-f61577ac3807.svg)
     no-repeat;
   left: 8px;
+  visibility: hidden;
 }
 
 .home-main-div {

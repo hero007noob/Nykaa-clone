@@ -948,10 +948,9 @@ function display(list, clear) {
     button.textContent = "Add to Bag";
     button.setAttribute("class", "Bathcartbtn");
     button.addEventListener("click", function () {
-      
-      if (button.innerHTML == "Added to Bag"){
-        alreadyAdded(); 
-      }else {
+      if (button.innerHTML == "Added to Bag") {
+        alreadyAdded();
+      } else {
         addedBagPopup();
       }
 
@@ -1298,9 +1297,9 @@ window.addEventListener("scroll", function () {
   let oTop = ele.top + this.window.pageYOffset;
   // console.log("ctop", cTop);
   // console.log("otop", oTop);
-  if (cTop < 0) {
+  if (cTop < 100) {
     div.style.top = "0";
-    div.style.paddingTop = "40px";
+    div.style.paddingTop = "120px";
   }
   if (top < 428) {
     div.style.top = "initial";
@@ -1353,30 +1352,26 @@ function callingbag(obj) {
   localStorage.setItem("product-Bag", JSON.stringify(arrBag));
 }
 
-
-
-// popup bag 
+// popup bag
 function addedBagPopup() {
   console.log("worked");
   let pop = document.getElementsByClassName("pop-up-alert")[0];
   let message = pop.querySelector("p");
-    message.textContent = "Added to bag";
-    pop.classList.add("pop");
-    pop.classList.add("bgBlack");
-    setTimeout(() => {
-      pop.classList.remove("pop");
-    }, 1500);
-   
+  message.textContent = "Added to bag";
+  pop.classList.add("pop");
+  pop.classList.add("bgBlack");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 1500);
 }
 
 function alreadyAdded() {
   let pop = document.getElementsByClassName("pop-up-alert")[0];
   let message = pop.querySelector("p");
-    message.textContent = "Already Added to bag";
-    pop.classList.add("pop");
-    pop.classList.add("bgBlack");
-    setTimeout(() => {
-      pop.classList.remove("pop");
-    }, 1500);
-   
+  message.textContent = "Already Added to bag";
+  pop.classList.add("pop");
+  pop.classList.add("bgBlack");
+  setTimeout(() => {
+    pop.classList.remove("pop");
+  }, 1500);
 }
