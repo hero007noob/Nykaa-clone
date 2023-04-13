@@ -170,69 +170,69 @@ function addPriceDetails() {
 
 
 var pinInput = document.querySelector(".add-pincode");
-pinInput.addEventListener("keyup", function (){
+pinInput.addEventListener("keyup", function () {
   let pin = pinInput.value;
   let pinwarn = document.querySelector(".ad-pinwarn");
 
-  if (!pin || pin.length != 6){
+  if (!pin || pin.length != 6) {
     pinwarn.classList.remove("hide");
   }
-  
-  if (pin && pin.length == 6){
+
+  if (pin && pin.length == 6) {
     pinwarn.classList.add("hide");
   }
 });
 var flatInput = document.querySelector(".add-flat");
-flatInput.addEventListener("keyup", function (){
+flatInput.addEventListener("keyup", function () {
   let flat = flatInput.value;
   let flatwarn = document.querySelector(".address-flatwarning");
 
-  if (!flat || flat.length != 4){
+  if (!flat) {
     flatwarn.classList.remove("hide1");
   }
-  
-  if (!flat || flat.length == 4){
+
+  if (flat) {
     flatwarn.classList.add("hide1");
   }
 });
 var areaInput = document.querySelector(".add-area");
-areaInput.addEventListener("keyup", function (){
+areaInput.addEventListener("keyup", function () {
   let area = areaInput.value;
   let areawarn = document.querySelector(".address-areawarning");
 
-  if (!area || area.length != 4){
+  if (!area) {
     areawarn.classList.remove("hide2");
   }
-  
-  if (!area || area.length == 4){
+
+  if (area) {
     areawarn.classList.add("hide2");
   }
 });
 
 var nameInput = document.querySelector(".add-name");
-nameInput.addEventListener("keyup", function (){
+nameInput.addEventListener("keyup", function () {
   let name = nameInput.value;
   let namewarn = document.querySelector(".address-namewarning");
 
-  if (!name || name.length != 4){
+  if (!name) {
     namewarn.classList.remove("hide4");
   }
-  
-  if (!name || name.length == 4){
+
+  if (name) {
     namewarn.classList.add("hide4");
   }
 });
 
 var phoneInput = document.querySelector(".add-phone");
-phoneInput.addEventListener("keyup", function (){
+phoneInput.addEventListener("keyup", function () {
   let phone = phoneInput.value;
   let phonewarn = document.querySelector(".address-phonewarning");
 
-  if (!phone || phone.length != 10){
+  if (!phone || phone.length != 10) {
     phonewarn.classList.remove("hide5");
   }
-  
-  if (!phone || phone.length == 10){
+
+  if (!phone || phone.length == 10) {
     phonewarn.classList.add("hide5");
   }
 });
