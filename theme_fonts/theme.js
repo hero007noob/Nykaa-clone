@@ -6,7 +6,7 @@ const button = document.createElement("div");
 button.setAttribute("class", "toggle-dark");
 // button.style.backgroundColor = "white";
 button.style.zIndex = "100";
-button.style.color = "white";
+button.style.color = "#ccc";
 button.style.border = "none";
 button.style.width = "40px";
 button.style.height = "40px";
@@ -18,7 +18,7 @@ button.appendChild(icon);
 // Set the button's position to fixed and top right
 button.style.position = "fixed";
 button.style.top = "0";
-button.style.right = "0";
+button.style.right = "100px";
 button.style.marginRight = "20px";
 
 // Append the button to the body
