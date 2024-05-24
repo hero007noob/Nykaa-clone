@@ -13,7 +13,7 @@
   background-color: transparent;
   align-items: center;
   position: fixed;
-  top: 0;
+  top: 5px;
   z-index: 10;
   /* border-bottom: 0.1px solid rgb(177, 175, 175); */
 }
