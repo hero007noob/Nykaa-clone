@@ -1,7 +1,7 @@
 # **Nykaa-clone**
  ## **Project Description**
 
-The goal of NYKAACLONE was to create a replica of Nykaa.com that functions similarly to the original website. This includes the ability to browse and purchase products, create an account, and view order history. The project was developed using only HTML, CSS, and JavaScript.
+The goal of NYKAACLONE was to create a replica of Nykaa.com that functions similarly to the original website. This includes the ability to browse and purchase products, create an account, and view order history. The project was developed using only HTML, CSS, and JavaScript.This project is made for paractice and educational purposes only.
 
 ## **Tech stacks used :**
 To create this clone following Tech stack is used by contributors.  
