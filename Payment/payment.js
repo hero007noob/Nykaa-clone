@@ -1,4 +1,5 @@
 // document.getElementById('firsttab').();
+redirect();
 var coll = document.getElementsByClassName("collapsible");
 
 
